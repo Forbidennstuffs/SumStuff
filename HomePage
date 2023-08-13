@@ -563,9 +563,10 @@ Update1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Update1.BorderSizePixel = 0
 Update1.Size = UDim2.new(0, 175, 0, 12)
 Update1.Font = Enum.Font.Gotham
-Update1.Text = "New GUI"
+Update1.Text = ""
 Update1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Update1.TextWrapped = true
+Update1.Visible = false
 
 UICorner_15.Parent = Update1
 
@@ -583,9 +584,10 @@ Update2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Update2.BorderSizePixel = 0
 Update2.Size = UDim2.new(0, 175, 0, 12)
 Update2.Font = Enum.Font.Gotham
-Update2.Text = "New GUI"
+Update2.Text = ""
 Update2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Update2.TextWrapped = true
+Update2.Visible = false
 
 UICorner_16.Parent = Update2
 
@@ -603,9 +605,10 @@ Update3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Update3.BorderSizePixel = 0
 Update3.Size = UDim2.new(0, 175, 0, 12)
 Update3.Font = Enum.Font.Gotham
-Update3.Text = "New GUI"
+Update3.Text = ""
 Update3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Update3.TextWrapped = true
+Update3.Visible = false
 
 UICorner_17.Parent = Update3
 
@@ -623,9 +626,10 @@ Update4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Update4.BorderSizePixel = 0
 Update4.Size = UDim2.new(0, 175, 0, 12)
 Update4.Font = Enum.Font.Gotham
-Update4.Text = "New GUI"
+Update4.Text = ""
 Update4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Update4.TextWrapped = true
+Update4.Visible = false
 
 UICorner_18.Parent = Update4
 
@@ -784,6 +788,19 @@ _5Piece.Visible = true
 _6Tube.Visible = true
 _7Heart.Visible = true
 end
+
+-- Update System:
+Update1.Visible = true
+Update1.Text = "New Gui"
+
+Update2.Visible = false
+Update2.Text = ""
+
+Update3.Visible = false
+Update3.Text = ""
+
+Update4.Visible = false
+Update4.Text = ""
 
 -- Scripts:
 
