@@ -93,6 +93,9 @@ local UICorner_22 = Instance.new("UICorner")
 local UIStroke_21 = Instance.new("UIStroke")
 local WelcomeUserUserName = Instance.new("TextLabel")
 
+--Locals:
+local Your = game:GetService("Players").LocalPlayer
+
 --Properties:
 
 MainFrame.Name = "MainFrame"
@@ -384,6 +387,7 @@ _1ShootingStar.Font = Enum.Font.SourceSans
 _1ShootingStar.Text = "🌠"
 _1ShootingStar.TextColor3 = Color3.fromRGB(0, 0, 0)
 _1ShootingStar.TextSize = 14.000
+_1ShootingStar.Visible = false
 
 _2Wrench.Name = "2Wrench"
 _2Wrench.Parent = Badges
@@ -396,6 +400,7 @@ _2Wrench.Font = Enum.Font.SourceSans
 _2Wrench.Text = "🔧"
 _2Wrench.TextColor3 = Color3.fromRGB(0, 0, 0)
 _2Wrench.TextSize = 14.000
+_2Wrench.Visible = false
 
 _3Star.Name = "3Star"
 _3Star.Parent = Badges
@@ -408,6 +413,7 @@ _3Star.Font = Enum.Font.SourceSans
 _3Star.Text = "⭐"
 _3Star.TextColor3 = Color3.fromRGB(0, 0, 0)
 _3Star.TextSize = 14.000
+_3Star.Visible = false
 
 _4Trophy.Name = "4Trophy"
 _4Trophy.Parent = Badges
@@ -420,6 +426,7 @@ _4Trophy.Font = Enum.Font.SourceSans
 _4Trophy.Text = "🏆"
 _4Trophy.TextColor3 = Color3.fromRGB(0, 0, 0)
 _4Trophy.TextSize = 14.000
+_4Trophy.Visible = False
 
 _5Piece.Name = "5Piece"
 _5Piece.Parent = Badges
@@ -432,6 +439,7 @@ _5Piece.Font = Enum.Font.SourceSans
 _5Piece.Text = "🧩"
 _5Piece.TextColor3 = Color3.fromRGB(0, 0, 0)
 _5Piece.TextSize = 14.000
+_5Piece.Visible = false
 
 _6Tube.Name = "6Tube"
 _6Tube.Parent = Badges
@@ -444,6 +452,7 @@ _6Tube.Font = Enum.Font.SourceSans
 _6Tube.Text = "🧪"
 _6Tube.TextColor3 = Color3.fromRGB(0, 0, 0)
 _6Tube.TextSize = 14.000
+_6Tube.Visible = false
 
 _7Heart.Name = "7Heart"
 _7Heart.Parent = Badges
@@ -456,6 +465,7 @@ _7Heart.Font = Enum.Font.SourceSans
 _7Heart.Text = "💝"
 _7Heart.TextColor3 = Color3.fromRGB(0, 0, 0)
 _7Heart.TextSize = 14.000
+_7Heart.Visible = false
 
 BadgesYouEarnText.Name = "BadgesYouEarnText"
 BadgesYouEarnText.Parent = MainFrame
@@ -644,7 +654,7 @@ WelcomeUserDisplayName.BorderSizePixel = 0
 WelcomeUserDisplayName.Position = UDim2.new(0.287, 0, 0.219999999, 0)
 WelcomeUserDisplayName.Size = UDim2.new(0, 277, 0, 20)
 WelcomeUserDisplayName.Font = Enum.Font.GothamMedium
-WelcomeUserDisplayName.Text = "Hello, V31nc!"
+WelcomeUserDisplayName.Text = "Hello, "..Your.DisplayName
 WelcomeUserDisplayName.TextColor3 = Color3.fromRGB(255, 255, 255)
 WelcomeUserDisplayName.TextSize = 20.000
 WelcomeUserDisplayName.TextWrapped = true
@@ -747,11 +757,31 @@ WelcomeUserUserName.BorderSizePixel = 0
 WelcomeUserUserName.Position = UDim2.new(0.287, 0, 0.314999998, 0)
 WelcomeUserUserName.Size = UDim2.new(0, 277, 0, 10)
 WelcomeUserUserName.Font = Enum.Font.Gotham
-WelcomeUserUserName.Text = "@itsyaboivincentt"
+WelcomeUserUserName.Text = "@"..Your.Name
 WelcomeUserUserName.TextColor3 = Color3.fromRGB(255, 255, 255)
 WelcomeUserUserName.TextSize = 10.000
 WelcomeUserUserName.TextWrapped = true
 WelcomeUserUserName.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Badging System:
+-- Badges:
+--_1ShootingStar
+--_2Wrench
+--_3Star
+--_4Trophy
+--_5Piece
+--_6Tube
+--_7Heart
+
+if Your.Name == "itsyaboivincentt" then
+_1ShootingStar.Visible = true
+_2Wrench = true
+_3Star = true
+_4Trophy = true
+_5Piece = true
+_6Tube = true
+_7Heart = true
+end
 
 -- Scripts:
 
