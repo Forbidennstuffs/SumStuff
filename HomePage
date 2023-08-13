@@ -647,7 +647,7 @@ UpdatesText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UpdatesText.BorderSizePixel = 0
 UpdatesText.Size = UDim2.new(0, 185, 0, 17)
 UpdatesText.Font = Enum.Font.GothamMedium
-UpdatesText.Text = "Whats New About V5.143?"
+UpdatesText.Text = "Whats New About "..The.path.Version.."?"
 UpdatesText.TextColor3 = Color3.fromRGB(255, 255, 255)
 UpdatesText.TextSize = 12.000
 
@@ -691,7 +691,7 @@ AdditionalInfo.BorderSizePixel = 0
 AdditionalInfo.Position = UDim2.new(0.20769231, 0, 0, 0)
 AdditionalInfo.Size = UDim2.new(0, 100, 0, 20)
 AdditionalInfo.Font = Enum.Font.Gotham
-AdditionalInfo.Text = "Key Change: 88/88/88 \nCreated By V31nc"
+AdditionalInfo.Text = "Key Change: "..The.path.KC" \nCreated By "..The.path.Creator
 AdditionalInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
 AdditionalInfo.TextSize = 7.000
 AdditionalInfo.TextWrapped = true
