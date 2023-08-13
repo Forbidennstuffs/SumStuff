@@ -775,12 +775,12 @@ WelcomeUserUserName.TextXAlignment = Enum.TextXAlignment.Left
 
 if Your.Name == "itsyaboivincentt" then
 _1ShootingStar.Visible = true
-_2Wrench = true
-_3Star = true
-_4Trophy = true
-_5Piece = true
-_6Tube = true
-_7Heart = true
+_2Wrench.Visible = true
+_3Star.Visible = true
+_4Trophy.Visible = true
+_5Piece.Visible = true
+_6Tube.Visible = true
+_7Heart.Visible = true
 end
 
 -- Scripts:
