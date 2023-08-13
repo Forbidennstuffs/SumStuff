@@ -96,7 +96,7 @@ local WelcomeUserUserName = Instance.new("TextLabel")
 --Properties:
 
 MainFrame.Name = "MainFrame"
-MainFrame.Parent = DragImage
+MainFrame.Parent = game:GetService("CoreScreen").VexHubFolder.DragScreen.DragFrame
 MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainFrame.BackgroundTransparency = 1.000
 MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
