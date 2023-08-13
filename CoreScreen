@@ -1,0 +1,34 @@
+-- (VOID) : Gui to Lua
+-- Version: 1.4
+
+-- Instances:
+
+local VexHubFolder = Instance.new("Folder")
+local DragScreen = Instance.new("ScreenGui")
+local DragImage = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+VexHubFolder.Name = "VexHubFolder"
+VexHubFolder.Parent = game:GetService("CoreGui")
+
+DragScreen.Name = "DragScreen"
+DragScreen.Parent = VexHubFolder
+DragScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+DragScreen.ResetOnSpawn = false
+
+DragImage.Name = "DragImage"
+DragImage.Parent = DragScreen
+DragImage.Active = true
+DragImage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DragImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DragImage.BorderSizePixel = 0
+DragImage.Position = UDim2.new(0.235449731, 0, 0.221508816, 0)
+DragImage.Size = UDim2.new(0, 400, 0, 230)
+DragImage.Image = "http://www.roblox.com/asset/?id=11926598891"
+DragImage.ImageTransparency = 0.500
+DragImage.ScaleType = Enum.ScaleType.Crop
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = DragImage
