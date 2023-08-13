@@ -1,0 +1,775 @@
+-- (VOID) : Gui to Lua
+-- Version: 1.4
+
+-- Instances:
+
+local MainFrame = Instance.new("Frame")
+local InfoBar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local VexHubLogo = Instance.new("ImageLabel")
+local VexHubText = Instance.new("TextLabel")
+local Version = Instance.new("TextLabel")
+local X = Instance.new("TextButton")
+local Settings = Instance.new("ImageButton")
+local TabsParent = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local Tabs = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local _1HomeTab = Instance.new("ImageButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local _2ScriptsTab = Instance.new("ImageButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
+local _3RequiredAccessoriesTab = Instance.new("ImageButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIStroke_5 = Instance.new("UIStroke")
+local _4GuisTab = Instance.new("ImageButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIStroke_6 = Instance.new("UIStroke")
+local _5AnimationsTab = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+local UIStroke_7 = Instance.new("UIStroke")
+local _6CommandsTab = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
+local UIStroke_8 = Instance.new("UIStroke")
+local _7OtherHubsTab = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
+local UIStroke_9 = Instance.new("UIStroke")
+local ProfilePicture = Instance.new("ImageLabel")
+local UICorner_11 = Instance.new("UICorner")
+local UIStroke_10 = Instance.new("UIStroke")
+local BadgesParent = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local UIStroke_11 = Instance.new("UIStroke")
+local Badges = Instance.new("Frame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local _1ShootingStar = Instance.new("TextLabel")
+local _2Wrench = Instance.new("TextLabel")
+local _3Star = Instance.new("TextLabel")
+local _4Trophy = Instance.new("TextLabel")
+local _5Piece = Instance.new("TextLabel")
+local _6Tube = Instance.new("TextLabel")
+local _7Heart = Instance.new("TextLabel")
+local BadgesYouEarnText = Instance.new("TextLabel")
+local AnnouncementFrame = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local UIStroke_12 = Instance.new("UIStroke")
+local AnnouncementText = Instance.new("TextLabel")
+local Announcement = Instance.new("TextLabel")
+local UpdatesFrame = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local UIStroke_13 = Instance.new("UIStroke")
+local Updates = Instance.new("Frame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local Update1 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local UIStroke_14 = Instance.new("UIStroke")
+local Update2 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local UIStroke_15 = Instance.new("UIStroke")
+local Update3 = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local UIStroke_16 = Instance.new("UIStroke")
+local Update4 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local UIStroke_17 = Instance.new("UIStroke")
+local UpdatesText = Instance.new("TextLabel")
+local WelcomeUserDisplayName = Instance.new("TextLabel")
+local AdditionalInfoFrame = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local UIStroke_18 = Instance.new("UIStroke")
+local AdditionalInfo = Instance.new("TextLabel")
+local IText = Instance.new("TextLabel")
+local UICorner_20 = Instance.new("UICorner")
+local UIStroke_19 = Instance.new("UIStroke")
+local ReportButton = Instance.new("ImageButton")
+local UICorner_21 = Instance.new("UICorner")
+local UIStroke_20 = Instance.new("UIStroke")
+local DiscordButton = Instance.new("ImageButton")
+local UICorner_22 = Instance.new("UICorner")
+local UIStroke_21 = Instance.new("UIStroke")
+local WelcomeUserUserName = Instance.new("TextLabel")
+
+--Properties:
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = DragImage
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Size = UDim2.new(0, 400, 0, 230)
+
+InfoBar.Name = "InfoBar"
+InfoBar.Parent = MainFrame
+InfoBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfoBar.BackgroundTransparency = 0.900
+InfoBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfoBar.BorderSizePixel = 0
+InfoBar.Position = UDim2.new(0.0125000002, 0, 0.0260869563, 0)
+InfoBar.Size = UDim2.new(0, 390, 0, 20)
+
+UICorner_2.Parent = InfoBar
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 0.500
+UIStroke.Transparency = 0.700
+UIStroke.Parent = InfoBar
+
+VexHubLogo.Name = "VexHubLogo"
+VexHubLogo.Parent = InfoBar
+VexHubLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VexHubLogo.BackgroundTransparency = 1.000
+VexHubLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VexHubLogo.BorderSizePixel = 0
+VexHubLogo.Position = UDim2.new(0.00999999978, 0, -0.0199999996, 0)
+VexHubLogo.Size = UDim2.new(0, 20, 0, 20)
+VexHubLogo.Image = "rbxassetid://14271640941"
+
+VexHubText.Name = "VexHubText"
+VexHubText.Parent = InfoBar
+VexHubText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VexHubText.BackgroundTransparency = 1.000
+VexHubText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VexHubText.BorderSizePixel = 0
+VexHubText.Position = UDim2.new(0.0650000125, 0, 0, 0)
+VexHubText.Size = UDim2.new(0, 32, 0, 20)
+VexHubText.Font = Enum.Font.GothamMedium
+VexHubText.Text = "VexHub"
+VexHubText.TextColor3 = Color3.fromRGB(255, 255, 255)
+VexHubText.TextSize = 13.000
+VexHubText.TextXAlignment = Enum.TextXAlignment.Left
+
+Version.Name = "Version"
+Version.Parent = InfoBar
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Version.BorderSizePixel = 0
+Version.Position = UDim2.new(0.185000002, 0, 0.280000001, 0)
+Version.Size = UDim2.new(0, 32, 0, 14)
+Version.Font = Enum.Font.Gotham
+Version.Text = "V.5.143"
+Version.TextColor3 = Color3.fromRGB(255, 255, 0)
+Version.TextSize = 6.000
+Version.TextXAlignment = Enum.TextXAlignment.Left
+
+X.Name = "X"
+X.Parent = InfoBar
+X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X.BackgroundTransparency = 1.000
+X.BorderColor3 = Color3.fromRGB(0, 0, 0)
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.944000006, 0, 0, 0)
+X.Size = UDim2.new(0, 20, 0, 20)
+X.Font = Enum.Font.FredokaOne
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 255, 255)
+X.TextSize = 18.000
+X.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = InfoBar
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.89200002, 0, 0, 0)
+Settings.Size = UDim2.new(0, 20, 0, 20)
+Settings.Image = "http://www.roblox.com/asset/?id=11592827868"
+
+TabsParent.Name = "TabsParent"
+TabsParent.Parent = MainFrame
+TabsParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabsParent.BackgroundTransparency = 0.900
+TabsParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabsParent.BorderSizePixel = 0
+TabsParent.Position = UDim2.new(0.0130000003, 0, 0.135000005, 0)
+TabsParent.Size = UDim2.new(0, 28, 0, 195)
+
+UICorner_3.Parent = TabsParent
+
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Thickness = 0.500
+UIStroke_2.Transparency = 0.700
+UIStroke_2.Parent = TabsParent
+
+Tabs.Name = "Tabs"
+Tabs.Parent = TabsParent
+Tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tabs.BackgroundTransparency = 1.000
+Tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tabs.BorderSizePixel = 0
+Tabs.Position = UDim2.new(0, 0, 0.0130000003, 0)
+Tabs.Size = UDim2.new(0, 28, 0, 190)
+
+UIListLayout.Parent = Tabs
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.Padding = UDim.new(0, 3)
+
+_1HomeTab.Name = "1HomeTab"
+_1HomeTab.Parent = Tabs
+_1HomeTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_1HomeTab.BackgroundTransparency = 0.900
+_1HomeTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_1HomeTab.BorderSizePixel = 0
+_1HomeTab.Size = UDim2.new(0, 23, 0, 23)
+_1HomeTab.Image = "rbxassetid://11592840951"
+
+UICorner_4.CornerRadius = UDim.new(0, 30)
+UICorner_4.Parent = _1HomeTab
+
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Thickness = 0.500
+UIStroke_3.Transparency = 0.700
+UIStroke_3.Parent = _1HomeTab
+
+_2ScriptsTab.Name = "2ScriptsTab"
+_2ScriptsTab.Parent = Tabs
+_2ScriptsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_2ScriptsTab.BackgroundTransparency = 0.900
+_2ScriptsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2ScriptsTab.BorderSizePixel = 0
+_2ScriptsTab.Size = UDim2.new(0, 23, 0, 23)
+_2ScriptsTab.Image = "rbxassetid://11592851654"
+
+UICorner_5.CornerRadius = UDim.new(0, 30)
+UICorner_5.Parent = _2ScriptsTab
+
+UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_4.Thickness = 0.500
+UIStroke_4.Transparency = 0.700
+UIStroke_4.Parent = _2ScriptsTab
+
+_3RequiredAccessoriesTab.Name = "3RequiredAccessoriesTab"
+_3RequiredAccessoriesTab.Parent = Tabs
+_3RequiredAccessoriesTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_3RequiredAccessoriesTab.BackgroundTransparency = 0.900
+_3RequiredAccessoriesTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3RequiredAccessoriesTab.BorderSizePixel = 0
+_3RequiredAccessoriesTab.Size = UDim2.new(0, 23, 0, 23)
+_3RequiredAccessoriesTab.Image = "rbxassetid://11592824883"
+
+UICorner_6.CornerRadius = UDim.new(0, 30)
+UICorner_6.Parent = _3RequiredAccessoriesTab
+
+UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_5.Thickness = 0.500
+UIStroke_5.Transparency = 0.700
+UIStroke_5.Parent = _3RequiredAccessoriesTab
+
+_4GuisTab.Name = "4GuisTab"
+_4GuisTab.Parent = Tabs
+_4GuisTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_4GuisTab.BackgroundTransparency = 0.900
+_4GuisTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_4GuisTab.BorderSizePixel = 0
+_4GuisTab.Size = UDim2.new(0, 23, 0, 23)
+_4GuisTab.Image = "rbxassetid://11592848654"
+
+UICorner_7.CornerRadius = UDim.new(0, 30)
+UICorner_7.Parent = _4GuisTab
+
+UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_6.Thickness = 0.500
+UIStroke_6.Transparency = 0.700
+UIStroke_6.Parent = _4GuisTab
+
+_5AnimationsTab.Name = "5AnimationsTab"
+_5AnimationsTab.Parent = Tabs
+_5AnimationsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_5AnimationsTab.BackgroundTransparency = 0.900
+_5AnimationsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_5AnimationsTab.BorderSizePixel = 0
+_5AnimationsTab.Size = UDim2.new(0, 23, 0, 23)
+_5AnimationsTab.Image = "rbxassetid://11592835705"
+
+UICorner_8.CornerRadius = UDim.new(0, 30)
+UICorner_8.Parent = _5AnimationsTab
+
+UIStroke_7.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_7.Thickness = 0.500
+UIStroke_7.Transparency = 0.700
+UIStroke_7.Parent = _5AnimationsTab
+
+_6CommandsTab.Name = "6CommandsTab"
+_6CommandsTab.Parent = Tabs
+_6CommandsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_6CommandsTab.BackgroundTransparency = 0.900
+_6CommandsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_6CommandsTab.BorderSizePixel = 0
+_6CommandsTab.Size = UDim2.new(0, 23, 0, 23)
+_6CommandsTab.Image = "rbxassetid://11592837927"
+
+UICorner_9.CornerRadius = UDim.new(0, 30)
+UICorner_9.Parent = _6CommandsTab
+
+UIStroke_8.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_8.Thickness = 0.500
+UIStroke_8.Transparency = 0.700
+UIStroke_8.Parent = _6CommandsTab
+
+_7OtherHubsTab.Name = "7OtherHubsTab"
+_7OtherHubsTab.Parent = Tabs
+_7OtherHubsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_7OtherHubsTab.BackgroundTransparency = 0.900
+_7OtherHubsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_7OtherHubsTab.BorderSizePixel = 0
+_7OtherHubsTab.Size = UDim2.new(0, 23, 0, 23)
+_7OtherHubsTab.Image = "rbxassetid://11592850267"
+
+UICorner_10.CornerRadius = UDim.new(0, 30)
+UICorner_10.Parent = _7OtherHubsTab
+
+UIStroke_9.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_9.Thickness = 0.500
+UIStroke_9.Transparency = 0.700
+UIStroke_9.Parent = _7OtherHubsTab
+
+ProfilePicture.Name = "ProfilePicture"
+ProfilePicture.Parent = MainFrame
+ProfilePicture.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ProfilePicture.BackgroundTransparency = 0.900
+ProfilePicture.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ProfilePicture.BorderSizePixel = 0
+ProfilePicture.Position = UDim2.new(0.112499997, 0, 0.159130454, 0)
+ProfilePicture.Size = UDim2.new(0, 60, 0, 60)
+
+UICorner_11.Parent = ProfilePicture
+
+UIStroke_10.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_10.Thickness = 0.500
+UIStroke_10.Transparency = 0.700
+UIStroke_10.Parent = ProfilePicture
+
+BadgesParent.Name = "BadgesParent"
+BadgesParent.Parent = MainFrame
+BadgesParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BadgesParent.BackgroundTransparency = 0.900
+BadgesParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BadgesParent.BorderSizePixel = 0
+BadgesParent.Position = UDim2.new(0.111500017, 0, 0.861521721, 0)
+BadgesParent.Size = UDim2.new(0, 150, 0, 20)
+
+UICorner_12.Parent = BadgesParent
+
+UIStroke_11.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_11.Thickness = 0.500
+UIStroke_11.Transparency = 0.700
+UIStroke_11.Parent = BadgesParent
+
+Badges.Name = "Badges"
+Badges.Parent = BadgesParent
+Badges.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Badges.BackgroundTransparency = 1.000
+Badges.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Badges.BorderSizePixel = 0
+Badges.Position = UDim2.new(0.0359999985, 0, 0.0500000007, 0)
+Badges.Size = UDim2.new(0, 140, 0, 20)
+
+UIListLayout_2.Parent = Badges
+UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+
+_1ShootingStar.Name = "1ShootingStar"
+_1ShootingStar.Parent = Badges
+_1ShootingStar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_1ShootingStar.BackgroundTransparency = 1.000
+_1ShootingStar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_1ShootingStar.BorderSizePixel = 0
+_1ShootingStar.Size = UDim2.new(0, 20, 0, 20)
+_1ShootingStar.Font = Enum.Font.SourceSans
+_1ShootingStar.Text = "🌠"
+_1ShootingStar.TextColor3 = Color3.fromRGB(0, 0, 0)
+_1ShootingStar.TextSize = 14.000
+
+_2Wrench.Name = "2Wrench"
+_2Wrench.Parent = Badges
+_2Wrench.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_2Wrench.BackgroundTransparency = 1.000
+_2Wrench.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2Wrench.BorderSizePixel = 0
+_2Wrench.Size = UDim2.new(0, 20, 0, 20)
+_2Wrench.Font = Enum.Font.SourceSans
+_2Wrench.Text = "🔧"
+_2Wrench.TextColor3 = Color3.fromRGB(0, 0, 0)
+_2Wrench.TextSize = 14.000
+
+_3Star.Name = "3Star"
+_3Star.Parent = Badges
+_3Star.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_3Star.BackgroundTransparency = 1.000
+_3Star.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3Star.BorderSizePixel = 0
+_3Star.Size = UDim2.new(0, 20, 0, 20)
+_3Star.Font = Enum.Font.SourceSans
+_3Star.Text = "⭐"
+_3Star.TextColor3 = Color3.fromRGB(0, 0, 0)
+_3Star.TextSize = 14.000
+
+_4Trophy.Name = "4Trophy"
+_4Trophy.Parent = Badges
+_4Trophy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_4Trophy.BackgroundTransparency = 1.000
+_4Trophy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_4Trophy.BorderSizePixel = 0
+_4Trophy.Size = UDim2.new(0, 20, 0, 20)
+_4Trophy.Font = Enum.Font.SourceSans
+_4Trophy.Text = "🏆"
+_4Trophy.TextColor3 = Color3.fromRGB(0, 0, 0)
+_4Trophy.TextSize = 14.000
+
+_5Piece.Name = "5Piece"
+_5Piece.Parent = Badges
+_5Piece.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_5Piece.BackgroundTransparency = 1.000
+_5Piece.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_5Piece.BorderSizePixel = 0
+_5Piece.Size = UDim2.new(0, 20, 0, 20)
+_5Piece.Font = Enum.Font.SourceSans
+_5Piece.Text = "🧩"
+_5Piece.TextColor3 = Color3.fromRGB(0, 0, 0)
+_5Piece.TextSize = 14.000
+
+_6Tube.Name = "6Tube"
+_6Tube.Parent = Badges
+_6Tube.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_6Tube.BackgroundTransparency = 1.000
+_6Tube.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_6Tube.BorderSizePixel = 0
+_6Tube.Size = UDim2.new(0, 20, 0, 20)
+_6Tube.Font = Enum.Font.SourceSans
+_6Tube.Text = "🧪"
+_6Tube.TextColor3 = Color3.fromRGB(0, 0, 0)
+_6Tube.TextSize = 14.000
+
+_7Heart.Name = "7Heart"
+_7Heart.Parent = Badges
+_7Heart.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_7Heart.BackgroundTransparency = 1.000
+_7Heart.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_7Heart.BorderSizePixel = 0
+_7Heart.Size = UDim2.new(0, 20, 0, 20)
+_7Heart.Font = Enum.Font.SourceSans
+_7Heart.Text = "💝"
+_7Heart.TextColor3 = Color3.fromRGB(0, 0, 0)
+_7Heart.TextSize = 14.000
+
+BadgesYouEarnText.Name = "BadgesYouEarnText"
+BadgesYouEarnText.Parent = MainFrame
+BadgesYouEarnText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BadgesYouEarnText.BackgroundTransparency = 1.000
+BadgesYouEarnText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BadgesYouEarnText.BorderSizePixel = 0
+BadgesYouEarnText.Position = UDim2.new(0.111500017, 0, 0.802565217, 0)
+BadgesYouEarnText.Size = UDim2.new(0, 140, 0, 13)
+BadgesYouEarnText.Font = Enum.Font.GothamMedium
+BadgesYouEarnText.Text = "Badges You Earn:"
+BadgesYouEarnText.TextColor3 = Color3.fromRGB(255, 255, 255)
+BadgesYouEarnText.TextSize = 12.000
+
+AnnouncementFrame.Name = "AnnouncementFrame"
+AnnouncementFrame.Parent = MainFrame
+AnnouncementFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AnnouncementFrame.BackgroundTransparency = 0.900
+AnnouncementFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AnnouncementFrame.BorderSizePixel = 0
+AnnouncementFrame.Position = UDim2.new(0.112000003, 0, 0.469000012, 0)
+AnnouncementFrame.Size = UDim2.new(0, 149, 0, 72)
+
+UICorner_13.Parent = AnnouncementFrame
+
+UIStroke_12.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_12.Thickness = 0.500
+UIStroke_12.Transparency = 0.700
+UIStroke_12.Parent = AnnouncementFrame
+
+AnnouncementText.Name = "AnnouncementText"
+AnnouncementText.Parent = AnnouncementFrame
+AnnouncementText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AnnouncementText.BackgroundTransparency = 1.000
+AnnouncementText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AnnouncementText.BorderSizePixel = 0
+AnnouncementText.Size = UDim2.new(0, 150, 0, 17)
+AnnouncementText.Font = Enum.Font.GothamMedium
+AnnouncementText.Text = "Announcement"
+AnnouncementText.TextColor3 = Color3.fromRGB(255, 255, 255)
+AnnouncementText.TextSize = 12.000
+
+Announcement.Name = "Announcement"
+Announcement.Parent = AnnouncementFrame
+Announcement.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Announcement.BackgroundTransparency = 1.000
+Announcement.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Announcement.BorderSizePixel = 0
+Announcement.Position = UDim2.new(0.0335570462, 0, 0.232526988, 0)
+Announcement.Size = UDim2.new(0, 140, 0, 49)
+Announcement.Font = Enum.Font.Gotham
+Announcement.Text = "Kill yourself @everyone right now"
+Announcement.TextColor3 = Color3.fromRGB(200, 200, 200)
+Announcement.TextWrapped = true
+Announcement.TextXAlignment = Enum.TextXAlignment.Left
+Announcement.TextYAlignment = Enum.TextYAlignment.Top
+
+UpdatesFrame.Name = "UpdatesFrame"
+UpdatesFrame.Parent = MainFrame
+UpdatesFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesFrame.BackgroundTransparency = 0.900
+UpdatesFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UpdatesFrame.BorderSizePixel = 0
+UpdatesFrame.Position = UDim2.new(0.507000029, 0, 0.468999982, 0)
+UpdatesFrame.Size = UDim2.new(0, 185, 0, 81)
+
+UICorner_14.Parent = UpdatesFrame
+
+UIStroke_13.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_13.Thickness = 0.500
+UIStroke_13.Transparency = 0.700
+UIStroke_13.Parent = UpdatesFrame
+
+Updates.Name = "Updates"
+Updates.Parent = UpdatesFrame
+Updates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Updates.BackgroundTransparency = 1.000
+Updates.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Updates.BorderSizePixel = 0
+Updates.Position = UDim2.new(0.0270270277, 0, 0.210290372, 0)
+Updates.Size = UDim2.new(0, 175, 0, 59)
+
+UIListLayout_3.Parent = Updates
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 3)
+
+Update1.Name = "Update1"
+Update1.Parent = Updates
+Update1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update1.BackgroundTransparency = 0.900
+Update1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Update1.BorderSizePixel = 0
+Update1.Size = UDim2.new(0, 175, 0, 12)
+Update1.Font = Enum.Font.Gotham
+Update1.Text = "New GUI"
+Update1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update1.TextWrapped = true
+
+UICorner_15.Parent = Update1
+
+UIStroke_14.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_14.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_14.Thickness = 0.500
+UIStroke_14.Transparency = 0.700
+UIStroke_14.Parent = Update1
+
+Update2.Name = "Update2"
+Update2.Parent = Updates
+Update2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update2.BackgroundTransparency = 0.900
+Update2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Update2.BorderSizePixel = 0
+Update2.Size = UDim2.new(0, 175, 0, 12)
+Update2.Font = Enum.Font.Gotham
+Update2.Text = "New GUI"
+Update2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update2.TextWrapped = true
+
+UICorner_16.Parent = Update2
+
+UIStroke_15.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_15.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_15.Thickness = 0.500
+UIStroke_15.Transparency = 0.700
+UIStroke_15.Parent = Update2
+
+Update3.Name = "Update3"
+Update3.Parent = Updates
+Update3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update3.BackgroundTransparency = 0.900
+Update3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Update3.BorderSizePixel = 0
+Update3.Size = UDim2.new(0, 175, 0, 12)
+Update3.Font = Enum.Font.Gotham
+Update3.Text = "New GUI"
+Update3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update3.TextWrapped = true
+
+UICorner_17.Parent = Update3
+
+UIStroke_16.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_16.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_16.Thickness = 0.500
+UIStroke_16.Transparency = 0.700
+UIStroke_16.Parent = Update3
+
+Update4.Name = "Update4"
+Update4.Parent = Updates
+Update4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update4.BackgroundTransparency = 0.900
+Update4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Update4.BorderSizePixel = 0
+Update4.Size = UDim2.new(0, 175, 0, 12)
+Update4.Font = Enum.Font.Gotham
+Update4.Text = "New GUI"
+Update4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update4.TextWrapped = true
+
+UICorner_18.Parent = Update4
+
+UIStroke_17.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_17.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_17.Thickness = 0.500
+UIStroke_17.Transparency = 0.700
+UIStroke_17.Parent = Update4
+
+UpdatesText.Name = "UpdatesText"
+UpdatesText.Parent = UpdatesFrame
+UpdatesText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesText.BackgroundTransparency = 1.000
+UpdatesText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UpdatesText.BorderSizePixel = 0
+UpdatesText.Size = UDim2.new(0, 185, 0, 17)
+UpdatesText.Font = Enum.Font.GothamMedium
+UpdatesText.Text = "Whats New About V5.143?"
+UpdatesText.TextColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesText.TextSize = 12.000
+
+WelcomeUserDisplayName.Name = "WelcomeUserDisplayName"
+WelcomeUserDisplayName.Parent = MainFrame
+WelcomeUserDisplayName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeUserDisplayName.BackgroundTransparency = 1.000
+WelcomeUserDisplayName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WelcomeUserDisplayName.BorderSizePixel = 0
+WelcomeUserDisplayName.Position = UDim2.new(0.287, 0, 0.219999999, 0)
+WelcomeUserDisplayName.Size = UDim2.new(0, 277, 0, 20)
+WelcomeUserDisplayName.Font = Enum.Font.GothamMedium
+WelcomeUserDisplayName.Text = "Hello, V31nc!"
+WelcomeUserDisplayName.TextColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeUserDisplayName.TextSize = 20.000
+WelcomeUserDisplayName.TextWrapped = true
+WelcomeUserDisplayName.TextXAlignment = Enum.TextXAlignment.Left
+
+AdditionalInfoFrame.Name = "AdditionalInfoFrame"
+AdditionalInfoFrame.Parent = MainFrame
+AdditionalInfoFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AdditionalInfoFrame.BackgroundTransparency = 0.900
+AdditionalInfoFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AdditionalInfoFrame.BorderSizePixel = 0
+AdditionalInfoFrame.Position = UDim2.new(0.506999969, 0, 0.861999929, 0)
+AdditionalInfoFrame.Size = UDim2.new(0, 133, 0, 20)
+
+UICorner_19.Parent = AdditionalInfoFrame
+
+UIStroke_18.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_18.Thickness = 0.500
+UIStroke_18.Transparency = 0.700
+UIStroke_18.Parent = AdditionalInfoFrame
+
+AdditionalInfo.Name = "AdditionalInfo"
+AdditionalInfo.Parent = AdditionalInfoFrame
+AdditionalInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AdditionalInfo.BackgroundTransparency = 1.000
+AdditionalInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AdditionalInfo.BorderSizePixel = 0
+AdditionalInfo.Position = UDim2.new(0.20769231, 0, 0, 0)
+AdditionalInfo.Size = UDim2.new(0, 100, 0, 20)
+AdditionalInfo.Font = Enum.Font.Gotham
+AdditionalInfo.Text = "Key Change: 88/88/88 \nCreated By V31nc"
+AdditionalInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+AdditionalInfo.TextSize = 7.000
+AdditionalInfo.TextWrapped = true
+AdditionalInfo.TextXAlignment = Enum.TextXAlignment.Left
+
+IText.Name = "IText"
+IText.Parent = AdditionalInfoFrame
+IText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IText.BackgroundTransparency = 0.900
+IText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+IText.BorderSizePixel = 0
+IText.Position = UDim2.new(0.0379999988, 0, 0.100000001, 0)
+IText.Size = UDim2.new(0, 16, 0, 16)
+IText.Font = Enum.Font.FredokaOne
+IText.Text = "i"
+IText.TextColor3 = Color3.fromRGB(255, 255, 255)
+IText.TextSize = 14.000
+
+UICorner_20.CornerRadius = UDim.new(0, 20)
+UICorner_20.Parent = IText
+
+UIStroke_19.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_19.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_19.Thickness = 0.500
+UIStroke_19.Transparency = 0.700
+UIStroke_19.Parent = IText
+
+ReportButton.Name = "ReportButton"
+ReportButton.Parent = MainFrame
+ReportButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ReportButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ReportButton.BorderSizePixel = 0
+ReportButton.Position = UDim2.new(0.918310702, 0, 0.865217388, 0)
+ReportButton.Size = UDim2.new(0, 20, 0, 20)
+ReportButton.Image = "rbxassetid://12904923643"
+
+UICorner_21.CornerRadius = UDim.new(0, 20)
+UICorner_21.Parent = ReportButton
+
+UIStroke_20.Color = Color3.fromRGB(255, 0, 0)
+UIStroke_20.Thickness = 0.500
+UIStroke_20.Transparency = 0.700
+UIStroke_20.Parent = ReportButton
+
+DiscordButton.Name = "DiscordButton"
+DiscordButton.Parent = MainFrame
+DiscordButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordButton.BackgroundTransparency = 0.600
+DiscordButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DiscordButton.BorderSizePixel = 0
+DiscordButton.Position = UDim2.new(0.85799998, 0, 0.86500001, 0)
+DiscordButton.Size = UDim2.new(0, 20, 0, 20)
+DiscordButton.Image = "rbxassetid://10735070439"
+
+UICorner_22.CornerRadius = UDim.new(0, 20)
+UICorner_22.Parent = DiscordButton
+
+UIStroke_21.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_21.Thickness = 0.500
+UIStroke_21.Transparency = 0.700
+UIStroke_21.Parent = DiscordButton
+
+WelcomeUserUserName.Name = "WelcomeUserUserName"
+WelcomeUserUserName.Parent = MainFrame
+WelcomeUserUserName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeUserUserName.BackgroundTransparency = 1.000
+WelcomeUserUserName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WelcomeUserUserName.BorderSizePixel = 0
+WelcomeUserUserName.Position = UDim2.new(0.287, 0, 0.314999998, 0)
+WelcomeUserUserName.Size = UDim2.new(0, 277, 0, 10)
+WelcomeUserUserName.Font = Enum.Font.Gotham
+WelcomeUserUserName.Text = "@itsyaboivincentt"
+WelcomeUserUserName.TextColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeUserUserName.TextSize = 10.000
+WelcomeUserUserName.TextWrapped = true
+WelcomeUserUserName.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+local function VYQVU_fake_script() -- ProfilePicture.LocalScript 
+	local script = Instance.new('LocalScript', ProfilePicture)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	-- Fetch the thumbnail
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	-- Set the ImageLabel's content to the user thumbnail
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+end
+coroutine.wrap(VYQVU_fake_script)()
