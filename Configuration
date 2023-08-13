@@ -1,0 +1,10 @@
+return {
+  path = {
+    Creator = 'V31nc',
+    Logo = 'rbxassetid://14271640941',
+    Version = 'V5.143',
+    K = 'IStealSpermsInSpermBanksForMoney',
+    FL = '.msl',
+    KC = '08/14/23'
+  }
+}
