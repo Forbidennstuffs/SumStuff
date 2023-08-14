@@ -32,12 +32,12 @@ a.NotificationsFrame.Size = UDim2.new(0.800000012, 0, 0.0252497606, 0)
 a.UIStroke.Color = Color3.fromRGB(255, 255, 255)
 a.UIStroke.Thickness = 0.500
 a.UIStroke.Transparency = 0.700
-a.UIStroke.Parent = NotificationsFrame
+a.UIStroke.Parent = a.NotificationsFrame
 
-a.UICorner.Parent = NotificationsFrame
+a.UICorner.Parent = a.NotificationsFrame
 
 a.Notification.Name = "Notification"
-a.Notification.Parent = NotificationsFrame
+a.Notification.Parent = a.NotificationsFrame
 a.Notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 a.Notification.BackgroundTransparency = 1.000
 a.Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
