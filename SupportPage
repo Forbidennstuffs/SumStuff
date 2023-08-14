@@ -17,7 +17,7 @@ local UIStroke_2 = Instance.new("UIStroke")
 --Properties:
 
 ReportPopUp.Name = "ReportPopUp"
-ReportPopUp.Parent = StarterGui.VexHubFolder.DragScreen.DragImage["Required Accessories1"]
+ReportPopUp.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 ReportPopUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ReportPopUp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ReportPopUp.BorderSizePixel = 0
