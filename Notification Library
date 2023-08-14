@@ -63,16 +63,17 @@ local ExistedNotification = game:GetService("CoreGui").VexHubFolder.DragScreen:F
 local ExistedNotificationPath = game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame
 
 local DisappearExistedNotification = {
-TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame.UIStroke, TweenInfo.new(time), {Thickness = 1}),
-TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame.UIStroke, TweenInfo.new(time), {Transparency = 1}),
-TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame.Notification, TweenInfo.new(time), {TextTransparency = 1})
+TweenService:Create(ExistedNotificationPath, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(ExistedNotificationPath.UIStroke, TweenInfo.new(time), {Thickness = 1}),
+TweenService:Create(ExistedNotificationPath.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(ExistedNotificationPath.Notification, TweenInfo.new(time), {TextTransparency = 1})
 }
 
 if ExistedNotification then
 for _, v in pairs(DisappearExistedNotification) do
 v:Play()
 end
+ExistedNotificationPath:Destroy()
 end
 
 for _, v in pairs(Appear) do
