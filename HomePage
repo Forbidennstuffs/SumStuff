@@ -806,6 +806,16 @@ Update4.Text = ""
 -- GUI Animations:
 
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
+local TweenService = game:GetService("TweenService")
+local time = 1
+
+local AppearReportPopUp = {
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}),
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}),
+TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+}
 
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
