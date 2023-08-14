@@ -807,10 +807,6 @@ Update4.Text = ""
 
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
 
-local ReportAppear = {
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
-}
-
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
 setclipboard("discord.gg/3NN5zTW7h2")
@@ -820,9 +816,7 @@ end)
 ReportButton.MouseButton1Down:connect(function()
 ReportPopUpFrame.Position = UDim2.new(-0.5, 0, 0, 0)
 ReportPopUpFrame.Visible = true
-for _, v in pairs(ReportAppear) do
-v:Play()
-end
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
 end)
 
 -- Scripts:
