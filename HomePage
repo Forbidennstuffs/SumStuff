@@ -856,6 +856,21 @@ ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
 for _, v in pairs(AppearReportPopUp) do
 v:Play()
 end
+else
+ReportPopUpFrame.Position = UDim2.new(-0.519999981, 0, 0, 0)
+ReportPopUpFrame.BackgroundTransparency = 0
+ReportPopUpFrame.ImageTransparency = 0.5
+ReportPopUpFrame.SupportText.TextTransparency = 0
+ReportPopUpFrame.TextBoxParent.BackgroundTransparency = 0.9
+ReportPopUpFrame.TextBoxParent.UIStroke.Transparency = 0.7
+ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 0
+ReportPopUpFrame.SendButton.TextTransparency = 0
+ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
+ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.5, 0, 0, 0),"Out","Quad",1)
+for _, v in pairs(DisappearReportPopUp) do
+v:Play()
+end
 end
 end)
 
