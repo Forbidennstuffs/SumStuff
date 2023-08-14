@@ -818,7 +818,7 @@ TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time)
 TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 0}),
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 0}),
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(ReportPopUpFrame.SendButton.UIStroke_2, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
 }
 
 local DisappearReportPopUp = {
@@ -830,7 +830,7 @@ TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time)
 TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 1}),
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}),
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SendButton.UIStroke_2, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
 }
 
 -- Button Functions:
