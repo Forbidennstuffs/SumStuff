@@ -803,6 +803,18 @@ Update3.Text = ""
 Update4.Visible = false
 Update4.Text = ""
 
+-- GUI Animations:
+
+local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
+
+local ReportAppear = {
+ReportPopUpFrame.Visible = true,
+TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(a.UIStroke, TweenInfo.new(time), {Thickness = 1}),
+TweenService:Create(a.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(a.Notification, TweenInfo.new(time), {TextTransparency = 1})
+}
+
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
 setclipboard("discord.gg/3NN5zTW7h2")
