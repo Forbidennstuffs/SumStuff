@@ -59,6 +59,14 @@ a.Notification.TextTransparency = 1
 a.Notification.TextWrapped = true
 a.Notification.TextXAlignment = Enum.TextXAlignment.Left
 
+local ExistedNotification = game:GetService("CoreGui").VexHubFolder.DragScreen:FindFirstChild("NotificationsFrame")
+
+if ExistedNotification then
+for _, v in pairs(Disappear) do
+v:Play()
+end
+end
+
 for _, v in pairs(Appear) do
 v:Play()
 end
