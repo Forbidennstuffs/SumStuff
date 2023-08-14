@@ -3,10 +3,10 @@ local Library = {}
 function Library:Create(Content, Duration)
 
 	local a = {
-local NotificationsFrame = Instance.new("Frame"),
-local UIStroke = Instance.new("UIStroke"),
-local UICorner = Instance.new("UICorner"),
-local Notification = Instance.new("TextLabel")
+NotificationsFrame = Instance.new("Frame"),
+UIStroke = Instance.new("UIStroke"),
+UICorner = Instance.new("UICorner"),
+Notification = Instance.new("TextLabel")
 	} 
 
 local TweenService = game:GetService("TweenService")
