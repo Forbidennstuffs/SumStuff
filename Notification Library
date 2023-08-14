@@ -72,8 +72,9 @@ TweenService:Create(ExistedNotificationPath.Notification, TweenInfo.new(time), {
 if ExistedNotification then
 for _, v in pairs(DisappearExistedNotification) do
 v:Play()
-end
+wait(1)
 ExistedNotificationPath:Destroy()
+end
 end
 
 for _, v in pairs(Appear) do
