@@ -1,0 +1,95 @@
+-- (VOID) : Gui to Lua
+-- Version: 1.4
+
+-- Instances:
+
+local ReportPopUp = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local SupportText = Instance.new("TextLabel")
+local TextBoxParent = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local TextBox = Instance.new("TextBox")
+local SendButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+
+--Properties:
+
+ReportPopUp.Name = "ReportPopUp"
+ReportPopUp.Parent = StarterGui.VexHubFolder.DragScreen.DragImage["Required Accessories1"]
+ReportPopUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ReportPopUp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ReportPopUp.BorderSizePixel = 0
+ReportPopUp.Position = UDim2.new(-0.519999981, 0, 0, 0)
+ReportPopUp.Size = UDim2.new(0, 200, 0, 230)
+ReportPopUp.Image = "http://www.roblox.com/asset/?id=11926598891"
+ReportPopUp.ImageTransparency = 0.500
+ReportPopUp.ScaleType = Enum.ScaleType.Crop
+
+UICorner.Parent = ReportPopUp
+
+SupportText.Name = "SupportText"
+SupportText.Parent = ReportPopUp
+SupportText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SupportText.BackgroundTransparency = 1.000
+SupportText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SupportText.BorderSizePixel = 0
+SupportText.Size = UDim2.new(0, 200, 0, 26)
+SupportText.Font = Enum.Font.GothamMedium
+SupportText.Text = "Support"
+SupportText.TextColor3 = Color3.fromRGB(255, 255, 255)
+SupportText.TextSize = 16.000
+
+TextBoxParent.Name = "TextBoxParent"
+TextBoxParent.Parent = ReportPopUp
+TextBoxParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxParent.BackgroundTransparency = 0.900
+TextBoxParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBoxParent.BorderSizePixel = 0
+TextBoxParent.Position = UDim2.new(0.0500000007, 0, 0.11304348, 0)
+TextBoxParent.Size = UDim2.new(0, 180, 0, 165)
+
+UICorner_2.Parent = TextBoxParent
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 0.500
+UIStroke.Transparency = 0.700
+UIStroke.Parent = TextBoxParent
+
+TextBox.Parent = TextBoxParent
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.027777778, 0, 0.027777778, 0)
+TextBox.Size = UDim2.new(0, 170, 0, 155)
+TextBox.Font = Enum.Font.Gotham
+TextBox.PlaceholderText = "Describe The Issue That You're Facing Right Now. Anything You Typed Here Will Be Sent To The VHub Server And We Might Reply To You."
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 12.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+SendButton.Name = "SendButton"
+SendButton.Parent = ReportPopUp
+SendButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SendButton.BackgroundTransparency = 0.900
+SendButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SendButton.BorderSizePixel = 0
+SendButton.Position = UDim2.new(0.0500000007, 0, 0.865217805, 0)
+SendButton.Size = UDim2.new(0, 180, 0, 21)
+SendButton.Font = Enum.Font.GothamMedium
+SendButton.Text = "Send"
+SendButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SendButton.TextSize = 14.000
+
+UICorner_3.Parent = SendButton
+
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Thickness = 0.500
+UIStroke_2.Transparency = 0.700
+UIStroke_2.Parent = SendButton
