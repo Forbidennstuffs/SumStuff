@@ -820,7 +820,9 @@ end)
 ReportButton.MouseButton1Down:connect(function()
 ReportPopUpFrame.Position = UDim2.new(-0.5, 0, 0, 0)
 ReportPopUpFrame.Visible = true
-ReportAppear:Play()
+for _, v in pairs(ReportAppear) do
+v:Play()
+end
 end)
 
 -- Scripts:
