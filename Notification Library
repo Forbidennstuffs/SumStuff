@@ -1,0 +1,67 @@
+local Library = {}
+
+function Library:Create(Content, Duration)
+
+	local a = {
+local NotificationsFrame = Instance.new("Frame"),
+local UIStroke = Instance.new("UIStroke"),
+local UICorner = Instance.new("UICorner"),
+local Notification = Instance.new("TextLabel")
+	} 
+
+local TweenService = game:GetService("TweenService")
+local time = 1
+
+--Disappear
+local DisappearFrame = TweenService:Create(a.NotificationFrame, TweenInfo.new(time), {Transparency = 1})
+local DisappearNotification = TweenService:Create(a.Notification, TweenInfo.new(time), {Transparency = 1})
+
+--Appear
+local AppearFrame = TweenService:Create(a.NotificationFrame, TweenInfo.new(time), {Transparency = 0})
+local AppearNotification = TweenService:Create(a.Notification, TweenInfo.new(time), {Transparency = 0})
+
+a.NotificationsFrame.Name = "NotificationsFrame"
+a.NotificationsFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen
+a.NotificationsFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+a.NotificationsFrame.BackgroundTransparency = 0.700
+a.NotificationsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+a.NotificationsFrame.BorderSizePixel = 0
+a.NotificationsFrame.Position = UDim2.new(0.0999999866, 0, 0.75, 0)
+a.NotificationsFrame.Size = UDim2.new(0.800000012, 0, 0.0252497606, 0)
+
+a.UIStroke.Color = Color3.fromRGB(255, 255, 255)
+a.UIStroke.Thickness = 0.500
+a.UIStroke.Transparency = 0.700
+a.UIStroke.Parent = NotificationsFrame
+
+a.UICorner.Parent = NotificationsFrame
+
+a.Notification.Name = "Notification"
+a.Notification.Parent = NotificationsFrame
+a.Notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+a.Notification.BackgroundTransparency = 1.000
+a.Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
+a.Notification.BorderSizePixel = 0
+a.Notification.Position = UDim2.new(0.00971508492, 0, 0, 0)
+a.Notification.Size = UDim2.new(0.980000019, 0, 1, 0)
+a.Notification.Font = Enum.Font.GothamMedium
+a.Notification.Text = tostring(Content)
+a.Notification.TextColor3 = Color3.fromRGB(255, 255, 255)
+a.Notification.TextScaled = true
+a.Notification.TextSize = 14.000
+a.Notification.TextWrapped = true
+a.Notification.TextXAlignment = Enum.TextXAlignment.Left
+
+	AppearFrame:Play()
+	AppearNotification:Play()
+
+	task.spawn(function() 
+		wait(Duration)
+		DisappearFrame:Play()
+		DisappearNotification:Play()
+		wait(1)
+		a.NotificationFrame:Destroy()
+	end)
+end
+
+return Library
