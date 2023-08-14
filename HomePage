@@ -97,6 +97,7 @@ local WelcomeUserUserName = Instance.new("TextLabel")
 
 local Your = game:GetService("Players").LocalPlayer
 local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
 
 --Properties:
 
@@ -801,6 +802,12 @@ Update3.Text = ""
 
 Update4.Visible = false
 Update4.Text = ""
+
+-- Button Functions:
+DiscordButton.MouseButton1Down:connect(function()
+setclipboard("discord.gg/3NN5zTW7h2")
+Notification:Create("Copied To Clipboard!",5)
+end)
 
 -- Scripts:
 
