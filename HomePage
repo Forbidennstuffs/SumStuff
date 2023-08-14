@@ -853,7 +853,9 @@ ReportPopUpFrame.SendButton.BackgroundTransparency = 1
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
 ReportPopUpFrame.Visible = true
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
-AppearReportPopUp:Play()
+for _, v in pairs(AppearReportPopUp) do
+v:Play()
+end
 end
 end)
 
