@@ -26,6 +26,7 @@ ReportPopUp.Size = UDim2.new(0, 200, 0, 230)
 ReportPopUp.Image = "http://www.roblox.com/asset/?id=11926598891"
 ReportPopUp.ImageTransparency = 0.500
 ReportPopUp.ScaleType = Enum.ScaleType.Crop
+ReportPopUp.Visible = false
 
 UICorner.Parent = ReportPopUp
 
