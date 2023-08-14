@@ -14,7 +14,6 @@ local time = 1
 
 local Disappear = {
 TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(a.UIStroke, TweenInfo.new(time), {Thickness = 1}),
 TweenService:Create(a.UIStroke, TweenInfo.new(time), {Transparency = 1}),
 TweenService:Create(a.Notification, TweenInfo.new(time), {TextTransparency = 1})
 }
