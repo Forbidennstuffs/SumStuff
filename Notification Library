@@ -13,11 +13,11 @@ local TweenService = game:GetService("TweenService")
 local time = 1
 
 --Disappear
-local DisappearFrame = TweenService:Create(a.NotificationFrame, TweenInfo.new(time), {Transparency = 1})
+local DisappearFrame = TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {Transparency = 1})
 local DisappearNotification = TweenService:Create(a.Notification, TweenInfo.new(time), {Transparency = 1})
 
 --Appear
-local AppearFrame = TweenService:Create(a.NotificationFrame, TweenInfo.new(time), {Transparency = 0})
+local AppearFrame = TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {Transparency = 0})
 local AppearNotification = TweenService:Create(a.Notification, TweenInfo.new(time), {Transparency = 0})
 
 a.NotificationsFrame.Name = "NotificationsFrame"
@@ -60,7 +60,7 @@ a.Notification.TextXAlignment = Enum.TextXAlignment.Left
 		DisappearFrame:Play()
 		DisappearNotification:Play()
 		wait(1)
-		a.NotificationFrame:Destroy()
+		a.NotificationsFrame:Destroy()
 	end)
 end
 
