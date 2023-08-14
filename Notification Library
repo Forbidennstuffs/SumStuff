@@ -13,17 +13,17 @@ local TweenService = game:GetService("TweenService")
 local time = 1
 
 local Disappear = {
-DisappearFrame = TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
-DisappearUIStrokeTH = TweenService:Create(a.UIStroke, TweenInfo.new(time), {Thickness = 1}),
-DisappearUIStrokeTR = TweenService:Create(a.UIStroke, TweenInfo.new(time), {Transparency = 1}),
-DisappearNotification = TweenService:Create(a.Notification, TweenInfo.new(time), {TextTransparency = 1})
+TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(a.UIStroke, TweenInfo.new(time), {Thickness = 1}),
+TweenService:Create(a.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(a.Notification, TweenInfo.new(time), {TextTransparency = 1})
 }
 
 local Appear = {
-AppearFrame = TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 0.7}),
-AppearUIStrokeTH = TweenService:Create(a.UIStroke, TweenInfo.new(time), {Thickness = 0.5}),
-AppearUIStrokeTR = TweenService:Create(a.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-AppearNotification = TweenService:Create(a.Notification, TweenInfo.new(time), {TextTransparency = 0})
+TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 0.7}),
+TweenService:Create(a.UIStroke, TweenInfo.new(time), {Thickness = 0.5}),
+TweenService:Create(a.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(a.Notification, TweenInfo.new(time), {TextTransparency = 0})
 }
 
 a.NotificationsFrame.Name = "NotificationsFrame"
