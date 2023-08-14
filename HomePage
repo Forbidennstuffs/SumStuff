@@ -821,18 +821,6 @@ TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {Backgroun
 TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
 }
 
-local DisappearReportPopUp = {
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 1}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
-}
-
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
 setclipboard("discord.gg/3NN5zTW7h2")
@@ -840,7 +828,7 @@ Notification:Create("Copied To Clipboard!",5)
 end)
 
 ReportButton.MouseButton1Down:connect(function()
-if ReportPopUpFrame.BackgroundTransparency == 0 then
+if ReportPopUpFrame.Visible == false then
 ReportPopUpFrame.Position = UDim2.new(-0.5, 0, 0, 0)
 ReportPopUpFrame.BackgroundTransparency = 1
 ReportPopUpFrame.ImageTransparency = 1
@@ -851,6 +839,7 @@ ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 1
 ReportPopUpFrame.SendButton.TextTransparency = 1
 ReportPopUpFrame.SendButton.BackgroundTransparency = 1
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
+ReportPopUpFrame.Visible = true
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
 for _, v in pairs(AppearReportPopUp) do
 v:Play()
@@ -867,9 +856,16 @@ ReportPopUpFrame.SendButton.TextTransparency = 0
 ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.5, 0, 0, 0),"Out","Quad",1)
-for _, v in pairs(DisappearReportPopUp) do
-v:Play()
-end
+
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
 end
 end)
 
