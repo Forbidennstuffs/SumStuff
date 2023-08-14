@@ -808,7 +808,6 @@ Update4.Text = ""
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
 
 local ReportAppear = {
-ReportPopUpFrame.Position = UDim2.new(-0.5, 0, 0, 0),
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
 }
 
@@ -819,6 +818,7 @@ Notification:Create("Copied To Clipboard!",5)
 end)
 
 ReportButton.MouseButton1Down:connect(function()
+ReportPopUpFrame.Position = UDim2.new(-0.5, 0, 0, 0)
 ReportPopUpFrame.Visible = true
 ReportAppear:Play()
 end)
