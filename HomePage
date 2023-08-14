@@ -841,7 +841,7 @@ end)
 
 ReportButton.MouseButton1Down:connect(function()
 if ReportPopUpFrame.Visible == false then
-ReportPopUpFrame.Position = UDim2.new(-0.5, 0, 0, 0)
+ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
 ReportPopUpFrame.BackgroundTransparency = 1
 ReportPopUpFrame.ImageTransparency = 1
 ReportPopUpFrame.SupportText.TextTransparency = 1
@@ -868,7 +868,7 @@ ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 0
 ReportPopUpFrame.SendButton.TextTransparency = 0
 ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.5, 0, 0, 0),"Out","Quad",1)
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",1)
 
 coroutine.wrap(function()
 while wait() do
