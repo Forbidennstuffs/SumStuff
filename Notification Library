@@ -29,15 +29,15 @@ TweenService:Create(a.Notification, TweenInfo.new(time), {TextTransparency = 0})
 a.NotificationsFrame.Name = "NotificationsFrame"
 a.NotificationsFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen
 a.NotificationsFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-a.NotificationsFrame.BackgroundTransparency = 0.700
+a.NotificationsFrame.BackgroundTransparency = 1
 a.NotificationsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 a.NotificationsFrame.BorderSizePixel = 0
 a.NotificationsFrame.Position = UDim2.new(0.0999999866, 0, 0.75, 0)
 a.NotificationsFrame.Size = UDim2.new(0.800000012, 0, 0.0252497606, 0)
 
 a.UIStroke.Color = Color3.fromRGB(255, 255, 255)
-a.UIStroke.Thickness = 0.500
-a.UIStroke.Transparency = 0.700
+a.UIStroke.Thickness = 1
+a.UIStroke.Transparency = 1
 a.UIStroke.Parent = a.NotificationsFrame
 
 a.UICorner.Parent = a.NotificationsFrame
@@ -55,6 +55,7 @@ a.Notification.Text = tostring(Content)
 a.Notification.TextColor3 = Color3.fromRGB(255, 255, 255)
 a.Notification.TextScaled = true
 a.Notification.TextSize = 14.000
+a.Notification.TextTransparency = 1
 a.Notification.TextWrapped = true
 a.Notification.TextXAlignment = Enum.TextXAlignment.Left
 
