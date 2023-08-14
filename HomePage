@@ -871,7 +871,7 @@ ReportPopUpFrame:TweenPosition(UDim2.new(-0.5, 0, 0, 0),"Out","Quad",1)
 coroutine.wrap(function()
 while wait() do
 wait(1)
-ReportPopUpFrame.Visible = true
+ReportPopUpFrame.Visible = false
 return
 end
 end)()
