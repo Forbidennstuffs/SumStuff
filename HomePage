@@ -809,6 +809,7 @@ local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Drag
 
 local ReportAppear = {
 ReportPopUpFrame.Visible = true,
+Bar:TweenPosition(UDim2.new(0.2, 0, 1, 0),"Out","Quad",1)
 TweenService:Create(a.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
 TweenService:Create(a.UIStroke, TweenInfo.new(time), {Thickness = 1}),
 TweenService:Create(a.UIStroke, TweenInfo.new(time), {Transparency = 1}),
