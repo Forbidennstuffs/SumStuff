@@ -60,9 +60,17 @@ a.Notification.TextWrapped = true
 a.Notification.TextXAlignment = Enum.TextXAlignment.Left
 
 local ExistedNotification = game:GetService("CoreGui").VexHubFolder.DragScreen:FindFirstChild("NotificationsFrame")
+local ExistedNotificationPath = game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame
+
+local DisappearExistedNotification = {
+TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame.UIStroke, TweenInfo.new(time), {Thickness = 1}),
+TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(game:GetService("CoreGui").VexHubFolder.DragScreen.NotificationsFrame.Notification, TweenInfo.new(time), {TextTransparency = 1})
+}
 
 if ExistedNotification then
-for _, v in pairs(Disappear) do
+for _, v in pairs(DisappearExistedNotification) do
 v:Play()
 end
 end
