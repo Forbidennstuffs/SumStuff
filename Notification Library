@@ -58,11 +58,15 @@ a.Notification.TextSize = 14.000
 a.Notification.TextWrapped = true
 a.Notification.TextXAlignment = Enum.TextXAlignment.Left
 
-	Appear:Play()
+for _, v in pairs(Appear) do
+v:Play()
+end
 
 	task.spawn(function() 
 		wait(Duration)
-		Disappear:Play()
+for _, v in pairs(Disappear) do
+v:Play()
+end
 		wait(1)
 		a.NotificationsFrame:Destroy()
 	end)
