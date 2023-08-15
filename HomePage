@@ -877,7 +877,7 @@ TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {Text
 TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
 }
 
-local DisppearSettingsPopUp = {
+local DisappearSettingsPopUp = {
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}),
 TweenService:Create(SettingsPopUpFrame.SettingsText, TweenInfo.new(time), {TextTransparency = 1}),
