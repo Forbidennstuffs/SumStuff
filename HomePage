@@ -963,17 +963,16 @@ v:Play()
 end
 else
 ReportPopUpFrameTransparencyReset()
+coroutine.wrap(function()
 while wait() do
 wait(1)
 ReportPopUpFrame.Visible = false
 return
 end
 end)()
-
 for _, v in pairs(DisappearReportPopUp) do
 v:Play()
 end
-
 end
 end)
 
