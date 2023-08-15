@@ -806,6 +806,7 @@ Update4.Text = ""
 -- GUI Animations:
 
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
+local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
 local TweenService = game:GetService("TweenService")
 local time = 1
 
@@ -831,6 +832,19 @@ TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time),
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}),
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
 TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+}
+
+local AppearSettingsPopUp = {
+SettingsPopUpFrame.ImageTransparency = 0.5
+SettingsPopUpFrame.SettingsText.TextTransparency = 0
+SettingsPopUpFrame.Close.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Close.TextTransparency = 0
+SettingsPopUpFrame.Close.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.UIScaleText.TextTransparency = 0
+SettingsPopUpFrame.UIScaleTextBox.BackgroundTransparency = 0.9
+SettingsPopUpFrame.UIScaleTextBox.TextTransparency = 0
+SettingsPopUpFrame.UIScaleTextBox.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.UIScaleImage.BackgroundTransparency = 0.9
 }
 
 -- Button Functions:
