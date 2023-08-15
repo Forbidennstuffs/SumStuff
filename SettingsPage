@@ -369,6 +369,51 @@ UIStroke_11.Parent = AccessZComics
 local TweenService = game:GetService("TweenService")
 local time = 1
 
+function SettingsPopUpFrameTransparencyReset()
+SettingsPopUpFrame.Position = UDim2.new(1.02499998, 0, 0, 0)
+SettingsPopUpFrame.BackgroundTransparency = 0
+SettingsPopUpFrame.ImageTransparency = 0.5
+SettingsPopUpFrame.SettingsText.TextTransparency = 0
+SettingsPopUpFrame.Close.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Close.TextTransparency = 0
+SettingsPopUpFrame.Close.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.UIScaleText.TextTransparency = 0
+SettingsPopUpFrame.UIScaleTextBox.BackgroundTransparency = 0.9
+SettingsPopUpFrame.UIScaleTextBox.TextTransparency = 0
+SettingsPopUpFrame.UIScaleTextBox.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.UIScaleImage.BackgroundTransparency = 0.9
+SettingsPopUpFrame.UIScaleImage.ImageTransparency = 0
+SettingsPopUpFrame.UIScaleImage.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.OpenButtonText.TextTransparency = 0
+SettingsPopUpFrame.TopLeftButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.TopLeftButton.TextTransparency = 0
+SettingsPopUpFrame.TopLeftButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.TopRightButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.TopRightButton.TextTransparency = 0
+SettingsPopUpFrame.TopRightButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.WallpaperText.TextTransparency = 0
+SettingsPopUpFrame.WallpaperTextBox.BackgroundTransparency = 0.9
+SettingsPopUpFrame.WallpaperTextBox.TextTransparency = 0
+SettingsPopUpFrame.WallpaperTextBox.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.OkButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.OkButton.TextTransparency = 0
+SettingsPopUpFrame.OkButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.BackgroundText.TextTransparency = 0
+SettingsPopUpFrame.BlackButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.BlackButton.TextTransparency = 0
+SettingsPopUpFrame.BlackButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.WhiteButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.WhiteButton.TextTransparency = 0
+SettingsPopUpFrame.WhiteButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.ReExecuteVHub.BackgroundTransparency = 0.9
+SettingsPopUpFrame.ReExecuteVHub.TextTransparency = 0
+SettingsPopUpFrame.ReExecuteVHub.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.AccessZComics.BackgroundTransparency = 0.9
+SettingsPopUpFrame.AccessZComics.TextTransparency = 0
+SettingsPopUpFrame.AccessZComics.UIStroke.Transparency = 0.7
+SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",1)
+end
+
 local DisappearSettingsPopUp = {
 TweenService:Create(SettingsPopUp, TweenInfo.new(time), {BackgroundTransparency = 1}),
 TweenService:Create(SettingsPopUp, TweenInfo.new(time), {ImageTransparency = 1}),
@@ -414,59 +459,15 @@ TweenService:Create(AccessZComics.UIStroke, TweenInfo.new(time), {Transparency =
 
 -- Button Functions:
 Close.MouseButton1Down:connect(function()
-SettingsPopUp.Position = UDim2.new(1.02499998, 0, 0, 0)
-SettingsPopUp.BackgroundTransparency = 0
-SettingsPopUp.ImageTransparency = 0.5
-SettingsText.TextTransparency = 0
-Close.BackgroundTransparency = 0.9
-Close.TextTransparency = 0
-Close.UIStroke.Transparency = 0.7
-UIScaleText.TextTransparency = 0
-UIScaleTextBox.BackgroundTransparency = 0.9
-UIScaleTextBox.TextTransparency = 0
-UIScaleTextBox.UIStroke.Transparency = 0.7
-UIScaleImage.BackgroundTransparency = 0.9
-UIScaleImage.ImageTransparency = 0
-UIScaleImage.UIStroke.Transparency = 0.7
-OpenButtonText.TextTransparency = 0
-TopLeftButton.BackgroundTransparency = 0.9
-TopLeftButton.TextTransparency = 0
-TopLeftButton.UIStroke.Transparency = 0.7
-TopRightButton.BackgroundTransparency = 0.9
-TopRightButton.TextTransparency = 0
-TopRightButton.UIStroke.Transparency = 0.7
-WallpaperText.TextTransparency = 0
-WallpaperTextBox.BackgroundTransparency = 0.9
-WallpaperTextBox.TextTransparency = 0
-WallpaperTextBox.UIStroke.Transparency = 0.7
-OkButton.BackgroundTransparency = 0.9
-OkButton.TextTransparency = 0
-OkButton.UIStroke.Transparency = 0.7
-BackgroundText.TextTransparency = 0
-BlackButton.BackgroundTransparency = 0.9
-BlackButton.TextTransparency = 0
-BlackButton.UIStroke.Transparency = 0.7
-WhiteButton.BackgroundTransparency = 0.9
-WhiteButton.TextTransparency = 0
-WhiteButton.UIStroke.Transparency = 0.7
-ReExecuteVHub.BackgroundTransparency = 0.9
-ReExecuteVHub.TextTransparency = 0
-ReExecuteVHub.UIStroke.Transparency = 0.7
-AccessZComics.BackgroundTransparency = 0.9
-AccessZComics.TextTransparency = 0
-AccessZComics.UIStroke.Transparency = 0.7
-SettingsPopUp:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",1)
-
+SettingsPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
 wait(1)
-SettingsPopUp.Visible = false
+SettingsPopUpFrame.Visible = false
 return
 end
 end)()
-
 for _, v in pairs(DisappearSettingsPopUp) do
 v:Play()
 end
-
 end)
