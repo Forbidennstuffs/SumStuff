@@ -834,19 +834,6 @@ TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {Backgroun
 TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
 }
 
-local AppearSettingsPopUp = {
-SettingsPopUpFrame.ImageTransparency = 0.5
-SettingsPopUpFrame.SettingsText.TextTransparency = 0
-SettingsPopUpFrame.Close.BackgroundTransparency = 0.9
-SettingsPopUpFrame.Close.TextTransparency = 0
-SettingsPopUpFrame.Close.UIStroke.Transparency = 0.7
-SettingsPopUpFrame.UIScaleText.TextTransparency = 0
-SettingsPopUpFrame.UIScaleTextBox.BackgroundTransparency = 0.9
-SettingsPopUpFrame.UIScaleTextBox.TextTransparency = 0
-SettingsPopUpFrame.UIScaleTextBox.UIStroke.Transparency = 0.7
-SettingsPopUpFrame.UIScaleImage.BackgroundTransparency = 0.9
-}
-
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
 setclipboard("discord.gg/3NN5zTW7h2")
