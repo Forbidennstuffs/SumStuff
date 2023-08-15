@@ -810,6 +810,21 @@ local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Dr
 local TweenService = game:GetService("TweenService")
 local time = 1
 
+function ReportPopUpFrameResetTransparency()
+ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
+ReportPopUpFrame.BackgroundTransparency = 1
+ReportPopUpFrame.ImageTransparency = 1
+ReportPopUpFrame.SupportText.TextTransparency = 1
+ReportPopUpFrame.TextBoxParent.BackgroundTransparency = 1
+ReportPopUpFrame.TextBoxParent.UIStroke.Transparency = 1
+ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 1
+ReportPopUpFrame.SendButton.TextTransparency = 1
+ReportPopUpFrame.SendButton.BackgroundTransparency = 1
+ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
+ReportPopUpFrame.Visible = true
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
+end
+
 local AppearReportPopUp = {
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}),
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}),
@@ -928,18 +943,7 @@ end)
 
 ReportButton.MouseButton1Down:connect(function()
 if ReportPopUpFrame.Visible == false then
-ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
-ReportPopUpFrame.BackgroundTransparency = 1
-ReportPopUpFrame.ImageTransparency = 1
-ReportPopUpFrame.SupportText.TextTransparency = 1
-ReportPopUpFrame.TextBoxParent.BackgroundTransparency = 1
-ReportPopUpFrame.TextBoxParent.UIStroke.Transparency = 1
-ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 1
-ReportPopUpFrame.SendButton.TextTransparency = 1
-ReportPopUpFrame.SendButton.BackgroundTransparency = 1
-ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
-ReportPopUpFrame.Visible = true
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
+ReportPopUpFrameResetTransparency()
 for _, v in pairs(AppearReportPopUp) do
 v:Play()
 end
