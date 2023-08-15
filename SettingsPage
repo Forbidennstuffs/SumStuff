@@ -366,6 +366,9 @@ UIStroke_11.Parent = AccessZComics
 
 -- GUI Animations
 
+local TweenService = game:GetService("TweenService")
+local time = 1
+
 local DisappearSettingsPopUp = {
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}),
