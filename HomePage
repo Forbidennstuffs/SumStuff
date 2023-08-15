@@ -810,7 +810,124 @@ local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Dr
 local TweenService = game:GetService("TweenService")
 local time = 1
 
-function AppearReportPopUp()
+local AppearReportPopUp = {
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}),
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}),
+TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+}
+
+local DisappearReportPopUp = {
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+}
+
+local AppearSettingsPopUp = {
+TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}),
+TweenService:Create(SettingsPopUpFrame.SettingsText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.Close.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.UIScaleText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.UIScaleTextBox.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.UIScaleImage.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.OpenButtonText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.TopLeftButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.TopRightButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.WallpaperText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.WallpaperTextBox.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.OkButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.BackgroundText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.BlackButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.WhiteButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.ReExecuteVHub.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+}
+
+local DisappearSettingsPopUp = {
+TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.SettingsText, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.Close.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.UIScaleText, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.UIScaleTextBox.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {ImageTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.UIScaleImage.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.OpenButtonText, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.TopLeftButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.TopRightButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.WallpaperText, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.WallpaperTextBox.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.OkButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.BackgroundText, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.BlackButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.WhiteButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.ReExecuteVHub.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {TextTransparency = 1}),
+TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+}
+
+-- Button Functions:
+DiscordButton.MouseButton1Down:connect(function()
+setclipboard("discord.gg/3NN5zTW7h2")
+Notification:Create("Copied To Clipboard!",5)
+end)
+
+ReportButton.MouseButton1Down:connect(function()
+if ReportPopUpFrame.Visible == false then
 ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
 ReportPopUpFrame.BackgroundTransparency = 1
 ReportPopUpFrame.ImageTransparency = 1
@@ -823,18 +940,11 @@ ReportPopUpFrame.SendButton.BackgroundTransparency = 1
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
 ReportPopUpFrame.Visible = true
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0})
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5})
-TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
+for _, v in pairs(AppearReportPopUp) do
+v:Play()
 end
 
-function DisappearReportPopUp()
+else
 ReportPopUpFrame.Position = UDim2.new(-0.519999981, 0, 0, 0)
 ReportPopUpFrame.BackgroundTransparency = 0
 ReportPopUpFrame.ImageTransparency = 0.5
@@ -846,20 +956,24 @@ ReportPopUpFrame.SendButton.TextTransparency = 0
 ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",1)
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1})
-TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1})
+
+coroutine.wrap(function()
+while wait() do
 wait(1)
 ReportPopUpFrame.Visible = false
+return
+end
+end)()
+
+for _, v in pairs(DisappearReportPopUp) do
+v:Play()
 end
 
-function AppearSettingsPopUp()
+end
+end)
+
+Settings.MouseButton1Down:connect(function()
+if SettingsPopUpFrame.Visible == false then
 SettingsPopUpFrame.Position = UDim2.new(1.01499998, 0, 0, 0)
 SettingsPopUpFrame.BackgroundTransparency = 1
 SettingsPopUpFrame.ImageTransparency = 1
@@ -902,49 +1016,13 @@ SettingsPopUpFrame.AccessZComics.BackgroundTransparency = 1
 SettingsPopUpFrame.AccessZComics.TextTransparency = 1
 SettingsPopUpFrame.AccessZComics.UIStroke.Transparency = 1
 SettingsPopUpFrame.Visible = true
-TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0})
-TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5})
-TweenService:Create(SettingsPopUpFrame.SettingsText, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.Close.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.UIScaleText, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.UIScaleTextBox.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {ImageTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.UIScaleImage.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.OpenButtonText, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.TopLeftButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.TopRightButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.WallpaperText, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.WallpaperTextBox.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.OkButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.BackgroundText, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.BlackButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.WhiteButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.ReExecuteVHub.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
-TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {BackgroundTransparency = 0.9})
-TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {TextTransparency = 0})
-TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 0.7})
+
+SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",1)
+for _, v in pairs(AppearSettingsPopUp) do
+v:Play()
 end
 
-function DisappearSettingsPopUp()
+else
 SettingsPopUpFrame.Position = UDim2.new(1.02499998, 0, 0, 0)
 SettingsPopUpFrame.BackgroundTransparency = 0
 SettingsPopUpFrame.ImageTransparency = 0.5
@@ -987,69 +1065,19 @@ SettingsPopUpFrame.AccessZComics.BackgroundTransparency = 0.9
 SettingsPopUpFrame.AccessZComics.TextTransparency = 0
 SettingsPopUpFrame.AccessZComics.UIStroke.Transparency = 0.7
 SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",1)
-TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.SettingsText, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.Close, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.Close.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.UIScaleText, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.UIScaleTextBox, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.UIScaleTextBox.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.UIScaleImage, TweenInfo.new(time), {ImageTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.UIScaleImage.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.OpenButtonText, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.TopLeftButton, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.TopLeftButton.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.TopRightButton, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.TopRightButton.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.WallpaperText, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.WallpaperTextBox, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.WallpaperTextBox.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.OkButton, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.OkButton.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.BackgroundText, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.BlackButton, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.BlackButton.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.WhiteButton, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.WhiteButton.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.ReExecuteVHub.UIStroke, TweenInfo.new(time), {Transparency = 1})
-TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {TextTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 1})
+
+coroutine.wrap(function()
+while wait() do
 wait(1)
 SettingsPopUpFrame.Visible = false
+return
+end
+end)()
+
+for _, v in pairs(DisappearSettingsPopUp) do
+v:Play()
 end
 
--- Button Functions:
-DiscordButton.MouseButton1Down:connect(function()
-setclipboard("discord.gg/3NN5zTW7h2")
-Notification:Create("Copied To Clipboard!",5)
-end)
-
-ReportButton.MouseButton1Down:connect(function()
-if ReportPopUpFrame.Visible == false then
-AppearReportPopUp()
-elseif ReportPopUpFrame.Visible == true then
-DisappearReportPopUp()
-end
-end)
-
-Settings.MouseButton1Down:connect(function()
-if SettingsPopUpFrame.Visible == false then
-AppearSettingsPopUp()
-elseif SettingsPopUpFrame.Visible == true then
-DisappearSettingsPopUp()
 end
 end)
 
