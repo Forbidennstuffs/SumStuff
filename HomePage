@@ -837,8 +837,6 @@ ReportPopUpFrame.SendButton.TextTransparency = 0
 ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",1)
-wait(1)
-ReportPopUpFrame.Visible = false
 end
 
 local AppearReportPopUp = {
@@ -965,6 +963,13 @@ v:Play()
 end
 else
 ReportPopUpFrameTransparencyReset()
+while wait() do
+wait(1)
+ReportPopUpFrame.Visible = false
+return
+end
+end)()
+
 for _, v in pairs(DisappearReportPopUp) do
 v:Play()
 end
