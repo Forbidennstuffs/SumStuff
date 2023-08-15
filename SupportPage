@@ -63,6 +63,7 @@ TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BackgroundTransparency = 1.000
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
+TextBox.ClearTextOnFocus = false
 TextBox.Position = UDim2.new(0.027777778, 0, 0.027777778, 0)
 TextBox.Size = UDim2.new(0, 170, 0, 155)
 TextBox.Font = Enum.Font.Gotham
