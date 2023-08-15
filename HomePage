@@ -1040,7 +1040,7 @@ end)
 ReportButton.MouseButton1Down:connect(function()
 if ReportPopUpFrame.Visible == false then
 AppearReportPopUp()
-else
+elseif ReportPopUpFrame.Visible == true then
 DisappearReportPopUp()
 end
 end)
@@ -1048,7 +1048,7 @@ end)
 Settings.MouseButton1Down:connect(function()
 if SettingsPopUpFrame.Visible == false then
 AppearSettingsPopUp()
-else
+elseif SettingsPopUpFrame.Visible == true then
 DisappearSettingsPopUp()
 end
 end)
