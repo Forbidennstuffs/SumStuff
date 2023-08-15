@@ -1025,7 +1025,7 @@ TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {Back
 TweenService:Create(SettingsPopUpFrame.ReExecuteVHub, TweenInfo.new(time), {TextTransparency = 1})
 TweenService:Create(SettingsPopUpFrame.ReExecuteVHub.UIStroke, TweenInfo.new(time), {Transparency = 1})
 TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {BackgroundTransparency = 1})
-TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {TextTransparency = 1}),l
+TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {TextTransparency = 1})
 TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 1})
 wait(1)
 SettingsPopUpFrame.Visible = false
