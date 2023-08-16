@@ -1,3 +1,37 @@
+_G.settingsTable = {
+UIScale = "1.05";
+ButtonTopLeft = true;
+Wallpaper = "11926598891";
+WhiteBackground = true;
+}
+
+for i,v in pairs(_G.settingsTable) do 
+end
+
+local filename = "VexHubSettings.txt";
+
+function loadSettings()
+local HttpService = game:GetService("HttpService")
+if (readfile and isfile and isfile(filename)) then
+_G.settingsTable = HttpService:JSONDecode(readfile(filename));
+for i,v in pairs(_G.settingsTable) do 
+end
+end
+end
+
+function saveSettings()
+local json;
+local HttpService = game:GetService("HttpService"); 
+if (writefile) then
+json = HttpService:JSONEncode(_G.settingsTable);
+writefile(filename, json);
+end
+end
+
+loadSettings()
+wait()
+
+
 -- (VOID) : Gui to Lua
 -- Version: 1.4
 
@@ -28,12 +62,12 @@ DragImage.BorderSizePixel = 0
 DragImage.Draggable = true
 DragImage.Position = UDim2.new(0.235449731, 0, 0.221508816, 0)
 DragImage.Size = UDim2.new(0, 400, 0, 230)
-DragImage.Image = "http://www.roblox.com/asset/?id=11926598891"
+DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 DragImage.ImageTransparency = 0.500
 DragImage.ScaleType = Enum.ScaleType.Crop
 
 UIScale.Parent = DragImage
-UIScale.Scale = 1.05
+UIScale.Scale = _G.settingsTable.UIScale
 
 UICorner.CornerRadius = UDim.new(0, 15)
 UICorner.Parent = DragImage
