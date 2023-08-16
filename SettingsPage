@@ -77,6 +77,9 @@ local AccessZComics = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
 local UIStroke_11 = Instance.new("UIStroke")
 
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
+
+
 --Properties:
 
 SettingsPopUp.Name = "SettingsPopUp"
@@ -523,29 +526,35 @@ end)
 UIScaleImage.MouseButton1Down:connect(function()
 _G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
+Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 TopLeftButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = true
 saveSettings()
+Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 TopRightButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = false
 saveSettings()
+Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 OkButton.MouseButton1Down:connect(function()
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
+Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 BlackButton.MouseButton1Down:connect(function()
 _G.settingsTable.WhiteBackground = false
 saveSettings()
+Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 WhiteButton.MouseButton1Down:connect(function()
 _G.settingsTable.WhiteBackground = true
 saveSettings()
+Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
