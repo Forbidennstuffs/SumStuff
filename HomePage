@@ -1123,6 +1123,10 @@ end
 end
 end)
 
+X.MouseButton1Down:connect(function()
+game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.Visible = false
+end)
+
 Settings.MouseButton1Down:connect(function()
 if SettingsPopUpFrame.Visible == false then
 SettingsPopUpFrameTransparencyTo1()
