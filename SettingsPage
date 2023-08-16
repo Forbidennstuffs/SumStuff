@@ -506,7 +506,7 @@ end
 end)
 
 UIScaleImage.MouseButton1Down:connect(function()
-_G.settingsTable.UIScale = UIScaleTextBox
+_G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
 end)
 
@@ -521,7 +521,7 @@ saveSettings()
 end)
 
 OkButton.MouseButton1Down:connect(function()
-_G.settingsTable.Wallpaper = WallpaperTextBox
+_G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
 end)
 
