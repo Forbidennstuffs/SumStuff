@@ -821,6 +821,9 @@ _4Trophy.Visible = true
 _5Piece.Visible = true
 _6Tube.Visible = true
 _7Heart.Visible = true
+
+elseif Your.Name == "Klay5278" then
+_6Tube.Visible = true
 end
 
 -- Update System:
