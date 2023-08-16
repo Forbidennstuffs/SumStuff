@@ -397,6 +397,21 @@ UIStroke_11.Thickness = 0.500
 UIStroke_11.Transparency = 0.700
 UIStroke_11.Parent = AccessZComics
 
+--White Background Checker:
+if _G.settingsTable.WhiteBackground == false then
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+UIScaleTextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+UIScaleImage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TopLeftButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TopRightButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WallpaperTextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OkButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BlackButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WhiteButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ReExecuteVHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AccessZComics.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+end
+
 -- GUI Animations
 
 local TweenService = game:GetService("TweenService")
