@@ -30,10 +30,10 @@ writefile(filename, json);
 end
 end
 
-table.foreach(_G.settingsTable,warn)
-
 loadSettings()
 wait()
+
+table.foreach(_G.settingsTable,warn)
 
 -- (VOID) : Gui to Lua
 -- Version: 1.4
