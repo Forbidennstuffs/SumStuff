@@ -44,7 +44,7 @@ SupportText.TextSize = 16.000
 
 TextBoxParent.Name = "TextBoxParent"
 TextBoxParent.Parent = ReportPopUp
-TextBoxParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SendButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBoxParent.BackgroundTransparency = 0.900
 TextBoxParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBoxParent.BorderSizePixel = 0
@@ -95,3 +95,9 @@ UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_2.Thickness = 0.500
 UIStroke_2.Transparency = 0.700
 UIStroke_2.Parent = SendButton
+
+-- White Background Checker:
+if _G.settingsTable.WhiteBackground == false then
+SendButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SendButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+end
