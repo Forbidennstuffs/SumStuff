@@ -31,6 +31,8 @@ end
 loadSettings()
 wait()
 
+local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
+
 local ButtonParent = Instance.new("Frame")
 local VHubLogoOpen = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -51,7 +53,7 @@ VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 VHubLogoOpen.BackgroundTransparency = 0.5
 VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
 VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
-VHubLogoOpen.Image = "rbxassetid://12193689334"
+VHubLogoOpen.Image = The.Logo
 VHubLogoOpen.ImageTransparency = 0
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
