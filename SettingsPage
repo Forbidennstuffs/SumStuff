@@ -504,3 +504,33 @@ for _, v in pairs(DisappearSettingsPopUp) do
 v:Play()
 end
 end)
+
+UIScaleImage.MouseButton1Down:connect(function()
+_G.settingsTable.UIScale = UIScaleTextBox
+saveSettings()
+end)
+
+TopLeftButton.MouseButton1Down:connect(function()
+_G.settingsTable.ButtonTopLeft = true
+saveSettings()
+end)
+
+TopRightButton.MouseButton1Down:connect(function()
+_G.settingsTable.ButtonTopLeft = false
+saveSettings()
+end)
+
+OkButton.MouseButton1Down:connect(function()
+_G.settingsTable.Wallpaper = WallpaperTextBox
+saveSettings()
+end)
+
+BlackButton.MouseButton1Down:connect(function()
+_G.settingsTable.WhiteBackground = false
+saveSettings()
+end)
+
+WhiteButton.MouseButton1Down:connect(function()
+_G.settingsTable.WhiteBackground = true
+saveSettings()
+end)
