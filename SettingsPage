@@ -5,6 +5,8 @@ _G.settingsTable = {
 ["WhiteBackground"] = true;
 }
 
+table.foreach(_G.settingsTable,print)
+
 for i,v in pairs(_G.settingsTable) do 
 end
 
@@ -27,6 +29,8 @@ json = HttpService:JSONEncode(_G.settingsTable);
 writefile(filename, json);
 end
 end
+
+table.foreach(_G.settingsTable,warn)
 
 loadSettings()
 wait()
