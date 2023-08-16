@@ -23,7 +23,7 @@ ReportPopUp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ReportPopUp.BorderSizePixel = 0
 ReportPopUp.Position = UDim2.new(-0.519999981, 0, 0, 0)
 ReportPopUp.Size = UDim2.new(0, 200, 0, 230)
-ReportPopUp.Image = "http://www.roblox.com/asset/?id=11926598891"
+ReportPopUp.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 ReportPopUp.ImageTransparency = 0.500
 ReportPopUp.ScaleType = Enum.ScaleType.Crop
 ReportPopUp.Visible = false 
