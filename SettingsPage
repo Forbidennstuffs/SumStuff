@@ -1,4 +1,9 @@
-_G.settingsTable = {}
+_G.settingsTable = {
+UIScale = "1.05";
+ButtonTopLeft = true;
+Wallpaper = "rbxassetid://11926598891";
+WhiteBackground = true;
+}
 
 for i,v in pairs(_G.settingsTable) do 
 end
@@ -24,20 +29,6 @@ end
 end
 
 loadSettings()
-
-local AppendTbl = {
-["UIScale"] = "1.05";
-["ButtonTopLeft"] = true;
-["Wallpaper"] = "11926598891";
-["WhiteBackground"] = true;
-}
-
-for i, v in pairs(AppendTbl) do
-if not settingsTable[i] then
-settingsTable[i] = v
-end
-end
-
 wait()
 
 -- (VOID) : Gui to Lua
@@ -95,7 +86,7 @@ SettingsPopUp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SettingsPopUp.BorderSizePixel = 0
 SettingsPopUp.Position = UDim2.new(1.02499998, 0, 0, 0)
 SettingsPopUp.Size = UDim2.new(0, 120, 0, 230)
-SettingsPopUp.Image = "http://www.roblox.com/asset/?id=".._G.settingsTable.Wallpaper
+SettingsPopUp.Image = _G.settingsTable.Wallpaper
 SettingsPopUp.ImageTransparency = 0.500
 SettingsPopUp.ScaleType = Enum.ScaleType.Crop
 SettingsPopUp.Visible = false
