@@ -2,7 +2,7 @@ _G.settingsTable = {
 ["UIScale"] = "1.05";
 ["ButtonTopLeft"] = true;
 ["Wallpaper"] = "11926598891";
-["WhiteBackground"] true;
+["WhiteBackground"] = true;
 }
 
 for i,v in pairs(_G.settingsTable) do 
