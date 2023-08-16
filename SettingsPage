@@ -8,7 +8,7 @@ WhiteBackground = true;
 for i,v in pairs(_G.settingsTable) do 
 end
 
-local filename = "VexHubSettings.txt";
+local filename = "VHSettings.txt";
 
 function loadSettings()
 local HttpService = game:GetService("HttpService")
