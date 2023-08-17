@@ -49,8 +49,8 @@ ButtonParent.Active = true
 
 VHubLogoOpen.Name = "VHubLogoOpen"
 VHubLogoOpen.Parent = ButtonParent
-VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-VHubLogoOpen.BackgroundTransparency = 0.5
+VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VHubLogoOpen.BackgroundTransparency = 0.9
 VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
 VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
 VHubLogoOpen.Image = The.path.Logo
@@ -67,10 +67,19 @@ end)
 
 UICorner.Parent = VHubLogoOpen
 
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 0.500
+UIStroke.Transparency = 0.700
+UIStroke.Parent = VHubLogoOpen
+
 game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0)
 
 if _G.settingsTable.ButtonTopLeft == false then
 VHubLogoOpen.Size = UDim2.new(0, 32, 0, 32)
 ButtonParent.LayoutOrder = 0
 ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
+end
+
+if _G.settingsTable.WhiteBackground == false then
+VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 end
