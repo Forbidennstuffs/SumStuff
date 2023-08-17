@@ -526,19 +526,23 @@ end)
 UIScaleImage.MouseButton1Down:connect(function()
 _G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
-Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.UIScale = UIScaleTextBox.Text
 end)
 
 TopLeftButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = true
 saveSettings()
-Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame.ButtonParent.VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
+game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame.ButtonParent.LayoutOrder = 3
+game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame.ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame
 end)
 
 TopRightButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = false
 saveSettings()
-Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ButtonParent.VHubLogoOpen.Size = UDim2.new(0, 32, 0, 32)
+game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ButtonParent.LayoutOrder = 0
+game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
 end)
 
 OkButton.MouseButton1Down:connect(function()
