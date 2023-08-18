@@ -822,6 +822,7 @@ _6Tube.Visible = true
 _7Heart.Visible = true
 
 elseif Your.Name == "Klay5278" then
+_4Trophy.Visible = true
 _6Tube.Visible = true
 end
 
