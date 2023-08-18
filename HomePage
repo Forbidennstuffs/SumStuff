@@ -867,7 +867,7 @@ end
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
 local TweenService = game:GetService("TweenService")
-local time = 1
+local time = 5
 
 function ReportPopUpFrameTransparencyTo1()
 ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
@@ -881,7 +881,7 @@ ReportPopUpFrame.SendButton.TextTransparency = 1
 ReportPopUpFrame.SendButton.BackgroundTransparency = 1
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
 ReportPopUpFrame.Visible = true
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",1)
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",time)
 end
 
 function ReportPopUpFrameTransparencyReset()
@@ -895,7 +895,7 @@ ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 0
 ReportPopUpFrame.SendButton.TextTransparency = 0
 ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",1)
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",time)
 end
 
 function SettingsPopUpFrameTransparencyTo1()
@@ -941,7 +941,7 @@ SettingsPopUpFrame.AccessZComics.BackgroundTransparency = 1
 SettingsPopUpFrame.AccessZComics.TextTransparency = 1
 SettingsPopUpFrame.AccessZComics.UIStroke.Transparency = 1
 SettingsPopUpFrame.Visible = true
-SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",1)
+SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",time)
 end
 
 function SettingsPopUpFrameTransparencyReset()
@@ -986,7 +986,7 @@ SettingsPopUpFrame.ReExecuteVHub.UIStroke.Transparency = 0.7
 SettingsPopUpFrame.AccessZComics.BackgroundTransparency = 0.9
 SettingsPopUpFrame.AccessZComics.TextTransparency = 0
 SettingsPopUpFrame.AccessZComics.UIStroke.Transparency = 0.7
-SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",1)
+SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",time)
 end
 
 local AppearReportPopUp = {
@@ -1115,7 +1115,7 @@ else
 ReportPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
-wait(1)
+wait(6)
 ReportPopUpFrame.Visible = false
 return
 end
