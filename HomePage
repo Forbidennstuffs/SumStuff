@@ -1224,6 +1224,9 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
+for _, v in pairs(AppearHomePage) do
+v:Play()
+end
 local ButtonParent = Instance.new("Frame")
 local VHubLogoOpen = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
