@@ -1115,7 +1115,7 @@ else
 ReportPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
-wait(6)
+wait(time)
 ReportPopUpFrame.Visible = false
 return
 end
@@ -1140,7 +1140,7 @@ else
 SettingsPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
-wait(1)
+wait(time)
 SettingsPopUpFrame.Visible = false
 return
 end
