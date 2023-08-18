@@ -1135,27 +1135,6 @@ TweenService:Create(HomePageFrame.ProfilePicture, TweenInfo.new(time), {ImageTra
 TweenService:Create(HomePageFrame.ProfilePicture.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
 TweenService:Create(HomePageFrame.BadgesParent, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
 TweenService:Create(HomePageFrame.BadgesParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-if HomePageFrame.BadgesParent.Badges._1ShootingStar.Visible == true then
-TweenService:Create(HomePageFrame.BadgesParent.Badges._1ShootingStar, TweenInfo.new(time), {TextTransparency = 0}),
-end
-if HomePageFrame.BadgesParent.Badges._2Wrench.Visible == true then
-TweenService:Create(HomePageFrame.BadgesParent.Badges._2Wrench, TweenInfo.new(time), {TextTransparency = 0}),
-end
-if HomePageFrame.BadgesParent.Badges._3Star.Visible == true then
-TweenService:Create(HomePageFrame.BadgesParent.Badges._3Star, TweenInfo.new(time), {TextTransparency = 0}),
-end
-if HomePageFrame.BadgesParent.Badges._4Trophy.Visible == true then
-TweenService:Create(HomePageFrame.BadgesParent.Badges._4Trophy, TweenInfo.new(time), {TextTransparency = 0}),
-end
-if HomePageFrame.BadgesParent.Badges._5Piece.Visible == true then
-TweenService:Create(HomePageFrame.BadgesParent.Badges._5Piece, TweenInfo.new(time), {TextTransparency = 0}),
-end
-if HomePageFrame.BadgesParent.Badges._6Tube.Visible == true then
-TweenService:Create(HomePageFrame.BadgesParent.Badges._6Tube, TweenInfo.new(time), {TextTransparency = 0}),
-end
-if HomePageFrame.BadgesParent.Badges._7Heart.Visible == true then
-TweenService:Create(HomePageFrame.BadgesParent.Badges._7Heart, TweenInfo.new(time), {TextTransparency = 0}),
-end
 TweenService:Create(HomePageFrame.BadgesYouEarnText, TweenInfo.new(time), {TextTransparency = 0}),
 TweenService:Create(HomePageFrame.AnnouncementFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
 TweenService:Create(HomePageFrame.AnnouncementFrame.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
@@ -1163,22 +1142,6 @@ TweenService:Create(HomePageFrame.AnnouncementFrame.AnnouncementText, TweenInfo.
 TweenService:Create(HomePageFrame.AnnouncementFrame.Announcement, TweenInfo.new(time), {TextTransparency = 0}),
 TweenService:Create(HomePageFrame.UpdatesFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
 TweenService:Create(HomePageFrame.UpdatesFrame.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-if HomePageFrame.UpdatesFrame.Updates.Update1.Visible == true then
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-end
-if HomePageFrame.UpdatesFrame.Updates.Update2.Visible == true then
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-end
-if HomePageFrame.UpdatesFrame.Updates.Update3.Visible == true then
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-end
-if HomePageFrame.UpdatesFrame.Updates.Update4.Visible == true then
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-end
 TweenService:Create(HomePageFrame.UpdatesFrame.UpdatesText, TweenInfo.new(time), {TextTransparency = 0}),
 TweenService:Create(HomePageFrame.WelcomeUserDisplayName, TweenInfo.new(time), {TextTransparency = 0}),
 TweenService:Create(HomePageFrame.AdditionalInfoFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
@@ -1227,6 +1190,45 @@ X.MouseButton1Down:connect(function()
 for _, v in pairs(AppearHomePage) do
 v:Play()
 end
+
+if HomePageFrame.BadgesParent.Badges._1ShootingStar.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._1ShootingStar, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._2Wrench.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._2Wrench, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._3Star.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._3Star, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._4Trophy.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._4Trophy, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._5Piece.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._5Piece, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._6Tube.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._6Tube, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._7Heart.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._7Heart, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.UpdatesFrame.Updates.Update1.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+if HomePageFrame.UpdatesFrame.Updates.Update2.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+if HomePageFrame.UpdatesFrame.Updates.Update3.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+if HomePageFrame.UpdatesFrame.Updates.Update4.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+
 local ButtonParent = Instance.new("Frame")
 local VHubLogoOpen = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
