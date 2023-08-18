@@ -1100,8 +1100,8 @@ TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(tim
 }
 
 local AppearHomePage = {
-TweenService:Create(HomePageFrame.InfoFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(HomePageFrame.InfoFrame.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.InfoBar.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
 TweenService:Create(HomePageFrame.VexHubLogo, TweenInfo.new(time), {ImageTransparency = 0}),
 TweenService:Create(HomePageFrame.VexHubText, TweenInfo.new(time), {TextTransparency = 0}),
 TweenService:Create(HomePageFrame.Version, TweenInfo.new(time), {TextTransparency = 0}),
