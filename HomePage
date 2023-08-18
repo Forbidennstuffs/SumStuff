@@ -1249,6 +1249,7 @@ VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
 VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
 VHubLogoOpen.Image = The.path.Logo
 VHubLogoOpen.ImageTransparency = 0
+VHubLogoOpen.Visible = false
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
