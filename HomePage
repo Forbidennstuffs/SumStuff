@@ -990,6 +990,66 @@ SettingsPopUpFrame.AccessZComics.UIStroke.Transparency = 0.7
 SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",time)
 end
 
+function HomePageTransparencyReset()
+HomePageFrame.InfoBar.BackgroundTransparency = 0.9
+HomePageFrame.InfoBar.UIStroke.Transparency = 0.7
+HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 0
+HomePageFrame.InfoBar.VexHubText.TextTransparency = 0
+HomePageFrame.InfoBar.Version.TextTransparency = 0
+HomePageFrame.InfoBar.X.TextTransparency = 0
+HomePageFrame.InfoBar.Settings.ImageTransparency = 0
+HomePageFrame.TabsParent.BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["1HomeTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["4GuisTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 0.7
+HomePageFrame.ProfilePicture.BackgroundTransparency = 0.9
+HomePageFrame.ProfilePicture.ImageTransparency = 0
+HomePageFrame.ProfilePicture.UIStroke.Transparency = 0.7
+HomePageFrame.BadgesParent.BackgroundTransparency = 0.9
+HomePageFrame.BadgesParent.UIStroke.Transparency = 0.7
+HomePageFrame.BadgesYouEarnText.TextTransparency = 0
+HomePageFrame.AnnouncementFrame.BackgroundTransparency = 0.9
+HomePageFrame.AnnouncementFrame.UIStroke.Transparency = 0.7
+HomePageFrame.AnnouncementFrame.AnnouncementText.TextTransparency = 0
+HomePageFrame.AnnouncementFrame.Announcement.TextTransparency = 0
+HomePageFrame.UpdatesFrame.BackgroundTransparency = 0.9
+HomePageFrame.UpdatesFrame.UIStroke.Transparency = 0.7
+HomePageFrame.UpdatesFrame.UpdatesText.TextTransparency = 0
+HomePageFrame.WelcomeUserDisplayName.TextTransparency = 0
+HomePageFrame.AdditionalInfoFrame.BackgroundTransparency = 0.9
+HomePageFrame.AdditionalInfoFrame.UIStroke.Transparency = 0.7
+HomePageFrame.AdditionalInfoFrame.AdditionalInfo.TextTransparency = 0
+HomePageFrame.AdditionalInfoFrame.IText.BackgroundTransparency = 0.9
+HomePageFrame.AdditionalInfoFrame.IText.TextTransparency = 0
+HomePageFrame.AdditionalInfoFrame.IText.UIStroke.Transparency = 0.7
+HomePageFrame.ReportButton.BackgroundTransparency = 0
+HomePageFrame.ReportButton.ImageTransparency = 0
+HomePageFrame.ReportButton.UIStroke.Transparency = 0.7
+HomePageFrame.DiscordButton.BackgroundTransparency = 0
+HomePageFrame.DiscordButton.ImageTransparency = 0
+HomePageFrame.DiscordButton.UIStroke.Transparency = 0.7
+HomePageFrame.WelcomeUserUserName.TextTransparency = 0
+end
+
 local AppearReportPopUp = {
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}),
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}),
