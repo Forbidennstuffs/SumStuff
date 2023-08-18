@@ -134,7 +134,7 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 
 --Properties:
 
-MainFrame.Name = "MainFrame"
+MainFrame.Name = "HomePage"
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainFrame.BackgroundTransparency = 1.000
@@ -773,7 +773,6 @@ UIStroke_20.Parent = ReportButton
 DiscordButton.Name = "DiscordButton"
 DiscordButton.Parent = MainFrame
 DiscordButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DiscordButton.BackgroundTransparency = 0.600
 DiscordButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DiscordButton.BorderSizePixel = 0
 DiscordButton.Position = UDim2.new(0.85799998, 0, 0.86500001, 0)
@@ -866,6 +865,7 @@ end
 
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
+local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
@@ -1099,6 +1099,103 @@ TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {Text
 TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 1}),
 }
 
+local AppearHomePage = {
+TweenService:Create(HomePageFrame.InfoFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.InfoFrame.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.VexHubLogo, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.VexHubText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.Version, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.X, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.Settings, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._1HomeTab, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._1HomeTab, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._1HomeTab.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._2ScriptsTab, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._2ScriptsTab, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._2ScriptsTab.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._3RequiredAccessoriesTab, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._3RequiredAccessoriesTab, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._3RequiredAccessoriesTab.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._4GuisTab, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._4GuisTab, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._4GuisTab.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._5AnimationsTab, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._5AnimationsTab, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._5AnimationsTab.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._6CommandsTab, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._6CommandsTab, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._6CommandsTab.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._7OtherHubsTab, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._7OtherHubsTab, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.TabsParent.Tabs._7OtherHubsTab.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.ProfilePicture, TweenInfo.new(time), {BackgroundTransparency = 0}),
+TweenService:Create(HomePageFrame.ProfilePicture, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.ProfilePicture.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.BadgesParent, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.BadgesParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+if HomePageFrame.BadgesParent.Badges._1ShootingStar.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._1ShootingStar, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._2Wrench.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._2Wrench, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._3Star.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._3Star, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._4Trophy.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._4Trophy, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._5Piece.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._5Piece, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._6Tube.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._6Tube, TweenInfo.new(time), {TextTransparency = 0}),
+end
+if HomePageFrame.BadgesParent.Badges._7Heart.Visible == true then
+TweenService:Create(HomePageFrame.BadgesParent.Badges._7Heart, TweenInfo.new(time), {TextTransparency = 0}),
+end
+TweenService:Create(HomePageFrame.BadgesYouEarnText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.AnnouncementFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.AnnouncementFrame.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.AnnouncementFrame.AnnouncementText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.AnnouncementFrame.Announcement, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.UpdatesFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+if HomePageFrame.UpdatesFrame.Updates.Update1.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+if HomePageFrame.UpdatesFrame.Updates.Update2.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+if HomePageFrame.UpdatesFrame.Updates.Update3.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+if HomePageFrame.UpdatesFrame.Updates.Update4.Visible == true then
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+end
+TweenService:Create(HomePageFrame.UpdatesFrame.UpdatesText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.WelcomeUserDisplayName, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.AdditionalInfoFrame, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.AdditionalInfoFrame.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.AdditionalInfoFrame.AdditionalInfo, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.AdditionalInfoFrame.IText, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
+TweenService:Create(HomePageFrame.AdditionalInfoFrame.IText, TweenInfo.new(time), {TextTransparency = 0}),
+TweenService:Create(HomePageFrame.AdditionalInfoFrame.IText.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.ReportButton, TweenInfo.new(time), {BackgroundTransparency = 0}),
+TweenService:Create(HomePageFrame.ReportButton, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.ReportButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {BackgroundTransparency = 0}),
+TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {ImageTransparency = 0}),
+TweenService:Create(HomePageFrame.DiscordButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 0}),
+}
+
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
 setclipboard("discord.gg/3NN5zTW7h2")
@@ -1127,7 +1224,47 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
+local ButtonParent = Instance.new("Frame")
+local VHubLogoOpen = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ButtonParent.Name = "ButtonParent"
+ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame
+ButtonParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonParent.BackgroundTransparency = 1.000
+ButtonParent.Size = UDim2.new(0, 32, 1, 0)
+ButtonParent.Position = UDim2.new(0, 0, 0, 0)
+ButtonParent.Visible = true
+ButtonParent.LayoutOrder = 3
+ButtonParent.Active = true
+
+VHubLogoOpen.Name = "VHubLogoOpen"
+VHubLogoOpen.Parent = ButtonParent
+VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VHubLogoOpen.BackgroundTransparency = 0.5
+VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
+VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
+VHubLogoOpen.Image = The.path.Logo
+VHubLogoOpen.ImageTransparency = 0
+VHubLogoOpen.Active = true 
+VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
+VHubLogoOpen.MouseButton1Down:connect(function()
+if game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.Visible == true then
 game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.Visible = false
+else
+game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.Visible = true
+end
+end)
+
+UICorner.Parent = VHubLogoOpen
+
+game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0)
+
+if _G.settingsTable.ButtonTopLeft == false then
+VHubLogoOpen.Size = UDim2.new(0, 32, 0, 32)
+ButtonParent.LayoutOrder = 0
+ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
+end
 end)
 
 Settings.MouseButton1Down:connect(function()
