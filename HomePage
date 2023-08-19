@@ -1461,27 +1461,35 @@ Heart:Play()
 end
 if HomePageFrame.UpdatesFrame.Updates.Update1.Visible == true then
 local Update1 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1, TweenInfo.new(time), {BackgroundTransparency = 1})
-local Update1_2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1.UIStroke, TweenInfo.new(time), {Transparency = 1})
+local Update1_2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1, TweenInfo.new(time), {TextTransparency = 1})
+local Update1_3 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1.UIStroke, TweenInfo.new(time), {Transparency = 1})
 Update1:Play()
 Update1_2:Play()
+Update1_3:Play()
 end
 if HomePageFrame.UpdatesFrame.Updates.Update2.Visible == true then
 local Update2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2, TweenInfo.new(time), {BackgroundTransparency = 1})
-local Update2_2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2.UIStroke, TweenInfo.new(time), {Transparency = 1})
+local Update2_2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update1, TweenInfo.new(time), {TextTransparency = 1})
+local Update2_3 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update2.UIStroke, TweenInfo.new(time), {Transparency = 1})
 Update2:Play()
 Update2_2:Play()
+Update2_3:Play()
 end
 if HomePageFrame.UpdatesFrame.Updates.Update3.Visible == true then
 local Update3 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3, TweenInfo.new(time), {BackgroundTransparency = 1})
-local Update3_2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3.UIStroke, TweenInfo.new(time), {Transparency = 1})
+local Update3_2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3.UIStroke, TweenInfo.new(time), {TextTransparency = 1})
+local Update3_3 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update3.UIStroke, TweenInfo.new(time), {Transparency = 1})
 Update3:Play()
 Update3_2:Play()
+Update3_3:Play()
 end
 if HomePageFrame.UpdatesFrame.Updates.Update4.Visible == true then
 local Update4 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4, TweenInfo.new(time), {BackgroundTransparency = 1})
 local Update4_2 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4.UIStroke, TweenInfo.new(time), {Transparency = 1})
+local Update4_3 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4.UIStroke, TweenInfo.new(time), {Transparency = 1})
 Update4:Play()
 Update4_2:Play()
+Update4_3:Play()
 end
 
 for _, v in pairs(DisappearHomePage) do
