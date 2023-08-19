@@ -1398,25 +1398,25 @@ for _, v in pairs(DisappearHomePage) do
 v:Play()
 end
 
-if HomePageFrame.BadgesParent.Badges._1ShootingStar.Visible == true then
+if HomePageFrame.BadgesParent.Badges.["1ShootingStar"].Visible == true then
 TweenService:Create(HomePageFrame.BadgesParent.Badges["1ShootingStar"], TweenInfo.new(time), {TextTransparency = 1})
 end
-if HomePageFrame.BadgesParent.Badges._2Wrench.Visible == true then
+if HomePageFrame.BadgesParent.Badges.["2Wrench"].Visible == true then
 TweenService:Create(HomePageFrame.BadgesParent.Badges["2Wrench"], TweenInfo.new(time), {TextTransparency = 1})
 end
-if HomePageFrame.BadgesParent.Badges._3Star.Visible == true then
+if HomePageFrame.BadgesParent.Badges.["3Star"].Visible == true then
 TweenService:Create(HomePageFrame.BadgesParent.Badges["3Star"], TweenInfo.new(time), {TextTransparency = 1})
 end
-if HomePageFrame.BadgesParent.Badges._4Trophy.Visible == true then
+if HomePageFrame.BadgesParent.Badges.["4Trophy"].Visible == true then
 TweenService:Create(HomePageFrame.BadgesParent.Badges["4Trophy"], TweenInfo.new(time), {TextTransparency = 1})
 end
-if HomePageFrame.BadgesParent.Badges._5Piece.Visible == true then
+if HomePageFrame.BadgesParent.Badges.["5Piece"].Visible == true then
 TweenService:Create(HomePageFrame.BadgesParent.Badges["5Piece"], TweenInfo.new(time), {TextTransparency = 1})
 end
-if HomePageFrame.BadgesParent.Badges._6Tube.Visible == true then
+if HomePageFrame.BadgesParent.Badges.["6Tube"].Visible == true then
 TweenService:Create(HomePageFrame.BadgesParent.Badges["6Tube"], TweenInfo.new(time), {TextTransparency = 1})
 end
-if HomePageFrame.BadgesParent.Badges._7Heart.Visible == true then
+if HomePageFrame.BadgesParent.Badges.["7Heart"].Visible == true then
 TweenService:Create(HomePageFrame.BadgesParent.Badges["7Heart"], TweenInfo.new(time), {TextTransparency = 1})
 end
 if HomePageFrame.UpdatesFrame.Updates.Update1.Visible == true then
