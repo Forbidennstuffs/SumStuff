@@ -1448,7 +1448,7 @@ local Trophy = TweenService:Create(HomePageFrame.BadgesParent.Badges["4Trophy"],
 Trophy:Play()
 end
 if HomePageFrame.BadgesParent.Badges["5Piece"].Visible == true then
-local 5Piece = TweenService:Create(HomePageFrame.BadgesParent.Badges["5Piece"], TweenInfo.new(time), {TextTransparency = 1})
+local Piece = TweenService:Create(HomePageFrame.BadgesParent.Badges["5Piece"], TweenInfo.new(time), {TextTransparency = 1})
 Piece:Play()
 end
 if HomePageFrame.BadgesParent.Badges["6Tube"].Visible == true then
