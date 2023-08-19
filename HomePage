@@ -867,6 +867,7 @@ end
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
+local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
@@ -991,6 +992,18 @@ SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",tim
 end
 
 function HomePageTransparencyReset()
+HomePageFrame.InfoBar.Position = UDim2.new(0.0125000002, 0, 0.0260869563, 0)
+HomePageFrame.TabsParent.Position = UDim2.new(0.0130000003, 0, 0.135000005, 0)
+HomePageFrame.ProfilePicture.Position = UDim2.new(0.112499997, 0, 0.159130454, 0)
+HomePageFrame.BadgesParent.Position = UDim2.new(0.111500017, 0, 0.861521721, 0)
+HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.111500017, 0, 0.802565217, 0)
+HomePageFrame.AnnouncementFrame.Position = UDim2.new(0.112000003, 0, 0.469000012, 0)
+HomePageFrame.UpdatesFrame.Position = UDim2.new(0.507000029, 0, 0.468999982, 0)
+HomePageFrame.WelcomeUserDisplayName.Position = UDim2.new(0.287, 0, 0.219999999, 0)
+HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.506999969, 0, 0.861999929, 0)
+HomePageFrame.ReportButton.Position = UDim2.new(0.918310702, 0, 0.865217388, 0)
+HomePageFrame.DiscordButton.Position = UDim2.new(0.85799998, 0, 0.86500001, 0)
+HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.287, 0, 0.314999998, 0)
 HomePageFrame.InfoBar.BackgroundTransparency = 0.9
 HomePageFrame.InfoBar.UIStroke.Transparency = 0.7
 HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 0
@@ -1048,6 +1061,78 @@ HomePageFrame.DiscordButton.BackgroundTransparency = 0
 HomePageFrame.DiscordButton.ImageTransparency = 0
 HomePageFrame.DiscordButton.UIStroke.Transparency = 0.7
 HomePageFrame.WelcomeUserUserName.TextTransparency = 0
+HomePageFrame.InfoBar:TweenPosition(UDim2.new(0.0025000002, 0, 0.0260869563, 0),"Out","Quad",time)
+HomePageFrame.TabsParent:TweenPosition(UDim2.new(0.0030000003, 0, 0.135000005, 0),"Out","Quad",time)
+HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.102499997, 0, 0.159130454, 0),"Out","Quad",time)
+HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.101500017, 0, 0.861521721, 0),"Out","Quad",time)
+HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.101500017, 0, 0.802565217, 0),"Out","Quad",time)
+HomePageFrame.AnnouncementFrame:TweenPosition(UDim2.new(0.102000003, 0, 0.469000012, 0),"Out","Quad",time)
+HomePageFrame.UpdatesFrame:TweenPosition(UDim2.new(0.497000029, 0, 0.468999982, 0),"Out","Quad",time)
+HomePageFrame.WelcomeUserDisplayName:TweenPosition(UDim2.new(0.277, 0, 0.219999999, 0),"Out","Quad",time)
+HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.496999969, 0, 0.861999929, 0),"Out","Quad",time)
+HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.908310702, 0, 0.865217388, 0),"Out","Quad",time)
+HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.84799998, 0, 0.86500001, 0),"Out","Quad",time)
+HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.277, 0, 0.314999998, 0),"Out","Quad",time)
+end
+
+function HomePageTransparencyTo1()
+HomePageFrame.InfoBar.BackgroundTransparency = 1
+HomePageFrame.InfoBar.UIStroke.Transparency = 1
+HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 1
+HomePageFrame.InfoBar.VexHubText.TextTransparency = 1
+HomePageFrame.InfoBar.Version.TextTransparency = 1
+HomePageFrame.InfoBar.X.TextTransparency = 1
+HomePageFrame.InfoBar.Settings.ImageTransparency = 1
+HomePageFrame.TabsParent.BackgroundTransparency = 1
+HomePageFrame.TabsParent.UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 1
+HomePageFrame.ProfilePicture.BackgroundTransparency = 1
+HomePageFrame.ProfilePicture.ImageTransparency = 1
+HomePageFrame.ProfilePicture.UIStroke.Transparency = 1
+HomePageFrame.BadgesParent.BackgroundTransparency = 1
+HomePageFrame.BadgesParent.UIStroke.Transparency = 1
+HomePageFrame.BadgesYouEarnText.TextTransparency = 1
+HomePageFrame.AnnouncementFrame.BackgroundTransparency = 1
+HomePageFrame.AnnouncementFrame.UIStroke.Transparency = 1
+HomePageFrame.AnnouncementFrame.AnnouncementText.TextTransparency = 1
+HomePageFrame.AnnouncementFrame.Announcement.TextTransparency = 1
+HomePageFrame.UpdatesFrame.BackgroundTransparency = 1
+HomePageFrame.UpdatesFrame.UIStroke.Transparency = 1
+HomePageFrame.UpdatesFrame.UpdatesText.TextTransparency = 1
+HomePageFrame.WelcomeUserDisplayName.TextTransparency = 1
+HomePageFrame.AdditionalInfoFrame.BackgroundTransparency = 1
+HomePageFrame.AdditionalInfoFrame.UIStroke.Transparency = 1
+HomePageFrame.AdditionalInfoFrame.AdditionalInfo.TextTransparency = 1
+HomePageFrame.AdditionalInfoFrame.IText.BackgroundTransparency = 1
+HomePageFrame.AdditionalInfoFrame.IText.TextTransparency = 1
+HomePageFrame.AdditionalInfoFrame.IText.UIStroke.Transparency = 1
+HomePageFrame.ReportButton.BackgroundTransparency = 1
+HomePageFrame.ReportButton.ImageTransparency = 1
+HomePageFrame.ReportButton.UIStroke.Transparency = 1
+HomePageFrame.DiscordButton.BackgroundTransparency = 1
+HomePageFrame.DiscordButton.ImageTransparency = 1
+HomePageFrame.DiscordButton.UIStroke.Transparency = 1
+HomePageFrame.WelcomeUserUserName.TextTransparency = 1
 end
 
 local AppearReportPopUp = {
@@ -1308,6 +1393,7 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
+HomePageTransparencyReset()
 for _, v in pairs(DisppearHomePage) do
 v:Play()
 end
