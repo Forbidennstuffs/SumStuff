@@ -1394,7 +1394,7 @@ end)
 
 X.MouseButton1Down:connect(function()
 HomePageTransparencyReset()
-for _, v in pairs(DisppearHomePage) do
+for _, v in pairs(DisappearHomePage) do
 v:Play()
 end
 
