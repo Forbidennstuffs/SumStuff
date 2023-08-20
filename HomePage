@@ -1438,6 +1438,7 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
+coroutine.wrap(function()
 while wait() do
 wait(time)
 HomePageFrame.Visible = false
