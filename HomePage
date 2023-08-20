@@ -992,8 +992,6 @@ SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",tim
 end
 
 function HomePageTransparencyReset()
-HomePageFrame.InfoBar.Position = UDim2.new(0.0125000002, 0, 0.0260869563, 0)
-HomePageFrame.TabsParent.Position = UDim2.new(0.0130000003, 0, 0.135000005, 0)
 HomePageFrame.ProfilePicture.Position = UDim2.new(0.112499997, 0, 0.159130454, 0)
 HomePageFrame.BadgesParent.Position = UDim2.new(0.111500017, 0, 0.861521721, 0)
 HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.111500017, 0, 0.802565217, 0)
@@ -1061,8 +1059,6 @@ HomePageFrame.DiscordButton.BackgroundTransparency = 0
 HomePageFrame.DiscordButton.ImageTransparency = 0
 HomePageFrame.DiscordButton.UIStroke.Transparency = 0.7
 HomePageFrame.WelcomeUserUserName.TextTransparency = 0
-HomePageFrame.InfoBar:TweenPosition(UDim2.new(0.0025000002, 0, 0.0260869563, 0),"Out","Quad",time)
-HomePageFrame.TabsParent:TweenPosition(UDim2.new(0.0030000003, 0, 0.135000005, 0),"Out","Quad",time)
 HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.102499997, 0, 0.159130454, 0),"Out","Quad",time)
 HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.101500017, 0, 0.861521721, 0),"Out","Quad",time)
 HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.101500017, 0, 0.802565217, 0),"Out","Quad",time)
@@ -1076,8 +1072,6 @@ HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.277, 0, 0.314999998,
 end
 
 function HomePageTransparencyTo1()
-HomePageFrame.InfoBar.Position = UDim2.new(0.0025000002, 0, 0.0260869563, 0)
-HomePageFrame.TabsParent.Position = UDim2.new(0.0030000003, 0, 0.135000005, 0)
 HomePageFrame.ProfilePicture.Position = UDim2.new(0.102499997, 0, 0.159130454, 0)
 HomePageFrame.BadgesParent.Position = UDim2.new(0.101500017, 0, 0.861521721, 0)
 HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.101500017, 0, 0.802565217, 0)
@@ -1146,8 +1140,6 @@ HomePageFrame.DiscordButton.ImageTransparency = 1
 HomePageFrame.DiscordButton.UIStroke.Transparency = 1
 HomePageFrame.WelcomeUserUserName.TextTransparency = 1
 HomePageFrame.Visible = true
-HomePageFrame.InfoBar:TweenPosition(UDim2.new(0.0125000002, 0, 0.0260869563, 0),"Out","Quad",time)
-HomePageFrame.TabsParent:TweenPosition(UDim2.new(0.0130000003, 0, 0.135000005, 0),"Out","Quad",time)
 HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.112499997, 0, 0.159130454, 0),"Out","Quad",time)
 HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.111500017, 0, 0.861521721, 0),"Out","Quad",time)
 HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.111500017, 0, 0.802565217, 0),"Out","Quad",time)
