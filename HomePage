@@ -1160,6 +1160,16 @@ HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.85799998, 0, 0.86500001, 0
 HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.287, 0, 0.314999998, 0),"Out","Quad",time)
 end
 
+function DragImageTransparencyReset()
+DragImagePath.ImageTransparency = 0.500
+DragImagePath.BackgroundTransparency = 0
+end
+
+function DragImageTransparencyTo1()
+DragImagePath.ImageTransparency = 1
+DragImagePath.BackgroundTransparency = 1
+end
+
 local AppearReportPopUp = {
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}),
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}),
@@ -1390,6 +1400,16 @@ TweenService:Create(HomePageFrame.DiscordButton.UIStroke, TweenInfo.new(time), {
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 1}),
 }
 
+local AppearDragImage = {
+TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 0}),
+TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 0.5}),
+}
+
+local DisappearDragImage = {
+TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 1}),
+TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 1}),
+}
+
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
 setclipboard("discord.gg/3NN5zTW7h2")
@@ -1522,6 +1542,10 @@ local Update4_3 = TweenService:Create(HomePageFrame.UpdatesFrame.Updates.Update4
 Update4:Play()
 Update4_2:Play()
 Update4_3:Play()
+end
+
+for _, v in pairs(DisappearDragImage) do
+v:Play()
 end
 
 for _, v in pairs(DisappearHomePage) do
