@@ -1059,16 +1059,6 @@ HomePageFrame.DiscordButton.BackgroundTransparency = 0
 HomePageFrame.DiscordButton.ImageTransparency = 0
 HomePageFrame.DiscordButton.UIStroke.Transparency = 0.7
 HomePageFrame.WelcomeUserUserName.TextTransparency = 0
-HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.102499997, 0, 0.159130454, 0),"Out","Quad",time)
-HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.101500017, 0, 0.861521721, 0),"Out","Quad",time)
-HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.101500017, 0, 0.802565217, 0),"Out","Quad",time)
-HomePageFrame.AnnouncementFrame:TweenPosition(UDim2.new(0.102000003, 0, 0.469000012, 0),"Out","Quad",time)
-HomePageFrame.UpdatesFrame:TweenPosition(UDim2.new(0.497000029, 0, 0.468999982, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserDisplayName:TweenPosition(UDim2.new(0.277, 0, 0.219999999, 0),"Out","Quad",time)
-HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.496999969, 0, 0.861999929, 0),"Out","Quad",time)
-HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.908310702, 0, 0.865217388, 0),"Out","Quad",time)
-HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.84799998, 0, 0.86500001, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.277, 0, 0.314999998, 0),"Out","Quad",time)
 end
 
 function HomePageTransparencyTo1()
@@ -1140,6 +1130,22 @@ HomePageFrame.DiscordButton.ImageTransparency = 1
 HomePageFrame.DiscordButton.UIStroke.Transparency = 1
 HomePageFrame.WelcomeUserUserName.TextTransparency = 1
 HomePageFrame.Visible = true
+end
+
+function PlayDisappearHomePageAnimation()
+HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.102499997, 0, 0.159130454, 0),"Out","Quad",time)
+HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.101500017, 0, 0.861521721, 0),"Out","Quad",time)
+HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.101500017, 0, 0.802565217, 0),"Out","Quad",time)
+HomePageFrame.AnnouncementFrame:TweenPosition(UDim2.new(0.102000003, 0, 0.469000012, 0),"Out","Quad",time)
+HomePageFrame.UpdatesFrame:TweenPosition(UDim2.new(0.497000029, 0, 0.468999982, 0),"Out","Quad",time)
+HomePageFrame.WelcomeUserDisplayName:TweenPosition(UDim2.new(0.277, 0, 0.219999999, 0),"Out","Quad",time)
+HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.496999969, 0, 0.861999929, 0),"Out","Quad",time)
+HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.908310702, 0, 0.865217388, 0),"Out","Quad",time)
+HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.84799998, 0, 0.86500001, 0),"Out","Quad",time)
+HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.277, 0, 0.314999998, 0),"Out","Quad",time)
+end
+
+function PlayAppearHomePageAnimation()
 HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.112499997, 0, 0.159130454, 0),"Out","Quad",time)
 HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.111500017, 0, 0.861521721, 0),"Out","Quad",time)
 HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.111500017, 0, 0.802565217, 0),"Out","Quad",time)
@@ -1457,7 +1463,7 @@ VHubLogoOpen.Parent = ButtonParent
 VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 VHubLogoOpen.BackgroundTransparency = 0.5
 VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
-VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
+VHubLogoOpen.Size = UDim2.new(0, 0, 0, 0)
 VHubLogoOpen.Image = The.path.Logo
 VHubLogoOpen.ImageTransparency = 0
 VHubLogoOpen.Active = true 
@@ -1471,9 +1477,14 @@ UICorner.Parent = VHubLogoOpen
 game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0)
 
 if _G.settingsTable.ButtonTopLeft == false then
-VHubLogoOpen.Size = UDim2.new(0, 32, 0, 32)
 ButtonParent.LayoutOrder = 0
 ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
+ButtonParent.Visible = true
+local OpenButtonAppear = VHubLogoOpen:TweenSize(UDim2.new(0, 32, 0, 32),"Out","Quad",time)
+else
+ButtonParent.Visible = true
+local OpenButtonAppear = VHubLogoOpen:TweenSize(UDim2.new(0, 62, 0, 32),"Out","Quad",time)
+OpenButtonAppear:Play()
 end
 
 HomePageTransparencyReset()
