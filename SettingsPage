@@ -510,6 +510,17 @@ TweenService:Create(AccessZComics.UIStroke, TweenInfo.new(time), {Transparency =
 
 -- Button Functions:
 Close.MouseButton1Down:connect(function()
+if ReportPopUpFrame.Visible == false then
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 SettingsPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
@@ -520,6 +531,7 @@ end
 end)()
 for _, v in pairs(DisappearSettingsPopUp) do
 v:Play()
+end
 end
 end)
 
