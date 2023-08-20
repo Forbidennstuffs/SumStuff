@@ -1461,11 +1461,11 @@ ButtonParent.Active = true
 VHubLogoOpen.Name = "VHubLogoOpen"
 VHubLogoOpen.Parent = ButtonParent
 VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-VHubLogoOpen.BackgroundTransparency = 0.5
+VHubLogoOpen.BackgroundTransparency = 1
 VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
 VHubLogoOpen.Size = UDim2.new(0, 0, 0, 0)
 VHubLogoOpen.Image = The.path.Logo
-VHubLogoOpen.ImageTransparency = 0
+VHubLogoOpen.ImageTransparency = 1
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
@@ -1481,10 +1481,19 @@ ButtonParent.LayoutOrder = 0
 ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
 ButtonParent.Visible = true
 local OpenButtonAppear = VHubLogoOpen:TweenSize(UDim2.new(0, 32, 0, 32),"Out","Quad",time)
+Local OpenButtonAppear_2 = TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 0.5}),
+Local OpenButtonAppear_3 = TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 0}),
+OpenButtonAppear:Play()
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
 else
 ButtonParent.Visible = true
 local OpenButtonAppear = VHubLogoOpen:TweenSize(UDim2.new(0, 62, 0, 32),"Out","Quad",time)
+Local OpenButtonAppear_2 = TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 0.5}),
+Local OpenButtonAppear_3 = TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 0}),
 OpenButtonAppear:Play()
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
 end
 
 HomePageTransparencyReset()
