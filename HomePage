@@ -1481,16 +1481,16 @@ ButtonParent.LayoutOrder = 0
 ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
 ButtonParent.Visible = true
 local OpenButtonAppear = VHubLogoOpen:TweenSize(UDim2.new(0, 32, 0, 32),"Out","Quad",time)
-Local OpenButtonAppear_2 = TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 0.5}),
-Local OpenButtonAppear_3 = TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 0}),
+Local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
+Local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
 OpenButtonAppear:Play()
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 else
 ButtonParent.Visible = true
 local OpenButtonAppear = VHubLogoOpen:TweenSize(UDim2.new(0, 62, 0, 32),"Out","Quad",time)
-Local OpenButtonAppear_2 = TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 0.5}),
-Local OpenButtonAppear_3 = TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 0}),
+Local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
+Local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
 OpenButtonAppear:Play()
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
