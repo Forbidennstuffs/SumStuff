@@ -1495,14 +1495,12 @@ if _G.settingsTable.ButtonTopLeft == false then
 ButtonParent.LayoutOrder = 0
 ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
 ButtonParent.Visible = true
-VHubLogoOpen:TweenSize(UDim2.new(0, 32, 0, 32),"Out","Back",time)
 local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 else
 ButtonParent.Visible = true
-VHubLogoOpen:TweenSize(UDim2.new(0, 62, 0, 32),"Out","Back",time)
 local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
 OpenButtonAppear_2:Play()
