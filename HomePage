@@ -1442,6 +1442,16 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 coroutine.wrap(function()
 while wait() do
 wait(time)
@@ -1475,6 +1485,16 @@ VHubLogoOpen.ImageTransparency = 1
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 DragImagePath.Visible = true
 HomePageTransparencyTo1()
 local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 1})
@@ -1549,6 +1569,7 @@ v:Play()
 end
 wait(1)
 ButtonParent:Destroy()
+end
 end)
 
 UICorner.Parent = VHubLogoOpen
@@ -1641,6 +1662,7 @@ end
 
 for _, v in pairs(DisappearHomePage) do
 v:Play()
+end
 end
 end)
 
