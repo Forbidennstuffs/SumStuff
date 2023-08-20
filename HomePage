@@ -1422,11 +1422,31 @@ end)
 
 ReportButton.MouseButton1Down:connect(function()
 if ReportPopUpFrame.Visible == false then
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 ReportPopUpFrameTransparencyTo1()
 for _, v in pairs(AppearReportPopUp) do
 v:Play()
 end
 else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 ReportPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
@@ -1668,11 +1688,31 @@ end)
 
 Settings.MouseButton1Down:connect(function()
 if SettingsPopUpFrame.Visible == false then
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 SettingsPopUpFrameTransparencyTo1()
 for _, v in pairs(AppearSettingsPopUp) do
 v:Play()
 end
 else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 SettingsPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
