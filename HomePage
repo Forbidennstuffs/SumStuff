@@ -992,16 +992,6 @@ SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",tim
 end
 
 function HomePageTransparencyReset()
-HomePageFrame.ProfilePicture.Position = UDim2.new(0.112499997, 0, 0.159130454, 0)
-HomePageFrame.BadgesParent.Position = UDim2.new(0.111500017, 0, 0.861521721, 0)
-HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.111500017, 0, 0.802565217, 0)
-HomePageFrame.AnnouncementFrame.Position = UDim2.new(0.112000003, 0, 0.469000012, 0)
-HomePageFrame.UpdatesFrame.Position = UDim2.new(0.507000029, 0, 0.468999982, 0)
-HomePageFrame.WelcomeUserDisplayName.Position = UDim2.new(0.287, 0, 0.219999999, 0)
-HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.506999969, 0, 0.861999929, 0)
-HomePageFrame.ReportButton.Position = UDim2.new(0.918310702, 0, 0.865217388, 0)
-HomePageFrame.DiscordButton.Position = UDim2.new(0.85799998, 0, 0.86500001, 0)
-HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.287, 0, 0.314999998, 0)
 HomePageFrame.InfoBar.BackgroundTransparency = 0.9
 HomePageFrame.InfoBar.UIStroke.Transparency = 0.7
 HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 0
@@ -1062,16 +1052,6 @@ HomePageFrame.WelcomeUserUserName.TextTransparency = 0
 end
 
 function HomePageTransparencyTo1()
-HomePageFrame.ProfilePicture.Position = UDim2.new(0.102499997, 0, 0.159130454, 0)
-HomePageFrame.BadgesParent.Position = UDim2.new(0.101500017, 0, 0.861521721, 0)
-HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.101500017, 0, 0.802565217, 0)
-HomePageFrame.AnnouncementFrame.Position = UDim2.new(0.102000003, 0, 0.469000012, 0)
-HomePageFrame.UpdatesFrame.Position = UDim2.new(0.497000029, 0, 0.468999982, 0)
-HomePageFrame.WelcomeUserDisplayName.Position = UDim2.new(0.277, 0, 0.219999999, 0)
-HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.496999969, 0, 0.861999929, 0)
-HomePageFrame.ReportButton.Position = UDim2.new(0.908310702, 0, 0.865217388, 0)
-HomePageFrame.DiscordButton.Position = UDim2.new(0.84799998, 0, 0.86500001, 0)
-HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.277, 0, 0.314999998, 0)
 HomePageFrame.InfoBar.BackgroundTransparency = 1
 HomePageFrame.InfoBar.UIStroke.Transparency = 1
 HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 1
@@ -1130,6 +1110,32 @@ HomePageFrame.DiscordButton.ImageTransparency = 1
 HomePageFrame.DiscordButton.UIStroke.Transparency = 1
 HomePageFrame.WelcomeUserUserName.TextTransparency = 1
 HomePageFrame.Visible = true
+end
+
+function HomePageDisappearedPositionReset()
+HomePageFrame.ProfilePicture.Position = UDim2.new(0.102499997, 0, 0.159130454, 0)
+HomePageFrame.BadgesParent.Position = UDim2.new(0.101500017, 0, 0.861521721, 0)
+HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.101500017, 0, 0.802565217, 0)
+HomePageFrame.AnnouncementFrame.Position = UDim2.new(0.102000003, 0, 0.469000012, 0)
+HomePageFrame.UpdatesFrame.Position = UDim2.new(0.497000029, 0, 0.468999982, 0)
+HomePageFrame.WelcomeUserDisplayName.Position = UDim2.new(0.277, 0, 0.219999999, 0)
+HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.496999969, 0, 0.861999929, 0)
+HomePageFrame.ReportButton.Position = UDim2.new(0.908310702, 0, 0.865217388, 0)
+HomePageFrame.DiscordButton.Position = UDim2.new(0.84799998, 0, 0.86500001, 0)
+HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.277, 0, 0.314999998, 0)
+end
+
+function HomePageAppearedPositionReset()
+HomePageFrame.ProfilePicture.Position = UDim2.new(0.112499997, 0, 0.159130454, 0)
+HomePageFrame.BadgesParent.Position = UDim2.new(0.111500017, 0, 0.861521721, 0)
+HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.111500017, 0, 0.802565217, 0)
+HomePageFrame.AnnouncementFrame.Position = UDim2.new(0.112000003, 0, 0.469000012, 0)
+HomePageFrame.UpdatesFrame.Position = UDim2.new(0.507000029, 0, 0.468999982, 0)
+HomePageFrame.WelcomeUserDisplayName.Position = UDim2.new(0.287, 0, 0.219999999, 0)
+HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.506999969, 0, 0.861999929, 0)
+HomePageFrame.ReportButton.Position = UDim2.new(0.918310702, 0, 0.865217388, 0)
+HomePageFrame.DiscordButton.Position = UDim2.new(0.85799998, 0, 0.86500001, 0)
+HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.287, 0, 0.314999998, 0)
 end
 
 function PlayDisappearHomePageAnimation()
@@ -1470,6 +1476,9 @@ VHubLogoOpen.Active = true
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
 HomePageTransparencyTo1()
+for _, v in pairs(AppearHomePage) do
+v:Play()
+end
 end)
 
 UICorner.Parent = VHubLogoOpen
