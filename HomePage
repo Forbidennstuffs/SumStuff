@@ -1174,11 +1174,11 @@ TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(tim
 }
 
 local AppearHomePage = {
-TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {GroupTransparency = 0}),
+TweenService:Create(HomePageFrame, TweenInfo.new(time), {GroupTransparency = 0}),
 }
 
 local DisappearHomePage = {
-TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {GroupTransparency = 1}),
+TweenService:Create(HomePageFrame, TweenInfo.new(time), {GroupTransparency = 1}),
 }
 
 local AppearDragImage = {
