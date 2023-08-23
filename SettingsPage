@@ -462,6 +462,7 @@ end)()
 for _, v in pairs(DisappearSettingsPopUp) do
 v:Play()
 end
+end
 end)
 
 UIScaleImage.MouseButton1Down:connect(function()
