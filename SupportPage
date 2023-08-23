@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local ReportPopUpGroup = Instance.new("CanvasGroup")
 local ReportPopUp = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local SupportText = Instance.new("TextLabel")
@@ -16,17 +17,26 @@ local UIStroke_2 = Instance.new("UIStroke")
 
 --Properties:
 
+ReportPopUpGroup.Name = "ReportPopUpGroup"
+ReportPopUpGroup.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+ReportPopUpGroup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ReportPopUpGroup.BackgroundTransparency = 1.000
+ReportPopUpGroup.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ReportPopUpGroup.BorderSizePixel = 0
+ReportPopUpGroup.Position = UDim2.new(-0.519999981, 0, 0, 0)
+ReportPopUpGroup.Size = UDim2.new(0, 200, 0, 230)
+ReportPopUpGroup.GroupTransparency = 0
+ReportPopUpGroup.Visible = false
+
 ReportPopUp.Name = "ReportPopUp"
-ReportPopUp.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+ReportPopUp.Parent = ReportPopUpGroup
 ReportPopUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ReportPopUp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ReportPopUp.BorderSizePixel = 0
-ReportPopUp.Position = UDim2.new(-0.519999981, 0, 0, 0)
 ReportPopUp.Size = UDim2.new(0, 200, 0, 230)
 ReportPopUp.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 ReportPopUp.ImageTransparency = 0.500
 ReportPopUp.ScaleType = Enum.ScaleType.Crop
-ReportPopUp.Visible = false 
 
 UICorner.Parent = ReportPopUp
 
