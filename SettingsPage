@@ -451,11 +451,16 @@ return
 end
 end)()
 
+SettingsPopUpFrameTransparencyReset()
+coroutine.wrap(function()
+while wait() do
+wait(time)
+SettingsPopUpFrame.Visible = false
+return
+end
+end)()
 for _, v in pairs(DisappearSettingsPopUp) do
 v:Play()
-end
-wait(time)
-SettingsPopUpGroup.Visible = false
 end
 end)
 
