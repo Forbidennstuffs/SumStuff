@@ -432,7 +432,7 @@ local time = 1
 
 function SettingsPopUpFrameTransparencyReset()
 SettingsPopUpGroup.GroupTransparency = 0
-SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",1)
+SettingsPopUpGroup:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",1)
 end
 
 local DisappearSettingsPopUp = {
