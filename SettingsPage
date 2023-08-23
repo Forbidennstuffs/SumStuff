@@ -80,7 +80,6 @@ local UIStroke_11 = Instance.new("UIStroke")
 
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
 
-
 --Properties:
 
 SettingsPopUpGroup.Name = "SettingsPopUpGroup"
@@ -433,7 +432,7 @@ local time = 1
 function SettingsPopUpFrameTransparencyReset()
 SettingsPopUpGroup.Position = UDim2.new(1.02499998, 0, 0, 0)
 SettingsPopUpGroup.GroupTransparency = 0
-SettingsPopUpGroup:TweenPosition(UDim2.new(0.92499998, 0, 0, 0),"Out","Quad",time)
+SettingsPopUpGroup:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",time)
 end
 
 local DisappearSettingsPopUp = {
