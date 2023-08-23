@@ -440,7 +440,6 @@ TweenService:Create(SettingsPopUpGroup, TweenInfo.new(time), {GroupTransparency 
 
 -- Button Functions:
 Close.MouseButton1Down:connect(function()
-if ReportPopUpFrame.Visible == false then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -456,7 +455,6 @@ v:Play()
 end
 wait(time)
 SettingsPopUpGroup.Visible = false
-end
 end
 end)
 
