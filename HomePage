@@ -865,7 +865,7 @@ end
 
 -- GUI Animations:
 
-local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
+local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUpGroup
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUpGroup
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
@@ -874,30 +874,14 @@ local time = 0.8
 
 function ReportPopUpFrameTransparencyTo1()
 ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
-ReportPopUpFrame.BackgroundTransparency = 1
-ReportPopUpFrame.ImageTransparency = 1
-ReportPopUpFrame.SupportText.TextTransparency = 1
-ReportPopUpFrame.TextBoxParent.BackgroundTransparency = 1
-ReportPopUpFrame.TextBoxParent.UIStroke.Transparency = 1
-ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 1
-ReportPopUpFrame.SendButton.TextTransparency = 1
-ReportPopUpFrame.SendButton.BackgroundTransparency = 1
-ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
+ReportPopUpFrame.GroupTransparency = 1
 ReportPopUpFrame.Visible = true
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",time)
 end
 
 function ReportPopUpFrameTransparencyReset()
 ReportPopUpFrame.Position = UDim2.new(-0.519999981, 0, 0, 0)
-ReportPopUpFrame.BackgroundTransparency = 0
-ReportPopUpFrame.ImageTransparency = 0.5
-ReportPopUpFrame.SupportText.TextTransparency = 0
-ReportPopUpFrame.TextBoxParent.BackgroundTransparency = 0.9
-ReportPopUpFrame.TextBoxParent.UIStroke.Transparency = 0.7
-ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 0
-ReportPopUpFrame.SendButton.TextTransparency = 0
-ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
-ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
+ReportPopUpFrame.GroupTransparency = 0
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",time)
 end
 
@@ -986,27 +970,11 @@ DragImagePath.BackgroundTransparency = 1
 end
 
 local AppearReportPopUp = {
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}),
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}),
-TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 0}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 0}),
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 0}),
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}),
-TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}),
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {GroupTransparency = 0}),
 }
 
 local DisappearReportPopUp = {
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 1}),
-TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}),
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1}),
 }
 
 local AppearSettingsPopUp = {
