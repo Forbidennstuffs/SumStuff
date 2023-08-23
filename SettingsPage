@@ -455,7 +455,7 @@ SettingsPopUpFrameTransparencyReset()
 coroutine.wrap(function()
 while wait() do
 wait(time)
-SettingsPopUpFrame.Visible = false
+SettingsPopUpGroup.Visible = false
 return
 end
 end)()
