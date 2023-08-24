@@ -36,7 +36,7 @@ wait()
 
 -- Instances:
 
-local MainFrame = Instance.new("CanvasGroup")
+local MainFrame = Instance.new("Frame")
 local InfoBar = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local UIStroke = Instance.new("UIStroke")
@@ -139,7 +139,6 @@ MainFrame.BackgroundTransparency = 1.000
 MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainFrame.BorderSizePixel = 0
 MainFrame.Size = UDim2.new(0, 400, 0, 230)
-MainFrame.GroupTransparency = 0
 
 InfoBar.Name = "InfoBar"
 InfoBar.Parent = MainFrame
@@ -860,7 +859,7 @@ end
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.ReportPopUpGroup
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.SettingsPopUpGroup
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.HomePage
-local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
+local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
@@ -945,14 +944,19 @@ HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.84799998, 0, 0.86500001, 0
 HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.277, 0, 0.314999998, 0),"Out","Quad",time)
 end
 
-function DragImageTransparencyReset()
-DragImagePath.ImageTransparency = 0.500
-DragImagePath.BackgroundTransparency = 0
+function DragImageDisappear()
+DragImagePath.GroupTransparency = 0
+local Play = TweenService:Create(DragImagePath, TweenInfo.new(time), {GroupTransparency = 1})
+Play:Play()
+wait(time)
+DragImagePath.Visible = false
 end
 
-function DragImageTransparencyTo1()
-DragImagePath.ImageTransparency = 1
-DragImagePath.BackgroundTransparency = 1
+function DragImageAppear()
+DragImagePath.Visible = true
+DragImagePath.GroupTransparency = 1
+local Play = TweenService:Create(DragImagePath, TweenInfo.new(time), {GroupTransparency = 0})
+Play:Play()
 end
 
 local AppearReportPopUp = {
@@ -969,24 +973,6 @@ TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency 
 
 local DisappearSettingsPopUp = {
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1}),
-}
-
-local AppearHomePage = {
-TweenService:Create(HomePageFrame, TweenInfo.new(time), {GroupTransparency = 0}),
-}
-
-local DisappearHomePage = {
-TweenService:Create(HomePageFrame, TweenInfo.new(time), {GroupTransparency = 1}),
-}
-
-local AppearDragImage = {
-TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 0}),
-TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 0.5}),
-}
-
-local DisappearDragImage = {
-TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 1}),
-TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 1}),
 }
 
 -- Button Functions:
@@ -1049,14 +1035,8 @@ return
 end
 end)()
 
-coroutine.wrap(function()
-while wait() do
-wait(time)
-DragImagePath.Visible = false
-HomePageFrame.Visible = false
-return
-end
-end)()
+DragImageDisappear()
+
 local ButtonParent = Instance.new("Frame")
 local VHubLogoOpen = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -1092,20 +1072,13 @@ return
 end
 end)()
 
-DragImagePath.Visible = true
-HomePageTransparencyTo1()
+DragImageAppear()
 local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 1})
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 1})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
-for _, v in pairs(AppearHomePage) do
-v:Play()
-end
 
-for _, v in pairs(AppearDragImage) do
-v:Play()
-end
-wait(1)
+wait(time)
 ButtonParent:Destroy()
 end
 end)
@@ -1130,16 +1103,6 @@ local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time)
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
-end
-
-HomePageTransparencyReset()
-
-for _, v in pairs(DisappearDragImage) do
-v:Play()
-end
-
-for _, v in pairs(DisappearHomePage) do
-v:Play()
 end
 end
 end)
