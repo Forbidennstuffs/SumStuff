@@ -43,6 +43,7 @@ local DragImageGroup = Instance.new("CanvasGroup")
 local UICorner = Instance.new("UICorner")
 local DragImage = Instance.new("ImageLabel")
 local UIScale = Instance.new("UIScale")
+local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
@@ -81,3 +82,6 @@ DragImage.Size = UDim2.new(0, 400, 0, 230)
 DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 DragImage.ImageTransparency = 0.500
 DragImage.ScaleType = Enum.ScaleType.Crop
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = DragImage
