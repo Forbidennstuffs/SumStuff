@@ -860,6 +860,7 @@ local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Drag
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.SettingsPopUpGroup
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup
+local DragImagePath_2 = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
@@ -876,17 +877,32 @@ ReportPopUpFrame.GroupTransparency = 0
 ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",time)
 end
 
-function SettingsPopUpFrameTransparencyTo1()
+function AppearSettingsPopUpFrame()
+DragImagePath_2.Size = UDim2.new(0, 540, 0, 230)
 SettingsPopUpFrame.Position = UDim2.new(1.01499998, 0, 0, 0)
 SettingsPopUpFrame.GroupTransparency = 1
+DragImagePath_2.Size = UDim2.new(0, 540, 0, 230)
 SettingsPopUpFrame.Visible = true
 SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",time)
+local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 0}),
+Play:Play()
 end
 
-function SettingsPopUpFrameTransparencyReset()
+function DisappearSettingsPopUpFrame()
+DragImagePath_2.Size = UDim2.new(0, 540, 0, 230)
 SettingsPopUpFrame.Position = UDim2.new(1.02499998, 0, 0, 0)
 SettingsPopUpFrame.GroupTransparency = 0
+coroutine.wrap(function()
+while wait() do
+wait(time)
+DragImagePath_2.Size = UDim2.new(0, 400, 0, 230)
+SettingsPopUpFrame.Visible = false
+return
+end
+end)()
 SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",time)
+local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1}),
+Play:Play()
 end
 
 function HomePageTransparencyReset()
@@ -970,14 +986,6 @@ TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {GroupTransparency = 
 
 local DisappearReportPopUp = {
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1}),
-}
-
-local AppearSettingsPopUp = {
-TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 0}),
-}
-
-local DisappearSettingsPopUp = {
-TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1}),
 }
 
 -- Button Functions:
@@ -1124,10 +1132,7 @@ return
 end
 end)()
 
-SettingsPopUpFrameTransparencyTo1()
-for _, v in pairs(AppearSettingsPopUp) do
-v:Play()
-end
+AppearSettingsPopUpFrame()
 end
 else
 if getgenv().AnimationOngoing == false then
@@ -1140,17 +1145,7 @@ return
 end
 end)()
 
-SettingsPopUpFrameTransparencyReset()
-coroutine.wrap(function()
-while wait() do
-wait(time)
-SettingsPopUpFrame.Visible = false
-return
-end
-end)()
-for _, v in pairs(DisappearSettingsPopUp) do
-v:Play()
-end
+DisappearSettingsPopUpFrame()
 end
 end
 end)
