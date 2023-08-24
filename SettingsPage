@@ -468,7 +468,7 @@ end)
 UIScaleImage.MouseButton1Down:connect(function()
 _G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
-game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.UIScale.Scale = UIScaleTextBox.Text
+game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.UIScale.Scale = UIScaleTextBox.Text
 Notification:Create("Setting Changed And Saved!",5)
 end)
 
