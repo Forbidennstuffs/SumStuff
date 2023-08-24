@@ -74,7 +74,7 @@ local UIStroke_9 = Instance.new("UIStroke")
 local ProfilePicture = Instance.new("ImageLabel")
 local UICorner_11 = Instance.new("UICorner")
 local UIStroke_10 = Instance.new("UIStroke")
-local BadgesParent = Instance.new("Frame")
+local BadgesParent = Instance.new("CanvasGroup")
 local UICorner_12 = Instance.new("UICorner")
 local UIStroke_11 = Instance.new("UIStroke")
 local Badges = Instance.new("Frame")
@@ -87,12 +87,12 @@ local _5Piece = Instance.new("TextLabel")
 local _6Tube = Instance.new("TextLabel")
 local _7Heart = Instance.new("TextLabel")
 local BadgesYouEarnText = Instance.new("TextLabel")
-local AnnouncementFrame = Instance.new("Frame")
+local AnnouncementFrame = Instance.new("CanvasGroup")
 local UICorner_13 = Instance.new("UICorner")
 local UIStroke_12 = Instance.new("UIStroke")
 local AnnouncementText = Instance.new("TextLabel")
 local Announcement = Instance.new("TextLabel")
-local UpdatesFrame = Instance.new("Frame")
+local UpdatesFrame = Instance.new("CanvasGroup")
 local UICorner_14 = Instance.new("UICorner")
 local UIStroke_13 = Instance.new("UIStroke")
 local Updates = Instance.new("Frame")
@@ -111,7 +111,7 @@ local UICorner_18 = Instance.new("UICorner")
 local UIStroke_17 = Instance.new("UIStroke")
 local UpdatesText = Instance.new("TextLabel")
 local WelcomeUserDisplayName = Instance.new("TextLabel")
-local AdditionalInfoFrame = Instance.new("Frame")
+local AdditionalInfoFrame = Instance.new("CanvasGroup")
 local UICorner_19 = Instance.new("UICorner")
 local UIStroke_18 = Instance.new("UIStroke")
 local AdditionalInfo = Instance.new("TextLabel")
@@ -120,10 +120,8 @@ local UICorner_20 = Instance.new("UICorner")
 local UIStroke_19 = Instance.new("UIStroke")
 local ReportButton = Instance.new("ImageButton")
 local UICorner_21 = Instance.new("UICorner")
-local UIStroke_20 = Instance.new("UIStroke")
 local DiscordButton = Instance.new("ImageButton")
 local UICorner_22 = Instance.new("UICorner")
-local UIStroke_21 = Instance.new("UIStroke")
 local WelcomeUserUserName = Instance.new("TextLabel")
 
 --Locals:
@@ -370,7 +368,8 @@ UIStroke_9.Transparency = 0.700
 UIStroke_9.Parent = _7OtherHubsTab
 
 ProfilePicture.Name = "ProfilePicture"
-ProfilePicture.Parent = MainFrame
+ProfilePicture.Parent = MainF
+rame
 ProfilePicture.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ProfilePicture.BackgroundTransparency = 0.900
 ProfilePicture.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -393,6 +392,7 @@ BadgesParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
 BadgesParent.BorderSizePixel = 0
 BadgesParent.Position = UDim2.new(0.111500017, 0, 0.861521721, 0)
 BadgesParent.Size = UDim2.new(0, 150, 0, 20)
+BadgesParent.GroupTransparency = 0
 
 UICorner_12.Parent = BadgesParent
 
@@ -525,6 +525,7 @@ AnnouncementFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AnnouncementFrame.BorderSizePixel = 0
 AnnouncementFrame.Position = UDim2.new(0.112000003, 0, 0.469000012, 0)
 AnnouncementFrame.Size = UDim2.new(0, 149, 0, 72)
+AnnouncementFrame.GroupTransparency = 0
 
 UICorner_13.Parent = AnnouncementFrame
 
@@ -568,6 +569,7 @@ UpdatesFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UpdatesFrame.BorderSizePixel = 0
 UpdatesFrame.Position = UDim2.new(0.507000029, 0, 0.468999982, 0)
 UpdatesFrame.Size = UDim2.new(0, 185, 0, 81)
+UpdatesFrame.GroupTransparency = 0
 
 UICorner_14.Parent = UpdatesFrame
 
@@ -709,6 +711,7 @@ AdditionalInfoFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AdditionalInfoFrame.BorderSizePixel = 0
 AdditionalInfoFrame.Position = UDim2.new(0.506999969, 0, 0.861999929, 0)
 AdditionalInfoFrame.Size = UDim2.new(0, 133, 0, 20)
+AdditionalInfoFrame.GroupTransparency = 0
 
 UICorner_19.Parent = AdditionalInfoFrame
 
@@ -766,11 +769,6 @@ ReportButton.Image = "rbxassetid://12904923643"
 UICorner_21.CornerRadius = UDim.new(0, 20)
 UICorner_21.Parent = ReportButton
 
-UIStroke_20.Color = Color3.fromRGB(255, 0, 0)
-UIStroke_20.Thickness = 0.500
-UIStroke_20.Transparency = 0.700
-UIStroke_20.Parent = ReportButton
-
 DiscordButton.Name = "DiscordButton"
 DiscordButton.Parent = MainFrame
 DiscordButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -782,11 +780,6 @@ DiscordButton.Image = "rbxassetid://10735070439"
 
 UICorner_22.CornerRadius = UDim.new(0, 20)
 UICorner_22.Parent = DiscordButton
-
-UIStroke_21.Color = Color3.fromRGB(255, 255, 255)
-UIStroke_21.Thickness = 0.500
-UIStroke_21.Transparency = 0.700
-UIStroke_21.Parent = DiscordButton
 
 WelcomeUserUserName.Name = "WelcomeUserUserName"
 WelcomeUserUserName.Parent = MainFrame
