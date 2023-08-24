@@ -368,8 +368,7 @@ UIStroke_9.Transparency = 0.700
 UIStroke_9.Parent = _7OtherHubsTab
 
 ProfilePicture.Name = "ProfilePicture"
-ProfilePicture.Parent = MainF
-rame
+ProfilePicture.Parent = MainFrame
 ProfilePicture.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ProfilePicture.BackgroundTransparency = 0.900
 ProfilePicture.BorderColor3 = Color3.fromRGB(0, 0, 0)
