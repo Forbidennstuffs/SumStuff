@@ -950,6 +950,7 @@ coroutine.wrap(function()
 while wait() do
 wait(time)
 DragImagePath.Visible = false
+return
 end
 end)()
 local Play = TweenService:Create(DragImagePath, TweenInfo.new(time), {GroupTransparency = 1})
