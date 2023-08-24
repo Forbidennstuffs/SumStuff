@@ -884,7 +884,7 @@ SettingsPopUpFrame.GroupTransparency = 1
 DragImagePath_2.Size = UDim2.new(0, 540, 0, 230)
 SettingsPopUpFrame.Visible = true
 SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",time)
-local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 0}),
+local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 0})
 Play:Play()
 end
 
@@ -901,7 +901,7 @@ return
 end
 end)()
 SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",time)
-local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1}),
+local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1})
 Play:Play()
 end
 
