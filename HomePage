@@ -859,8 +859,8 @@ end
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.ReportPopUpGroup
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.SettingsPopUpGroup
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.HomePage
-local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup
-local DragImagePath_2 = game:GetService("CoreGui").VexHubFolder.DragScreen
+local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
+local DragImagePath_2 = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
