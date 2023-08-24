@@ -40,9 +40,9 @@ wait()
 local VexHubFolder = Instance.new("Folder")
 local DragScreen = Instance.new("ScreenGui")
 local DragImageGroup = Instance.new("CanvasGroup")
+local UICorner = Instance.new("UICorner")
 local DragImage = Instance.new("ImageLabel")
 local UIScale = Instance.new("UIScale")
-local UICorner = Instance.new("UICorner")
 
 --Properties:
 
@@ -66,6 +66,9 @@ DragImageGroup.Position = UDim2.new(0.235449731, 0, 0.221508816, 0)
 DragImageGroup.Size = UDim2.new(0, 400, 0, 230)
 DragImageGroup.GroupTransparency = 0
 
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = DragImageGroup
+
 DragImage.Name = "DragImage"
 DragImage.Parent = DragImageGroup
 DragImage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -78,6 +81,3 @@ DragImage.ScaleType = Enum.ScaleType.Crop
 
 UIScale.Parent = DragImage
 UIScale.Scale = _G.settingsTable.UIScale
-
-UICorner.CornerRadius = UDim.new(0, 15)
-UICorner.Parent = DragImage
