@@ -911,6 +911,16 @@ HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.496999969, 0, 0.8619999
 HomePageFrame.ReportButton.Position = UDim2.new(0.908310702, 0, 0.865217388, 0)
 HomePageFrame.DiscordButton.Position = UDim2.new(0.84799998, 0, 0.86500001, 0)
 HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.277, 0, 0.314999998, 0)
+HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.112499997, 0, 0.159130454, 0),"Out","Quad",time)
+HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.111500017, 0, 0.861521721, 0),"Out","Quad",time)
+HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.111500017, 0, 0.802565217, 0),"Out","Quad",time)
+HomePageFrame.AnnouncementFrame:TweenPosition(UDim2.new(0.112000003, 0, 0.469000012, 0),"Out","Quad",time)
+HomePageFrame.UpdatesFrame:TweenPosition(UDim2.new(0.507000029, 0, 0.468999982, 0),"Out","Quad",time)
+HomePageFrame.WelcomeUserDisplayName:TweenPosition(UDim2.new(0.287, 0, 0.219999999, 0),"Out","Quad",time)
+HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.506999969, 0, 0.861999929, 0),"Out","Quad",time)
+HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.918310702, 0, 0.865217388, 0),"Out","Quad",time)
+HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.85799998, 0, 0.86500001, 0),"Out","Quad",time)
+HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.287, 0, 0.314999998, 0),"Out","Quad",time)
 end
 
 function HomePageAppearedPositionReset()
@@ -924,9 +934,6 @@ HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.506999969, 0, 0.8619999
 HomePageFrame.ReportButton.Position = UDim2.new(0.918310702, 0, 0.865217388, 0)
 HomePageFrame.DiscordButton.Position = UDim2.new(0.85799998, 0, 0.86500001, 0)
 HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.287, 0, 0.314999998, 0)
-end
-
-function PlayDisappearHomePageAnimation()
 HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.102499997, 0, 0.159130454, 0),"Out","Quad",time)
 HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.101500017, 0, 0.861521721, 0),"Out","Quad",time)
 HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.101500017, 0, 0.802565217, 0),"Out","Quad",time)
@@ -937,19 +944,6 @@ HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.496999969, 0, 0.8619
 HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.908310702, 0, 0.865217388, 0),"Out","Quad",time)
 HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.84799998, 0, 0.86500001, 0),"Out","Quad",time)
 HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.277, 0, 0.314999998, 0),"Out","Quad",time)
-end
-
-function PlayAppearHomePageAnimation()
-HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.112499997, 0, 0.159130454, 0),"Out","Quad",time)
-HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.111500017, 0, 0.861521721, 0),"Out","Quad",time)
-HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.111500017, 0, 0.802565217, 0),"Out","Quad",time)
-HomePageFrame.AnnouncementFrame:TweenPosition(UDim2.new(0.112000003, 0, 0.469000012, 0),"Out","Quad",time)
-HomePageFrame.UpdatesFrame:TweenPosition(UDim2.new(0.507000029, 0, 0.468999982, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserDisplayName:TweenPosition(UDim2.new(0.287, 0, 0.219999999, 0),"Out","Quad",time)
-HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.506999969, 0, 0.861999929, 0),"Out","Quad",time)
-HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.918310702, 0, 0.865217388, 0),"Out","Quad",time)
-HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.85799998, 0, 0.86500001, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.287, 0, 0.314999998, 0),"Out","Quad",time)
 end
 
 function DragImageTransparencyReset()
