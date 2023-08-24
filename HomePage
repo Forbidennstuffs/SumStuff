@@ -133,7 +133,7 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 --Properties:
 
 MainFrame.Name = "HomePage"
-MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
 MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainFrame.BackgroundTransparency = 1.000
 MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -858,10 +858,10 @@ end
 
 -- GUI Animations:
 
-local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUpGroup
-local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUpGroup
-local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
-local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.ReportPopUpGroup
+local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.SettingsPopUpGroup
+local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage.HomePage
+local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
