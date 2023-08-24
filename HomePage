@@ -948,6 +948,7 @@ function DragImageDisappear()
 DragImagePath.GroupTransparency = 0
 local Play = TweenService:Create(DragImagePath, TweenInfo.new(time), {GroupTransparency = 1})
 Play:Play()
+wait()
 DragImagePath.Visible = false
 end
 
