@@ -18,7 +18,7 @@ local UIStroke_2 = Instance.new("UIStroke")
 --Properties:
 
 ReportPopUpGroup.Name = "ReportPopUpGroup"
-ReportPopUpGroup.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+ReportPopUpGroup.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
 ReportPopUpGroup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ReportPopUpGroup.BackgroundTransparency = 1.000
 ReportPopUpGroup.BorderColor3 = Color3.fromRGB(0, 0, 0)
