@@ -69,6 +69,9 @@ DragImageGroup.GroupTransparency = 0
 UICorner.CornerRadius = UDim.new(0, 15)
 UICorner.Parent = DragImageGroup
 
+UIScale.Parent = DragImageGroup
+UIScale.Scale = _G.settingsTable.UIScale
+
 DragImage.Name = "DragImage"
 DragImage.Parent = DragImageGroup
 DragImage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -78,6 +81,3 @@ DragImage.Size = UDim2.new(0, 400, 0, 230)
 DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 DragImage.ImageTransparency = 0.500
 DragImage.ScaleType = Enum.ScaleType.Crop
-
-UIScale.Parent = DragImage
-UIScale.Scale = _G.settingsTable.UIScale
