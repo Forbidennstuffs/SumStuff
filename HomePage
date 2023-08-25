@@ -878,7 +878,6 @@ ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",tim
 end
 
 function AppearSettingsPopUpFrame()
-DragImagePath_2.Size = UDim2.new(0, 540, 0, 230)
 SettingsPopUpFrame.Position = UDim2.new(1.01499998, 0, 0, 0)
 SettingsPopUpFrame.GroupTransparency = 1
 DragImagePath_2.Size = UDim2.new(0, 540, 0, 230)
@@ -895,7 +894,6 @@ SettingsPopUpFrame.GroupTransparency = 0
 coroutine.wrap(function()
 while wait() do
 wait(time)
-DragImagePath_2.Size = UDim2.new(0, 400, 0, 230)
 SettingsPopUpFrame.Visible = false
 return
 end
