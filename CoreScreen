@@ -57,14 +57,11 @@ DragScreen.ResetOnSpawn = false
 
 DragImageGroup.Name = "DragImageGroup"
 DragImageGroup.Parent = DragScreen
-DragImageGroup.Active = true
 DragImageGroup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DragImageGroup.BackgroundTransparency = 1.000
 DragImageGroup.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DragImageGroup.BorderSizePixel = 0
-DragImageGroup.Draggable = true
-DragImageGroup.Position = UDim2.new(0.235449731, 0, 0.221508816, 0)
-DragImageGroup.Size = UDim2.new(0, 400, 0, 230)
+DragImageGroup.Size = UDim2.new(1, 0, 1, 0)
 DragImageGroup.GroupTransparency = 0
 
 UICorner.CornerRadius = UDim.new(0, 15)
@@ -75,9 +72,12 @@ UIScale.Scale = _G.settingsTable.UIScale
 
 DragImage.Name = "DragImage"
 DragImage.Parent = DragImageGroup
+DragImage.Active = true
 DragImage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 DragImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DragImage.BorderSizePixel = 0
+DragImage.Draggable = true
+DragImage.Position = UDim2.new(0.235449731, 0, 0.221508816, 0)
 DragImage.Size = UDim2.new(0, 400, 0, 230)
 DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 DragImage.ImageTransparency = 0.500
