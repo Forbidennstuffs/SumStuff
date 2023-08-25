@@ -51,6 +51,7 @@ VexHubFolder.Name = "VexHubFolder"
 VexHubFolder.Parent = game:GetService("CoreGui")
 
 DragScreen.Name = "DragScreen"
+DragScreen.IgnoreGuiInset = true
 DragScreen.Parent = VexHubFolder
 DragScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 DragScreen.ResetOnSpawn = false
