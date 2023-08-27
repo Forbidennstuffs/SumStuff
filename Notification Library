@@ -1,6 +1,6 @@
 local Library = {}
 
-function Library:Create(Title, Content, Duration)
+function Library:Create(Content1, Content2, Duration)
 
 local VexHubNotificationLibrary = Instance.new("ScreenGui")
 
@@ -27,7 +27,8 @@ a.Notification.BorderSizePixel = 0
 a.Notification.Position = UDim2.new(0.5, -200, 0, -20)
 a.Notification.Size = UDim2.new(0, 400, 0, 50)
 a.Notification.Image = "http://www.roblox.com/asset/?id=11926598891"
-a.Notification.ImageTransparency = 0.500
+a.Notification.ImageTransparency = 1
+a.Notification.BackgroundTransparency = 1
 a.Notification.ScaleType = Enum.ScaleType.Crop
 a.Notification.Visible = false
 
@@ -41,6 +42,7 @@ a.Bell.BorderColor3 = Color3.fromRGB(0, 0, 0)
 a.Bell.BorderSizePixel = 0
 a.Bell.Size = UDim2.new(0, 50, 0, 50)
 a.Bell.Image = "http://www.roblox.com/asset/?id=14586188666"
+a.Bell.ImageTransparency = 1
 
 a.Title.Name = "Title"
 a.Title.Parent = Notification
@@ -51,11 +53,12 @@ a.Title.BorderSizePixel = 0
 a.Title.Position = UDim2.new(0.124999925, 0, 0, 0)
 a.Title.Size = UDim2.new(0, 349, 0, 21)
 a.Title.Font = Enum.Font.GothamBold
-a.Title.Text = tostring(Title)
+a.Title.Text = tostring(Content1)
 a.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 a.Title.TextSize = 16.000
 a.Title.TextXAlignment = Enum.TextXAlignment.Left
 a.Title.TextYAlignment = Enum.TextYAlignment.Bottom
+a.Title.TextTransparency = 1
 
 a.Message.Name = "Message"
 a.Message.Parent = a.Notification
@@ -66,12 +69,13 @@ a.Message.BorderSizePixel = 0
 a.Message.Position = UDim2.new(0.124999925, 0, 0.419999987, 0)
 a.Message.Size = UDim2.new(0, 349, 0, 29)
 a.Message.Font = Enum.Font.Gotham
-a.Message.Text = tostring(Content)
+a.Message.Text = tostring(Content2)
 a.Message.TextColor3 = Color3.fromRGB(255, 255, 255)
 a.Message.TextSize = 12.000
 a.Message.TextWrapped = true
 a.Message.TextXAlignment = Enum.TextXAlignment.Left
 a.Message.TextYAlignment = Enum.TextYAlignment.Top
+a.Message.TextTransparency = 1
 
 -- Animations:
 function DisappearNotification()
