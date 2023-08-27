@@ -92,9 +92,11 @@ TweenService:Create(a.Title, TweenInfo.new(time), {TextTransparency = 0}):Play()
 TweenService:Create(a.Message, TweenInfo.new(time), {TextTransparency = 0}):Play()
 end
 
+AppearNotification()
+
 task.spawn(function() 
 		wait(Duration)
-		DisappearNotification:Play()
+		DisappearNotification()
 		wait(Duration)
 		a.Notification:Destroy()
 	end)
