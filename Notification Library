@@ -45,7 +45,7 @@ a.Bell.Image = "http://www.roblox.com/asset/?id=14586188666"
 a.Bell.ImageTransparency = 1
 
 a.Title.Name = "Title"
-a.Title.Parent = Notification
+a.Title.Parent = a.Notification
 a.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 a.Title.BackgroundTransparency = 1.000
 a.Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
