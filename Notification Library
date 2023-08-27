@@ -29,6 +29,7 @@ a.Notification.Size = UDim2.new(0, 400, 0, 50)
 a.Notification.Image = "http://www.roblox.com/asset/?id=11926598891"
 a.Notification.ImageTransparency = 0.500
 a.Notification.ScaleType = Enum.ScaleType.Crop
+a.Notification.Visible = false
 
 a.UICorner.Parent = a.Notification
 
