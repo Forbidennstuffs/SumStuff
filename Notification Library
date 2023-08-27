@@ -84,7 +84,7 @@ end
 
 function AppearNotification()
 Notification.Visible = true
-a.Notification:TweenPosition(UDim2.new(0.5, -200, 0, 1)
+a.Notification:TweenPosition(UDim2.new(0.5, -200, 0, 1),"Out","Quad",time)
 TweenService:Create(a.Notification, TweenInfo.new(time), {BackgroundTransparency = 0}):Play()
 TweenService:Create(a.Notification, TweenInfo.new(time), {ImageTransparency = 0.5}):Play()
 TweenService:Create(a.Bell, TweenInfo.new(time), {ImageTransparency = 0}):Play()
