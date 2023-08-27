@@ -1,6 +1,6 @@
 local Library = {}
 
-function Library:Create(Content, Duration)
+function Library:Create(Title, Content, Duration)
 
 local VexHubNotificationLibrary = Instance.new("ScreenGui")
 
@@ -17,7 +17,7 @@ Message = Instance.new("TextLabel")
 }
 
 local TweenService = game:GetService("TweenService")
-local time = 1
+local time = 0.8
 
 a.Notification.Name = "Notification"
 a.Notification.Parent = VexHubNotificationLibrary
@@ -30,7 +30,7 @@ a.Notification.Image = "http://www.roblox.com/asset/?id=11926598891"
 a.Notification.ImageTransparency = 0.500
 a.Notification.ScaleType = Enum.ScaleType.Crop
 
-UICorner.Parent = a.Notification
+a.UICorner.Parent = a.Notification
 
 a.Bell.Name = "Bell"
 a.Bell.Parent = a.Notification
