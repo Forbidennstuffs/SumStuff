@@ -2,11 +2,14 @@ local Library = {}
 
 function Library:Create(Content1, Content2, Duration)
 
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
 local VexHubNotificationLibrary = Instance.new("ScreenGui")
 
 VexHubNotificationLibrary.Name = "VexHubNotificationLibrary"
 VexHubNotificationLibrary.Parent = game:GetService("CoreGui")
 VexHubNotificationLibrary.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+end
 
 local a = {
 Notification = Instance.new("ImageLabel"),
@@ -20,7 +23,7 @@ local TweenService = game:GetService("TweenService")
 local time = 0.8
 
 a.Notification.Name = "Notification"
-a.Notification.Parent = VexHubNotificationLibrary
+a.Notification.Parent = game:GetService("CoreGui").VexHubNotificationLibrary
 a.Notification.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 a.Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
 a.Notification.BorderSizePixel = 0
