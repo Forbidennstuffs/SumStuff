@@ -2,8 +2,8 @@ local Library = {}
 
 function Library:Create(Content1, Content2, Duration)
 
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
+if getgenv().CreatedVexHubNotificationLibrary == false then
+getgenv().CreatedVexHubNotificationLibrary = true
 local VexHubNotificationLibrary = Instance.new("ScreenGui")
 
 VexHubNotificationLibrary.Name = "VexHubNotificationLibrary"
