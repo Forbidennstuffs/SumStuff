@@ -94,7 +94,7 @@ end
 
 function AppearNotification()
 a.Notification.Visible = true
-a.Notification:TweenPosition(UDim2.new(0.5, -200, 0, 1),"Out","Linear",time)
+a.Notification:TweenPosition(UDim2.new(0.5, -200, 0, 1),"Out","Exponential",time)
 local Play = TweenService:Create(a.Notification, TweenInfo.new(time), {BackgroundTransparency = 0})
 local Play_2 = TweenService:Create(a.Notification, TweenInfo.new(time), {ImageTransparency = 0.5})
 local Play_3 = TweenService:Create(a.Bell, TweenInfo.new(time), {ImageTransparency = 0})
