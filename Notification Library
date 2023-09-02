@@ -24,7 +24,7 @@ a.Notification.Parent = VexHubNotificationLibrary
 a.Notification.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 a.Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
 a.Notification.BorderSizePixel = 0
-a.Notification.Position = UDim2.new(0.5, -200, 0, -20)
+a.Notification.Position = UDim2.new(0.5, -200, 0, -30)
 a.Notification.Size = UDim2.new(0, 400, 0, 50)
 a.Notification.Image = "http://www.roblox.com/asset/?id=11926598891"
 a.Notification.ImageTransparency = 1
@@ -94,7 +94,7 @@ end
 
 function AppearNotification()
 a.Notification.Visible = true
-a.Notification:TweenPosition(UDim2.new(0.5, -200, 0, 1),"Out","Exponential",time)
+a.Notification:TweenPosition(UDim2.new(0.5, -200, 0, 1),"Out","Quint",time)
 local Play = TweenService:Create(a.Notification, TweenInfo.new(time), {BackgroundTransparency = 0})
 local Play_2 = TweenService:Create(a.Notification, TweenInfo.new(time), {ImageTransparency = 0.5})
 local Play_3 = TweenService:Create(a.Bell, TweenInfo.new(time), {ImageTransparency = 0})
