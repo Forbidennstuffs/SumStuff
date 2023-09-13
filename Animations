@@ -2,7 +2,7 @@ local Play = {}
 
 function Play:Create(Animation)
 
-if Animation = "test" then
+if Animation == "test" then
 print("Test")
 end
 
