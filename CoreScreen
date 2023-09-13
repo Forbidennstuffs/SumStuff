@@ -39,11 +39,9 @@ wait()
 
 local VexHubFolder = Instance.new("Folder")
 local DragScreen = Instance.new("ScreenGui")
-local DragImageGroup = Instance.new("CanvasGroup")
-local UICorner = Instance.new("UICorner")
 local DragImage = Instance.new("ImageLabel")
 local UIScale = Instance.new("UIScale")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner = Instance.new("UICorner")
 
 --Properties:
 
@@ -53,26 +51,10 @@ VexHubFolder.Parent = game:GetService("CoreGui")
 DragScreen.Name = "DragScreen"
 DragScreen.IgnoreGuiInset = true
 DragScreen.Parent = VexHubFolder
-DragScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 DragScreen.ResetOnSpawn = false
 
-DragImageGroup.Name = "DragImageGroup"
-DragImageGroup.Parent = DragScreen
-DragImageGroup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DragImageGroup.BackgroundTransparency = 1.000
-DragImageGroup.BorderColor3 = Color3.fromRGB(0, 0, 0)
-DragImageGroup.BorderSizePixel = 0
-DragImageGroup.Size = UDim2.new(1, 0, 1, 0)
-DragImageGroup.GroupTransparency = 0
-
-UICorner.CornerRadius = UDim.new(0, 15)
-UICorner.Parent = DragImageGroup
-
-UIScale.Parent = DragImageGroup
-UIScale.Scale = _G.settingsTable.UIScale
-
 DragImage.Name = "DragImage"
-DragImage.Parent = DragImageGroup
+DragImage.Parent = DragScreen
 DragImage.Active = true
 DragImage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 DragImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -84,5 +66,8 @@ DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 DragImage.ImageTransparency = 0.500
 DragImage.ScaleType = Enum.ScaleType.Crop
 
-UICorner_2.CornerRadius = UDim.new(0, 15)
-UICorner_2.Parent = DragImage
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = DragImage
+
+UIScale.Parent = DragImage
+UIScale.Scale = _G.settingsTable.UIScale
