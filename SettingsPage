@@ -36,7 +36,6 @@ wait()
 
 -- Instances:
 
-local SettingsPopUpGroup = Instance.new("CanvasGroup")
 local SettingsPopUp = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local SettingsText = Instance.new("TextLabel")
@@ -82,19 +81,8 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 
 --Properties:
 
-SettingsPopUpGroup.Name = "SettingsPopUpGroup"
-SettingsPopUpGroup.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
-SettingsPopUpGroup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SettingsPopUpGroup.BackgroundTransparency = 1.000
-SettingsPopUpGroup.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SettingsPopUpGroup.BorderSizePixel = 0
-SettingsPopUpGroup.Position = UDim2.new(1.02499998, 0, 0, 0)
-SettingsPopUpGroup.Size = UDim2.new(0, 120, 0, 230)
-SettingsPopUpGroup.GroupTransparency = 0
-SettingsPopUpGroup.Visible = false
-
 SettingsPopUp.Name = "SettingsPopUp"
-SettingsPopUp.Parent = SettingsPopUpGroup
+SettingsPopUp.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
 SettingsPopUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SettingsPopUp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SettingsPopUp.BorderSizePixel = 0
@@ -102,6 +90,7 @@ SettingsPopUp.Size = UDim2.new(0, 120, 0, 230)
 SettingsPopUp.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 SettingsPopUp.ImageTransparency = 0.500
 SettingsPopUp.ScaleType = Enum.ScaleType.Crop
+SettingsPopUp.Visible = false
 
 UICorner.Parent = SettingsPopUp
 
