@@ -27,6 +27,30 @@ elseif Animation == "Disappear" and Tab == "DragImage" and Page == "0" and Type 
 TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 1}):Play()
 
+elseif Animation == "Appear" and Tab == "ReportPopUp" and Page == "0" and Type == "1" then
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",time)
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}):Play()
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 0.5}):Play()
+TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 0}):Play()
+TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
+TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
+TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 0}):Play()
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 0}):Play()
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
+TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
+
+elseif Animation == "Disappear" and Tab == "ReportPopUp" and Page == "0" and Type == "1" then
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",time)
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {ImageTransparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame.TextBoxParent, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame.TextBoxParent.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+
 elseif Animation == "Appear" and Tab == "HomePage" and Page == "0" and Type == "1" then
 TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
 TweenService:Create(HomePageFrame.InfoBar.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
