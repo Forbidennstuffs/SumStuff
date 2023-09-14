@@ -19,7 +19,7 @@ return
 end
 end)()
 
-if Animation == "Appear" and Tab == "HomePage" and Page = "0" and Type = "1" then
+if Animation == "Appear" and Tab == "HomePage" and Page == "0" and Type == "1" then
 TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
 TweenService:Create(HomePageFrame.InfoBar.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
 TweenService:Create(HomePageFrame.InfoBar.VexHubLogo, TweenInfo.new(time), {ImageTransparency = 0}):Play()
@@ -89,7 +89,7 @@ TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {ImageTran
 TweenService:Create(HomePageFrame.DiscordButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 0}):Play()
 
-elseif Animation == "Disappear" and Tab == "HomePage" and Page = "0" and Type = "1" then
+elseif Animation == "Disappear" and Tab == "HomePage" and Page == "0" and Type == "1" then
 TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(HomePageFrame.InfoBar.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
 TweenService:Create(HomePageFrame.InfoBar.VexHubLogo, TweenInfo.new(time), {ImageTransparency = 1}):Play()
