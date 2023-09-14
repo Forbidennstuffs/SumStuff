@@ -1,6 +1,6 @@
 local Play = {}
 
-function Play:Create(Animation)
+function Play:Create(Animation, Tab, Page)
 
 if Animation == "test" then
 print("Test")
