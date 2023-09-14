@@ -9,6 +9,16 @@ local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragIma
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 if Animation == "Appear" and Tab == "HomePage" and Page = "0" and Type = "1" then
 TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
 TweenService:Create(HomePageFrame.InfoBar.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
@@ -78,6 +88,7 @@ TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {Backgroun
 TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {ImageTransparency = 0}):Play()
 TweenService:Create(HomePageFrame.DiscordButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 0}):Play()
+end
 end
 
 end
