@@ -852,132 +852,13 @@ end
 
 -- GUI Animations:
 
+local PlayAnimation = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations"))()
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUpGroup
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUpGroup
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
 local time = 0.8
-
-function ReportPopUpFrameTransparencyTo1()
-ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
-ReportPopUpFrame.GroupTransparency = 1
-ReportPopUpFrame.Visible = true
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",time)
-end
-
-function ReportPopUpFrameTransparencyReset()
-ReportPopUpFrame.Position = UDim2.new(-0.519999981, 0, 0, 0)
-ReportPopUpFrame.GroupTransparency = 0
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",time)
-end
-
-function AppearSettingsPopUpFrame()
-SettingsPopUpFrame.Position = UDim2.new(1.01499998, 0, 0, 0)
-SettingsPopUpFrame.GroupTransparency = 1
-SettingsPopUpFrame.Visible = true
-SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",time)
-local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 0})
-Play:Play()
-end
-
-function DisappearSettingsPopUpFrame()
-SettingsPopUpFrame.Position = UDim2.new(1.02499998, 0, 0, 0)
-SettingsPopUpFrame.GroupTransparency = 0
-coroutine.wrap(function()
-while wait() do
-wait(time)
-SettingsPopUpFrame.Visible = false
-return
-end
-end)()
-SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",time)
-local Play = TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1})
-Play:Play()
-end
-
-function HomePageTransparencyReset()
-HomePageFrame.GroupTransparency = 0
-end
-
-function HomePageTransparencyTo1()
-HomePageFrame.GroupTransparency = 1
-HomePageFrame.Visible = true
-end
-
-function HomePageDisappearedPositionReset()
-HomePageFrame.ProfilePicture.Position = UDim2.new(0.102499997, 0, 0.159130454, 0)
-HomePageFrame.BadgesParent.Position = UDim2.new(0.101500017, 0, 0.861521721, 0)
-HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.101500017, 0, 0.802565217, 0)
-HomePageFrame.AnnouncementFrame.Position = UDim2.new(0.102000003, 0, 0.469000012, 0)
-HomePageFrame.UpdatesFrame.Position = UDim2.new(0.497000029, 0, 0.468999982, 0)
-HomePageFrame.WelcomeUserDisplayName.Position = UDim2.new(0.277, 0, 0.219999999, 0)
-HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.496999969, 0, 0.861999929, 0)
-HomePageFrame.ReportButton.Position = UDim2.new(0.908310702, 0, 0.865217388, 0)
-HomePageFrame.DiscordButton.Position = UDim2.new(0.84799998, 0, 0.86500001, 0)
-HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.277, 0, 0.314999998, 0)
-HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.112499997, 0, 0.159130454, 0),"Out","Quad",time)
-HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.111500017, 0, 0.861521721, 0),"Out","Quad",time)
-HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.111500017, 0, 0.802565217, 0),"Out","Quad",time)
-HomePageFrame.AnnouncementFrame:TweenPosition(UDim2.new(0.112000003, 0, 0.469000012, 0),"Out","Quad",time)
-HomePageFrame.UpdatesFrame:TweenPosition(UDim2.new(0.507000029, 0, 0.468999982, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserDisplayName:TweenPosition(UDim2.new(0.287, 0, 0.219999999, 0),"Out","Quad",time)
-HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.506999969, 0, 0.861999929, 0),"Out","Quad",time)
-HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.918310702, 0, 0.865217388, 0),"Out","Quad",time)
-HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.85799998, 0, 0.86500001, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.287, 0, 0.314999998, 0),"Out","Quad",time)
-end
-
-function HomePageAppearedPositionReset()
-HomePageFrame.ProfilePicture.Position = UDim2.new(0.112499997, 0, 0.159130454, 0)
-HomePageFrame.BadgesParent.Position = UDim2.new(0.111500017, 0, 0.861521721, 0)
-HomePageFrame.BadgesYouEarnText.Position = UDim2.new(0.111500017, 0, 0.802565217, 0)
-HomePageFrame.AnnouncementFrame.Position = UDim2.new(0.112000003, 0, 0.469000012, 0)
-HomePageFrame.UpdatesFrame.Position = UDim2.new(0.507000029, 0, 0.468999982, 0)
-HomePageFrame.WelcomeUserDisplayName.Position = UDim2.new(0.287, 0, 0.219999999, 0)
-HomePageFrame.AdditionalInfoFrame.Position = UDim2.new(0.506999969, 0, 0.861999929, 0)
-HomePageFrame.ReportButton.Position = UDim2.new(0.918310702, 0, 0.865217388, 0)
-HomePageFrame.DiscordButton.Position = UDim2.new(0.85799998, 0, 0.86500001, 0)
-HomePageFrame.WelcomeUserUserName.Position = UDim2.new(0.287, 0, 0.314999998, 0)
-HomePageFrame.ProfilePicture:TweenPosition(UDim2.new(0.102499997, 0, 0.159130454, 0),"Out","Quad",time)
-HomePageFrame.BadgesParent:TweenPosition(UDim2.new(0.101500017, 0, 0.861521721, 0),"Out","Quad",time)
-HomePageFrame.BadgesYouEarnText:TweenPosition(UDim2.new(0.101500017, 0, 0.802565217, 0),"Out","Quad",time)
-HomePageFrame.AnnouncementFrame:TweenPosition(UDim2.new(0.102000003, 0, 0.469000012, 0),"Out","Quad",time)
-HomePageFrame.UpdatesFrame:TweenPosition(UDim2.new(0.497000029, 0, 0.468999982, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserDisplayName:TweenPosition(UDim2.new(0.277, 0, 0.219999999, 0),"Out","Quad",time)
-HomePageFrame.AdditionalInfoFrame:TweenPosition(UDim2.new(0.496999969, 0, 0.861999929, 0),"Out","Quad",time)
-HomePageFrame.ReportButton:TweenPosition(UDim2.new(0.908310702, 0, 0.865217388, 0),"Out","Quad",time)
-HomePageFrame.DiscordButton:TweenPosition(UDim2.new(0.84799998, 0, 0.86500001, 0),"Out","Quad",time)
-HomePageFrame.WelcomeUserUserName:TweenPosition(UDim2.new(0.277, 0, 0.314999998, 0),"Out","Quad",time)
-end
-
-function DragImageDisappear()
-DragImagePath.GroupTransparency = 0
-coroutine.wrap(function()
-while wait() do
-wait(time)
-DragImagePath.Visible = false
-return
-end
-end)()
-local Play = TweenService:Create(DragImagePath, TweenInfo.new(time), {GroupTransparency = 1})
-Play:Play()
-end
-
-function DragImageAppear()
-DragImagePath.Visible = true
-DragImagePath.GroupTransparency = 1
-local Play = TweenService:Create(DragImagePath, TweenInfo.new(time), {GroupTransparency = 0})
-Play:Play()
-end
-
-local AppearReportPopUp = {
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {GroupTransparency = 0}),
-}
-
-local DisappearReportPopUp = {
-TweenService:Create(ReportPopUpFrame, TweenInfo.new(time), {GroupTransparency = 1}),
-}
 
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
@@ -987,59 +868,15 @@ end)
 
 ReportButton.MouseButton1Down:connect(function()
 if ReportPopUpFrame.Visible == false then
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
-
-ReportPopUpFrameTransparencyTo1()
-for _, v in pairs(AppearReportPopUp) do
-v:Play()
-end
-end
+PlayAnimation:Create("Appear", "ReportPopUp", "0", "1")
 else
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
-
-ReportPopUpFrameTransparencyReset()
-coroutine.wrap(function()
-while wait() do
-wait(time)
-ReportPopUpFrame.Visible = false
-return
-end
-end)()
-for _, v in pairs(DisappearReportPopUp) do
-v:Play()
-end
-end
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
 end
 end)
 
 X.MouseButton1Down:connect(function()
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
-
-DragImageDisappear()
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 
 local ButtonParent = Instance.new("Frame")
 local VHubLogoOpen = Instance.new("ImageButton")
@@ -1066,17 +903,9 @@ VHubLogoOpen.ImageTransparency = 1
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
+PlayAnimation:Create("Appear", "DragImage", "0", "1")
+PlayAnimation:Create("Appear", "HomePage", "0", "1")
 
-DragImageAppear()
 local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 1})
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 1})
 OpenButtonAppear_2:Play()
@@ -1084,7 +913,6 @@ OpenButtonAppear_3:Play()
 
 wait(time)
 ButtonParent:Destroy()
-end
 end)
 
 UICorner.Parent = VHubLogoOpen
@@ -1108,36 +936,13 @@ local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time)
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 end
-end
 end)
 
 Settings.MouseButton1Down:connect(function()
 if SettingsPopUpFrame.Visible == false then
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
-
-AppearSettingsPopUpFrame()
-end
+PlayAnimation:Create("Appear", "SettingsPopUp", "0", "1")
 else
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
-
-DisappearSettingsPopUpFrame()
-end
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
 end
 end)
 
