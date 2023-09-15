@@ -416,78 +416,48 @@ end
 
 -- GUI Animations
 
+local PlayAnimation = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations"))()
 local TweenService = game:GetService("TweenService")
 local time = 1
 
-function SettingsPopUpFrameTransparencyReset()
-SettingsPopUpGroup.Position = UDim2.new(1.02499998, 0, 0, 0)
-SettingsPopUpGroup.GroupTransparency = 0
-SettingsPopUpGroup:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",time)
-end
-
-local DisappearSettingsPopUp = {
-TweenService:Create(SettingsPopUpGroup, TweenInfo.new(time), {GroupTransparency = 1}),
-}
-
 -- Button Functions:
 Close.MouseButton1Down:connect(function()
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
-
-SettingsPopUpFrameTransparencyReset()
-coroutine.wrap(function()
-while wait() do
-wait(time)
-SettingsPopUpGroup.Visible = false
-return
-end
-end)()
-for _, v in pairs(DisappearSettingsPopUp) do
-v:Play()
-end
-end
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
 end)
 
 UIScaleImage.MouseButton1Down:connect(function()
 _G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
-game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.UIScale.Scale = UIScaleTextBox.Text
-Notification:Create("Setting Changed And Saved!",5)
+game:GetService("CoreGui").VexHubFolder.DragScreen.UIScale.Scale = UIScaleTextBox.Text
+Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved!",5)
 end)
 
 TopLeftButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = true
 saveSettings()
-Notification:Create("Setting Changed And Saved!",5)
+Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved!",5)
 end)
 
 TopRightButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = false
 saveSettings()
-Notification:Create("Setting Changed And Saved!",5)
+Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved!",5)
 end)
 
 OkButton.MouseButton1Down:connect(function()
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
-Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 BlackButton.MouseButton1Down:connect(function()
 _G.settingsTable.WhiteBackground = false
 saveSettings()
-Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 WhiteButton.MouseButton1Down:connect(function()
 _G.settingsTable.WhiteBackground = true
 saveSettings()
-Notification:Create("Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
