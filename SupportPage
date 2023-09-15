@@ -3,7 +3,6 @@
 
 -- Instances:
 
-local ReportPopUpGroup = Instance.new("CanvasGroup")
 local ReportPopUp = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local SupportText = Instance.new("TextLabel")
