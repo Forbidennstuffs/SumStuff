@@ -20,10 +20,14 @@ end
 end)()
 
 if Animation == "Appear" and Tab == "DragImage" and Page == "0" and Type == "1" then
+DragImagePath.BackgroundTransparency = 1
+DragImagePath.ImageTransparency = 1
 TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 0}):Play()
 TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 0.5}):Play()
 
 elseif Animation == "Disappear" and Tab == "DragImage" and Page == "0" and Type == "1" then
+DragImagePath.BackgroundTransparency = 0
+DragImagePath.ImageTransparency = 0.5
 TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 1}):Play()
 
