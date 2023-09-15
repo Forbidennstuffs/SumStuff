@@ -82,7 +82,7 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 --Properties:
 
 SettingsPopUp.Name = "SettingsPopUp"
-SettingsPopUp.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImageGroup.DragImage
+SettingsPopUp.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 SettingsPopUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SettingsPopUp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SettingsPopUp.BorderSizePixel = 0
