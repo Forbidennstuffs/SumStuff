@@ -316,10 +316,8 @@ HomePageFrame.AdditionalInfoFrame.IText.TextTransparency = 1
 HomePageFrame.AdditionalInfoFrame.IText.UIStroke.Transparency = 1
 HomePageFrame.ReportButton.BackgroundTransparency = 1
 HomePageFrame.ReportButton.ImageTransparency = 1
-HomePageFrame.ReportButton.UIStroke.Transparency = 1
 HomePageFrame.DiscordButton.BackgroundTransparency = 1
 HomePageFrame.DiscordButton.ImageTransparency = 1
-HomePageFrame.DiscordButton.UIStroke.Transparency = 1
 HomePageFrame.WelcomeUserUserName.TextTransparency = 1
 HomePageFrame.Visible = true
 TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
@@ -385,10 +383,8 @@ TweenService:Create(HomePageFrame.AdditionalInfoFrame.IText, TweenInfo.new(time)
 TweenService:Create(HomePageFrame.AdditionalInfoFrame.IText.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
 TweenService:Create(HomePageFrame.ReportButton, TweenInfo.new(time), {BackgroundTransparency = 0}):Play()
 TweenService:Create(HomePageFrame.ReportButton, TweenInfo.new(time), {ImageTransparency = 0}):Play()
-TweenService:Create(HomePageFrame.ReportButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
 TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {BackgroundTransparency = 0}):Play()
 TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {ImageTransparency = 0}):Play()
-TweenService:Create(HomePageFrame.DiscordButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 0}):Play()
 
 elseif Animation == "Disappear" and Tab == "HomePage" and Page == "0" and Type == "1" then
@@ -455,10 +451,8 @@ HomePageFrame.AdditionalInfoFrame.IText.TextTransparency = 0
 HomePageFrame.AdditionalInfoFrame.IText.UIStroke.Transparency = 0.7
 HomePageFrame.ReportButton.BackgroundTransparency = 0
 HomePageFrame.ReportButton.ImageTransparency = 0
-HomePageFrame.ReportButton.UIStroke.Transparency = 0.7
 HomePageFrame.DiscordButton.BackgroundTransparency = 0
 HomePageFrame.DiscordButton.ImageTransparency = 0
-HomePageFrame.DiscordButton.UIStroke.Transparency = 0.7
 HomePageFrame.WelcomeUserUserName.TextTransparency = 0
 TweenService:Create(HomePageFrame.InfoBar, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(HomePageFrame.InfoBar.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
@@ -523,10 +517,8 @@ TweenService:Create(HomePageFrame.AdditionalInfoFrame.IText, TweenInfo.new(time)
 TweenService:Create(HomePageFrame.AdditionalInfoFrame.IText.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
 TweenService:Create(HomePageFrame.ReportButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(HomePageFrame.ReportButton, TweenInfo.new(time), {ImageTransparency = 1}):Play()
-TweenService:Create(HomePageFrame.ReportButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
 TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {ImageTransparency = 1}):Play()
-TweenService:Create(HomePageFrame.DiscordButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 1}):Play()
 wait(time)
 HomePageFrame.Visible = false
