@@ -875,10 +875,17 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
-task.spawn(function()
-PlayAnimation:Create("Disappear", "DragImage", "0", "1")
-end)
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
 
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 
 local ButtonParent = Instance.new("Frame")
@@ -906,6 +913,16 @@ VHubLogoOpen.ImageTransparency = 1
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 PlayAnimation:Create("Appear", "DragImage", "0", "1")
 PlayAnimation:Create("Appear", "HomePage", "0", "1")
 
@@ -916,6 +933,7 @@ OpenButtonAppear_3:Play()
 
 wait(time)
 ButtonParent:Destroy()
+end
 end)
 
 UICorner.Parent = VHubLogoOpen
@@ -938,6 +956,7 @@ local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time)
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
+end
 end
 end)
 
