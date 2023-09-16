@@ -875,7 +875,10 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
+task.spawn(function()
 PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+end)
+
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 
 local ButtonParent = Instance.new("Frame")
