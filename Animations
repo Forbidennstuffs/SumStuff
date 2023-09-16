@@ -9,16 +9,6 @@ local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragIma
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
-if getgenv().AnimationOngoing == false then
-getgenv().AnimationOngoing = true
-coroutine.wrap(function()
-while wait() do
-wait(time+0.1)
-getgenv().AnimationOngoing = false
-return
-end
-end)()
-
 if Animation == "Appear" and Tab == "DragImage" and Page == "0" and Type == "1" then
 DragImagePath.BackgroundTransparency = 1
 DragImagePath.ImageTransparency = 1
@@ -522,7 +512,6 @@ TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {ImageTran
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 1}):Play()
 wait(time)
 HomePageFrame.Visible = false
-end
 end
 
 end
