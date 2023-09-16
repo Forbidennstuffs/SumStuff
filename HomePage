@@ -875,13 +875,7 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
-coroutine.wrap(function()
-while wait() do
 PlayAnimation:Create("Disappear", "DragImage", "0", "1")
-return
-end
-end)()
-
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 
 local ButtonParent = Instance.new("Frame")
