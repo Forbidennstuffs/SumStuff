@@ -9,6 +9,16 @@ local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragIma
 local TweenService = game:GetService("TweenService")
 local time = 0.8
 
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 if Animation == "Appear" and Tab == "DragImage" and Page == "0" and Type == "1" then
 DragImagePath.BackgroundTransparency = 1
 DragImagePath.ImageTransparency = 1
@@ -21,8 +31,10 @@ DragImagePath.BackgroundTransparency = 0
 DragImagePath.ImageTransparency = 0.5
 TweenService:Create(DragImagePath, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(DragImagePath, TweenInfo.new(time), {ImageTransparency = 1}):Play()
+task.spawn(function()
 wait(time)
 DragImagePath.Visible = false
+end)
 
 elseif Animation == "Appear" and Tab == "ReportPopUp" and Page == "0" and Type == "1" then
 ReportPopUpFrame.Position = UDim2.new(-0.509999981, 0, 0, 0)
@@ -68,8 +80,10 @@ TweenService:Create(ReportPopUpFrame.TextBoxParent.TextBox, TweenInfo.new(time),
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
 TweenService:Create(ReportPopUpFrame.SendButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+task.spawn(function()
 wait(time)
 ReportPopUpFrame.Visible = false
+end)
 
 elseif Animation == "Appear" and Tab == "SettingsPopUp" and Page == "0" and Type == "1" then
 SettingsPopUpFrame.Position = UDim2.new(1.01499998, 0, 0, 0)
@@ -239,8 +253,10 @@ TweenService:Create(SettingsPopUpFrame.ReExecuteVHub.UIStroke, TweenInfo.new(tim
 TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(SettingsPopUpFrame.AccessZComics, TweenInfo.new(time), {TextTransparency = 1}):Play()
 TweenService:Create(SettingsPopUpFrame.AccessZComics.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+task.spawn(function()
 wait(time)
 SettingsPopUpFrame.Visible = false
+end)
 
 elseif Animation == "Appear" and Tab == "HomePage" and Page == "0" and Type == "1" then
 HomePageFrame.InfoBar.BackgroundTransparency = 1
@@ -510,8 +526,11 @@ TweenService:Create(HomePageFrame.ReportButton, TweenInfo.new(time), {ImageTrans
 TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
 TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(time), {ImageTransparency = 1}):Play()
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(time), {TextTransparency = 1}):Play()
+task.spawn(function()
 wait(time)
 HomePageFrame.Visible = false
+end)
+end
 end
 
 end
