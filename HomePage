@@ -968,6 +968,7 @@ local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time)
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 end
+end
 end)
 
 Settings.MouseButton1Down:connect(function()
