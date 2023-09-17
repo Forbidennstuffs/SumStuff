@@ -951,6 +951,14 @@ UICorner.Parent = VHubLogoOpen
 
 game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0)
 
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+
 if _G.settingsTable.ButtonTopLeft == false then
 ButtonParent.LayoutOrder = 0
 ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
