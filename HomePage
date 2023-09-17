@@ -863,7 +863,7 @@ local time = 0.8
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
 setclipboard("discord.gg/3NN5zTW7h2")
-Notification:Create("Copied To Clipboard!", "VexHub Discord link is in your clipboard!",5)
+Notification:Create("Copied To Clipboard!", "VexHub Discord link Is In Your Clipboard!",5)
 end)
 
 ReportButton.MouseButton1Down:connect(function()
