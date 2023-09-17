@@ -429,31 +429,31 @@ UIScaleImage.MouseButton1Down:connect(function()
 _G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
 game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.UIScale.Scale = UIScaleTextBox.Text
-Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved!",5)
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 TopLeftButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = true
 saveSettings()
-Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved!",5)
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 TopRightButton.MouseButton1Down:connect(function()
 _G.settingsTable.ButtonTopLeft = false
 saveSettings()
-Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved!",5)
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 OkButton.MouseButton1Down:connect(function()
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
-Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 BlackButton.MouseButton1Down:connect(function()
 _G.settingsTable.WhiteBackground = false
 saveSettings()
-Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 WhiteButton.MouseButton1Down:connect(function()
