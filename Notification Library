@@ -17,7 +17,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BackgroundTransparency = 1.000
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.5, -200, 0, -100)
+Frame.Position = UDim2.new(0.5, -200, 0, 1)
 Frame.Size = UDim2.new(0, 400, 0, 50)
 end
 
