@@ -945,7 +945,6 @@ OpenButtonAppear_3:Play()
 wait(time)
 ButtonParent:Destroy()
 end
-end
 end)
 
 UICorner.Parent = VHubLogoOpen
