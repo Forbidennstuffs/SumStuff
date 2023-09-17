@@ -137,6 +137,8 @@ Play_2:Play()
 Play_3:Play()
 Play_4:Play()
 Play_5:Play()
+wait(Duration)
+a.Notification:Destroy()
 end
 
 function AppearNotification()
@@ -159,8 +161,6 @@ AppearNotification()
 task.spawn(function() 
 		wait(Duration)
 		DisappearNotification()
-		wait(Duration)
-		a.Notification:Destroy()
 	end)
 end
 
