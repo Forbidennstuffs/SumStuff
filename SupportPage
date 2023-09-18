@@ -102,3 +102,21 @@ TextBoxParent.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SendButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SendButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 end
+
+--Wallpaper Type Checker:
+local WallpaperPath = _G.settingsTable.Wallpaper
+local MarketPlaceService = game:GetService("MarketplaceService")
+if string.find(WallpaperPath, ".png") then
+ReportPopUp.Image = getcustomasset(WallpaperPath)
+else
+local success, result = pcall(function() 
+   return MarketPlaceService:GetProductInfo(tonumber(WallpaperPath)).AssetTypeId
+end)
+if success then
+    if result == 13 then --checks if image id is decal
+        ReportPopUp.Image = "https://www.roblox.com/asset-thumbnail/image?assetId="..WallpaperPath.."&width=420&height=420&format=png"
+    elseif result == 1 then
+        ReportPopUp.Image = "rbxassetid://".._G.settingsTable.Wallpaper
+    end
+end
+end
