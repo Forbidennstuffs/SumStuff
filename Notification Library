@@ -124,6 +124,7 @@ a.Message.TextXAlignment = Enum.TextXAlignment.Left
 a.Message.TextYAlignment = Enum.TextYAlignment.Top
 a.Message.TextTransparency = 1
 
+--Wallpaper Type Checker:
 local WallpaperPath = _G.settingsTable.Wallpaper
 local MarketPlaceService = game:GetService("MarketplaceService")
 if string.find(WallpaperPath, ".png") then
