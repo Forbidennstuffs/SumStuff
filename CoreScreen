@@ -62,9 +62,14 @@ DragImage.BorderSizePixel = 0
 DragImage.Draggable = true
 DragImage.Position = UDim2.new(0.235449731, 0, 0.221508816, 0)
 DragImage.Size = UDim2.new(0, 400, 0, 230)
-DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 DragImage.ImageTransparency = 0.500
 DragImage.ScaleType = Enum.ScaleType.Crop
+
+if string.find(_G.settingsTable.Wallpaper, "%.png") then
+getcustomasset(_G.settingsTable.Wallpaper)
+else
+DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
+end
 
 UICorner.CornerRadius = UDim.new(0, 15)
 UICorner.Parent = DragImage
