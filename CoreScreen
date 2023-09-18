@@ -75,17 +75,13 @@ UIScale.Scale = _G.settingsTable.UIScale
 local WallpaperPath = _G.settingsTable.Wallpaper
 local MarketPlaceService = game:GetService("MarketplaceService")
 if string.find(WallpaperPath, ".png") then
-    if isfile(WallpaperPath) then
-        DragImage.Image = getcustomasset(WallpaperPath)
-    else
-        warn("Unable To Find File") -- Chnages Made Here
-    end
+DragImage.Image = getcustomasset(WallpaperPath)
 else
 local success, result = pcall(function() 
    return MarketPlaceService:GetProductInfo(tonumber(WallpaperPath)).AssetTypeId
 end)
 if success then
-    if result == 13 then
+    if result == 13 then --checks if image id is decal
         DragImage.Image = "https://www.roblox.com/asset-thumbnail/image?assetId="..WallpaperPath.."&width=420&height=420&format=png"
     elseif result == 1 then
         DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
