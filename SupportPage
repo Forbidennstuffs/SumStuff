@@ -44,7 +44,7 @@ SupportText.TextSize = 16.000
 
 TextBoxParent.Name = "TextBoxParent"
 TextBoxParent.Parent = ReportPopUp
-SendButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBoxParent.BackgroundTransparency = 0.900
 TextBoxParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBoxParent.BorderSizePixel = 0
