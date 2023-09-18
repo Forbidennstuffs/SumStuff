@@ -72,6 +72,7 @@ UIScale.Parent = DragImage
 UIScale.Scale = _G.settingsTable.UIScale
 
 local WallpaperPath = _G.settingsTable.Wallpaper
+local MarketPlaceService = game:GetService("MarketplaceService")
 if string.find(WallpaperPath, ".png") then
 DragImage.Image = getcustomasset(WallpaperPath)
 else
