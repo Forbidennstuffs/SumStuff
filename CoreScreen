@@ -78,7 +78,7 @@ if string.find(WallpaperPath, ".png") then
     if isfile(WallpaperPath) then
         DragImage.Image = getcustomasset(WallpaperPath)
     else
-        Warn("Unable To Find File") -- Chnages Made Here
+        warn("Unable To Find File") -- Chnages Made Here
     end
 else
 local success, result = pcall(function() 
