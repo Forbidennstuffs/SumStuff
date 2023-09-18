@@ -418,6 +418,24 @@ ReExecuteVHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 AccessZComics.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 end
 
+--Wallpaper Type Checker:
+local WallpaperPath = _G.settingsTable.Wallpaper
+local MarketPlaceService = game:GetService("MarketplaceService")
+if string.find(WallpaperPath, ".png") then
+SettingsPopUp.Image = getcustomasset(WallpaperPath)
+else
+local success, result = pcall(function() 
+   return MarketPlaceService:GetProductInfo(tonumber(WallpaperPath)).AssetTypeId
+end)
+if success then
+    if result == 13 then --checks if image id is decal
+        SettingsPopUp.Image = "https://www.roblox.com/asset-thumbnail/image?assetId="..WallpaperPath.."&width=420&height=420&format=png"
+    elseif result == 1 then
+        SettingsPopUp.Image = "rbxassetid://".._G.settingsTable.Wallpaper
+    end
+end
+end
+
 -- GUI Animations
 
 local PlayAnimation = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations"))()
