@@ -852,6 +852,7 @@ Execute1.Font = Enum.Font.GothamMedium
 Execute1.Text = "Execute"
 Execute1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute1.TextSize = 12.000
+Execute1.Visible = false
 
 UICorner_24.Parent = Execute1
 
@@ -867,6 +868,7 @@ Execute2.Font = Enum.Font.GothamMedium
 Execute2.Text = "Execute"
 Execute2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute2.TextSize = 12.000
+Execute2.Visible = false
 
 UICorner_25.Parent = Execute2
 
@@ -882,6 +884,7 @@ Execute3.Font = Enum.Font.GothamMedium
 Execute3.Text = "Execute"
 Execute3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute3.TextSize = 12.000
+Execute3.Visible = false
 
 UICorner_26.Parent = Execute3
 
@@ -897,6 +900,7 @@ Execute4.Font = Enum.Font.GothamMedium
 Execute4.Text = "Execute"
 Execute4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute4.TextSize = 12.000
+Execute4.Visible = false
 
 UICorner_27.Parent = Execute4
 
@@ -912,6 +916,7 @@ Execute5.Font = Enum.Font.GothamMedium
 Execute5.Text = "Execute"
 Execute5.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute5.TextSize = 12.000
+Execute5.Visible = false
 
 UICorner_28.Parent = Execute5
 
@@ -927,7 +932,7 @@ Execute6.Font = Enum.Font.GothamMedium
 Execute6.Text = "Execute"
 Execute6.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute6.TextSize = 12.000
-
+Execute6.Visible = false
 UICorner_29.Parent = Execute6
 
 PlayButtons.Name = "PlayButtons"
@@ -964,6 +969,7 @@ Play1.Size = UDim2.new(0, 20, 0, 18)
 Play1.SizeConstraint = Enum.SizeConstraint.RelativeXX
 Play1.Image = "http://www.roblox.com/asset/?id=14320976370"
 Play1.ScaleType = Enum.ScaleType.Fit
+Play1.Visible = false
 
 UICorner_31.Parent = Play1
 
@@ -978,6 +984,7 @@ Play2.Size = UDim2.new(0, 20, 0, 18)
 Play2.SizeConstraint = Enum.SizeConstraint.RelativeXX
 Play2.Image = "http://www.roblox.com/asset/?id=14320976370"
 Play2.ScaleType = Enum.ScaleType.Fit
+Play2.Visible = false
 
 UICorner_32.Parent = Play2
 
@@ -992,6 +999,7 @@ Play4.Size = UDim2.new(0, 20, 0, 18)
 Play4.SizeConstraint = Enum.SizeConstraint.RelativeXX
 Play4.Image = "http://www.roblox.com/asset/?id=14320976370"
 Play4.ScaleType = Enum.ScaleType.Fit
+Play4.Visible = false
 
 UICorner_33.Parent = Play4
 
@@ -1006,6 +1014,7 @@ Play3.Size = UDim2.new(0, 20, 0, 18)
 Play3.SizeConstraint = Enum.SizeConstraint.RelativeXX
 Play3.Image = "http://www.roblox.com/asset/?id=14320976370"
 Play3.ScaleType = Enum.ScaleType.Fit
+Play3.Visible = false
 
 UICorner_34.Parent = Play3
 
@@ -1020,6 +1029,7 @@ Play5.Size = UDim2.new(0, 20, 0, 18)
 Play5.SizeConstraint = Enum.SizeConstraint.RelativeXX
 Play5.Image = "http://www.roblox.com/asset/?id=14320976370"
 Play5.ScaleType = Enum.ScaleType.Fit
+Play5.Visible = false
 
 UICorner_35.Parent = Play5
 
@@ -1034,5 +1044,6 @@ Play6.Size = UDim2.new(0, 20, 0, 18)
 Play6.SizeConstraint = Enum.SizeConstraint.RelativeXX
 Play6.Image = "http://www.roblox.com/asset/?id=14320976370"
 Play6.ScaleType = Enum.ScaleType.Fit
+Play6.Visible = false
 
 UICorner_36.Parent = Play6
