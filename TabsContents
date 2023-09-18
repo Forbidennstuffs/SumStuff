@@ -1,3 +1,36 @@
+_G.settingsTable = {
+UIScale = "1.05";
+ButtonTopLeft = true;
+Wallpaper = "11926598891";
+WhiteBackground = true;
+}
+
+for i,v in pairs(_G.settingsTable) do 
+end
+
+local filename = "VexHubSettings.txt";
+
+function loadSettings()
+local HttpService = game:GetService("HttpService")
+if (readfile and isfile and isfile(filename)) then
+_G.settingsTable = HttpService:JSONDecode(readfile(filename));
+for i,v in pairs(_G.settingsTable) do 
+end
+end
+end
+
+function saveSettings()
+local json;
+local HttpService = game:GetService("HttpService"); 
+if (writefile) then
+json = HttpService:JSONEncode(_G.settingsTable);
+writefile(filename, json);
+end
+end
+
+loadSettings()
+wait()
+
 -- (VOID) : Gui to Lua
 -- Version: 1.4
 
@@ -122,6 +155,10 @@ local UICorner_35 = Instance.new("UICorner")
 local Play6 = Instance.new("ImageButton")
 local UICorner_36 = Instance.new("UICorner")
 
+--Locals:
+
+local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
+
 --Properties:
 
 MainFrame.Name = "TabsContents"
@@ -155,9 +192,9 @@ VexHubLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VexHubLogo.BackgroundTransparency = 1.000
 VexHubLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VexHubLogo.BorderSizePixel = 0
-VexHubLogo.Position = UDim2.new(0.00999999978, 0, -0.0199999996, 0)
+VexHubLogo.Position = UDim2.new(0.00999999978, 0, 0.0250000004, 0)
 VexHubLogo.Size = UDim2.new(0, 20, 0, 20)
-VexHubLogo.Image = "rbxassetid://14271640941"
+VexHubLogo.Image = The.path.Logo
 
 VexHubText.Name = "VexHubText"
 VexHubText.Parent = InfoBar
@@ -165,7 +202,7 @@ VexHubText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VexHubText.BackgroundTransparency = 1.000
 VexHubText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VexHubText.BorderSizePixel = 0
-VexHubText.Position = UDim2.new(0.0650000125, 0, 0, 0)
+VexHubText.Position = UDim2.new(0.0599999987, 0, 0.0500000007, 0)
 VexHubText.Size = UDim2.new(0, 32, 0, 20)
 VexHubText.Font = Enum.Font.GothamMedium
 VexHubText.Text = "VexHub"
@@ -179,10 +216,10 @@ Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Version.BackgroundTransparency = 1.000
 Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Version.BorderSizePixel = 0
-Version.Position = UDim2.new(0.185000002, 0, 0.280000001, 0)
+Version.Position = UDim2.new(0.182999998, 0, 0.280000001, 0)
 Version.Size = UDim2.new(0, 32, 0, 14)
 Version.Font = Enum.Font.Gotham
-Version.Text = "V.5.143"
+Version.Text = The.path.Version
 Version.TextColor3 = Color3.fromRGB(255, 255, 0)
 Version.TextSize = 6.000
 Version.TextXAlignment = Enum.TextXAlignment.Left
@@ -467,7 +504,7 @@ ScriptTitle.BorderSizePixel = 0
 ScriptTitle.Position = UDim2.new(0.0340000018, 0, 0.0329999998, 0)
 ScriptTitle.Size = UDim2.new(0, 119, 0, 40)
 ScriptTitle.Font = Enum.Font.GothamMedium
-ScriptTitle.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptTitle.Text = "Title"
 ScriptTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScriptTitle.TextSize = 12.000
 ScriptTitle.TextWrapped = true
@@ -490,7 +527,7 @@ ScriptDescription.BorderSizePixel = 0
 ScriptDescription.Position = UDim2.new(0.0339999199, 0, 0.350999653, 0)
 ScriptDescription.Size = UDim2.new(0, 119, 0, 66)
 ScriptDescription.Font = Enum.Font.Gotham
-ScriptDescription.Text = "This script gives you infinite money in 2 Player Millionaire Tycoon"
+ScriptDescription.Text = "Description"
 ScriptDescription.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScriptDescription.TextWrapped = true
 ScriptDescription.TextXAlignment = Enum.TextXAlignment.Left
@@ -505,7 +542,7 @@ ScriptCredits.BorderSizePixel = 0
 ScriptCredits.Position = UDim2.new(0.0340000018, 0, 0.910000026, 0)
 ScriptCredits.Size = UDim2.new(0, 119, 0, 11)
 ScriptCredits.Font = Enum.Font.GothamMedium
-ScriptCredits.Text = "By: Someone"
+ScriptCredits.Text = "By:"
 ScriptCredits.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScriptCredits.TextSize = 9.000
 ScriptCredits.TextWrapped = true
