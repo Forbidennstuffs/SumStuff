@@ -71,6 +71,7 @@ UICorner.Parent = DragImage
 UIScale.Parent = DragImage
 UIScale.Scale = _G.settingsTable.UIScale
 
+--Wallpaper Type Checker:
 local WallpaperPath = _G.settingsTable.Wallpaper
 local MarketPlaceService = game:GetService("MarketplaceService")
 if string.find(WallpaperPath, ".png") then
