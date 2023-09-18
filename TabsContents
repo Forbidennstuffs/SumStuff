@@ -1,0 +1,1001 @@
+-- (VOID) : Gui to Lua
+-- Version: 1.4
+
+-- Instances:
+
+local MainFrame = Instance.new("Frame")
+local InfoBar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local VexHubLogo = Instance.new("ImageLabel")
+local VexHubText = Instance.new("TextLabel")
+local Version = Instance.new("TextLabel")
+local X = Instance.new("TextButton")
+local Settings = Instance.new("ImageButton")
+local TabsParent = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local Tabs = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local _1HomeTab = Instance.new("ImageButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local _2ScriptsTab = Instance.new("ImageButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
+local _3RequiredAccessoriesTab = Instance.new("ImageButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIStroke_5 = Instance.new("UIStroke")
+local _4GuisTab = Instance.new("ImageButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIStroke_6 = Instance.new("UIStroke")
+local _5AnimationsTab = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+local UIStroke_7 = Instance.new("UIStroke")
+local _6CommandsTab = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
+local UIStroke_8 = Instance.new("UIStroke")
+local _7OtherHubsTab = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
+local UIStroke_9 = Instance.new("UIStroke")
+local TabInfo = Instance.new("Frame")
+local UIStroke_10 = Instance.new("UIStroke")
+local UICorner_11 = Instance.new("UICorner")
+local TabIcon = Instance.new("ImageLabel")
+local TabName = Instance.new("TextLabel")
+local PageChanger = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Previous = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Next = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local ScriptInfo = Instance.new("Frame")
+local ScriptTitle = Instance.new("TextLabel")
+local UICorner_15 = Instance.new("UICorner")
+local UIStroke_11 = Instance.new("UIStroke")
+local ScriptDescription = Instance.new("TextLabel")
+local ScriptCredits = Instance.new("TextLabel")
+local ChooseScriptFrameParent = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local UIStroke_12 = Instance.new("UIStroke")
+local ScriptButton1 = Instance.new("ImageButton")
+local UICorner_17 = Instance.new("UICorner")
+local UIStroke_13 = Instance.new("UIStroke")
+local ScriptName1 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local ScriptButton4 = Instance.new("ImageButton")
+local UICorner_18 = Instance.new("UICorner")
+local UIStroke_14 = Instance.new("UIStroke")
+local ScriptName4 = Instance.new("TextLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local ScriptButton2 = Instance.new("ImageButton")
+local UICorner_19 = Instance.new("UICorner")
+local UIStroke_15 = Instance.new("UIStroke")
+local ScriptName2 = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local ScriptButton3 = Instance.new("ImageButton")
+local UICorner_20 = Instance.new("UICorner")
+local UIStroke_16 = Instance.new("UIStroke")
+local ScriptName3 = Instance.new("TextLabel")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local ScriptButton5 = Instance.new("ImageButton")
+local UICorner_21 = Instance.new("UICorner")
+local UIStroke_17 = Instance.new("UIStroke")
+local ScriptName5 = Instance.new("TextLabel")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local ScriptButton6 = Instance.new("ImageButton")
+local UICorner_22 = Instance.new("UICorner")
+local UIStroke_18 = Instance.new("UIStroke")
+local ScriptName6 = Instance.new("TextLabel")
+local ImageLabel_6 = Instance.new("ImageLabel")
+local ExecuteButtons = Instance.new("Folder")
+local Execute = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local UIStroke_19 = Instance.new("UIStroke")
+local Execute1 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local Execute2 = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local Execute3 = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local Execute4 = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local Execute5 = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local Execute6 = Instance.new("TextButton")
+local UICorner_29 = Instance.new("UICorner")
+local PlayButtons = Instance.new("Folder")
+local Play = Instance.new("ImageButton")
+local UICorner_30 = Instance.new("UICorner")
+local UIStroke_20 = Instance.new("UIStroke")
+local Play1 = Instance.new("ImageButton")
+local UICorner_31 = Instance.new("UICorner")
+local Play2 = Instance.new("ImageButton")
+local UICorner_32 = Instance.new("UICorner")
+local Play4 = Instance.new("ImageButton")
+local UICorner_33 = Instance.new("UICorner")
+local Play3 = Instance.new("ImageButton")
+local UICorner_34 = Instance.new("UICorner")
+local Play5 = Instance.new("ImageButton")
+local UICorner_35 = Instance.new("UICorner")
+local Play6 = Instance.new("ImageButton")
+local UICorner_36 = Instance.new("UICorner")
+
+--Properties:
+
+MainFrame.Name = "TabsContents"
+MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Size = UDim2.new(0, 400, 0, 230)
+MainFrame.Visible = false
+
+InfoBar.Name = "InfoBar"
+InfoBar.Parent = MainFrame
+InfoBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfoBar.BackgroundTransparency = 0.900
+InfoBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfoBar.BorderSizePixel = 0
+InfoBar.Position = UDim2.new(0.0125000002, 0, 0.0260869563, 0)
+InfoBar.Size = UDim2.new(0, 390, 0, 20)
+
+UICorner_2.Parent = InfoBar
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 0.500
+UIStroke.Transparency = 0.700
+UIStroke.Parent = InfoBar
+
+VexHubLogo.Name = "VexHubLogo"
+VexHubLogo.Parent = InfoBar
+VexHubLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VexHubLogo.BackgroundTransparency = 1.000
+VexHubLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VexHubLogo.BorderSizePixel = 0
+VexHubLogo.Position = UDim2.new(0.00999999978, 0, -0.0199999996, 0)
+VexHubLogo.Size = UDim2.new(0, 20, 0, 20)
+VexHubLogo.Image = "rbxassetid://14271640941"
+
+VexHubText.Name = "VexHubText"
+VexHubText.Parent = InfoBar
+VexHubText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VexHubText.BackgroundTransparency = 1.000
+VexHubText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VexHubText.BorderSizePixel = 0
+VexHubText.Position = UDim2.new(0.0650000125, 0, 0, 0)
+VexHubText.Size = UDim2.new(0, 32, 0, 20)
+VexHubText.Font = Enum.Font.GothamMedium
+VexHubText.Text = "VexHub"
+VexHubText.TextColor3 = Color3.fromRGB(255, 255, 255)
+VexHubText.TextSize = 13.000
+VexHubText.TextXAlignment = Enum.TextXAlignment.Left
+
+Version.Name = "Version"
+Version.Parent = InfoBar
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Version.BorderSizePixel = 0
+Version.Position = UDim2.new(0.185000002, 0, 0.280000001, 0)
+Version.Size = UDim2.new(0, 32, 0, 14)
+Version.Font = Enum.Font.Gotham
+Version.Text = "V.5.143"
+Version.TextColor3 = Color3.fromRGB(255, 255, 0)
+Version.TextSize = 6.000
+Version.TextXAlignment = Enum.TextXAlignment.Left
+
+X.Name = "X"
+X.Parent = InfoBar
+X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X.BackgroundTransparency = 1.000
+X.BorderColor3 = Color3.fromRGB(0, 0, 0)
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.944000006, 0, 0, 0)
+X.Size = UDim2.new(0, 20, 0, 20)
+X.Font = Enum.Font.FredokaOne
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 255, 255)
+X.TextSize = 18.000
+X.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = InfoBar
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.89200002, 0, 0, 0)
+Settings.Size = UDim2.new(0, 20, 0, 20)
+Settings.Image = "http://www.roblox.com/asset/?id=11592827868"
+
+TabsParent.Name = "TabsParent"
+TabsParent.Parent = MainFrame
+TabsParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabsParent.BackgroundTransparency = 0.900
+TabsParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabsParent.BorderSizePixel = 0
+TabsParent.Position = UDim2.new(0.0130000003, 0, 0.135000005, 0)
+TabsParent.Size = UDim2.new(0, 28, 0, 195)
+
+UICorner_3.Parent = TabsParent
+
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Thickness = 0.500
+UIStroke_2.Transparency = 0.700
+UIStroke_2.Parent = TabsParent
+
+Tabs.Name = "Tabs"
+Tabs.Parent = TabsParent
+Tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tabs.BackgroundTransparency = 1.000
+Tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tabs.BorderSizePixel = 0
+Tabs.Position = UDim2.new(0, 0, 0.0130000003, 0)
+Tabs.Size = UDim2.new(0, 28, 0, 190)
+
+UIListLayout.Parent = Tabs
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.Padding = UDim.new(0, 3)
+
+_1HomeTab.Name = "1HomeTab"
+_1HomeTab.Parent = Tabs
+_1HomeTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_1HomeTab.BackgroundTransparency = 0.900
+_1HomeTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_1HomeTab.BorderSizePixel = 0
+_1HomeTab.Size = UDim2.new(0, 23, 0, 23)
+_1HomeTab.Image = "rbxassetid://11592840951"
+
+UICorner_4.CornerRadius = UDim.new(0, 30)
+UICorner_4.Parent = _1HomeTab
+
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Thickness = 0.500
+UIStroke_3.Transparency = 0.700
+UIStroke_3.Parent = _1HomeTab
+
+_2ScriptsTab.Name = "2ScriptsTab"
+_2ScriptsTab.Parent = Tabs
+_2ScriptsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_2ScriptsTab.BackgroundTransparency = 0.900
+_2ScriptsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2ScriptsTab.BorderSizePixel = 0
+_2ScriptsTab.Size = UDim2.new(0, 23, 0, 23)
+_2ScriptsTab.Image = "rbxassetid://11592851654"
+
+UICorner_5.CornerRadius = UDim.new(0, 30)
+UICorner_5.Parent = _2ScriptsTab
+
+UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_4.Thickness = 0.500
+UIStroke_4.Transparency = 0.700
+UIStroke_4.Parent = _2ScriptsTab
+
+_3RequiredAccessoriesTab.Name = "3RequiredAccessoriesTab"
+_3RequiredAccessoriesTab.Parent = Tabs
+_3RequiredAccessoriesTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_3RequiredAccessoriesTab.BackgroundTransparency = 0.900
+_3RequiredAccessoriesTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3RequiredAccessoriesTab.BorderSizePixel = 0
+_3RequiredAccessoriesTab.Size = UDim2.new(0, 23, 0, 23)
+_3RequiredAccessoriesTab.Image = "rbxassetid://11592824883"
+
+UICorner_6.CornerRadius = UDim.new(0, 30)
+UICorner_6.Parent = _3RequiredAccessoriesTab
+
+UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_5.Thickness = 0.500
+UIStroke_5.Transparency = 0.700
+UIStroke_5.Parent = _3RequiredAccessoriesTab
+
+_4GuisTab.Name = "4GuisTab"
+_4GuisTab.Parent = Tabs
+_4GuisTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_4GuisTab.BackgroundTransparency = 0.900
+_4GuisTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_4GuisTab.BorderSizePixel = 0
+_4GuisTab.Size = UDim2.new(0, 23, 0, 23)
+_4GuisTab.Image = "rbxassetid://11592848654"
+
+UICorner_7.CornerRadius = UDim.new(0, 30)
+UICorner_7.Parent = _4GuisTab
+
+UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_6.Thickness = 0.500
+UIStroke_6.Transparency = 0.700
+UIStroke_6.Parent = _4GuisTab
+
+_5AnimationsTab.Name = "5AnimationsTab"
+_5AnimationsTab.Parent = Tabs
+_5AnimationsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_5AnimationsTab.BackgroundTransparency = 0.900
+_5AnimationsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_5AnimationsTab.BorderSizePixel = 0
+_5AnimationsTab.Size = UDim2.new(0, 23, 0, 23)
+_5AnimationsTab.Image = "rbxassetid://11592835705"
+
+UICorner_8.CornerRadius = UDim.new(0, 30)
+UICorner_8.Parent = _5AnimationsTab
+
+UIStroke_7.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_7.Thickness = 0.500
+UIStroke_7.Transparency = 0.700
+UIStroke_7.Parent = _5AnimationsTab
+
+_6CommandsTab.Name = "6CommandsTab"
+_6CommandsTab.Parent = Tabs
+_6CommandsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_6CommandsTab.BackgroundTransparency = 0.900
+_6CommandsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_6CommandsTab.BorderSizePixel = 0
+_6CommandsTab.Size = UDim2.new(0, 23, 0, 23)
+_6CommandsTab.Image = "rbxassetid://11592837927"
+
+UICorner_9.CornerRadius = UDim.new(0, 30)
+UICorner_9.Parent = _6CommandsTab
+
+UIStroke_8.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_8.Thickness = 0.500
+UIStroke_8.Transparency = 0.700
+UIStroke_8.Parent = _6CommandsTab
+
+_7OtherHubsTab.Name = "7OtherHubsTab"
+_7OtherHubsTab.Parent = Tabs
+_7OtherHubsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_7OtherHubsTab.BackgroundTransparency = 0.900
+_7OtherHubsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_7OtherHubsTab.BorderSizePixel = 0
+_7OtherHubsTab.Size = UDim2.new(0, 23, 0, 23)
+_7OtherHubsTab.Image = "rbxassetid://11592850267"
+
+UICorner_10.CornerRadius = UDim.new(0, 30)
+UICorner_10.Parent = _7OtherHubsTab
+
+UIStroke_9.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_9.Thickness = 0.500
+UIStroke_9.Transparency = 0.700
+UIStroke_9.Parent = _7OtherHubsTab
+
+TabInfo.Name = "TabInfo"
+TabInfo.Parent = MainFrame
+TabInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabInfo.BackgroundTransparency = 0.900
+TabInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabInfo.BorderSizePixel = 0
+TabInfo.Position = UDim2.new(0.100000001, 0, 0.146021828, 0)
+TabInfo.Size = UDim2.new(0, 350, 0, 25)
+
+UIStroke_10.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_10.Thickness = 0.500
+UIStroke_10.Transparency = 0.700
+UIStroke_10.Parent = TabInfo
+
+UICorner_11.CornerRadius = UDim.new(0, 20)
+UICorner_11.Parent = TabInfo
+
+TabIcon.Name = "TabIcon"
+TabIcon.Parent = TabInfo
+TabIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabIcon.BackgroundTransparency = 1.000
+TabIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabIcon.BorderSizePixel = 0
+TabIcon.Position = UDim2.new(0.00999999978, 0, 0, 0)
+TabIcon.Size = UDim2.new(0, 25, 0, 25)
+TabIcon.Image = "rbxassetid://11592824883"
+
+TabName.Name = "TabName"
+TabName.Parent = TabInfo
+TabName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabName.BackgroundTransparency = 1.000
+TabName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabName.BorderSizePixel = 0
+TabName.Position = UDim2.new(0.0900000036, 0, 0, 0)
+TabName.Size = UDim2.new(0, 200, 0, 25)
+TabName.Font = Enum.Font.GothamMedium
+TabName.Text = "Required Accessories / Page 1"
+TabName.TextColor3 = Color3.fromRGB(255, 255, 255)
+TabName.TextSize = 13.000
+TabName.TextXAlignment = Enum.TextXAlignment.Left
+
+PageChanger.Name = "PageChanger"
+PageChanger.Parent = TabInfo
+PageChanger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PageChanger.BackgroundTransparency = 1.000
+PageChanger.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PageChanger.BorderSizePixel = 0
+PageChanger.Position = UDim2.new(0.827000022, 0, 0, 0)
+PageChanger.Size = UDim2.new(0, 63, 0, 25)
+
+UICorner_12.CornerRadius = UDim.new(0, 20)
+UICorner_12.Parent = PageChanger
+
+Previous.Name = "Previous"
+Previous.Parent = PageChanger
+Previous.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Previous.BackgroundTransparency = 1.000
+Previous.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Previous.BorderSizePixel = 0
+Previous.Size = UDim2.new(0, 24, 0, 24)
+Previous.Font = Enum.Font.FredokaOne
+Previous.Text = "<"
+Previous.TextColor3 = Color3.fromRGB(255, 255, 255)
+Previous.TextSize = 22.000
+
+UICorner_13.CornerRadius = UDim.new(0, 20)
+UICorner_13.Parent = Previous
+
+UIListLayout_2.Parent = PageChanger
+UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_2.Padding = UDim.new(0, 2)
+
+Next.Name = "Next"
+Next.Parent = PageChanger
+Next.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Next.BackgroundTransparency = 1.000
+Next.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Next.BorderSizePixel = 0
+Next.Size = UDim2.new(0, 24, 0, 24)
+Next.Font = Enum.Font.FredokaOne
+Next.Text = ">"
+Next.TextColor3 = Color3.fromRGB(255, 255, 255)
+Next.TextSize = 22.000
+
+UICorner_14.CornerRadius = UDim.new(0, 20)
+UICorner_14.Parent = Next
+
+ScriptInfo.Name = "ScriptInfo"
+ScriptInfo.Parent = MainFrame
+ScriptInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptInfo.BackgroundTransparency = 0.900
+ScriptInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptInfo.BorderSizePixel = 0
+ScriptInfo.Position = UDim2.new(0.654999971, 0, 0.282999992, 0)
+ScriptInfo.Size = UDim2.new(0, 128, 0, 124)
+
+ScriptTitle.Name = "ScriptTitle"
+ScriptTitle.Parent = ScriptInfo
+ScriptTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptTitle.BackgroundTransparency = 10.000
+ScriptTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptTitle.BorderSizePixel = 0
+ScriptTitle.Position = UDim2.new(0.0340000018, 0, 0.0329999998, 0)
+ScriptTitle.Size = UDim2.new(0, 119, 0, 40)
+ScriptTitle.Font = Enum.Font.GothamMedium
+ScriptTitle.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptTitle.TextSize = 12.000
+ScriptTitle.TextWrapped = true
+ScriptTitle.TextXAlignment = Enum.TextXAlignment.Left
+ScriptTitle.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_15.Parent = ScriptInfo
+
+UIStroke_11.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_11.Thickness = 0.500
+UIStroke_11.Transparency = 0.700
+UIStroke_11.Parent = ScriptInfo
+
+ScriptDescription.Name = "ScriptDescription"
+ScriptDescription.Parent = ScriptInfo
+ScriptDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptDescription.BackgroundTransparency = 10.000
+ScriptDescription.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptDescription.BorderSizePixel = 0
+ScriptDescription.Position = UDim2.new(0.0339999199, 0, 0.350999653, 0)
+ScriptDescription.Size = UDim2.new(0, 119, 0, 66)
+ScriptDescription.Font = Enum.Font.Gotham
+ScriptDescription.Text = "This script gives you infinite money in 2 Player Millionaire Tycoon"
+ScriptDescription.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptDescription.TextWrapped = true
+ScriptDescription.TextXAlignment = Enum.TextXAlignment.Left
+ScriptDescription.TextYAlignment = Enum.TextYAlignment.Top
+
+ScriptCredits.Name = "ScriptCredits"
+ScriptCredits.Parent = ScriptInfo
+ScriptCredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptCredits.BackgroundTransparency = 10.000
+ScriptCredits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptCredits.BorderSizePixel = 0
+ScriptCredits.Position = UDim2.new(0.0340000018, 0, 0.910000026, 0)
+ScriptCredits.Size = UDim2.new(0, 119, 0, 11)
+ScriptCredits.Font = Enum.Font.GothamMedium
+ScriptCredits.Text = "By: Someone"
+ScriptCredits.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptCredits.TextSize = 9.000
+ScriptCredits.TextWrapped = true
+ScriptCredits.TextXAlignment = Enum.TextXAlignment.Left
+
+ChooseScriptFrameParent.Name = "ChooseScriptFrameParent"
+ChooseScriptFrameParent.Parent = MainFrame
+ChooseScriptFrameParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ChooseScriptFrameParent.BackgroundTransparency = 0.900
+ChooseScriptFrameParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ChooseScriptFrameParent.BorderSizePixel = 0
+ChooseScriptFrameParent.Position = UDim2.new(0.109999999, 0, 0.282999992, 0)
+ChooseScriptFrameParent.Size = UDim2.new(0, 210, 0, 151)
+
+UICorner_16.Parent = ChooseScriptFrameParent
+
+UIStroke_12.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_12.Thickness = 0.500
+UIStroke_12.Transparency = 0.700
+UIStroke_12.Parent = ChooseScriptFrameParent
+
+ScriptButton1.Name = "ScriptButton1"
+ScriptButton1.Parent = ChooseScriptFrameParent
+ScriptButton1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptButton1.BackgroundTransparency = 0.900
+ScriptButton1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton1.BorderSizePixel = 0
+ScriptButton1.Position = UDim2.new(0.0320000015, 0, 0.0350000001, 0)
+ScriptButton1.Size = UDim2.new(0, 60, 0, 67)
+ScriptButton1.Image = "rbxassetid://11592824883"
+ScriptButton1.ImageTransparency = 0.900
+
+UICorner_17.Parent = ScriptButton1
+
+UIStroke_13.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_13.Thickness = 0.500
+UIStroke_13.Transparency = 0.700
+UIStroke_13.Parent = ScriptButton1
+
+ScriptName1.Name = "ScriptName1"
+ScriptName1.Parent = ScriptButton1
+ScriptName1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName1.BackgroundTransparency = 1.000
+ScriptName1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptName1.BorderSizePixel = 0
+ScriptName1.Position = UDim2.new(0.0430000313, 0, 0.313433528, 0)
+ScriptName1.Size = UDim2.new(0, 55, 0, 45)
+ScriptName1.Font = Enum.Font.Gotham
+ScriptName1.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptName1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName1.TextWrapped = true
+ScriptName1.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageLabel.Parent = ScriptButton1
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0, 0, 7.04251818e-07, 0)
+ImageLabel.Size = UDim2.new(0, 60, 0, 21)
+ImageLabel.Image = "rbxassetid://11592824883"
+ImageLabel.ScaleType = Enum.ScaleType.Fit
+
+ScriptButton4.Name = "ScriptButton4"
+ScriptButton4.Parent = ChooseScriptFrameParent
+ScriptButton4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptButton4.BackgroundTransparency = 0.900
+ScriptButton4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton4.BorderSizePixel = 0
+ScriptButton4.Position = UDim2.new(0.0320000015, 0, 0.519999981, 0)
+ScriptButton4.Size = UDim2.new(0, 60, 0, 67)
+ScriptButton4.Image = "rbxassetid://11592824883"
+ScriptButton4.ImageTransparency = 0.900
+
+UICorner_18.Parent = ScriptButton4
+
+UIStroke_14.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_14.Thickness = 0.500
+UIStroke_14.Transparency = 0.700
+UIStroke_14.Parent = ScriptButton4
+
+ScriptName4.Name = "ScriptName4"
+ScriptName4.Parent = ScriptButton4
+ScriptName4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName4.BackgroundTransparency = 1.000
+ScriptName4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptName4.BorderSizePixel = 0
+ScriptName4.Position = UDim2.new(0.0430000313, 0, 0.313433528, 0)
+ScriptName4.Size = UDim2.new(0, 55, 0, 45)
+ScriptName4.Font = Enum.Font.Gotham
+ScriptName4.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptName4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName4.TextWrapped = true
+ScriptName4.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageLabel_2.Parent = ScriptButton4
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0, 0, 7.04251818e-07, 0)
+ImageLabel_2.Size = UDim2.new(0, 60, 0, 21)
+ImageLabel_2.Image = "rbxassetid://11592824883"
+ImageLabel_2.ScaleType = Enum.ScaleType.Fit
+
+ScriptButton2.Name = "ScriptButton2"
+ScriptButton2.Parent = ChooseScriptFrameParent
+ScriptButton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptButton2.BackgroundTransparency = 0.900
+ScriptButton2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton2.BorderSizePixel = 0
+ScriptButton2.Position = UDim2.new(0.356999993, 0, 0.0350000001, 0)
+ScriptButton2.Size = UDim2.new(0, 60, 0, 67)
+ScriptButton2.Image = "rbxassetid://11592824883"
+ScriptButton2.ImageTransparency = 0.900
+
+UICorner_19.Parent = ScriptButton2
+
+UIStroke_15.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_15.Thickness = 0.500
+UIStroke_15.Transparency = 0.700
+UIStroke_15.Parent = ScriptButton2
+
+ScriptName2.Name = "ScriptName2"
+ScriptName2.Parent = ScriptButton2
+ScriptName2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName2.BackgroundTransparency = 1.000
+ScriptName2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptName2.BorderSizePixel = 0
+ScriptName2.Position = UDim2.new(0.0430000313, 0, 0.313433528, 0)
+ScriptName2.Size = UDim2.new(0, 55, 0, 45)
+ScriptName2.Font = Enum.Font.Gotham
+ScriptName2.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptName2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName2.TextWrapped = true
+ScriptName2.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageLabel_3.Parent = ScriptButton2
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0, 0, 7.04251818e-07, 0)
+ImageLabel_3.Size = UDim2.new(0, 60, 0, 21)
+ImageLabel_3.Image = "rbxassetid://11592824883"
+ImageLabel_3.ScaleType = Enum.ScaleType.Fit
+
+ScriptButton3.Name = "ScriptButton3"
+ScriptButton3.Parent = ChooseScriptFrameParent
+ScriptButton3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptButton3.BackgroundTransparency = 0.900
+ScriptButton3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton3.BorderSizePixel = 0
+ScriptButton3.Position = UDim2.new(0.680000007, 0, 0.0350000001, 0)
+ScriptButton3.Size = UDim2.new(0, 60, 0, 67)
+ScriptButton3.Image = "rbxassetid://11592824883"
+ScriptButton3.ImageTransparency = 0.900
+
+UICorner_20.Parent = ScriptButton3
+
+UIStroke_16.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_16.Thickness = 0.500
+UIStroke_16.Transparency = 0.700
+UIStroke_16.Parent = ScriptButton3
+
+ScriptName3.Name = "ScriptName3"
+ScriptName3.Parent = ScriptButton3
+ScriptName3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName3.BackgroundTransparency = 1.000
+ScriptName3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptName3.BorderSizePixel = 0
+ScriptName3.Position = UDim2.new(0.0430000313, 0, 0.313433528, 0)
+ScriptName3.Size = UDim2.new(0, 55, 0, 45)
+ScriptName3.Font = Enum.Font.Gotham
+ScriptName3.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptName3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName3.TextWrapped = true
+ScriptName3.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageLabel_4.Parent = ScriptButton3
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_4.BackgroundTransparency = 1.000
+ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_4.BorderSizePixel = 0
+ImageLabel_4.Position = UDim2.new(0, 0, 7.04251818e-07, 0)
+ImageLabel_4.Size = UDim2.new(0, 60, 0, 21)
+ImageLabel_4.Image = "rbxassetid://11592824883"
+ImageLabel_4.ScaleType = Enum.ScaleType.Fit
+
+ScriptButton5.Name = "ScriptButton5"
+ScriptButton5.Parent = ChooseScriptFrameParent
+ScriptButton5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptButton5.BackgroundTransparency = 0.900
+ScriptButton5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton5.BorderSizePixel = 0
+ScriptButton5.Position = UDim2.new(0.356999993, 0, 0.519999981, 0)
+ScriptButton5.Size = UDim2.new(0, 60, 0, 67)
+ScriptButton5.Image = "rbxassetid://11592824883"
+ScriptButton5.ImageTransparency = 0.900
+
+UICorner_21.Parent = ScriptButton5
+
+UIStroke_17.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_17.Thickness = 0.500
+UIStroke_17.Transparency = 0.700
+UIStroke_17.Parent = ScriptButton5
+
+ScriptName5.Name = "ScriptName5"
+ScriptName5.Parent = ScriptButton5
+ScriptName5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName5.BackgroundTransparency = 1.000
+ScriptName5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptName5.BorderSizePixel = 0
+ScriptName5.Position = UDim2.new(0.0430000313, 0, 0.313433528, 0)
+ScriptName5.Size = UDim2.new(0, 55, 0, 45)
+ScriptName5.Font = Enum.Font.Gotham
+ScriptName5.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptName5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName5.TextWrapped = true
+ScriptName5.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageLabel_5.Parent = ScriptButton5
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_5.BackgroundTransparency = 1.000
+ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_5.BorderSizePixel = 0
+ImageLabel_5.Position = UDim2.new(0, 0, 7.04251818e-07, 0)
+ImageLabel_5.Size = UDim2.new(0, 60, 0, 21)
+ImageLabel_5.Image = "rbxassetid://11592824883"
+ImageLabel_5.ScaleType = Enum.ScaleType.Fit
+
+ScriptButton6.Name = "ScriptButton6"
+ScriptButton6.Parent = ChooseScriptFrameParent
+ScriptButton6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptButton6.BackgroundTransparency = 0.900
+ScriptButton6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton6.BorderSizePixel = 0
+ScriptButton6.Position = UDim2.new(0.680000007, 0, 0.519999981, 0)
+ScriptButton6.Size = UDim2.new(0, 60, 0, 67)
+ScriptButton6.Image = "rbxassetid://11592824883"
+ScriptButton6.ImageTransparency = 0.900
+
+UICorner_22.Parent = ScriptButton6
+
+UIStroke_18.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_18.Thickness = 0.500
+UIStroke_18.Transparency = 0.700
+UIStroke_18.Parent = ScriptButton6
+
+ScriptName6.Name = "ScriptName6"
+ScriptName6.Parent = ScriptButton6
+ScriptName6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName6.BackgroundTransparency = 1.000
+ScriptName6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptName6.BorderSizePixel = 0
+ScriptName6.Position = UDim2.new(0.0430000313, 0, 0.313433528, 0)
+ScriptName6.Size = UDim2.new(0, 55, 0, 45)
+ScriptName6.Font = Enum.Font.Gotham
+ScriptName6.Text = "2 Player Millionaire Tycoon Infinite Money"
+ScriptName6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptName6.TextWrapped = true
+ScriptName6.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageLabel_6.Parent = ScriptButton6
+ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_6.BackgroundTransparency = 1.000
+ImageLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_6.BorderSizePixel = 0
+ImageLabel_6.Position = UDim2.new(0, 0, 7.04251818e-07, 0)
+ImageLabel_6.Size = UDim2.new(0, 60, 0, 21)
+ImageLabel_6.Image = "rbxassetid://11592824883"
+ImageLabel_6.ScaleType = Enum.ScaleType.Fit
+
+ExecuteButtons.Name = "ExecuteButtons"
+ExecuteButtons.Parent = MainFrame
+
+Execute.Name = "Execute"
+Execute.Parent = ExecuteButtons
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BackgroundTransparency = 0.900
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.654999971, 0, 0.860869944, 0)
+Execute.Size = UDim2.new(0, 102, 0, 18)
+Execute.Font = Enum.Font.GothamMedium
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 12.000
+
+UICorner_23.Parent = Execute
+
+UIStroke_19.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_19.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_19.Thickness = 0.500
+UIStroke_19.Transparency = 0.700
+UIStroke_19.Parent = Execute
+
+Execute1.Name = "Execute1"
+Execute1.Parent = ExecuteButtons
+Execute1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute1.BackgroundTransparency = 0.900
+Execute1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute1.BorderSizePixel = 0
+Execute1.Position = UDim2.new(0.654999971, 0, 0.860869944, 0)
+Execute1.Size = UDim2.new(0, 102, 0, 18)
+Execute1.Font = Enum.Font.GothamMedium
+Execute1.Text = "Execute"
+Execute1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute1.TextSize = 12.000
+
+UICorner_24.Parent = Execute1
+
+Execute2.Name = "Execute2"
+Execute2.Parent = ExecuteButtons
+Execute2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute2.BackgroundTransparency = 0.900
+Execute2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute2.BorderSizePixel = 0
+Execute2.Position = UDim2.new(0.654999971, 0, 0.860869944, 0)
+Execute2.Size = UDim2.new(0, 102, 0, 18)
+Execute2.Font = Enum.Font.GothamMedium
+Execute2.Text = "Execute"
+Execute2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute2.TextSize = 12.000
+
+UICorner_25.Parent = Execute2
+
+Execute3.Name = "Execute3"
+Execute3.Parent = ExecuteButtons
+Execute3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute3.BackgroundTransparency = 0.900
+Execute3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute3.BorderSizePixel = 0
+Execute3.Position = UDim2.new(0.654999971, 0, 0.860869944, 0)
+Execute3.Size = UDim2.new(0, 102, 0, 18)
+Execute3.Font = Enum.Font.GothamMedium
+Execute3.Text = "Execute"
+Execute3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute3.TextSize = 12.000
+
+UICorner_26.Parent = Execute3
+
+Execute4.Name = "Execute4"
+Execute4.Parent = ExecuteButtons
+Execute4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute4.BackgroundTransparency = 0.900
+Execute4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute4.BorderSizePixel = 0
+Execute4.Position = UDim2.new(0.654999971, 0, 0.860869944, 0)
+Execute4.Size = UDim2.new(0, 102, 0, 18)
+Execute4.Font = Enum.Font.GothamMedium
+Execute4.Text = "Execute"
+Execute4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute4.TextSize = 12.000
+
+UICorner_27.Parent = Execute4
+
+Execute5.Name = "Execute5"
+Execute5.Parent = ExecuteButtons
+Execute5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute5.BackgroundTransparency = 0.900
+Execute5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute5.BorderSizePixel = 0
+Execute5.Position = UDim2.new(0.654999971, 0, 0.860869944, 0)
+Execute5.Size = UDim2.new(0, 102, 0, 18)
+Execute5.Font = Enum.Font.GothamMedium
+Execute5.Text = "Execute"
+Execute5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute5.TextSize = 12.000
+
+UICorner_28.Parent = Execute5
+
+Execute6.Name = "Execute6"
+Execute6.Parent = ExecuteButtons
+Execute6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute6.BackgroundTransparency = 0.900
+Execute6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute6.BorderSizePixel = 0
+Execute6.Position = UDim2.new(0.654999971, 0, 0.860869944, 0)
+Execute6.Size = UDim2.new(0, 102, 0, 18)
+Execute6.Font = Enum.Font.GothamMedium
+Execute6.Text = "Execute"
+Execute6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute6.TextSize = 12.000
+
+UICorner_29.Parent = Execute6
+
+PlayButtons.Name = "PlayButtons"
+PlayButtons.Parent = MainFrame
+
+Play.Name = "Play"
+Play.Parent = PlayButtons
+Play.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Play.BackgroundTransparency = 0.900
+Play.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Play.BorderSizePixel = 0
+Play.Position = UDim2.new(0.924000025, 0, 0.861000001, 0)
+Play.Size = UDim2.new(0, 20, 0, 18)
+Play.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Play.Image = "http://www.roblox.com/asset/?id=14320976370"
+Play.ScaleType = Enum.ScaleType.Fit
+
+UICorner_30.Parent = Play
+
+UIStroke_20.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_20.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_20.Thickness = 0.500
+UIStroke_20.Transparency = 0.700
+UIStroke_20.Parent = Play
+
+Play1.Name = "Play1"
+Play1.Parent = PlayButtons
+Play1.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Play1.BackgroundTransparency = 0.900
+Play1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Play1.BorderSizePixel = 0
+Play1.Position = UDim2.new(0.924000025, 0, 0.861000001, 0)
+Play1.Size = UDim2.new(0, 20, 0, 18)
+Play1.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Play1.Image = "http://www.roblox.com/asset/?id=14320976370"
+Play1.ScaleType = Enum.ScaleType.Fit
+
+UICorner_31.Parent = Play1
+
+Play2.Name = "Play2"
+Play2.Parent = PlayButtons
+Play2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Play2.BackgroundTransparency = 0.900
+Play2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Play2.BorderSizePixel = 0
+Play2.Position = UDim2.new(0.924000025, 0, 0.861000001, 0)
+Play2.Size = UDim2.new(0, 20, 0, 18)
+Play2.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Play2.Image = "http://www.roblox.com/asset/?id=14320976370"
+Play2.ScaleType = Enum.ScaleType.Fit
+
+UICorner_32.Parent = Play2
+
+Play4.Name = "Play4"
+Play4.Parent = PlayButtons
+Play4.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Play4.BackgroundTransparency = 0.900
+Play4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Play4.BorderSizePixel = 0
+Play4.Position = UDim2.new(0.924000025, 0, 0.861000001, 0)
+Play4.Size = UDim2.new(0, 20, 0, 18)
+Play4.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Play4.Image = "http://www.roblox.com/asset/?id=14320976370"
+Play4.ScaleType = Enum.ScaleType.Fit
+
+UICorner_33.Parent = Play4
+
+Play3.Name = "Play3"
+Play3.Parent = PlayButtons
+Play3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Play3.BackgroundTransparency = 0.900
+Play3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Play3.BorderSizePixel = 0
+Play3.Position = UDim2.new(0.924000025, 0, 0.861000001, 0)
+Play3.Size = UDim2.new(0, 20, 0, 18)
+Play3.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Play3.Image = "http://www.roblox.com/asset/?id=14320976370"
+Play3.ScaleType = Enum.ScaleType.Fit
+
+UICorner_34.Parent = Play3
+
+Play5.Name = "Play5"
+Play5.Parent = PlayButtons
+Play5.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Play5.BackgroundTransparency = 0.900
+Play5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Play5.BorderSizePixel = 0
+Play5.Position = UDim2.new(0.924000025, 0, 0.861000001, 0)
+Play5.Size = UDim2.new(0, 20, 0, 18)
+Play5.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Play5.Image = "http://www.roblox.com/asset/?id=14320976370"
+Play5.ScaleType = Enum.ScaleType.Fit
+
+UICorner_35.Parent = Play5
+
+Play6.Name = "Play6"
+Play6.Parent = PlayButtons
+Play6.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Play6.BackgroundTransparency = 0.900
+Play6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Play6.BorderSizePixel = 0
+Play6.Position = UDim2.new(0.924000025, 0, 0.861000001, 0)
+Play6.Size = UDim2.new(0, 20, 0, 18)
+Play6.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Play6.Image = "http://www.roblox.com/asset/?id=14320976370"
+Play6.ScaleType = Enum.ScaleType.Fit
+
+UICorner_36.Parent = Play6
