@@ -467,9 +467,19 @@ Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",
 end)
 
 OkButton.MouseButton1Down:connect(function()
+if string.find(WallpaperTextBox.Text, ".png") then
+if not isfile(WallpaperTextBox.Text) then
+Notification:Create("Failed To Saved!", "File "..WallpaperTextBox.Text.." Does Not Exist In Your Exploits Workspace.",5)
+else
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
-Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
+Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
+end
+else
+_G.settingsTable.Wallpaper = WallpaperTextBox.Text
+saveSettings()
+Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
+end
 end)
 
 BlackButton.MouseButton1Down:connect(function()
