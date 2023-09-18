@@ -65,7 +65,7 @@ DragImage.Size = UDim2.new(0, 400, 0, 230)
 DragImage.ImageTransparency = 0.500
 DragImage.ScaleType = Enum.ScaleType.Crop
 
-if string.find(_G.settingsTable.Wallpaper, "%.png") then
+if string.find(_G.settingsTable.Wallpaper, ".png") then
 getcustomasset(_G.settingsTable.Wallpaper)
 else
 DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
