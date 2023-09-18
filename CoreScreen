@@ -67,7 +67,7 @@ DragImage.ScaleType = Enum.ScaleType.Crop
 
 local WallpaperPath = _G.settingsTable.Wallpaper
 if string.find(WallpaperPath, ".png") then
-getcustomasset(WallpaperPath)
+DragImage.Image = getcustomasset(WallpaperPath)
 else
 DragImage.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 end
