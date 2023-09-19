@@ -488,7 +488,6 @@ Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfu
 else
 Notification:Create("Failed To Save!", "This ID Is Not A Image ID Or Decal ID!",5)
 end
-end
 else
 Notification:Create("Failed To Save!", "Wallpapers Only Supports Decal ID's, Image ID's And .png File.",5)
 end
