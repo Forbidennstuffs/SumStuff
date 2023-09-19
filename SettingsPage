@@ -421,7 +421,7 @@ end
 --Wallpaper Type Checker:
 local WallpaperPath = _G.settingsTable.Wallpaper
 local MarketPlaceService = game:GetService("MarketplaceService")
-if string.find(WallpaperPath, "%.png") then
+if string.find(WallpaperPath, ".png") then
 SettingsPopUp.Image = getcustomasset(WallpaperPath)
 else
 local success, result = pcall(function() 
@@ -467,7 +467,7 @@ Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",
 end)
 
 OkButton.MouseButton1Down:connect(function()
-if string.find(WallpaperTextBox.Text, ".png") then
+if string.find(WallpaperTextBox.Text, "%.png") then
 if not isfile(WallpaperTextBox.Text) then
 Notification:Create("Failed To Saved!", "File "..WallpaperTextBox.Text.." Does Not Exist In Your Exploits Workspace.",5)
 else
