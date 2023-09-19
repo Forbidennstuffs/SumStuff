@@ -469,16 +469,32 @@ end)
 OkButton.MouseButton1Down:connect(function()
 if string.find(WallpaperTextBox.Text, ".png") then
 if not isfile(WallpaperTextBox.Text) then
-Notification:Create("Failed To Saved!", "File "..WallpaperTextBox.Text.." Does Not Exist In Your Exploits Workspace.",5)
+Notification:Create("Failed To Save!", "File "..WallpaperTextBox.Text.." Does Not Exist In Your Exploits Workspace.",5)
 else
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
 end
 else
+local Numbers = {
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"0",
+}
+if string.find(WallpaperTextBox.Text, Numbers) then
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
+else
+Notification:Create("Failed To Save!", "Wallpapers Only Supports Decal ID's, Image ID's And .png File.",5)
+end
 end
 end)
 
