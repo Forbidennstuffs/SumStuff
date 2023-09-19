@@ -484,7 +484,7 @@ Notification:Create("Failed To Save!", "File "..WallpaperTextBox.Text.." Does No
 else
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
-Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
+Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To \""..WallpaperTextBox.Text.."\"! Re-Execute VexHub To See Changes.",5)
 end
 else
 
@@ -496,9 +496,9 @@ if success then
     if result == 13 or result == 1 then --checks if image id is decal
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
-Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
+Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To \""..WallpaperTextBox.Text.."\"! Re-Execute VexHub To See Changes.",5)
 else
-Notification:Create("Failed To Save!", "This ID Is Not A Image ID Or Decal ID!",5)
+Notification:Create("Failed To Save!", "This ID Is Not A Valid Image ID Or A Decal ID!",5)
 end
 else
 Notification:Create("Failed To Save!", "Wallpapers Only Supports Decal ID's, Image ID's And .png File.",5)
