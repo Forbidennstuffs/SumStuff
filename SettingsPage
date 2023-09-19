@@ -476,7 +476,6 @@ saveSettings()
 Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
 end
 else
-if string.find(WallpaperTextBox.Text, "0", "1", "2", "3", "4", "5", "6", "7", "8", "9") then
 local MarketPlaceService = game:GetService("MarketplaceService")
 local success, result = pcall(function() 
    return MarketPlaceService:GetProductInfo(tonumber(WallpaperPath)).AssetTypeId
