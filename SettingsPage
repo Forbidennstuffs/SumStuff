@@ -477,9 +477,20 @@ Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfu
 end
 else
 if string.find(WallpaperTextBox.Text, "0", "1", "2", "3", "4", "5", "6", "7", "8", "9") then
+local MarketPlaceService = game:GetService("MarketplaceService")
+local success, result = pcall(function() 
+   return MarketPlaceService:GetProductInfo(tonumber(WallpaperPath)).AssetTypeId
+end)
+if success then
+    if result == 13 or result == 1 then --checks if image id is decal
 _G.settingsTable.Wallpaper = WallpaperTextBox.Text
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Your Wallpaper Was Successfully Set To "..WallpaperTextBox.Text,5)
+else
+Notification:Create("Failed To Save!", "This ID Is Not A Image ID Or Decal ID!",5)
+end
+end
+end
 else
 Notification:Create("Failed To Save!", "Wallpapers Only Supports Decal ID's, Image ID's And .png File.",5)
 end
