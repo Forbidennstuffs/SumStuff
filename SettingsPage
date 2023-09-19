@@ -479,7 +479,7 @@ else
 
 local MarketPlaceService = game:GetService("MarketplaceService")
 local success, result = pcall(function() 
-   return MarketPlaceService:GetProductInfo(tonumber(WallpaperPath)).AssetTypeId
+   return MarketPlaceService:GetProductInfo(tonumber(WallpaperTextBox.Text)).AssetTypeId
 end)
 if success then
     if result == 13 or result == 1 then --checks if image id is decal
