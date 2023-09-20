@@ -64,7 +64,7 @@ Message = Instance.new("TextLabel")
 
 local mr = math.random(1, 999999)
 local TweenService = game:GetService("TweenService")
-local time = 0.8
+local time = 0.6
 
 a.Notification.Name = "Notification"..mr
 a.Notification.Parent = game:GetService("CoreGui").VexHubNotificationLibrary.Frame
