@@ -440,7 +440,7 @@ end
 
 local PlayAnimation = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations"))()
 local TweenService = game:GetService("TweenService")
-local time = 1
+local time = 0.6
 
 -- Button Functions:
 Close.MouseButton1Down:connect(function()
