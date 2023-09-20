@@ -858,7 +858,7 @@ local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Dr
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
-local time = 0.8
+local time = 0.6
 
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
