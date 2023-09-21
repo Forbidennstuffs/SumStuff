@@ -1,6 +1,11 @@
 local MainFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.TabsContents
 MainFrame:Clone()
 
+--Locals:
+
+local Your = game:GetService("Players").LocalPlayer
+local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
 local TabName = "Scripts"
 local CurrentPage = "1"
 local PreviousPage = "1-"..CurrentPage
