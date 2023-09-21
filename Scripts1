@@ -9,3 +9,99 @@ local NextPage = "1+"..CurrentPage
 MainFrame.Name = TabName..""..CurrentPage
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 
+
+-- Button Functions:
+X.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "1")
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+
+local ButtonParent = Instance.new("Frame")
+local VHubLogoOpen = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ButtonParent.Name = "ButtonParent"
+ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame
+ButtonParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonParent.BackgroundTransparency = 1.000
+ButtonParent.Size = UDim2.new(0, 32, 1, 0)
+ButtonParent.Position = UDim2.new(0, 0, 0, 0)
+ButtonParent.Visible = false
+ButtonParent.LayoutOrder = 3
+ButtonParent.Active = true
+
+VHubLogoOpen.Name = "VHubLogoOpen"
+VHubLogoOpen.Parent = ButtonParent
+VHubLogoOpen.AutoButtonColor = false
+VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VHubLogoOpen.BackgroundTransparency = 1
+VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
+VHubLogoOpen.Size = UDim2.new(0, 0, 0, 0)
+VHubLogoOpen.Image = The.path.Logo
+VHubLogoOpen.ImageTransparency = 1
+VHubLogoOpen.Active = true 
+VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
+VHubLogoOpen.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Appear", "DragImage", "0", "1")
+PlayAnimation:Create("Appear", "HomePage", "0", "1")
+
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 1})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 1})
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
+
+wait(time)
+ButtonParent:Destroy()
+end
+end)
+
+UICorner.Parent = VHubLogoOpen
+
+game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0)
+
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+
+if _G.settingsTable.ButtonTopLeft == false then
+ButtonParent.LayoutOrder = 0
+ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
+VHubLogoOpen.Size = UDim2.new(0, 32, 0, 32)
+ButtonParent.Visible = true
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
+else
+VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
+ButtonParent.Visible = true
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
+end
+end
+end)
