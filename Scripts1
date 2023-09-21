@@ -20,7 +20,7 @@ local TweenService = game:GetService("TweenService")
 local time = 0.6
 
 -- Button Functions:
-X.MouseButton1Down:connect(function()
+MainFrame.InfoBar.X.MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
