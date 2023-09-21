@@ -5,3 +5,7 @@ local TabName = "Scripts"
 local CurrentPage = "1"
 local PreviousPage = "1-"..CurrentPage
 local NextPage = "1+"..CurrentPage
+
+MainFrame.Name = TabName..""..CurrentPage
+MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+
