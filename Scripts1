@@ -1,0 +1,7 @@
+local MainFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragFrame.TabsContents
+MainFrame:Clone()
+
+local TabName = "Scripts"
+local CurrentPage = "1"
+local PreviousPage = "1-"..CurrentPage
+local NextPage = "1+"..CurrentPage
