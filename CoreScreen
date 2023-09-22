@@ -4,7 +4,7 @@ ButtonTopLeft = true;
 Wallpaper = "11926598891";
 WhiteBackground = true;
 OpenButtonFloating = false;
-Notifications = true;
+EnabledNotifications = true;
 FastGUIAnimations = true;
 }
 
