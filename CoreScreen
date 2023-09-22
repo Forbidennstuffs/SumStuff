@@ -5,7 +5,7 @@ Wallpaper = "11926598891";
 WhiteBackground = true;
 OpenButtonFloating = false;
 Notifications = true;
-GUIAnimationsFast = true;
+FastGUIAnimations = true;
 }
 
 for i,v in pairs(_G.settingsTable) do 
