@@ -3,6 +3,9 @@ UIScale = "1.05";
 ButtonTopLeft = true;
 Wallpaper = "11926598891";
 WhiteBackground = true;
+OpenButtonFloating = false;
+Notifications = true;
+FastGUIAnimations = true;
 }
 
 for i,v in pairs(_G.settingsTable) do 
