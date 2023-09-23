@@ -129,7 +129,7 @@ a.Message.TextTransparency = 1
 
 --Notification Enabled Checker:
 if _G.settingsTable.EnabledNotifications == false then
-Frame.Visible = false
+game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = false
 end
 
 --Wallpaper Type Checker:
