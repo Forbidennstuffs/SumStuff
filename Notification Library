@@ -57,6 +57,11 @@ end
 loadSettings()
 wait()
 
+--Notification Enabled Checker:
+if _G.settingsTable.EnabledNotifications == false then
+game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = false
+end
+
 local a = {
 Notification = Instance.new("ImageLabel"),
 UICorner = Instance.new("UICorner"),
@@ -126,11 +131,6 @@ a.Message.TextWrapped = true
 a.Message.TextXAlignment = Enum.TextXAlignment.Left
 a.Message.TextYAlignment = Enum.TextYAlignment.Top
 a.Message.TextTransparency = 1
-
---Notification Enabled Checker:
-if _G.settingsTable.EnabledNotifications == false then
-game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = false
-end
 
 --Wallpaper Type Checker:
 local WallpaperPath = _G.settingsTable.Wallpaper
