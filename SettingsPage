@@ -862,12 +862,14 @@ end)
 EnabledButton.MouseButton1Down:connect(function()
 _G.settingsTable.EnabledNotifications = true
 saveSettings()
+game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = true
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 DisabledButton.MouseButton1Down:connect(function()
 _G.settingsTable.EnabledNotifications = false
 saveSettings()
+game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = false
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
