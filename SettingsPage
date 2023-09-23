@@ -876,7 +876,7 @@ _G.settingsTable.EnabledNotifications = false
 saveSettings()
 local LibraryLoaded = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
 
-if LibraryLoaded == false then
+if LibraryLoaded == true then
 game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = false
 end
 end)
