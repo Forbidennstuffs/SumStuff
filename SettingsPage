@@ -42,43 +42,75 @@ wait()
 local SettingsPopUp = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local SettingsText = Instance.new("TextLabel")
-local Close = Instance.new("TextButton")
+local ReExecuteVHub = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local UIStroke = Instance.new("UIStroke")
-local UIScaleText = Instance.new("TextLabel")
-local UIScaleTextBox = Instance.new("TextBox")
+local Close = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local UIStroke_2 = Instance.new("UIStroke")
+local Settings1 = Instance.new("Frame")
 local UIScaleImage = Instance.new("ImageButton")
 local UICorner_4 = Instance.new("UICorner")
 local UIStroke_3 = Instance.new("UIStroke")
-local OpenButtonText = Instance.new("TextLabel")
-local TopLeftButton = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local Next = Instance.new("TextButton")
 local UIStroke_4 = Instance.new("UIStroke")
-local TopRightButton = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
+local Previous = Instance.new("TextButton")
 local UIStroke_5 = Instance.new("UIStroke")
-local WallpaperText = Instance.new("TextLabel")
-local WallpaperTextBox = Instance.new("TextBox")
+local UICorner_6 = Instance.new("UICorner")
+local BlackButton = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
 local UIStroke_6 = Instance.new("UIStroke")
 local OkButton = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local UIStroke_7 = Instance.new("UIStroke")
-local BackgroundText = Instance.new("TextLabel")
-local BlackButton = Instance.new("TextButton")
+local TopLeftButton = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
 local UIStroke_8 = Instance.new("UIStroke")
-local WhiteButton = Instance.new("TextButton")
+local TopRightButton = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local UIStroke_9 = Instance.new("UIStroke")
-local ReExecuteVHub = Instance.new("TextButton")
+local UIScaleTextBox = Instance.new("TextBox")
 local UICorner_11 = Instance.new("UICorner")
 local UIStroke_10 = Instance.new("UIStroke")
-local AccessZComics = Instance.new("TextButton")
+local WallpaperTextBox = Instance.new("TextBox")
 local UICorner_12 = Instance.new("UICorner")
 local UIStroke_11 = Instance.new("UIStroke")
+local WhiteButton = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local UIStroke_12 = Instance.new("UIStroke")
+local BackgroundText = Instance.new("TextLabel")
+local OpenButtonText = Instance.new("TextLabel")
+local UIScaleText = Instance.new("TextLabel")
+local WallpaperText = Instance.new("TextLabel")
+local Settings2 = Instance.new("Frame")
+local Next_2 = Instance.new("TextButton")
+local UIStroke_13 = Instance.new("UIStroke")
+local UICorner_14 = Instance.new("UICorner")
+local Previous_2 = Instance.new("TextButton")
+local UIStroke_14 = Instance.new("UIStroke")
+local UICorner_15 = Instance.new("UICorner")
+local EnabledButton = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local UIStroke_15 = Instance.new("UIStroke")
+local DisabledButton = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local UIStroke_16 = Instance.new("UIStroke")
+local NotificationsText = Instance.new("TextLabel")
+local TopScreenButton = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local UIStroke_17 = Instance.new("UIStroke")
+local FloatingButton = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local UIStroke_18 = Instance.new("UIStroke")
+local OpenButtonText_2 = Instance.new("TextLabel")
+local FastButton = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local UIStroke_19 = Instance.new("UIStroke")
+local SlowButton = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local UIStroke_20 = Instance.new("UIStroke")
+local AnimationsText = Instance.new("TextLabel")
 
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
 
@@ -94,7 +126,6 @@ SettingsPopUp.Size = UDim2.new(0, 120, 0, 230)
 SettingsPopUp.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 SettingsPopUp.ImageTransparency = 0.500
 SettingsPopUp.ScaleType = Enum.ScaleType.Crop
-SettingsPopUp.Visible = false
 
 UICorner.Parent = SettingsPopUp
 
@@ -110,6 +141,27 @@ SettingsText.Text = "Settings"
 SettingsText.TextColor3 = Color3.fromRGB(255, 255, 255)
 SettingsText.TextSize = 16.000
 
+ReExecuteVHub.Name = "ReExecuteVHub"
+ReExecuteVHub.Parent = SettingsPopUp
+ReExecuteVHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ReExecuteVHub.BackgroundTransparency = 0.900
+ReExecuteVHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ReExecuteVHub.BorderSizePixel = 0
+ReExecuteVHub.Position = UDim2.new(0.0416666679, 0, 0.846021712, 0)
+ReExecuteVHub.Size = UDim2.new(0, 110, 0, 13)
+ReExecuteVHub.Font = Enum.Font.Gotham
+ReExecuteVHub.Text = "Re-Execute VHub"
+ReExecuteVHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+ReExecuteVHub.TextSize = 10.000
+
+UICorner_2.Parent = ReExecuteVHub
+
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 0.500
+UIStroke.Transparency = 0.700
+UIStroke.Parent = ReExecuteVHub
+
 Close.Name = "Close"
 Close.Parent = SettingsPopUp
 Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -123,54 +175,24 @@ Close.Text = "Close"
 Close.TextColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextSize = 10.000
 
-UICorner_2.Parent = Close
-
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke.Color = Color3.fromRGB(255, 255, 255)
-UIStroke.Thickness = 0.500
-UIStroke.Transparency = 0.700
-UIStroke.Parent = Close
-
-UIScaleText.Name = "UIScaleText"
-UIScaleText.Parent = SettingsPopUp
-UIScaleText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UIScaleText.BackgroundTransparency = 1.000
-UIScaleText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-UIScaleText.BorderSizePixel = 0
-UIScaleText.Position = UDim2.new(0.0416666679, 0, 0.111239225, 0)
-UIScaleText.Size = UDim2.new(0, 115, 0, 17)
-UIScaleText.Font = Enum.Font.Gotham
-UIScaleText.Text = "UIScale"
-UIScaleText.TextColor3 = Color3.fromRGB(255, 255, 255)
-UIScaleText.TextSize = 12.000
-UIScaleText.TextXAlignment = Enum.TextXAlignment.Left
-
-UIScaleTextBox.Name = "UIScaleTextBox"
-UIScaleTextBox.Parent = SettingsPopUp
-UIScaleTextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UIScaleTextBox.BackgroundTransparency = 0.900
-UIScaleTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-UIScaleTextBox.BorderSizePixel = 0
-UIScaleTextBox.ClearTextOnFocus = false
-UIScaleTextBox.Position = UDim2.new(0.0416666679, 0, 0.182608694, 0)
-UIScaleTextBox.Size = UDim2.new(0, 83, 0, 15)
-UIScaleTextBox.Font = Enum.Font.Gotham
-UIScaleTextBox.Text = _G.settingsTable.UIScale
-UIScaleTextBox.PlaceholderText = "0.9 - 1.3"
-UIScaleTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-UIScaleTextBox.TextSize = 12.000
-UIScaleTextBox.TextWrapped = true
-
-UICorner_3.Parent = UIScaleTextBox
+UICorner_3.Parent = Close
 
 UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_2.Thickness = 0.500
 UIStroke_2.Transparency = 0.700
-UIStroke_2.Parent = UIScaleTextBox
+UIStroke_2.Parent = Close
+
+Settings1.Name = "Settings1"
+Settings1.Parent = SettingsPopUp
+Settings1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings1.BackgroundTransparency = 1.000
+Settings1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings1.BorderSizePixel = 0
+Settings1.Size = UDim2.new(0, 120, 0, 230)
 
 UIScaleImage.Name = "UIScaleImage"
-UIScaleImage.Parent = SettingsPopUp
+UIScaleImage.Parent = Settings1
 UIScaleImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 UIScaleImage.BackgroundTransparency = 0.900
 UIScaleImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -188,104 +210,72 @@ UIStroke_3.Thickness = 0.500
 UIStroke_3.Transparency = 0.700
 UIStroke_3.Parent = UIScaleImage
 
-OpenButtonText.Name = "OpenButtonText"
-OpenButtonText.Parent = SettingsPopUp
-OpenButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenButtonText.BackgroundTransparency = 1.000
-OpenButtonText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OpenButtonText.BorderSizePixel = 0
-OpenButtonText.Position = UDim2.new(0.0416666679, 0, 0.254717499, 0)
-OpenButtonText.Size = UDim2.new(0, 115, 0, 17)
-OpenButtonText.Font = Enum.Font.Gotham
-OpenButtonText.Text = "Open Button"
-OpenButtonText.TextColor3 = Color3.fromRGB(255, 255, 255)
-OpenButtonText.TextSize = 12.000
-OpenButtonText.TextXAlignment = Enum.TextXAlignment.Left
-
-TopLeftButton.Name = "TopLeftButton"
-TopLeftButton.Parent = SettingsPopUp
-TopLeftButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TopLeftButton.BackgroundTransparency = 0.900
-TopLeftButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TopLeftButton.BorderSizePixel = 0
-TopLeftButton.Position = UDim2.new(0.0416666679, 0, 0.326086968, 0)
-TopLeftButton.Size = UDim2.new(0, 53, 0, 15)
-TopLeftButton.Font = Enum.Font.Gotham
-TopLeftButton.Text = "Top-Left"
-TopLeftButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TopLeftButton.TextSize = 10.000
-TopLeftButton.TextWrapped = true
-
-UICorner_5.Parent = TopLeftButton
+Next.Name = "Next"
+Next.Parent = Settings1
+Next.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Next.BackgroundTransparency = 0.900
+Next.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Next.BorderSizePixel = 0
+Next.Position = UDim2.new(0.516666651, 0, 0.767760813, 0)
+Next.Size = UDim2.new(0, 53, 0, 13)
+Next.Font = Enum.Font.GothamBold
+Next.Text = ">"
+Next.TextColor3 = Color3.fromRGB(255, 255, 255)
+Next.TextSize = 13.000
 
 UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_4.Thickness = 0.500
 UIStroke_4.Transparency = 0.700
-UIStroke_4.Parent = TopLeftButton
+UIStroke_4.Parent = Next
 
-TopRightButton.Name = "TopRightButton"
-TopRightButton.Parent = SettingsPopUp
-TopRightButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TopRightButton.BackgroundTransparency = 0.900
-TopRightButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TopRightButton.BorderSizePixel = 0
-TopRightButton.Position = UDim2.new(0.516666651, 0, 0.326086968, 0)
-TopRightButton.Size = UDim2.new(0, 53, 0, 15)
-TopRightButton.Font = Enum.Font.Gotham
-TopRightButton.Text = "Top-Right"
-TopRightButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TopRightButton.TextSize = 10.000
-TopRightButton.TextWrapped = true
+UICorner_5.Parent = Next
 
-UICorner_6.Parent = TopRightButton
+Previous.Name = "Previous"
+Previous.Parent = Settings1
+Previous.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Previous.BackgroundTransparency = 0.900
+Previous.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Previous.BorderSizePixel = 0
+Previous.Position = UDim2.new(0.0416666679, 0, 0.767760813, 0)
+Previous.Size = UDim2.new(0, 53, 0, 13)
+Previous.Font = Enum.Font.GothamBold
+Previous.Text = "<"
+Previous.TextColor3 = Color3.fromRGB(255, 255, 255)
+Previous.TextSize = 13.000
 
 UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_5.Thickness = 0.500
 UIStroke_5.Transparency = 0.700
-UIStroke_5.Parent = TopRightButton
+UIStroke_5.Parent = Previous
 
-WallpaperText.Name = "WallpaperText"
-WallpaperText.Parent = SettingsPopUp
-WallpaperText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-WallpaperText.BackgroundTransparency = 1.000
-WallpaperText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WallpaperText.BorderSizePixel = 0
-WallpaperText.Position = UDim2.new(0.0416666679, 0, 0.393847913, 0)
-WallpaperText.Size = UDim2.new(0, 115, 0, 17)
-WallpaperText.Font = Enum.Font.Gotham
-WallpaperText.Text = "Wallpaper"
-WallpaperText.TextColor3 = Color3.fromRGB(255, 255, 255)
-WallpaperText.TextSize = 12.000
-WallpaperText.TextXAlignment = Enum.TextXAlignment.Left
+UICorner_6.Parent = Previous
 
-WallpaperTextBox.Name = "WallpaperTextBox"
-WallpaperTextBox.Parent = SettingsPopUp
-WallpaperTextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-WallpaperTextBox.BackgroundTransparency = 0.900
-WallpaperTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WallpaperTextBox.BorderSizePixel = 0
-WallpaperTextBox.ClearTextOnFocus = false
-WallpaperTextBox.Position = UDim2.new(0.0416666679, 0, 0.465217382, 0)
-WallpaperTextBox.Size = UDim2.new(0, 83, 0, 15)
-WallpaperTextBox.Font = Enum.Font.Gotham
-WallpaperTextBox.Text = _G.settingsTable.Wallpaper
-WallpaperTextBox.PlaceholderText = "ID or .png"
-WallpaperTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-WallpaperTextBox.TextSize = 12.000
-WallpaperTextBox.TextWrapped = true
+BlackButton.Name = "BlackButton"
+BlackButton.Parent = Settings1
+BlackButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BlackButton.BackgroundTransparency = 0.900
+BlackButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BlackButton.BorderSizePixel = 0
+BlackButton.Position = UDim2.new(0.0416666679, 0, 0.600000024, 0)
+BlackButton.Size = UDim2.new(0, 53, 0, 15)
+BlackButton.Font = Enum.Font.Gotham
+BlackButton.Text = "Black"
+BlackButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BlackButton.TextSize = 10.000
+BlackButton.TextWrapped = true
 
-UICorner_7.Parent = WallpaperTextBox
+UICorner_7.Parent = BlackButton
 
 UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_6.Thickness = 0.500
 UIStroke_6.Transparency = 0.700
-UIStroke_6.Parent = WallpaperTextBox
+UIStroke_6.Parent = BlackButton
 
 OkButton.Name = "OkButton"
-OkButton.Parent = SettingsPopUp
+OkButton.Parent = Settings1
 OkButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 OkButton.BackgroundTransparency = 0.900
 OkButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -306,44 +296,96 @@ UIStroke_7.Thickness = 0.500
 UIStroke_7.Transparency = 0.700
 UIStroke_7.Parent = OkButton
 
-BackgroundText.Name = "BackgroundText"
-BackgroundText.Parent = SettingsPopUp
-BackgroundText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BackgroundText.BackgroundTransparency = 1.000
-BackgroundText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BackgroundText.BorderSizePixel = 0
-BackgroundText.Position = UDim2.new(0.0416666679, 0, 0.528630555, 0)
-BackgroundText.Size = UDim2.new(0, 115, 0, 17)
-BackgroundText.Font = Enum.Font.Gotham
-BackgroundText.Text = "Background"
-BackgroundText.TextColor3 = Color3.fromRGB(255, 255, 255)
-BackgroundText.TextSize = 12.000
-BackgroundText.TextXAlignment = Enum.TextXAlignment.Left
+TopLeftButton.Name = "TopLeftButton"
+TopLeftButton.Parent = Settings1
+TopLeftButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopLeftButton.BackgroundTransparency = 0.900
+TopLeftButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TopLeftButton.BorderSizePixel = 0
+TopLeftButton.Position = UDim2.new(0.0416666679, 0, 0.326086968, 0)
+TopLeftButton.Size = UDim2.new(0, 53, 0, 15)
+TopLeftButton.Font = Enum.Font.Gotham
+TopLeftButton.Text = "Top-Left"
+TopLeftButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TopLeftButton.TextSize = 10.000
+TopLeftButton.TextWrapped = true
 
-BlackButton.Name = "BlackButton"
-BlackButton.Parent = SettingsPopUp
-BlackButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BlackButton.BackgroundTransparency = 0.900
-BlackButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BlackButton.BorderSizePixel = 0
-BlackButton.Position = UDim2.new(0.0416666679, 0, 0.600000024, 0)
-BlackButton.Size = UDim2.new(0, 53, 0, 15)
-BlackButton.Font = Enum.Font.Gotham
-BlackButton.Text = "Black"
-BlackButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-BlackButton.TextSize = 10.000
-BlackButton.TextWrapped = true
-
-UICorner_9.Parent = BlackButton
+UICorner_9.Parent = TopLeftButton
 
 UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 UIStroke_8.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_8.Thickness = 0.500
 UIStroke_8.Transparency = 0.700
-UIStroke_8.Parent = BlackButton
+UIStroke_8.Parent = TopLeftButton
+
+TopRightButton.Name = "TopRightButton"
+TopRightButton.Parent = Settings1
+TopRightButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopRightButton.BackgroundTransparency = 0.900
+TopRightButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TopRightButton.BorderSizePixel = 0
+TopRightButton.Position = UDim2.new(0.516666651, 0, 0.326086968, 0)
+TopRightButton.Size = UDim2.new(0, 53, 0, 15)
+TopRightButton.Font = Enum.Font.Gotham
+TopRightButton.Text = "Top-Right"
+TopRightButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TopRightButton.TextSize = 10.000
+TopRightButton.TextWrapped = true
+
+UICorner_10.Parent = TopRightButton
+
+UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_9.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_9.Thickness = 0.500
+UIStroke_9.Transparency = 0.700
+UIStroke_9.Parent = TopRightButton
+
+UIScaleTextBox.Name = "UIScaleTextBox"
+UIScaleTextBox.Parent = Settings1
+UIScaleTextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UIScaleTextBox.BackgroundTransparency = 0.900
+UIScaleTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UIScaleTextBox.BorderSizePixel = 0
+UIScaleTextBox.Position = UDim2.new(0.0416666679, 0, 0.182608694, 0)
+UIScaleTextBox.Size = UDim2.new(0, 83, 0, 15)
+UIScaleTextBox.Font = Enum.Font.Gotham
+UIScaleTextBox.Text = "1.05"
+UIScaleTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+UIScaleTextBox.TextSize = 12.000
+UIScaleTextBox.TextWrapped = true
+
+UICorner_11.Parent = UIScaleTextBox
+
+UIStroke_10.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_10.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_10.Thickness = 0.500
+UIStroke_10.Transparency = 0.700
+UIStroke_10.Parent = UIScaleTextBox
+
+WallpaperTextBox.Name = "WallpaperTextBox"
+WallpaperTextBox.Parent = Settings1
+WallpaperTextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WallpaperTextBox.BackgroundTransparency = 0.900
+WallpaperTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WallpaperTextBox.BorderSizePixel = 0
+WallpaperTextBox.Position = UDim2.new(0.0416666679, 0, 0.465217382, 0)
+WallpaperTextBox.Size = UDim2.new(0, 83, 0, 15)
+WallpaperTextBox.Font = Enum.Font.Gotham
+WallpaperTextBox.Text = "11926598891"
+WallpaperTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+WallpaperTextBox.TextSize = 12.000
+WallpaperTextBox.TextWrapped = true
+
+UICorner_12.Parent = WallpaperTextBox
+
+UIStroke_11.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_11.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_11.Thickness = 0.500
+UIStroke_11.Transparency = 0.700
+UIStroke_11.Parent = WallpaperTextBox
 
 WhiteButton.Name = "WhiteButton"
-WhiteButton.Parent = SettingsPopUp
+WhiteButton.Parent = Settings1
 WhiteButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 WhiteButton.BackgroundTransparency = 0.900
 WhiteButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -356,55 +398,294 @@ WhiteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 WhiteButton.TextSize = 10.000
 WhiteButton.TextWrapped = true
 
-UICorner_10.Parent = WhiteButton
+UICorner_13.Parent = WhiteButton
 
-UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_9.Color = Color3.fromRGB(255, 255, 255)
-UIStroke_9.Thickness = 0.500
-UIStroke_9.Transparency = 0.700
-UIStroke_9.Parent = WhiteButton
+UIStroke_12.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_12.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_12.Thickness = 0.500
+UIStroke_12.Transparency = 0.700
+UIStroke_12.Parent = WhiteButton
 
-ReExecuteVHub.Name = "ReExecuteVHub"
-ReExecuteVHub.Parent = SettingsPopUp
-ReExecuteVHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ReExecuteVHub.BackgroundTransparency = 0.900
-ReExecuteVHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ReExecuteVHub.BorderSizePixel = 0
-ReExecuteVHub.Position = UDim2.new(0.0416666679, 0, 0.846021712, 0)
-ReExecuteVHub.Size = UDim2.new(0, 110, 0, 13)
-ReExecuteVHub.Font = Enum.Font.Gotham
-ReExecuteVHub.Text = "Re-Execute VHub"
-ReExecuteVHub.TextColor3 = Color3.fromRGB(255, 255, 255)
-ReExecuteVHub.TextSize = 10.000
+BackgroundText.Name = "BackgroundText"
+BackgroundText.Parent = Settings1
+BackgroundText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BackgroundText.BackgroundTransparency = 1.000
+BackgroundText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BackgroundText.BorderSizePixel = 0
+BackgroundText.Position = UDim2.new(0.0416666679, 0, 0.528630555, 0)
+BackgroundText.Size = UDim2.new(0, 115, 0, 17)
+BackgroundText.Font = Enum.Font.Gotham
+BackgroundText.Text = "Background"
+BackgroundText.TextColor3 = Color3.fromRGB(255, 255, 255)
+BackgroundText.TextSize = 12.000
+BackgroundText.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_11.Parent = ReExecuteVHub
+OpenButtonText.Name = "OpenButtonText"
+OpenButtonText.Parent = Settings1
+OpenButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenButtonText.BackgroundTransparency = 1.000
+OpenButtonText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenButtonText.BorderSizePixel = 0
+OpenButtonText.Position = UDim2.new(0.0416666679, 0, 0.254717499, 0)
+OpenButtonText.Size = UDim2.new(0, 115, 0, 17)
+OpenButtonText.Font = Enum.Font.Gotham
+OpenButtonText.Text = "Open Button"
+OpenButtonText.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenButtonText.TextSize = 12.000
+OpenButtonText.TextXAlignment = Enum.TextXAlignment.Left
 
-UIStroke_10.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_10.Color = Color3.fromRGB(255, 255, 255)
-UIStroke_10.Thickness = 0.500
-UIStroke_10.Transparency = 0.700
-UIStroke_10.Parent = ReExecuteVHub
+UIScaleText.Name = "UIScaleText"
+UIScaleText.Parent = Settings1
+UIScaleText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UIScaleText.BackgroundTransparency = 1.000
+UIScaleText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UIScaleText.BorderSizePixel = 0
+UIScaleText.Position = UDim2.new(0.0416666679, 0, 0.111239225, 0)
+UIScaleText.Size = UDim2.new(0, 115, 0, 17)
+UIScaleText.Font = Enum.Font.Gotham
+UIScaleText.Text = "UIScale"
+UIScaleText.TextColor3 = Color3.fromRGB(255, 255, 255)
+UIScaleText.TextSize = 12.000
+UIScaleText.TextXAlignment = Enum.TextXAlignment.Left
 
-AccessZComics.Name = "AccessZComics"
-AccessZComics.Parent = SettingsPopUp
-AccessZComics.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AccessZComics.BackgroundTransparency = 0.900
-AccessZComics.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AccessZComics.BorderSizePixel = 0
-AccessZComics.Position = UDim2.new(0.0416666679, 0, 0.767760813, 0)
-AccessZComics.Size = UDim2.new(0, 110, 0, 13)
-AccessZComics.Font = Enum.Font.Gotham
-AccessZComics.Text = "Access ZComics"
-AccessZComics.TextColor3 = Color3.fromRGB(255, 255, 255)
-AccessZComics.TextSize = 10.000
+WallpaperText.Name = "WallpaperText"
+WallpaperText.Parent = Settings1
+WallpaperText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WallpaperText.BackgroundTransparency = 1.000
+WallpaperText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WallpaperText.BorderSizePixel = 0
+WallpaperText.Position = UDim2.new(0.0416666679, 0, 0.393847913, 0)
+WallpaperText.Size = UDim2.new(0, 115, 0, 17)
+WallpaperText.Font = Enum.Font.Gotham
+WallpaperText.Text = "Wallpaper"
+WallpaperText.TextColor3 = Color3.fromRGB(255, 255, 255)
+WallpaperText.TextSize = 12.000
+WallpaperText.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_12.Parent = AccessZComics
+Settings2.Name = "Settings2"
+Settings2.Parent = SettingsPopUp
+Settings2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings2.BackgroundTransparency = 1.000
+Settings2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings2.BorderSizePixel = 0
+Settings2.Size = UDim2.new(0, 120, 0, 230)
+Settings2.Visible = false
 
-UIStroke_11.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_11.Color = Color3.fromRGB(255, 255, 255)
-UIStroke_11.Thickness = 0.500
-UIStroke_11.Transparency = 0.700
-UIStroke_11.Parent = AccessZComics
+Next_2.Name = "Next"
+Next_2.Parent = Settings2
+Next_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Next_2.BackgroundTransparency = 0.900
+Next_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Next_2.BorderSizePixel = 0
+Next_2.Position = UDim2.new(0.516666651, 0, 0.767760813, 0)
+Next_2.Size = UDim2.new(0, 53, 0, 13)
+Next_2.Font = Enum.Font.GothamBold
+Next_2.Text = ">"
+Next_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Next_2.TextSize = 13.000
+
+UIStroke_13.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_13.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_13.Thickness = 0.500
+UIStroke_13.Transparency = 0.700
+UIStroke_13.Parent = Next_2
+
+UICorner_14.Parent = Next_2
+
+Previous_2.Name = "Previous"
+Previous_2.Parent = Settings2
+Previous_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Previous_2.BackgroundTransparency = 0.900
+Previous_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Previous_2.BorderSizePixel = 0
+Previous_2.Position = UDim2.new(0.0416666679, 0, 0.767760813, 0)
+Previous_2.Size = UDim2.new(0, 53, 0, 13)
+Previous_2.Font = Enum.Font.GothamBold
+Previous_2.Text = "<"
+Previous_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Previous_2.TextSize = 13.000
+
+UIStroke_14.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_14.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_14.Thickness = 0.500
+UIStroke_14.Transparency = 0.700
+UIStroke_14.Parent = Previous_2
+
+UICorner_15.Parent = Previous_2
+
+EnabledButton.Name = "EnabledButton"
+EnabledButton.Parent = Settings2
+EnabledButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnabledButton.BackgroundTransparency = 0.900
+EnabledButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnabledButton.BorderSizePixel = 0
+EnabledButton.Position = UDim2.new(0.0416666679, 0, 0.326086968, 0)
+EnabledButton.Size = UDim2.new(0, 53, 0, 15)
+EnabledButton.Font = Enum.Font.Gotham
+EnabledButton.Text = "Enabled"
+EnabledButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnabledButton.TextSize = 10.000
+EnabledButton.TextWrapped = true
+
+UICorner_16.Parent = EnabledButton
+
+UIStroke_15.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_15.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_15.Thickness = 0.500
+UIStroke_15.Transparency = 0.700
+UIStroke_15.Parent = EnabledButton
+
+DisabledButton.Name = "DisabledButton"
+DisabledButton.Parent = Settings2
+DisabledButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DisabledButton.BackgroundTransparency = 0.900
+DisabledButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DisabledButton.BorderSizePixel = 0
+DisabledButton.Position = UDim2.new(0.516666651, 0, 0.326086968, 0)
+DisabledButton.Size = UDim2.new(0, 53, 0, 15)
+DisabledButton.Font = Enum.Font.Gotham
+DisabledButton.Text = "Disabled"
+DisabledButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisabledButton.TextSize = 10.000
+DisabledButton.TextWrapped = true
+
+UICorner_17.Parent = DisabledButton
+
+UIStroke_16.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_16.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_16.Thickness = 0.500
+UIStroke_16.Transparency = 0.700
+UIStroke_16.Parent = DisabledButton
+
+NotificationsText.Name = "NotificationsText"
+NotificationsText.Parent = Settings2
+NotificationsText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotificationsText.BackgroundTransparency = 1.000
+NotificationsText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NotificationsText.BorderSizePixel = 0
+NotificationsText.Position = UDim2.new(0.0416666679, 0, 0.254717499, 0)
+NotificationsText.Size = UDim2.new(0, 115, 0, 17)
+NotificationsText.Font = Enum.Font.Gotham
+NotificationsText.Text = "Notifications:"
+NotificationsText.TextColor3 = Color3.fromRGB(255, 255, 255)
+NotificationsText.TextSize = 12.000
+NotificationsText.TextXAlignment = Enum.TextXAlignment.Left
+
+TopScreenButton.Name = "TopScreenButton"
+TopScreenButton.Parent = Settings2
+TopScreenButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopScreenButton.BackgroundTransparency = 0.900
+TopScreenButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TopScreenButton.BorderSizePixel = 0
+TopScreenButton.Position = UDim2.new(0.0416666679, 0, 0.460869551, 0)
+TopScreenButton.Size = UDim2.new(0, 53, 0, 15)
+TopScreenButton.Font = Enum.Font.Gotham
+TopScreenButton.Text = "Top-Screen"
+TopScreenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TopScreenButton.TextSize = 10.000
+TopScreenButton.TextWrapped = true
+
+UICorner_18.Parent = TopScreenButton
+
+UIStroke_17.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_17.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_17.Thickness = 0.500
+UIStroke_17.Transparency = 0.700
+UIStroke_17.Parent = TopScreenButton
+
+FloatingButton.Name = "FloatingButton"
+FloatingButton.Parent = Settings2
+FloatingButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FloatingButton.BackgroundTransparency = 0.900
+FloatingButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FloatingButton.BorderSizePixel = 0
+FloatingButton.Position = UDim2.new(0.516666651, 0, 0.460869551, 0)
+FloatingButton.Size = UDim2.new(0, 53, 0, 15)
+FloatingButton.Font = Enum.Font.Gotham
+FloatingButton.Text = "Floating"
+FloatingButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+FloatingButton.TextSize = 10.000
+FloatingButton.TextWrapped = true
+
+UICorner_19.Parent = FloatingButton
+
+UIStroke_18.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_18.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_18.Thickness = 0.500
+UIStroke_18.Transparency = 0.700
+UIStroke_18.Parent = FloatingButton
+
+OpenButtonText_2.Name = "OpenButtonText"
+OpenButtonText_2.Parent = Settings2
+OpenButtonText_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenButtonText_2.BackgroundTransparency = 1.000
+OpenButtonText_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenButtonText_2.BorderSizePixel = 0
+OpenButtonText_2.Position = UDim2.new(0.0416666679, 0, 0.389500082, 0)
+OpenButtonText_2.Size = UDim2.new(0, 115, 0, 17)
+OpenButtonText_2.Font = Enum.Font.Gotham
+OpenButtonText_2.Text = "Open Button:"
+OpenButtonText_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenButtonText_2.TextSize = 12.000
+OpenButtonText_2.TextXAlignment = Enum.TextXAlignment.Left
+
+FastButton.Name = "FastButton"
+FastButton.Parent = Settings2
+FastButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FastButton.BackgroundTransparency = 0.900
+FastButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FastButton.BorderSizePixel = 0
+FastButton.Position = UDim2.new(0.0416666679, 0, 0.182608694, 0)
+FastButton.Size = UDim2.new(0, 53, 0, 15)
+FastButton.Font = Enum.Font.Gotham
+FastButton.Text = "Fast"
+FastButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+FastButton.TextSize = 10.000
+FastButton.TextWrapped = true
+
+UICorner_20.Parent = FastButton
+
+UIStroke_19.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_19.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_19.Thickness = 0.500
+UIStroke_19.Transparency = 0.700
+UIStroke_19.Parent = FastButton
+
+SlowButton.Name = "SlowButton"
+SlowButton.Parent = Settings2
+SlowButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SlowButton.BackgroundTransparency = 0.900
+SlowButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SlowButton.BorderSizePixel = 0
+SlowButton.Position = UDim2.new(0.516666651, 0, 0.182608694, 0)
+SlowButton.Size = UDim2.new(0, 53, 0, 15)
+SlowButton.Font = Enum.Font.Gotham
+SlowButton.Text = "Slow"
+SlowButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SlowButton.TextSize = 10.000
+SlowButton.TextWrapped = true
+
+UICorner_21.Parent = SlowButton
+
+UIStroke_20.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_20.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_20.Thickness = 0.500
+UIStroke_20.Transparency = 0.700
+UIStroke_20.Parent = SlowButton
+
+AnimationsText.Name = "AnimationsText"
+AnimationsText.Parent = Settings2
+AnimationsText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AnimationsText.BackgroundTransparency = 1.000
+AnimationsText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AnimationsText.BorderSizePixel = 0
+AnimationsText.Position = UDim2.new(0.0416666679, 0, 0.111239225, 0)
+AnimationsText.Size = UDim2.new(0, 115, 0, 17)
+AnimationsText.Font = Enum.Font.Gotham
+AnimationsText.Text = "Animations:"
+AnimationsText.TextColor3 = Color3.fromRGB(255, 255, 255)
+AnimationsText.TextSize = 12.000
+AnimationsText.TextXAlignment = Enum.TextXAlignment.Left
 
 --White Background Checker:
 if _G.settingsTable.WhiteBackground == false then
@@ -419,6 +700,16 @@ BlackButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 WhiteButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ReExecuteVHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 AccessZComics.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Next.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Previous.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Next_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Previous_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+EnabledButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DisabledButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TopScreenButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FloatingButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FastButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SlowButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 end
 
 --Wallpaper Type Checker:
