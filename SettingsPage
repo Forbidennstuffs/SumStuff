@@ -862,15 +862,23 @@ end)
 EnabledButton.MouseButton1Down:connect(function()
 _G.settingsTable.EnabledNotifications = true
 saveSettings()
-game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary").Frame.Visible = true
+local LibraryLoaded = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
+
+if LibraryLoaded == true then
+game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = true
+end
+
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 DisabledButton.MouseButton1Down:connect(function()
 _G.settingsTable.EnabledNotifications = false
 saveSettings()
-game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary").Frame.Visible = false
-Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
+local LibraryLoaded = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
+
+if LibraryLoaded == false then
+game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = false
+end
 end)
 
 TopScreenButton.MouseButton1Down:connect(function()
