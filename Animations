@@ -84,46 +84,6 @@ TweenService:Create(ReportPopUpFrame.SendButton.UIStroke, TweenInfo.new(time), {
 
 elseif Animation == "Appear" and Tab == "SettingsPopUp" and Page == "0" and Type == "1" then
 SettingsPopUpFrame.Position = UDim2.new(1.01499998, 0, 0, 0)
-SettingsPopUpFrame.BackgroundTransparency = 1
-SettingsPopUpFrame.ImageTransparency = 1
-SettingsPopUpFrame.SettingsText.TextTransparency = 1
-SettingsPopUpFrame.Close.BackgroundTransparency = 1
-SettingsPopUpFrame.Close.TextTransparency = 1
-SettingsPopUpFrame.Close.UIStroke.Transparency = 1
-SettingsPopUpFrame.UIScaleText.TextTransparency = 1
-SettingsPopUpFrame.UIScaleTextBox.BackgroundTransparency = 1
-SettingsPopUpFrame.UIScaleTextBox.TextTransparency = 1
-SettingsPopUpFrame.UIScaleTextBox.UIStroke.Transparency = 1
-SettingsPopUpFrame.UIScaleImage.BackgroundTransparency = 1
-SettingsPopUpFrame.UIScaleImage.ImageTransparency = 1
-SettingsPopUpFrame.UIScaleImage.UIStroke.Transparency = 1
-SettingsPopUpFrame.OpenButtonText.TextTransparency = 1
-SettingsPopUpFrame.TopLeftButton.BackgroundTransparency = 1
-SettingsPopUpFrame.TopLeftButton.TextTransparency = 1
-SettingsPopUpFrame.TopLeftButton.UIStroke.Transparency = 1
-SettingsPopUpFrame.TopRightButton.BackgroundTransparency = 1
-SettingsPopUpFrame.TopRightButton.TextTransparency = 1
-SettingsPopUpFrame.TopRightButton.UIStroke.Transparency = 1
-SettingsPopUpFrame.WallpaperText.TextTransparency = 1
-SettingsPopUpFrame.WallpaperTextBox.BackgroundTransparency = 1
-SettingsPopUpFrame.WallpaperTextBox.TextTransparency = 1
-SettingsPopUpFrame.WallpaperTextBox.UIStroke.Transparency = 1
-SettingsPopUpFrame.OkButton.BackgroundTransparency = 1
-SettingsPopUpFrame.OkButton.TextTransparency = 1
-SettingsPopUpFrame.OkButton.UIStroke.Transparency = 1
-SettingsPopUpFrame.BackgroundText.TextTransparency = 1
-SettingsPopUpFrame.BlackButton.BackgroundTransparency = 1
-SettingsPopUpFrame.BlackButton.TextTransparency = 1
-SettingsPopUpFrame.BlackButton.UIStroke.Transparency = 1
-SettingsPopUpFrame.WhiteButton.BackgroundTransparency = 1
-SettingsPopUpFrame.WhiteButton.TextTransparency = 1
-SettingsPopUpFrame.WhiteButton.UIStroke.Transparency = 1
-SettingsPopUpFrame.ReExecuteVHub.BackgroundTransparency = 1
-SettingsPopUpFrame.ReExecuteVHub.TextTransparency = 1
-SettingsPopUpFrame.ReExecuteVHub.UIStroke.Transparency = 1
-SettingsPopUpFrame.AccessZComics.BackgroundTransparency = 1
-SettingsPopUpFrame.AccessZComics.TextTransparency = 1
-SettingsPopUpFrame.AccessZComics.UIStroke.Transparency = 1
 SettingsPopUpFrame.Visible = true
 SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",time)
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(time), {BackgroundTransparency = 0}):Play()
