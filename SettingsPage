@@ -754,15 +754,37 @@ end
 end)
 
 Next.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 PlayAnimation:Create("Disappear", "SettingsFeatures", "0", "1")
-wait(time+0.05)
+wait(time+0.01)
 PlayAnimation:Create("Appear", "SettingsFeatures", "0", "1")
+end
 end)
 
 Previous_2.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(time+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 PlayAnimation:Create("Disappear", "SettingsFeatures", "0", "1")
-wait(time)
+wait(time+0.01)
 PlayAnimation:Create("Appear", "SettingsFeatures", "0", "1")
+end
 end)
 
 UIScaleImage.MouseButton1Down:connect(function()
