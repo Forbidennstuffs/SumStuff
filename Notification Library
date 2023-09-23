@@ -127,6 +127,11 @@ a.Message.TextXAlignment = Enum.TextXAlignment.Left
 a.Message.TextYAlignment = Enum.TextYAlignment.Top
 a.Message.TextTransparency = 1
 
+--Notification Enabled Checker:
+if _G.settingsTable.EnabledNotifications == false then
+Frame.Visible = false
+end
+
 --Wallpaper Type Checker:
 local WallpaperPath = _G.settingsTable.Wallpaper
 local MarketPlaceService = game:GetService("MarketplaceService")
