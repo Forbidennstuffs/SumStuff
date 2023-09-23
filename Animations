@@ -485,6 +485,126 @@ TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton, TweenInfo.new(time)
 TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
 end
 
+elseif Animation == "Disappear" and Tab == "SettingsFeatures" and Page == "0" and Type == "1" then
+if SettingsPopUpFrame.Settings1.Visible == true then
+coroutine.wrap(function()
+while wait() do
+wait(time)
+SettingsPopUpFrame.Settings1.Visible = false
+return
+end
+end)()
+
+SettingsPopUpFrame.Settings1.UIScaleText.TextTransparency = 0
+SettingsPopUpFrame.Settings1.UIScaleTextBox.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.UIScaleTextBox.TextTransparency = 0
+SettingsPopUpFrame.Settings1.UIScaleTextBox.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings1.UIScaleImage.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.UIScaleImage.ImageTransparency = 0
+SettingsPopUpFrame.Settings1.UIScaleImage.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings1.OpenButtonText.TextTransparency = 0
+SettingsPopUpFrame.Settings1.TopLeftButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.TopLeftButton.TextTransparency = 0
+SettingsPopUpFrame.Settings1.TopLeftButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings1.TopRightButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.TopRightButton.TextTransparency = 0
+SettingsPopUpFrame.Settings1.TopRightButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings1.WallpaperText.TextTransparency = 0
+SettingsPopUpFrame.Settings1.WallpaperTextBox.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.WallpaperTextBox.TextTransparency = 0
+SettingsPopUpFrame.Settings1.WallpaperTextBox.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings1.OkButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.OkButton.TextTransparency = 0
+SettingsPopUpFrame.Settings1.OkButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings1.BackgroundText.TextTransparency = 0
+SettingsPopUpFrame.Settings1.BlackButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.BlackButton.TextTransparency = 0
+SettingsPopUpFrame.Settings1.BlackButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings1.WhiteButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings1.WhiteButton.TextTransparency = 0
+SettingsPopUpFrame.Settings1.WhiteButton.UIStroke.Transparency = 0.7
+TweenService:Create(SettingsPopUpFrame.Settings1.UIScaleText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.UIScaleTextBox, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.UIScaleTextBox, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.UIScaleTextBox.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.UIScaleImage, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.UIScaleImage, TweenInfo.new(time), {ImageTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.UIScaleImage.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.OpenButtonText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.TopLeftButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.TopLeftButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.TopLeftButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.TopRightButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.TopRightButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.TopRightButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.WallpaperText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.WallpaperTextBox, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.WallpaperTextBox, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.WallpaperTextBox.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.OkButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.OkButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.OkButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.BackgroundText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.BlackButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.BlackButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.BlackButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.WhiteButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.WhiteButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings1.WhiteButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+
+elseif SettingsPopUpFrame.Settings2.Visible == true then
+coroutine.wrap(function()
+while wait() do
+wait(time)
+SettingsPopUpFrame.Settings2.Visible = false
+return
+end
+end)()
+
+SettingsPopUpFrame.Settings2.NotificationsText.TextTransparency = 0
+SettingsPopUpFrame.Settings2.EnabledButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings2.EnabledButton.TextTransparency = 0
+SettingsPopUpFrame.Settings2.EnabledButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings2.DisabledButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings2.DisabledButton.TextTransparency = 0
+SettingsPopUpFrame.Settings2.DisabledButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings2.OpenButtonText.TextTransparency = 0
+SettingsPopUpFrame.Settings2.TopScreenButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings2.TopScreenButton.TextTransparency = 0
+SettingsPopUpFrame.Settings2.TopScreenButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings2.FloatingButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings2.FloatingButton.TextTransparency = 0
+SettingsPopUpFrame.Settings2.FloatingButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings2.AnimationsText.TextTransparency = 0
+SettingsPopUpFrame.Settings2.FastButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings2.FastButton.TextTransparency = 0
+SettingsPopUpFrame.Settings2.FastButton.UIStroke.Transparency = 0.7
+SettingsPopUpFrame.Settings2.SlowButton.BackgroundTransparency = 0.9
+SettingsPopUpFrame.Settings2.SlowButton.TextTransparency = 0
+SettingsPopUpFrame.Settings2.SlowButton.UIStroke.Transparency = 0.7
+TweenService:Create(SettingsPopUpFrame.Settings2.NotificationsText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.EnabledButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.EnabledButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.EnabledButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.DisabledButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.DisabledButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.DisabledButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.OpenButtonText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.TopScreenButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.TopScreenButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.TopScreenButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.FloatingButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.FloatingButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.FloatingButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.AnimationsText, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.FastButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.FastButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.FastButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton.UIStroke, TweenInfo.new(time), {Transparency = 1}):Play()
+end
+
 elseif Animation == "Appear" and Tab == "HomePage" and Page == "0" and Type == "1" then
 HomePageFrame.InfoBar.BackgroundTransparency = 1
 HomePageFrame.InfoBar.UIStroke.Transparency = 1
