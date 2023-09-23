@@ -765,7 +765,7 @@ end
 end)()
 
 PlayAnimation:Create("Disappear", "SettingsFeatures", "0", "1")
-wait(time+0.02)
+wait(time+0.03)
 PlayAnimation:Create("Appear", "SettingsFeatures", "0", "1")
 end
 end)
@@ -775,14 +775,14 @@ if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
 while wait() do
-wait(time+0.02)
+wait(time+0.1)
 getgenv().AnimationOngoing = false
 return
 end
 end)()
 
 PlayAnimation:Create("Disappear", "SettingsFeatures", "0", "1")
-wait(time+0.01)
+wait(time+0.03)
 PlayAnimation:Create("Appear", "SettingsFeatures", "0", "1")
 end
 end)
