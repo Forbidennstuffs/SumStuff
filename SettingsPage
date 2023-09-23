@@ -753,6 +753,18 @@ PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
 end
 end)
 
+Next.MouseButton1Down:connect(function()
+PlayAnimation:Create("Disappear", "SettingsFeatures", "0", "1")
+wait(time)
+PlayAnimation:Create("Appear", "SettingsFeatures", "0", "1")
+end)
+
+Previous_2.MouseButton1Down:connect(function()
+PlayAnimation:Create("Disappear", "SettingsFeatures", "0", "1")
+wait(time)
+PlayAnimation:Create("Appear", "SettingsFeatures", "0", "1")
+end)
+
 UIScaleImage.MouseButton1Down:connect(function()
 _G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
