@@ -28,7 +28,7 @@ Wallpaper = "11926598891";
 WhiteBackground = true;
 OpenButtonFloating = false;
 EnabledNotifications = true;
-FastGUIAnimations = true;
+AnimationDelay = "0.6"
 }
 
 for i,v in pairs(_G.settingsTable) do 
