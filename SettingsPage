@@ -755,7 +755,7 @@ end)
 
 Next.MouseButton1Down:connect(function()
 PlayAnimation:Create("Disappear", "SettingsFeatures", "0", "1")
-wait(time)
+wait(time+0.05)
 PlayAnimation:Create("Appear", "SettingsFeatures", "0", "1")
 end)
 
