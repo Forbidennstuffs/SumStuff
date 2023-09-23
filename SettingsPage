@@ -846,3 +846,39 @@ _G.settingsTable.WhiteBackground = true
 saveSettings()
 Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
+
+FastButton.MouseButton1Down:connect(function()
+_G.settingsTable.AnimationDelay = "0.6"
+saveSettings()
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
+end)
+
+SlowButton.MouseButton1Down:connect(function()
+_G.settingsTable.AnimationDelay = "0.8"
+saveSettings()
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
+end)
+
+EnabledButton.MouseButton1Down:connect(function()
+_G.settingsTable.EnabledNotifications = true
+saveSettings()
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
+end)
+
+DisabledButton.MouseButton1Down:connect(function()
+_G.settingsTable.EnabledNotifications = false
+saveSettings()
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
+end)
+
+TopScreenButton.MouseButton1Down:connect(function()
+_G.settingsTable.OpenButtonFloating = false
+saveSettings()
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
+end)
+
+FloatingButton.MouseButton1Down:connect(function()
+_G.settingsTable.OpenButtonFloating = true
+saveSettings()
+Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
+end)
