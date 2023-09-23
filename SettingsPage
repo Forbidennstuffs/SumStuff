@@ -126,6 +126,7 @@ SettingsPopUp.Size = UDim2.new(0, 120, 0, 230)
 SettingsPopUp.Image = "rbxassetid://".._G.settingsTable.Wallpaper
 SettingsPopUp.ImageTransparency = 0.500
 SettingsPopUp.ScaleType = Enum.ScaleType.Crop
+SettingsPopUp.Visible = false
 
 UICorner.Parent = SettingsPopUp
 
