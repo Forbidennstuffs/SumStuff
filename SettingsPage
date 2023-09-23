@@ -862,7 +862,9 @@ end)
 EnabledButton.MouseButton1Down:connect(function()
 _G.settingsTable.EnabledNotifications = true
 saveSettings()
-if getgenv().CreatedVexHubNotificationLibrary == false then
+local LibraryLoaded = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
+
+if LibraryLoaded then
 game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = true
 end
 
@@ -872,7 +874,9 @@ end)
 DisabledButton.MouseButton1Down:connect(function()
 _G.settingsTable.EnabledNotifications = false
 saveSettings()
-if getgenv().CreatedVexHubNotificationLibrary == false then
+local LibraryLoaded = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
+
+if LibraryLoaded then
 game:GetService("CoreGui").VexHubNotificationLibrary.Frame.Visible = false
 end
 end)
