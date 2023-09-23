@@ -127,7 +127,7 @@ SettingsPopUpFrame.Settings1.Next.UIStroke.Transparency = 1
 SettingsPopUpFrame.Settings1.Previous.BackgroundTransparency = 1
 SettingsPopUpFrame.Settings1.Previous.TextTransparency = 1
 SettingsPopUpFrame.Settings1.Previous.UIStroke.Transparency = 1
-SettingsPopUpFrame.Settings2.NotificationText.TextTransparency = 1
+SettingsPopUpFrame.Settings2.NotificationsText.TextTransparency = 1
 SettingsPopUpFrame.Settings2.EnabledButton.BackgroundTransparency = 1
 SettingsPopUpFrame.Settings2.EnabledButton.TextTransparency = 1
 SettingsPopUpFrame.Settings2.EnabledButton.UIStroke.Transparency = 1
@@ -199,7 +199,7 @@ TweenService:Create(SettingsPopUpFrame.Settings1.Next.UIStroke, TweenInfo.new(ti
 TweenService:Create(SettingsPopUpFrame.Settings1.Previous, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
 TweenService:Create(SettingsPopUpFrame.Settings1.Previous, TweenInfo.new(time), {TextTransparency = 0}):Play()
 TweenService:Create(SettingsPopUpFrame.Settings1.Previous.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
-TweenService:Create(SettingsPopUpFrame.Settings2.NotificationText, TweenInfo.new(time), {TextTransparency = 0}):Play()
+TweenService:Create(SettingsPopUpFrame.Settings2.NotificationsText, TweenInfo.new(time), {TextTransparency = 0}):Play()
 TweenService:Create(SettingsPopUpFrame.Settings2.EnabledButton, TweenInfo.new(time), {BackgroundTransparency = 0.9}):Play()
 TweenService:Create(SettingsPopUpFrame.Settings2.EnabledButton, TweenInfo.new(time), {TextTransparency = 0}):Play()
 TweenService:Create(SettingsPopUpFrame.Settings2.EnabledButton.UIStroke, TweenInfo.new(time), {Transparency = 0.7}):Play()
