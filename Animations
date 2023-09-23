@@ -2,12 +2,48 @@ local Play = {}
 
 function Play:Create(Animation, Tab, Page, Type)
 
+_G.settingsTable = {
+UIScale = "1.05";
+ButtonTopLeft = true;
+Wallpaper = "11926598891";
+WhiteBackground = true;
+OpenButtonFloating = false;
+EnabledNotifications = true;
+AnimationDelay = 0.6;
+}
+
+for i,v in pairs(_G.settingsTable) do 
+end
+
+local filename = "VexHubSettings.txt";
+
+function loadSettings()
+local HttpService = game:GetService("HttpService")
+if (readfile and isfile and isfile(filename)) then
+_G.settingsTable = HttpService:JSONDecode(readfile(filename));
+for i,v in pairs(_G.settingsTable) do 
+end
+end
+end
+
+function saveSettings()
+local json;
+local HttpService = game:GetService("HttpService"); 
+if (writefile) then
+json = HttpService:JSONEncode(_G.settingsTable);
+writefile(filename, json);
+end
+end
+
+loadSettings()
+wait()
+
 local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 local TweenService = game:GetService("TweenService")
-local time = 0.6
+local time = _G.settingsTable.AnimationDelay
 
 if Animation == "Appear" and Tab == "DragImage" and Page == "0" and Type == "1" then
 DragImagePath.BackgroundTransparency = 1
