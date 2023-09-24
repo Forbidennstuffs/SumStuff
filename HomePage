@@ -1000,6 +1000,8 @@ VexHubLogo.Position = UDim2.new(0.444559604, 0, 0.41844511, 0)
 VexHubLogo.Size = UDim2.new(0, 70, 0, 70)
 VexHubLogo.Image = "rbxassetid://14803348752"
 VexHubLogo.ImageTransparency = 1
+VexHubLogo.Active = true
+VexHubLogo.Draggable = true
 
 OpenButton.Name = "OpenButton"
 OpenButton.Parent = VexHubLogo
