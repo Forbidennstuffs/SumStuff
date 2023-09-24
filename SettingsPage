@@ -849,12 +849,14 @@ end)
 FastButton.MouseButton1Down:connect(function()
 _G.settingsTable.AnimationDelay = 0.6
 saveSettings()
+getgenv().AnimationDelay = 0.6
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 SlowButton.MouseButton1Down:connect(function()
 _G.settingsTable.AnimationDelay = 0.8
 saveSettings()
+getgenv().AnimationDelay = 0.8
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
