@@ -861,7 +861,6 @@ local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Dr
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
-local time = 0.6
 
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
@@ -874,7 +873,7 @@ if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
 while wait() do
-wait(time+0.1)
+wait(getgenv().AnimationDelay+0.1)
 getgenv().AnimationOngoing = false
 return
 end
@@ -893,7 +892,7 @@ if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
 while wait() do
-wait(time+0.1)
+wait(getgenv().AnimationDelay+0.1)
 getgenv().AnimationOngoing = false
 return
 end
@@ -932,7 +931,7 @@ if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
 while wait() do
-wait(time+0.1)
+wait(getgenv().AnimationDelay+0.1)
 getgenv().AnimationOngoing = false
 return
 end
@@ -941,12 +940,12 @@ end)()
 PlayAnimation:Create("Appear", "DragImage", "0", "1")
 PlayAnimation:Create("Appear", "HomePage", "0", "1")
 
-local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 1})
-local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 1})
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 
-wait(time)
+wait(getgenv().AnimationDelay)
 ButtonParent:Destroy()
 end
 end)
@@ -968,15 +967,15 @@ ButtonParent.LayoutOrder = 0
 ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
 VHubLogoOpen.Size = UDim2.new(0, 32, 0, 32)
 ButtonParent.Visible = true
-local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
-local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.5})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 else
 VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
 ButtonParent.Visible = true
-local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {BackgroundTransparency = 0.5})
-local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(time), {ImageTransparency = 0})
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.5})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 end
@@ -988,7 +987,7 @@ if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
 while wait() do
-wait(time+0.1)
+wait(getgenv().AnimationDelay+0.1)
 getgenv().AnimationOngoing = false
 return
 end
