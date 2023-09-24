@@ -996,7 +996,7 @@ VexHubLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VexHubLogo.BackgroundTransparency = 1.000
 VexHubLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VexHubLogo.BorderSizePixel = 0
-VexHubLogo.Position = UDim2.new(0.444559604, 0, 0.41844511, 0)
+VexHubLogo.Position = getgenv().VexHubLogoPosition
 VexHubLogo.Size = UDim2.new(0, 70, 0, 70)
 VexHubLogo.Image = "rbxassetid://14803348752"
 VexHubLogo.ImageTransparency = 1
@@ -1025,6 +1025,8 @@ getgenv().AnimationOngoing = false
 return
 end
 end)()
+
+getgenv().VexHubLogoPosition = VexHubLogo.Position
 
 TweenService:Create(VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 PlayAnimation:Create("Appear", "DragImage", "0", "1")
