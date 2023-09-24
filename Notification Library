@@ -72,7 +72,6 @@ Message = Instance.new("TextLabel")
 
 local mr = math.random(1, 999999)
 local TweenService = game:GetService("TweenService")
-local time = 0.6
 
 a.Notification.Name = "Notification"..mr
 a.Notification.Parent = game:GetService("CoreGui").VexHubNotificationLibrary.Frame
@@ -152,20 +151,20 @@ end
 
 -- Animations:
 
-a.Notification:TweenPosition(UDim2.new(0, 0, 0, 0),"Out","Quint",time)
-TweenService:Create(a.Notification, TweenInfo.new(time), {BackgroundTransparency = 0}):Play()
-TweenService:Create(a.Notification, TweenInfo.new(time), {ImageTransparency = 0.5}):Play()
-TweenService:Create(a.Bell, TweenInfo.new(time), {ImageTransparency = 0}):Play()
-TweenService:Create(a.Title, TweenInfo.new(time), {TextTransparency = 0}):Play()
-TweenService:Create(a.Message, TweenInfo.new(time), {TextTransparency = 0}):Play()
+a.Notification:TweenPosition(UDim2.new(0, 0, 0, 0),"Out","Quint",getgenv().AnimationDelay)
+TweenService:Create(a.Notification, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
+TweenService:Create(a.Notification, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
+TweenService:Create(a.Bell, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
+TweenService:Create(a.Title, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
+TweenService:Create(a.Message, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
 
 task.spawn(function() 
 wait(Duration)
-TweenService:Create(a.Notification, TweenInfo.new(time), {BackgroundTransparency = 1}):Play()
-TweenService:Create(a.Notification, TweenInfo.new(time), {ImageTransparency = 1}):Play()
-TweenService:Create(a.Bell, TweenInfo.new(time), {ImageTransparency = 1}):Play()
-TweenService:Create(a.Title, TweenInfo.new(time), {TextTransparency = 1}):Play()
-TweenService:Create(a.Message, TweenInfo.new(time), {TextTransparency = 1}):Play()
+TweenService:Create(a.Notification, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
+TweenService:Create(a.Notification, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
+TweenService:Create(a.Bell, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
+TweenService:Create(a.Title, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
+TweenService:Create(a.Message, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
 wait(1)
 a.Notification:Destroy()
 end)
