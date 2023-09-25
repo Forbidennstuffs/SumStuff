@@ -982,6 +982,7 @@ OpenButtonAppear_3:Play()
 end
 else
 
+getgenv().TweenHomePage = true
 game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
 TweenService:Create(game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
 
