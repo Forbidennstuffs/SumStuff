@@ -991,9 +991,6 @@ return
 end
 end)()
 
-getgenv().TweenHomePage = true
-game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
-
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 PlayAnimation:Create("Disappear", "DragImage", "0", "1")
 
@@ -1004,8 +1001,6 @@ end
 if SettingsPopUpFrame.Visible == true then
 PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
 end
-
-TweenService:Create(game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
 
 end
 end
