@@ -52,10 +52,10 @@ end)()
 TweenService:Create(VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 PlayAnimation:Create("Appear", "DragImage", "0", "1")
 
-if getgenv().HomePageVisible == true then
+if getgenv().TweenHomePage == true then
 PlayAnimation:Create("Appear", "HomePage", "0", "1")
 else
-PlayAnimation:Create("Appear", getgenv().VisibleTab, getgenv().VisiblePage, "1")
+PlayAnimation:Create("Appear", getgenv().TweenTab, getgenv().TweenPage, "1")
 end
 
 wait(getgenv().AnimationDelay)
