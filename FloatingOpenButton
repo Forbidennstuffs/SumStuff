@@ -59,6 +59,6 @@ PlayAnimation:Create("Appear", getgenv().VisibleTab, getgenv().VisiblePage, "1")
 end
 
 wait(getgenv().AnimationDelay)
-VexHubOpenButtonScreen:Destroy()
+VexHubLogo.Visible = false
 end
 end)
