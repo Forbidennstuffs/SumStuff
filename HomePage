@@ -981,7 +981,20 @@ OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 end
 else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/FloatingOpenButton"))()
+
+game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
+TweenService:Create(game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "1")
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
 end
 end
 end)
