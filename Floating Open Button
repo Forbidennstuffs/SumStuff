@@ -1,0 +1,82 @@
+local PlayAnimation = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations"))()
+local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
+local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
+local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
+local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
+local TweenService = game:GetService("TweenService")
+
+local VexHubOpenButtonScreen = Instance.new("ScreenGui")
+local VexHubLogo = Instance.new("ImageLabel")
+local OpenButton = Instance.new("TextButton")
+
+VexHubOpenButtonScreen.Name = "VexHubOpenButtonScreen"
+VexHubOpenButtonScreen.Parent = game:GetService("CoreGui")
+VexHubOpenButtonScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+VexHubLogo.Name = "VexHubLogo"
+VexHubLogo.Parent = VexHubOpenButtonScreen
+VexHubLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VexHubLogo.BackgroundTransparency = 1.000
+VexHubLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VexHubLogo.BorderSizePixel = 0
+VexHubLogo.Position = UDim2.new(0.444559604, -191, 0.41844511, -125)
+VexHubLogo.Size = UDim2.new(0, 70, 0, 70)
+VexHubLogo.Image = "rbxassetid://14803348752"
+VexHubLogo.ImageTransparency = 1
+VexHubLogo.Active = true
+VexHubLogo.Draggable = true
+
+OpenButton.Name = "OpenButton"
+OpenButton.Parent = VexHubLogo
+OpenButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.BackgroundTransparency = 1.000
+OpenButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenButton.BorderSizePixel = 0
+OpenButton.Position = UDim2.new(0.400000006, 0, 0.400000006, 0)
+OpenButton.Size = UDim2.new(0, 15, 0, 15)
+OpenButton.Font = Enum.Font.SourceSans
+OpenButton.Text = ""
+OpenButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+OpenButton.TextSize = 14.000
+OpenButton.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+TweenService:Create(VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
+PlayAnimation:Create("Appear", "DragImage", "0", "1")
+
+if getgenv().HomePageVisible == true then
+PlayAnimation:Create("Appear", "HomePage", "0", "1")
+else
+PlayAnimation:Create("Appear", getgenv().VisibleTab, getgenv().VisiblePage, "1")
+end
+
+wait(getgenv().AnimationDelay)
+VexHubOpenButtonScreen:Destroy()
+end
+end)
+
+TweenService:Create(VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
+
+if getgenv().HomePageVisible == true then
+PlayAnimation:Create("Disappear", "HomePage", "0", "1")
+else
+PlayAnimation:Create("Disappear", getgenv().VisibleTab, getgenv().VisiblePage, "1")
+end
+
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
