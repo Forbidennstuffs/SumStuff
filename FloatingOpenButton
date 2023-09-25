@@ -62,21 +62,3 @@ wait(getgenv().AnimationDelay)
 VexHubOpenButtonScreen:Destroy()
 end
 end)
-
-TweenService:Create(VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
-
-if getgenv().HomePageVisible == true then
-PlayAnimation:Create("Disappear", "HomePage", "0", "1")
-else
-PlayAnimation:Create("Disappear", getgenv().VisibleTab, getgenv().VisiblePage, "1")
-end
-
-PlayAnimation:Create("Disappear", "DragImage", "0", "1")
-
-if ReportPopUpFrame.Visible == true then
-PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
-end
-
-if SettingsPopUpFrame.Visible == true then
-PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
-end
