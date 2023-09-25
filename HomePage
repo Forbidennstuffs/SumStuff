@@ -981,6 +981,15 @@ OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 end
 else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
 
 getgenv().TweenHomePage = true
 game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
@@ -995,6 +1004,7 @@ end
 
 if SettingsPopUpFrame.Visible == true then
 PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
 end
 end
 end
