@@ -4,6 +4,7 @@ local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Dr
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
+local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
 
 local VexHubOpenButtonScreen = Instance.new("ScreenGui")
 local VexHubLogo = Instance.new("ImageLabel")
@@ -21,7 +22,7 @@ VexHubLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VexHubLogo.BorderSizePixel = 0
 VexHubLogo.Position = UDim2.new(0.444559604, -191, 0.41844511, -125)
 VexHubLogo.Size = UDim2.new(0, 70, 0, 70)
-VexHubLogo.Image = "rbxassetid://14803348752"
+VexHubLogo.Image = The.path.Logo
 VexHubLogo.ImageTransparency = 1
 VexHubLogo.Active = true
 VexHubLogo.Draggable = true
