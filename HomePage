@@ -980,10 +980,16 @@ local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getge
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
 end
+
 else
+
+getgenv().TweenHomePage = true
+game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
 
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+
+TweenService:Create(game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
 
 if ReportPopUpFrame.Visible == true then
 PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
