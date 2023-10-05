@@ -54,7 +54,8 @@ return
 end
 end)()
 
-PlayAnimation:Create("Disappear", TabName, CurrentPage, "1")
+if _G.settingsTable.OpenButtonFloating == false then
+PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 PlayAnimation:Create("Disappear", "DragImage", "0", "1")
 
 local ButtonParent = Instance.new("Frame")
@@ -94,7 +95,7 @@ end
 end)()
 
 PlayAnimation:Create("Appear", "DragImage", "0", "1")
-PlayAnimation:Create("Appear", TabName, CurrentPage, "1")
+PlayAnimation:Create("Appear", "HomePage", "0", "1")
 
 local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1})
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1})
@@ -134,6 +135,26 @@ local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getge
 local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0})
 OpenButtonAppear_2:Play()
 OpenButtonAppear_3:Play()
+end
+
+else
+
+getgenv().TweenHomePage = false
+game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "1")
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+
+TweenService:Create(game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
+
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+
 end
 end
 end)
