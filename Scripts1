@@ -55,8 +55,8 @@ end
 end)()
 
 if _G.settingsTable.OpenButtonFloating == false then
-PlayAnimation:Create("Disappear", "HomePage", "0", "1")
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "1")
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
 
 local ButtonParent = Instance.new("Frame")
 local VHubLogoOpen = Instance.new("ImageButton")
