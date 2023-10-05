@@ -140,6 +140,8 @@ end
 else
 
 getgenv().TweenHomePage = false
+getgenv().TweenPage = CurrentPage
+getgenv().TweenTab = TabName
 game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
 
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
