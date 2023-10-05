@@ -24,6 +24,25 @@ local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
 
 -- Button Functions:
+MainFrame.InfoBar.Settings.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+if SettingsPopUpFrame.Visible == false then
+PlayAnimation:Create("Appear", "SettingsPopUp", "0", "1")
+else
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+end
+end)
+
 MainFrame.InfoBar.X.MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
