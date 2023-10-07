@@ -160,3 +160,8 @@ end
 end
 end
 end)
+
+MainFrame.Tabs.1HomeTab.MouseButton1Down:connect(function()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "HomePage", "0", "2")
+end)
