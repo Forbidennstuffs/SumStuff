@@ -756,6 +756,73 @@ TweenService:Create(HomePageFrame.DiscordButton, TweenInfo.new(getgenv().Animati
 TweenService:Create(HomePageFrame.WelcomeUserUserName, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
 
 elseif Animation == "Appear" and Tab == "HomePage" and Page == "0" and Type == "2" then
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay)
+HomePageFrame.InfoBar.BackgroundTransparency = 0.9
+HomePageFrame.InfoBar.UIStroke.Transparency = 0.7
+HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 0
+HomePageFrame.InfoBar.VexHubText.TextTransparency = 0
+HomePageFrame.InfoBar.Version.TextTransparency = 0
+HomePageFrame.InfoBar.X.TextTransparency = 0
+HomePageFrame.InfoBar.Settings.ImageTransparency = 0
+HomePageFrame.TabsParent.BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["1HomeTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["4GuisTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 0.7
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 0.9
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 0
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 0.7
+return
+end
+end)()
+
+HomePageFrame.InfoBar.BackgroundTransparency = 1
+HomePageFrame.InfoBar.UIStroke.Transparency = 1
+HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 1
+HomePageFrame.InfoBar.VexHubText.TextTransparency = 1
+HomePageFrame.InfoBar.Version.TextTransparency = 1
+HomePageFrame.InfoBar.X.TextTransparency = 1
+HomePageFrame.InfoBar.Settings.ImageTransparency = 1
+HomePageFrame.TabsParent.BackgroundTransparency = 1
+HomePageFrame.TabsParent.UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 1
 HomePageFrame.ProfilePicture.BackgroundTransparency = 1
 HomePageFrame.ProfilePicture.ImageTransparency = 1
 HomePageFrame.ProfilePicture.UIStroke.Transparency = 1
@@ -1009,6 +1076,36 @@ coroutine.wrap(function()
 while wait() do
 wait(getgenv().AnimationDelay)
 HomePageFrame.Visible = false
+HomePageFrame.InfoBar.BackgroundTransparency = 1
+HomePageFrame.InfoBar.UIStroke.Transparency = 1
+HomePageFrame.InfoBar.VexHubLogo.ImageTransparency = 1
+HomePageFrame.InfoBar.VexHubText.TextTransparency = 1
+HomePageFrame.InfoBar.Version.TextTransparency = 1
+HomePageFrame.InfoBar.X.TextTransparency = 1
+HomePageFrame.InfoBar.Settings.ImageTransparency = 1
+HomePageFrame.TabsParent.BackgroundTransparency = 1
+HomePageFrame.TabsParent.UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 1
+HomePageFrame.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 1
 return
 end
 end)()
@@ -1260,6 +1357,74 @@ TweenService:Create(TargetPage.PlayButtons.Play, TweenInfo.new(getgenv().Animati
 
 elseif Animation == "Appear" and Type == "2" then
 local TargetPage = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage[Tab..""..Page]
+
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay)
+TargetPage.InfoBar.BackgroundTransparency = 0.9
+TargetPage.InfoBar.UIStroke.Transparency = 0.7
+TargetPage.InfoBar.VexHubLogo.ImageTransparency = 0
+TargetPage.InfoBar.VexHubText.TextTransparency = 0
+TargetPage.InfoBar.Version.TextTransparency = 0
+TargetPage.InfoBar.X.TextTransparency = 0
+TargetPage.InfoBar.Settings.ImageTransparency = 0
+TargetPage.TabsParent.BackgroundTransparency = 0.9
+TargetPage.TabsParent.UIStroke.Transparency = 0.7
+TargetPage.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 0.9
+TargetPage.TabsParent.Tabs["1HomeTab"].ImageTransparency = 0
+TargetPage.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 0.7
+TargetPage.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 0.9
+TargetPage.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 0
+TargetPage.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 0.7
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 0.9
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 0
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 0.7
+TargetPage.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 0.9
+TargetPage.TabsParent.Tabs["4GuisTab"].ImageTransparency = 0
+TargetPage.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 0.7
+TargetPage.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 0.9
+TargetPage.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 0
+TargetPage.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 0.7
+TargetPage.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 0.9
+TargetPage.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 0
+TargetPage.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 0.7
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 0.9
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 0
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 0.7
+return
+end
+end)()
+
+TargetPage.InfoBar.BackgroundTransparency = 1
+TargetPage.InfoBar.UIStroke.Transparency = 1
+TargetPage.InfoBar.VexHubLogo.ImageTransparency = 1
+TargetPage.InfoBar.VexHubText.TextTransparency = 1
+TargetPage.InfoBar.Version.TextTransparency = 1
+TargetPage.InfoBar.X.TextTransparency = 1
+TargetPage.InfoBar.Settings.ImageTransparency = 1
+TargetPage.TabsParent.BackgroundTransparency = 1
+TargetPage.TabsParent.UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["1HomeTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["4GuisTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 1
 TargetPage.TabInfo.BackgroundTransparency = 1
 TargetPage.TabInfo.UIStroke.Transparency = 1
 TargetPage.TabInfo.TabIcon.ImageTransparency = 1
@@ -1525,6 +1690,36 @@ coroutine.wrap(function()
 while wait() do
 wait(getgenv().AnimationDelay)
 TargetPage.Visible = false
+TargetPage.InfoBar.BackgroundTransparency = 1
+TargetPage.InfoBar.UIStroke.Transparency = 1
+TargetPage.InfoBar.VexHubLogo.ImageTransparency = 1
+TargetPage.InfoBar.VexHubText.TextTransparency = 1
+TargetPage.InfoBar.Version.TextTransparency = 1
+TargetPage.InfoBar.X.TextTransparency = 1
+TargetPage.InfoBar.Settings.ImageTransparency = 1
+TargetPage.TabsParent.BackgroundTransparency = 1
+TargetPage.TabsParent.UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["1HomeTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["1HomeTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["1HomeTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["2ScriptsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["2ScriptsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["2ScriptsTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["3RequiredAccessoriesTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["4GuisTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["4GuisTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["4GuisTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["5AnimationsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["5AnimationsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["5AnimationsTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["6CommandsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["6CommandsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["6CommandsTab"].UIStroke.Transparency = 1
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].BackgroundTransparency = 1
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].ImageTransparency = 1
+TargetPage.TabsParent.Tabs["7OtherHubsTab"].UIStroke.Transparency = 1
 return
 end
 end)()
