@@ -1023,8 +1023,19 @@ end
 end)
 
 _2ScriptsTab.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
 PlayAnimation:Create("Appear", "Scripts", "1", "2")
+end
 end)
 
 -- Scripts:
