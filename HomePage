@@ -1024,6 +1024,7 @@ end)
 
 _2ScriptsTab.MouseButton1Down:connect(function()
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
+PlayAnimation:Create("Appear", "Scripts", "1", "2")
 end)
 
 -- Scripts:
