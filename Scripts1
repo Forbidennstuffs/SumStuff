@@ -8,8 +8,8 @@ local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidenn
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
 local TabName = "Scripts"
 local CurrentPage = "1"
-local PreviousPage = "1-"..CurrentPage
-local NextPage = "1+"..CurrentPage
+local PreviousPage = CurrentPage-1
+local NextPage = CurrentPage+1
 
 MainFrame.Name = TabName..""..CurrentPage
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
