@@ -391,3 +391,20 @@ MainFrame.PlayButtons.Play6.Visible = false
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script2Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script2Creator..'</b> ('..Script2CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script2Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script2GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script2RigType)..'</b></font>'
 end)
+
+MainFrame.ChooseScriptFrameParent.ScriptButton3.MouseButton1Down:connect(function()
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = true
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = true
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script3Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script3Creator..'</b> ('..Script3CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script3Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script3GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script3RigType)..'</b></font>'
+end)
