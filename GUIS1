@@ -260,7 +260,6 @@ PlayAnimation:Create("Appear", "HomePage", "0", "2")
 end
 end)
 
---[=[
 MainFrame.TabsParent.Tabs["2ScriptsTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
@@ -289,7 +288,6 @@ PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Scripts", "1", "2")
 end
 end)
-]=]
 
 MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
@@ -320,6 +318,7 @@ PlayAnimation:Create("Appear", "Required Accessories", "1", "2")
 end
 end)
 
+--[=[
 MainFrame.TabsParent.Tabs["4GuisTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
@@ -348,6 +347,7 @@ PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "GUIS", "1", "2")
 end
 end)
+]=]
 
 MainFrame.TabsParent.Tabs["5AnimationsTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
