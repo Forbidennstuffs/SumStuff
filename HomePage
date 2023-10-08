@@ -1038,6 +1038,86 @@ PlayAnimation:Create("Appear", "Scripts", "1", "2")
 end
 end)
 
+_3RequiredAccessoriesTab.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "2")
+PlayAnimation:Create("Appear", "Required Accessories", "1", "2")
+end
+end)
+
+_4GuisTab.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "2")
+PlayAnimation:Create("Appear", "GUIS", "1", "2")
+end
+end)
+
+_5AnimationsTab.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "2")
+PlayAnimation:Create("Appear", "Animations", "1", "2")
+end
+end)
+
+_6CommandsTab.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "2")
+PlayAnimation:Create("Appear", "Commands", "1", "2")
+end
+end)
+
+_7OtherHubsTab.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", "HomePage", "0", "2")
+PlayAnimation:Create("Appear", "Other Hubs", "1", "2")
+end
+end)
+
 -- Scripts:
 
 local function VYQVU_fake_script() -- ProfilePicture.LocalScript 
