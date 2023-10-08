@@ -580,13 +580,14 @@ MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\
 getgenv().AnimationOngoing = false
 return
 end
-else
-Notification:Create("Whoops!", TabName.." Page "..NextPage.." Does Not Exist Yet!",5)
-end
 end)()
 
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", TabName, NextPage, "2")
+end
+
+else
+Notification:Create("Whoops!", TabName.." Page "..NextPage.." Does Not Exist Yet!",5)
 end
 end)
 
