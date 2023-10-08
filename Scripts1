@@ -31,7 +31,8 @@ local Script1CreatorPlatform = "Platform"
 local Script1Description = "Test"
 local Script1GameID = ""
 local Script1RigType = "All" -- Choises: All, R15, R6
-MainFrame.ExecuteButtons.Settings.MouseButton1Down:connect(function()
+MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
+print("Executed Script1")
 end)
 
 -- Button Functions:
