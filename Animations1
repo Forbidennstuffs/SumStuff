@@ -11,6 +11,14 @@ local CurrentPage = "1"
 local PreviousPage = CurrentPage-1
 local NextPage = CurrentPage+1
 
+-- Functions:
+
+function R6()
+	if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+		return true
+	end
+end
+
 MainFrame.Name = TabName..""..CurrentPage
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 
