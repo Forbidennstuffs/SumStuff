@@ -591,6 +591,42 @@ Notification:Create("Whoops!", TabName.." Page "..NextPage.." Does Not Exist Yet
 end
 end)
 
+MainFrame.TabInfo.PageChanger.Previous.MouseButton1Down:connect(function()
+local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..PreviousPage)
+
+if PageExist then
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", TabName, PreviousPage, "2")
+end
+
+else
+Notification:Create("Whoops!", TabName.." Page "..PreviousPage.." Does Not Exist Yet!",5)
+end
+end)
+
 MainFrame.ChooseScriptFrameParent.ScriptButton1.MouseButton1Down:connect(function()
 MainFrame.ExecuteButtons.Execute1.Visible = true
 MainFrame.ExecuteButtons.Execute2.Visible = false
