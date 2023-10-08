@@ -470,3 +470,27 @@ MainFrame.PlayButtons.Play6.Visible = true
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script6Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script6Creator..'</b> ('..Script6CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script6Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script6GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script6RigType)..'</b></font>'
 end)
+
+MainFrame.PlayButtons.Play1.MouseButton1Down:connect(function()
+JoinGame(Script1GameID)
+end)
+
+MainFrame.PlayButtons.Play2.MouseButton1Down:connect(function()
+JoinGame(Script2GameID)
+end)
+
+MainFrame.PlayButtons.Play3.MouseButton1Down:connect(function()
+JoinGame(Script3GameID)
+end)
+
+MainFrame.PlayButtons.Play4.MouseButton1Down:connect(function()
+JoinGame(Script4GameID)
+end)
+
+MainFrame.PlayButtons.Play5.MouseButton1Down:connect(function()
+JoinGame(Script5GameID)
+end)
+
+MainFrame.PlayButtons.Play6.MouseButton1Down:connect(function()
+JoinGame(Script6GameID)
+end)
