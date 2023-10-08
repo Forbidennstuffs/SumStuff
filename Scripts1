@@ -239,7 +239,25 @@ PlayAnimation:Create("Appear", "HomePage", "0", "2")
 end
 end)
 
--- Page Buttons, Texts And Images:
+-- Page Functions, Buttons, Texts And Images:
+
+function ScriptRigType(Script)
+if Script == "All" then
+return "R6, R15"
+elseif Script == "R6" then
+return "R6"
+elseif Script == "R15" then
+return "R15"
+end
+end
+
+function ScriptSupportedGame(PlaceId)
+if PlaceId == "0" then
+return "Universal"
+else
+return game:GetService("MarketplaceService"):GetProductInfo(GameId).Name
+end
+end
 
 if TabName == "Scripts" then
 MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592851654"
