@@ -686,6 +686,10 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton3.MouseButton1Down:connect(function()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
 MainFrame.ExecuteButtons.Execute1.Visible = false
 MainFrame.ExecuteButtons.Execute2.Visible = false
 MainFrame.ExecuteButtons.Execute3.Visible = true
@@ -700,9 +704,21 @@ MainFrame.PlayButtons.Play5.Visible = false
 MainFrame.PlayButtons.Play6.Visible = false
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script3Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script3Creator..'</b> ('..Script3CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script3Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script3GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script3RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton4.MouseButton1Down:connect(function()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
 MainFrame.ExecuteButtons.Execute1.Visible = false
 MainFrame.ExecuteButtons.Execute2.Visible = false
 MainFrame.ExecuteButtons.Execute3.Visible = false
@@ -717,9 +733,21 @@ MainFrame.PlayButtons.Play5.Visible = false
 MainFrame.PlayButtons.Play6.Visible = false
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script4Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script4Creator..'</b> ('..Script4CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script4Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script4GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script4RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton5.MouseButton1Down:connect(function()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
 MainFrame.ExecuteButtons.Execute1.Visible = false
 MainFrame.ExecuteButtons.Execute2.Visible = false
 MainFrame.ExecuteButtons.Execute3.Visible = false
@@ -734,9 +762,21 @@ MainFrame.PlayButtons.Play5.Visible = true
 MainFrame.PlayButtons.Play6.Visible = false
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script5Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script5Creator..'</b> ('..Script5CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script5Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script5GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script5RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton6.MouseButton1Down:connect(function()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
 MainFrame.ExecuteButtons.Execute1.Visible = false
 MainFrame.ExecuteButtons.Execute2.Visible = false
 MainFrame.ExecuteButtons.Execute3.Visible = false
@@ -751,6 +791,14 @@ MainFrame.PlayButtons.Play5.Visible = false
 MainFrame.PlayButtons.Play6.Visible = true
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script6Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script6Creator..'</b> ('..Script6CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script6Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script6GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script6RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
 end)
 
 MainFrame.PlayButtons.Play1.MouseButton1Down:connect(function()
