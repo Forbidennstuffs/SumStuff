@@ -263,10 +263,7 @@ function JoinGame(PlaceId)
 if PlaceId == "0" then
 return Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
 else
-return 
-Notification:Create("Teleporting...", "Teleporting To The Game... Please Wait...",5)
-local TeleportService = game:GetService("TeleportService")
-TeleportService:Teleport(PlaceId)
+return game:GetService("TeleportService"):Teleport(PlaceId)
 end
 end
 
