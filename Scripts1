@@ -556,8 +556,9 @@ MainFrame.ChooseScriptFrameParent.ScriptButton5.ScriptName5.Text = Script5Name
 MainFrame.ChooseScriptFrameParent.ScriptButton6.ScriptName6.Text = Script6Name
 
 MainFrame.TabInfo.PageChanger.Next.MouseButton1Down:connect(function()
-local CheckPageIfExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage[TabName..""..NextPage]:
+local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..NextPage)
 
+if PageExist then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -578,6 +579,9 @@ MainFrame.PlayButtons.Play6.Visible = false
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
 getgenv().AnimationOngoing = false
 return
+end
+else
+Notification:Create("Whoops!", TabName.." Page "..NextPage.." Does Not Exist Yet!",5)
 end
 end)()
 
