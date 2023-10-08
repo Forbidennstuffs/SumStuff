@@ -11,6 +11,14 @@ local CurrentPage = "1"
 local PreviousPage = CurrentPage-1
 local NextPage = CurrentPage+1
 
+-- Functions:
+
+function R6()
+	if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+		return true
+	end
+end
+
 MainFrame.Name = TabName..""..CurrentPage
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 
@@ -252,7 +260,6 @@ PlayAnimation:Create("Appear", "HomePage", "0", "2")
 end
 end)
 
---[=[
 MainFrame.TabsParent.Tabs["2ScriptsTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
@@ -281,8 +288,8 @@ PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Scripts", "1", "2")
 end
 end)
-]=]
 
+--[=[
 MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
@@ -311,6 +318,7 @@ PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Required Accessories", "1", "2")
 end
 end)
+]=]
 
 MainFrame.TabsParent.Tabs["4GuisTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
