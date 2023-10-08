@@ -444,7 +444,7 @@ function ScriptSupportedGame(PlaceId)
 if PlaceId == "0" then
 return "Universal"
 else
-return game:GetService("MarketplaceService"):GetProductInfo(GameId).Name
+return game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 end
 end
 
