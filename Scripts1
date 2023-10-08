@@ -281,7 +281,7 @@ PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Scripts", "1", "2")
 end
 end)
-]=}
+]=]
 
 MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
