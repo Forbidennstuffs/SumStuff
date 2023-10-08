@@ -505,7 +505,7 @@ ScriptDetails.Position = UDim2.new(0.0340000018, 0, 0.0329999998, 0)
 ScriptDetails.Size = UDim2.new(0, 119, 0, 40)
 ScriptDetails.Font = Enum.Font.GothamMedium
 ScriptDetails.RichText = true
-ScriptDetails.Text = '<b><font size="12">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@V31nc</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@V31nc</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
 ScriptDetails.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScriptDetails.TextSize = 12.000
 ScriptDetails.TextWrapped = true
