@@ -354,5 +354,5 @@ MainFrame.PlayButtons.Play4.Visible = false
 MainFrame.PlayButtons.Play5.Visible = false
 MainFrame.PlayButtons.Play6.Visible = false
 
-MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="12">'..Script1Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script1Creator..'</b></font>'
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="12">'..Script1Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script1Creator..'</b> '..Script1CreatorPlatform..'</font>'
 end)
