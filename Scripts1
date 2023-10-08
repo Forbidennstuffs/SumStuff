@@ -29,9 +29,59 @@ local Script1Name = "Script1"
 local Script1Creator = "Someone"
 local Script1CreatorPlatform = "Platform"
 local Script1Description = "Test"
-local Script1GameID = ""
+local Script1GameID = "0"
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
+print("Executed Script1")
+end)
+
+local Script2Name = "Script2"
+local Script2Creator = "Someone"
+local Script2CreatorPlatform = "Platform"
+local Script2Description = "Test"
+local Script2GameID = "0"
+local Script2RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
+print("Executed Script1")
+end)
+
+local Script3Name = "Script3"
+local Script3Creator = "Someone"
+local Script3CreatorPlatform = "Platform"
+local Script3Description = "Test"
+local Script3GameID = "0"
+local Script3RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
+print("Executed Script1")
+end)
+
+local Script4Name = "Script4"
+local Script4Creator = "Someone"
+local Script4CreatorPlatform = "Platform"
+local Script4Description = "Test"
+local Script4GameID = "0"
+local Script4RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
+print("Executed Script1")
+end)
+
+local Script5Name = "Script5"
+local Script5Creator = "Someone"
+local Script5CreatorPlatform = "Platform"
+local Script5Description = "Test"
+local Script5GameID = "0"
+local Script5RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
+print("Executed Script1")
+end)
+
+local Script6Name = "Script6"
+local Script6Creator = "Someone"
+local Script6CreatorPlatform = "Platform"
+local Script6Description = "Test"
+local Script6GameID = "0"
+local Script6RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 print("Executed Script1")
 end)
 
@@ -188,3 +238,98 @@ PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "HomePage", "0", "2")
 end
 end)
+
+-- Page Buttons, Texts And Images:
+
+if TabName == "Scripts" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592851654"
+
+elseif TabName == "Required Accessories" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592824883"
+
+elseif TabName == "GUIS" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592848654"
+
+elseif TabName == "Animations" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592835705"
+
+elseif TabName == "Commands" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592837927"
+
+elseif TabName == "Other Hubs" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592850267"
+end
+
+MainFrame.TabInfo.TabName.Text = TabName.." / "..CurrentPage
