@@ -333,3 +333,9 @@ MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid:/
 end
 
 MainFrame.TabInfo.TabName.Text = TabName.." / "..CurrentPage
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ScriptName1.Text = Script1Name
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ScriptName2.Text = Script2Name
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ScriptName3.Text = Script3Name
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ScriptName4.Text = Script4Name
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ScriptName5.Text = Script5Name
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ScriptName6.Text = Script6Name
