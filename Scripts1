@@ -332,10 +332,27 @@ MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://1159285026
 MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592850267"
 end
 
-MainFrame.TabInfo.TabName.Text = TabName.." / "..CurrentPage
+MainFrame.TabInfo.TabName.Text = TabName.." / Page "..CurrentPage
 MainFrame.ChooseScriptFrameParent.ScriptButton1.ScriptName1.Text = Script1Name
 MainFrame.ChooseScriptFrameParent.ScriptButton2.ScriptName2.Text = Script2Name
 MainFrame.ChooseScriptFrameParent.ScriptButton3.ScriptName3.Text = Script3Name
 MainFrame.ChooseScriptFrameParent.ScriptButton4.ScriptName4.Text = Script4Name
 MainFrame.ChooseScriptFrameParent.ScriptButton5.ScriptName5.Text = Script5Name
 MainFrame.ChooseScriptFrameParent.ScriptButton6.ScriptName6.Text = Script6Name
+
+MainFrame.ChooseScriptFrameParent.ScriptButton1.MouseButton1Down:connect(function()
+MainFrame.ExecuteButtons.Execute1.Visible = true
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = true
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="12">'..Script1Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font></font>'
+end)
