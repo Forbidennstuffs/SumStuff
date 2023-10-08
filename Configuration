@@ -8,6 +8,7 @@ return {
     KC = '08/14/23',
     InvitationCodes = {
     "This",
+    "hi",
     }
   }
 }
