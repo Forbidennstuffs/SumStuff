@@ -646,13 +646,13 @@ MainFrame.PlayButtons.Play5.Visible = false
 MainFrame.PlayButtons.Play6.Visible = false
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script1Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script1Creator..'</b> ('..Script1CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script1Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script1GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script1RigType)..'</b></font>'
-wait(0.3)
+wait(1)
 getgenv().OnCooldown = false
 return
 end
 end)()
 else
-Notification:Create("Hey!", "Slowdown For 0.3 Seconds Please!",5)
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
 end
 end)
 
@@ -675,13 +675,13 @@ MainFrame.PlayButtons.Play5.Visible = false
 MainFrame.PlayButtons.Play6.Visible = false
 
 MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script2Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script2Creator..'</b> ('..Script2CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script2Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script2GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script2RigType)..'</b></font>'
-wait(0.3)
+wait(1)
 getgenv().OnCooldown = false
 return
 end
 end)()
 else
-Notification:Create("Hey!", "Slowdown For 0.3 Seconds Please!",5)
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
 end
 end)
 
