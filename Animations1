@@ -1,5 +1,5 @@
 local MainFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.TabsContents
-MainFrame:Clone()
+MainFrame:Duplicate()
 
 --Locals:
 
