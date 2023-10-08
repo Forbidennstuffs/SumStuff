@@ -23,6 +23,17 @@ local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragIma
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
 
+-- 6 Scripts Information And Functions:
+
+local Script1Name = "Script1"
+local Script1Creator = "Someone"
+local Script1CreatorPlatform = "Platform"
+local Script1Description = "Test"
+local Script1GameID = ""
+local Script1RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Settings.MouseButton1Down:connect(function()
+end)
+
 -- Button Functions:
 MainFrame.InfoBar.Settings.MouseButton1Down:connect(function()
 if getgenv().AnimationOngoing == false then
