@@ -1019,3 +1019,25 @@ Play6.ScaleType = Enum.ScaleType.Fit
 Play6.Visible = false
 
 UICorner_36.Parent = Play6
+
+-- White Background Checker:
+if _G.settingsTable.WhiteBackground == false then
+InfoBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TabsParent.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_1HomeTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_2ScriptsTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_3RequiredAccessoriesTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_4GuisTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_5AnimationsTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_6CommandsTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_7OtherHubsTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TabInfo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ChooseScriptFrameParent.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptButton6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+end
