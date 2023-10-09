@@ -485,6 +485,8 @@ Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Sc
 else
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take Seconds.",5)
+
+wait(1)
 game:GetService("TeleportService"):Teleport(PlaceId)
 end
 end
