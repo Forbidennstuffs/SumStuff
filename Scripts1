@@ -479,17 +479,13 @@ return game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 end
 end
 
-function Join(PlaceId)
-local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
-Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take A While.",5)
-game:GetService("TeleportService"):Teleport(PlaceId)
-end
-
 function JoinGame(PlaceId)
 if PlaceId == "0" then
-return Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
+Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
 else
-return Join(PlaceId)
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take Seconds.",5)
+game:GetService("TeleportService"):Teleport(PlaceId)
 end
 end
 
