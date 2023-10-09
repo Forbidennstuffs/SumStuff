@@ -142,6 +142,7 @@ MainFrame.BackgroundTransparency = 1.000
 MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainFrame.BorderSizePixel = 0
 MainFrame.Size = UDim2.new(0, 400, 0, 230)
+MainFrame.Visible = false
 
 InfoBar.Name = "InfoBar"
 InfoBar.Parent = MainFrame
