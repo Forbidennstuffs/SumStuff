@@ -483,6 +483,7 @@ function JoinGame(PlaceId)
 if PlaceId == "0" then
 Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
 else
+print("Checking For PlaceId")
 if game.PlaceId == PlaceId then
 Notification:Create("Whoops!", "You're Already In The Game.",5)
 else
