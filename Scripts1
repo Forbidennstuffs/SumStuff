@@ -279,8 +279,8 @@ PlayAnimation:Create("Appear", "HomePage", "0", "2")
 end
 end)
 
---[=[
 MainFrame.TabsParent.Tabs["2ScriptsTab"].MouseButton1Down:connect(function()
+if not TabName == "Scripts" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -308,10 +308,11 @@ DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Scripts", "1", "2")
 end
+end
 end)
-]=]
 
 MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
+if not TabName == "Required Accessories" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -339,9 +340,11 @@ DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Required Accessories", "1", "2")
 end
+end
 end)
 
 MainFrame.TabsParent.Tabs["4GuisTab"].MouseButton1Down:connect(function()
+if not TabName == "GUIS" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -369,9 +372,11 @@ DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "GUIS", "1", "2")
 end
+end
 end)
 
 MainFrame.TabsParent.Tabs["5AnimationsTab"].MouseButton1Down:connect(function()
+if not TabName == "Animations" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -399,9 +404,11 @@ DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Animations", "1", "2")
 end
+end
 end)
 
 MainFrame.TabsParent.Tabs["6CommandsTab"].MouseButton1Down:connect(function()
+if not TabName == "Commands" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -429,9 +436,11 @@ DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Commands", "1", "2")
 end
+end
 end)
 
 MainFrame.TabsParent.Tabs["7OtherHubsTab"].MouseButton1Down:connect(function()
+if not TabName == "Other Hubs" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -458,6 +467,7 @@ end)()
 DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Other Hubs", "1", "2")
+end
 end
 end)
 
