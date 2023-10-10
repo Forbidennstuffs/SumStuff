@@ -41,6 +41,8 @@ PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
 end
 end
 
+print("test")
+
 -- 6 Scripts Information And Functions:
 
 local Script1Name = "Script1"
