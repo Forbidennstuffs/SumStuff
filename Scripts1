@@ -491,8 +491,6 @@ Notification:Create("Whoops!", "You're Already In The Game.",5)
 else
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take Seconds.",5)
-
-game:GetService("TeleportService"):Teleport(PlaceId)
 end
 end
 end
