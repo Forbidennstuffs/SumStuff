@@ -31,6 +31,16 @@ local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragIma
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
 
+function DisappearOtherFrames()
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+end
+
 -- 6 Scripts Information And Functions:
 
 local Script1Name = "Script1"
@@ -40,6 +50,7 @@ local Script1Description = "Test"
 local Script1GameID = "0"
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 
@@ -50,6 +61,7 @@ local Script2Description = "Test"
 local Script2GameID = "0"
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 
@@ -60,6 +72,7 @@ local Script3Description = "Test"
 local Script3GameID = "0"
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 
@@ -70,6 +83,7 @@ local Script4Description = "Test"
 local Script4GameID = "0"
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 
@@ -80,6 +94,7 @@ local Script5Description = "Test"
 local Script5GameID = "0"
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 
@@ -90,6 +105,7 @@ local Script6Description = "Test"
 local Script6GameID = "0"
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 
@@ -255,12 +271,14 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "HomePage", "0", "2")
 end
 end)
 
 MainFrame.TabsParent.Tabs["2ScriptsTab"].MouseButton1Down:connect(function()
+if not TabName == "Scripts" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -284,12 +302,15 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Scripts", "1", "2")
+end
 end
 end)
 
 MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
+if not TabName == "Required Accessories" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -313,12 +334,15 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Required Accessories", "1", "2")
+end
 end
 end)
 
 MainFrame.TabsParent.Tabs["4GuisTab"].MouseButton1Down:connect(function()
+if not TabName == "GUIS" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -342,12 +366,15 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "GUIS", "1", "2")
+end
 end
 end)
 
 MainFrame.TabsParent.Tabs["5AnimationsTab"].MouseButton1Down:connect(function()
+if not TabName == "Animations" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -371,13 +398,15 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Animations", "1", "2")
 end
+end
 end)
 
---[=[
 MainFrame.TabsParent.Tabs["6CommandsTab"].MouseButton1Down:connect(function()
+if not TabName == "Commands" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -401,13 +430,15 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Commands", "1", "2")
 end
+end
 end)
-]=]
 
 MainFrame.TabsParent.Tabs["7OtherHubsTab"].MouseButton1Down:connect(function()
+if not TabName == "Other Hubs" then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -431,8 +462,10 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
 PlayAnimation:Create("Appear", "Other Hubs", "1", "2")
+end
 end
 end)
 
@@ -458,9 +491,16 @@ end
 
 function JoinGame(PlaceId)
 if PlaceId == "0" then
-return Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
+Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
 else
-return game:GetService("TeleportService"):Teleport(PlaceId)
+if game.PlaceId == PlaceId then
+Notification:Create("Whoops!", "You're Already In The Game.",5)
+else
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take Seconds.",5)
+
+game:GetService("TeleportService"):Teleport(PlaceId)
+end
 end
 end
 
@@ -566,6 +606,7 @@ MainFrame.ChooseScriptFrameParent.ScriptButton6.ScriptName6.Text = Script6Name
 MainFrame.TabInfo.PageChanger.Next.MouseButton1Down:connect(function()
 local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..NextPage)
 
+DisappearOtherFrames()
 if PageExist then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
@@ -602,6 +643,7 @@ end)
 MainFrame.TabInfo.PageChanger.Previous.MouseButton1Down:connect(function()
 local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..PreviousPage)
 
+DisappearOtherFrames()
 if PageExist then
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
@@ -636,6 +678,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton1.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
 coroutine.wrap(function()
@@ -665,6 +708,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton2.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
 coroutine.wrap(function()
@@ -694,6 +738,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton3.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
 coroutine.wrap(function()
@@ -723,6 +768,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton4.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
 coroutine.wrap(function()
@@ -752,6 +798,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton5.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
 coroutine.wrap(function()
@@ -781,6 +828,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton6.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
 coroutine.wrap(function()
@@ -810,25 +858,31 @@ end
 end)
 
 MainFrame.PlayButtons.Play1.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 JoinGame(Script1GameID)
 end)
 
 MainFrame.PlayButtons.Play2.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 JoinGame(Script2GameID)
 end)
 
 MainFrame.PlayButtons.Play3.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 JoinGame(Script3GameID)
 end)
 
 MainFrame.PlayButtons.Play4.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 JoinGame(Script4GameID)
 end)
 
 MainFrame.PlayButtons.Play5.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 JoinGame(Script5GameID)
 end)
 
 MainFrame.PlayButtons.Play6.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 JoinGame(Script6GameID)
 end)
