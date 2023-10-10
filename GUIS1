@@ -278,7 +278,9 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["2ScriptsTab"].MouseButton1Down:connect(function()
-if not TabName == "Scripts" then
+if TabName == "Scripts" then
+wait()
+else
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -310,7 +312,9 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
-if not TabName == "Required Accessories" then
+if TabName == "Required Accessories" then
+wait()
+else
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -342,7 +346,9 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["4GuisTab"].MouseButton1Down:connect(function()
-if not TabName == "GUIS" then
+if TabName == "GUIS" then
+wait()
+else
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -374,7 +380,9 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["5AnimationsTab"].MouseButton1Down:connect(function()
-if not TabName == "Animations" then
+if TabName == "Animations" then
+wait()
+else
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -406,7 +414,9 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["6CommandsTab"].MouseButton1Down:connect(function()
-if not TabName == "Commands" then
+if TabName == "Commands" then
+wait()
+else
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -438,7 +448,9 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["7OtherHubsTab"].MouseButton1Down:connect(function()
-if not TabName == "Other Hubs" then
+if TabName == "Other Hubs" then
+wait()
+else
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
