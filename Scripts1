@@ -104,7 +104,11 @@ local Script2GameID = 0
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
+GameScript(Script2GameID, function()
+RigTypeScript(Script2RigType, function()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
+end)
+end)
 end)
 
 local Script3Name = "Script3"
@@ -115,7 +119,11 @@ local Script3GameID = 0
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
+GameScript(Script3GameID, function()
+RigTypeScript(Script3RigType, function()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
+end)
+end)
 end)
 
 local Script4Name = "Script4"
@@ -126,7 +134,11 @@ local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
+GameScript(Script4GameID, function()
+RigTypeScript(Script4RigType, function()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
+end)
+end)
 end)
 
 local Script5Name = "Script5"
@@ -137,7 +149,11 @@ local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
+GameScript(Script5GameID, function()
+RigTypeScript(Script5RigType, function()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
+end)
+end)
 end)
 
 local Script6Name = "Script6"
@@ -148,7 +164,11 @@ local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
+GameScript(Script6GameID, function()
+RigTypeScript(Script6RigType, function()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
+end)
+end)
 end)
 
 -- Button Functions:
