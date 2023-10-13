@@ -24,10 +24,12 @@ local callback = callback or function() end
 
 if PlaceId == 0 then
 pcall(callback)
+elseif game.PlaceId == PlaceId then
+pcall(callback)
 else
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 
-Notification:Create("Whoops!", "This Script Only Works In"..GameName,5)
+Notification:Create("Whoops!", "This Script Only Works In "..GameName,5)
 wait(5)
 Notification:Create("Want To Join?", "If You Want To Join The Game, Click The Play Button!",5)
 end
@@ -87,8 +89,10 @@ local Script1GameID = 14404642904
 local Script1RigType = "R15" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
+GameScript(Script1GameId, function()
 RigTypeScript(Script1RigType, function()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
+end)
 end)
 end)
 
