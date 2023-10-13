@@ -95,9 +95,9 @@ end)
 end)
 end)
 
-local Script2Name = "Script2"
-local Script2Creator = "Someone"
-local Script2CreatorPlatform = "Platform"
+local Script2Name = "Mega Hats"
+local Script2Creator = "Marble"
+local Script2CreatorPlatform = "Not Verified Creator!"
 local Script2Description = "Test"
 local Script2GameID = 0
 local Script2RigType = "All" -- Choises: All, R15, R6
@@ -105,7 +105,9 @@ MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/r0p74xjX'),true))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/XSkZEkaV'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 end)
 end)
