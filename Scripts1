@@ -171,7 +171,7 @@ DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/a0jjaAyd'),true))()
-
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
 end)
