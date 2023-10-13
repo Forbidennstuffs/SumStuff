@@ -504,7 +504,7 @@ end
 end
 
 function JoinGame(PlaceId)
-if PlaceId == "0" then
+if PlaceId == 0 then
 Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
 elseif game.PlaceId == PlaceId then
 Notification:Create("Whoops!", "You're Already In The Game.",5)
