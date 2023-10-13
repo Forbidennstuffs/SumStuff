@@ -70,7 +70,7 @@ local Script1Creator = "Someone"
 local Script1CreatorPlatform = "Platform"
 local Script1Description = "Test"
 local Script1GameID = 14404642904
-local Script1RigType = "All" -- Choises: All, R15, R6
+local Script1RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 RigTypeScript(Script1RigType, function()
