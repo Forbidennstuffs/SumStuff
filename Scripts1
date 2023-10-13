@@ -49,7 +49,7 @@ local Script1Name = "Script1"
 local Script1Creator = "Someone"
 local Script1CreatorPlatform = "Platform"
 local Script1Description = "Test"
-local Script1GameID = "14404642904"
+local Script1GameID = 14404642904
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
@@ -506,15 +506,13 @@ end
 function JoinGame(PlaceId)
 if PlaceId == "0" then
 Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
-else
-if game.PlaceId == PlaceId then
+elseif game.PlaceId == PlaceId then
 Notification:Create("Whoops!", "You're Already In The Game.",5)
 else
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take Seconds.",5)
 
 game:GetService("TeleportService"):Teleport(PlaceId)
-end
 end
 end
 
