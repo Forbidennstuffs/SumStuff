@@ -26,13 +26,13 @@ if RigType == "R6" then
 if R6() then
 pcall(callback)
 else
-Notification:Create("Whoops!", "This Script Is Only For R6!",5)
+Notification:Create("Whoops!", "This Script Only Works If Your RigType is R6!",5)
 end
 elseif RigType == "R15" then
 if not R6() then
 pcall(callback)
 else
-Notification:Create("Whoops!", "This Script Is Only For R15!",5)
+Notification:Create("Whoops!", "This Script Only Works If Your RigType is R15!",5)
 end
 elseif RigType == "All" then
 pcall(callback)
@@ -70,7 +70,7 @@ local Script1Creator = "Someone"
 local Script1CreatorPlatform = "Platform"
 local Script1Description = "Test"
 local Script1GameID = 14404642904
-local Script1RigType = "R6" -- Choises: All, R15, R6
+local Script1RigType = "R15" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 RigTypeScript(Script1RigType, function()
