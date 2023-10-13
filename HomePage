@@ -863,8 +863,19 @@ local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragIma
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
 
+function DisappearOtherFrames()
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+end
+
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 setclipboard("discord.gg/3NN5zTW7h2")
 Notification:Create("Copied To Clipboard!", "VexHub Discord link Is In Your Clipboard!",5)
 end)
@@ -1024,6 +1035,7 @@ end
 end)
 
 _2ScriptsTab.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1040,6 +1052,7 @@ end
 end)
 
 _3RequiredAccessoriesTab.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1056,6 +1069,7 @@ end
 end)
 
 _4GuisTab.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1072,6 +1086,7 @@ end
 end)
 
 _5AnimationsTab.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1088,6 +1103,7 @@ end
 end)
 
 _6CommandsTab.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1104,6 +1120,7 @@ end
 end)
 
 _7OtherHubsTab.MouseButton1Down:connect(function()
+DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
