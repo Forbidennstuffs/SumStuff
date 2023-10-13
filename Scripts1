@@ -27,9 +27,9 @@ pcall(callback)
 elseif game.PlaceId == PlaceId then
 pcall(callback)
 else
-local TheGameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 
-Notification:Create("Whoops!", "This Script Only Works In "..TheGameName.."!",5)
+Notification:Create("Whoops!", "This Script Only Works In "..GameName.."!",5)
 wait(5)
 Notification:Create("Want To Join?", "If You Want To Join The Game, Click The Play Button!",5)
 end
