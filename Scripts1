@@ -19,6 +19,26 @@ function R6()
 	end
 end
 
+function RigTypeScript(RigType, callback)
+local callback = callback or function() end
+
+if RigType == "R6" then
+if R6() then
+pcall(callback)
+else
+Notification:Create("Whoops!", "This Script Is Only For R6!",5)
+end
+elseif RigType == "R15" then
+if not R6() then
+pcall(callback)
+else
+Notification:Create("Whoops!", "This Script Is Only For R15!",5)
+end
+elseif RigType == "All" then
+pcall(callback)
+end
+end
+
 MainFrame.Name = TabName..""..CurrentPage
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 
@@ -53,7 +73,9 @@ local Script1GameID = 14404642904
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
+RigTypeScript(Script1RigType, function()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
+end)
 end)
 
 local Script2Name = "Script2"
