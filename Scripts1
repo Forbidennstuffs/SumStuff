@@ -97,7 +97,7 @@ end)
 
 local Script2Name = "Mega Hats"
 local Script2Creator = "Marble"
-local Script2CreatorPlatform = "Not Verified Creator!"
+local Script2CreatorPlatform = "Unverified Creator!"
 local Script2Description = "Commands: .mode .speed .offset"
 local Script2GameID = 0
 local Script2RigType = "R6" -- Choises: All, R15, R6
@@ -129,8 +129,8 @@ end)
 end)
 
 local Script4Name = "Anti Kick"
-local Script4Creator = "Unverified/Unknown"
-local Script4CreatorPlatform = "U/U"
+local Script4Creator = "Unknown"
+local Script4CreatorPlatform = "Unknown"
 local Script4Description = "This Script Only Works On Some Games."
 local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
@@ -144,17 +144,18 @@ end)
 end)
 end)
 
-local Script5Name = "Script5"
-local Script5Creator = "Someone"
-local Script5CreatorPlatform = "Platform"
-local Script5Description = "Test"
+local Script5Name = "Mesh Accessories"
+local Script5Creator = "Unknown"
+local Script5CreatorPlatform = "Unknown"
+local Script5Description = "Makes Your Accessories Blocks!"
 local Script5GameID = 0
-local Script5RigType = "All" -- Choises: All, R15, R6
+local Script5RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/KuxL7e2R'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
 end)
