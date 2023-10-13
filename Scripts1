@@ -97,7 +97,7 @@ end)
 
 local Script2Name = "Mega Hats"
 local Script2Creator = "Marble"
-local Script2CreatorPlatform = "Unverified Creator!"
+local Script2CreatorPlatform = "Unverified Creator"
 local Script2Description = "Commands: .mode .speed .offset"
 local Script2GameID = 0
 local Script2RigType = "R6" -- Choises: All, R15, R6
@@ -160,17 +160,18 @@ end)
 end)
 end)
 
-local Script6Name = "Script6"
-local Script6Creator = "Someone"
-local Script6CreatorPlatform = "Platform"
-local Script6Description = "Test"
+local Script6Name = "Kill Farm"
+local Script6Creator = "Zaptosis (Unverified)"
+local Script6CreatorPlatform = "YouTube"
+local Script6Description = "Freeze Players To Kill Them."
 local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/a0jjaAyd'),true))()
+
 end)
 end)
 end)
