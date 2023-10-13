@@ -1035,7 +1035,6 @@ end
 end)
 
 _2ScriptsTab.MouseButton1Down:connect(function()
-DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1046,13 +1045,13 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
 PlayAnimation:Create("Appear", "Scripts", "1", "2")
 end
 end)
 
 _3RequiredAccessoriesTab.MouseButton1Down:connect(function()
-DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1063,13 +1062,13 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
 PlayAnimation:Create("Appear", "Required Accessories", "1", "2")
 end
 end)
 
 _4GuisTab.MouseButton1Down:connect(function()
-DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1080,13 +1079,13 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
 PlayAnimation:Create("Appear", "GUIS", "1", "2")
 end
 end)
 
 _5AnimationsTab.MouseButton1Down:connect(function()
-DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1097,13 +1096,13 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
 PlayAnimation:Create("Appear", "Animations", "1", "2")
 end
 end)
 
 _6CommandsTab.MouseButton1Down:connect(function()
-DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1114,13 +1113,13 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
 PlayAnimation:Create("Appear", "Commands", "1", "2")
 end
 end)
 
 _7OtherHubsTab.MouseButton1Down:connect(function()
-DisappearOtherFrames()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1131,6 +1130,7 @@ return
 end
 end)()
 
+DisappearOtherFrames()
 PlayAnimation:Create("Disappear", "HomePage", "0", "2")
 PlayAnimation:Create("Appear", "Other Hubs", "1", "2")
 end
