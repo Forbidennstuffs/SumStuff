@@ -79,17 +79,18 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Script1"
-local Script1Creator = "Someone"
-local Script1CreatorPlatform = "Platform"
-local Script1Description = "Test"
+local Script1Name = "Copy Chat Messages"
+local Script1Creator = The.path.Creator
+local Script1CreatorPlatform = "Discord"
+local Script1Description = "Copies Chat Messages. You Can't Stop It."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/NWMaSHhe'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
 end)
