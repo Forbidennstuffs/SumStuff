@@ -19,6 +19,18 @@ function R6()
 	end
 end
 
+function GameScript(PlaceId, callback)
+local callback = callback or function() end
+
+if PlaceId == 0 then
+pcall(callback)
+else
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+
+Notification:Create("Whoops!", "This Script Only Works If Your In",5)
+end
+end
+
 function RigTypeScript(RigType, callback)
 local callback = callback or function() end
 
