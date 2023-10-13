@@ -47,7 +47,7 @@ local Script1Name = "Script1"
 local Script1Creator = "Someone"
 local Script1CreatorPlatform = "Platform"
 local Script1Description = "Test"
-local Script1GameID = "0"
+local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
@@ -58,7 +58,7 @@ local Script2Name = "Script2"
 local Script2Creator = "Someone"
 local Script2CreatorPlatform = "Platform"
 local Script2Description = "Test"
-local Script2GameID = "0"
+local Script2GameID = 0
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
@@ -69,7 +69,7 @@ local Script3Name = "Script3"
 local Script3Creator = "Someone"
 local Script3CreatorPlatform = "Platform"
 local Script3Description = "Test"
-local Script3GameID = "0"
+local Script3GameID = 0
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
@@ -80,7 +80,7 @@ local Script4Name = "Script4"
 local Script4Creator = "Someone"
 local Script4CreatorPlatform = "Platform"
 local Script4Description = "Test"
-local Script4GameID = "0"
+local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
@@ -91,7 +91,7 @@ local Script5Name = "Script5"
 local Script5Creator = "Someone"
 local Script5CreatorPlatform = "Platform"
 local Script5Description = "Test"
-local Script5GameID = "0"
+local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
@@ -102,7 +102,7 @@ local Script6Name = "Script6"
 local Script6Creator = "Someone"
 local Script6CreatorPlatform = "Platform"
 local Script6Description = "Test"
-local Script6GameID = "0"
+local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
@@ -502,17 +502,15 @@ end
 end
 
 function JoinGame(PlaceId)
-if PlaceId == "0" then
+if PlaceId == 0 then
 Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
-else
-if game.PlaceId == PlaceId then
+elseif game.PlaceId == PlaceId then
 Notification:Create("Whoops!", "You're Already In The Game.",5)
 else
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
 Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take Seconds.",5)
 
 game:GetService("TeleportService"):Teleport(PlaceId)
-end
 end
 end
 
