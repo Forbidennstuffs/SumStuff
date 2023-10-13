@@ -128,17 +128,18 @@ end)
 end)
 end)
 
-local Script4Name = "Script4"
-local Script4Creator = "Someone"
-local Script4CreatorPlatform = "Platform"
-local Script4Description = "Test"
+local Script4Name = "Anti Kick"
+local Script4Creator = "Unverified/Unknown"
+local Script4CreatorPlatform = "U/U"
+local Script4Description = "This Script Only Works On Some Games."
 local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/Yi2QRzTu'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 end)
 end)
