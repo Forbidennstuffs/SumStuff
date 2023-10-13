@@ -98,9 +98,9 @@ end)
 local Script2Name = "Mega Hats"
 local Script2Creator = "Marble"
 local Script2CreatorPlatform = "Not Verified Creator!"
-local Script2Description = "Test"
+local Script2Description = "Commands: .mode .speed .offset"
 local Script2GameID = 0
-local Script2RigType = "All" -- Choises: All, R15, R6
+local Script2RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
@@ -112,17 +112,18 @@ end)
 end)
 end)
 
-local Script3Name = "Script3"
-local Script3Creator = "Someone"
-local Script3CreatorPlatform = "Platform"
-local Script3Description = "Test"
+local Script3Name = "Eat Accessories"
+local Script3Creator = "Nightmare#0930"
+local Script3CreatorPlatform = "Discord"
+local Script3Description = "Eat Hats, Bags, Necklace, etc..."
 local Script3GameID = 0
-local Script3RigType = "All" -- Choises: All, R15, R6
+local Script3RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/Th4jbiVn'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
 end)
