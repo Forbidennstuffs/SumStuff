@@ -159,17 +159,17 @@ end)
 end)
 end)
 
-local Script6Name = "Kill Farm"
-local Script6Creator = "Zaptosis (Unverified Creator)"
-local Script6CreatorPlatform = "YouTube"
-local Script6Description = "Freeze Players To Kill Them."
-local Script6GameID = 0
+local Script6Name = "Tower Of Hell Invincibility"
+local Script6Creator = "Unknown"
+local Script6CreatorPlatform = "Unknown"
+local Script6Description = "Makes You Not Get Killed When You Touch Kill Parts."
+local Script6GameID = 1962086868
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/a0jjaAyd'),true))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/X8cG57XV'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
