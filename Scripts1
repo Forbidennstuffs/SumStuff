@@ -161,7 +161,7 @@ end)
 end)
 
 local Script6Name = "Kill Farm"
-local Script6Creator = "Zaptosis (Unverified)"
+local Script6Creator = "Zaptosis (Unverified Creator)"
 local Script6CreatorPlatform = "YouTube"
 local Script6Description = "Freeze Players To Kill Them."
 local Script6GameID = 0
