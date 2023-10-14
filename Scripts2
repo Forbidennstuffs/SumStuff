@@ -143,17 +143,17 @@ end)
 end)
 end)
 
-local Script5Name = "Mesh Accessories"
+local Script5Name = "Color Block Auto Play"
 local Script5Creator = "Unknown"
 local Script5CreatorPlatform = "Unknown"
-local Script5Description = "Makes Your Accessories Blocks!"
-local Script5GameID = 0
-local Script5RigType = "R6" -- Choises: All, R15, R6
+local Script5Description = "Auto Plays The Game!"
+local Script5GameID = 5926001758
+local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/KuxL7e2R'),true))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/tKu2vZrb'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
