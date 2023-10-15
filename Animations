@@ -6,6 +6,7 @@ local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.Drag
 local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
 local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
 local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+local ScriptAds = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild("ScriptAds")
 local TweenService = game:GetService("TweenService")
 
 if Animation == "Appear" and Tab == "DragImage" and Page == "0" and Type == "1" then
@@ -602,6 +603,22 @@ TweenService:Create(SettingsPopUpFrame.Settings2.FastButton.UIStroke, TweenInfo.
 TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
 TweenService:Create(SettingsPopUpFrame.Settings2.SlowButton.UIStroke, TweenInfo.new(getgenv().AnimationDelay), {Transparency = 1}):Play()
+end
+
+elseif Animation == "Appear" and Tab == "ScriptAd" and Page == "0" and Type == "1" then
+if ScriptAds then
+TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
+TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
+TweenService:Create(ScriptAds.ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
+TweenService:Create(ScriptAds.X, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
+end
+
+elseif Animation == "Disappear" and Tab == "ScriptAd" and Page == "0" and Type == "1" then
+if ScriptAds then
+TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
+TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
+TweenService:Create(ScriptAds.ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
+TweenService:Create(ScriptAds.X, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
 end
 
 elseif Animation == "Appear" and Tab == "HomePage" and Page == "0" and Type == "1" then
