@@ -95,7 +95,7 @@ ScriptAds:Destroy()
 end)
 
 -- Advertisements:
-local AdNumber = math.random(1, 10)
+local AdNumber = math.random(1, 1)
 
 if AdNumber = 1 then
 LoadAdImage("VexHubAdvertisementInfo.png", "https://cdn.discordapp.com/attachments/1020631817499447397/1162995132501598209/20231015_140621_0000.png")
