@@ -2,8 +2,7 @@ local TweenService = game:GetService("TweenService")
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
 
 exe = syn or Fluxus
-getcustomasset = getsynasset or getcustomasset
-request = syn and syn.request or requet
+request = syn and syn.request or request
 
 -- (VOID) : Gui to Lua
 -- Version: 1.4
