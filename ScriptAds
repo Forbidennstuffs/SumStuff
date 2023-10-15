@@ -99,7 +99,7 @@ print(result)
 end
 wait(1)
 
-ScriptAds.Image = getcustomasset(path)
+ScriptAds.Image = getcustomasset("VexHubAdvertisingInfo.png")
 
 ScriptAds.MouseButton1Down:connect(function()
 Notification:Create("Advertisement Clicked!", "Join VexHub Discord Server To Advertising What You Want!",5)
