@@ -79,17 +79,19 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Spy On People's Private Chat"
-local Script1Creator = "PTR KILLER (Unverified Creator)"
-local Script1CreatorPlatform = "YouTube"
-local Script1Description = "See People's Private Chat."
+local Script1Name = "Set Spawn Point"
+local Script1Creator = "Unknown"
+local Script1CreatorPlatform = "Unknown"
+local Script1Description = "Spawns On Where You Died"
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Obfuscatetestloluwu/Scripts/main/Spy%20Peoples%20Private%20Chat'),true))()
+while wait() do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Set%20Spawn%20Point"))()
+end
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
