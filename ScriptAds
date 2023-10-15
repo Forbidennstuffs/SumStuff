@@ -40,7 +40,7 @@ ScriptAds.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 ScriptAds.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ScriptAds.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScriptAds.BorderSizePixel = 0
-ScriptAds.Position = UDim2.new(0, 0, -0.379999995, 0)
+ScriptAds.Position = UDim2.new(0, 0, -0.369999995, 0)
 ScriptAds.Size = UDim2.new(0, 400, 0, 80)
 ScriptAds.Image = "http://www.roblox.com/asset/?id=11926598891"
 ScriptAds.BackgroundTransparency = 1
@@ -77,6 +77,7 @@ X.TextColor3 = Color3.fromRGB(255, 255, 255)
 X.TextSize = 14.000
 X.TextTransparency = 1
 
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.379999995, 0),"Out","Quad",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
 TweenService:Create(ScriptAds.ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
