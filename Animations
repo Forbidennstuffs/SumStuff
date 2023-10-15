@@ -608,7 +608,7 @@ end
 elseif Animation == "Appear" and Tab == "ScriptAd" and Page == "0" and Type == "1" then
 if ScriptAds then
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
-TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
+TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
 TweenService:Create(ScriptAds.ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
 TweenService:Create(ScriptAds.X, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
 end
