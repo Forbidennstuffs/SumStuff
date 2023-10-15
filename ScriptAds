@@ -87,17 +87,12 @@ local result = request({
 	Method = 'GET'
 })
 
-if result.Success then
 if isfile(path) then
 if readfile(path) ~= result.Body then
 writefile(path, result.Body)
 end
 else
 writefile(path, result.Body)
-end
-else
-print(result)
-print("failed")
 end
 
 ScriptAds.Image = getcustomasset("VexHubAdvertisementInfo.png")
