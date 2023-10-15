@@ -97,17 +97,17 @@ end)
 end)
 end)
 
-local Script2Name = "Teleport Tool"
-local Script2Creator = "Unknown"
+local Script2Name = "Prison Life Aimbot"
+local Script2Creator = "AlexScripterUnfounded"
 local Script2CreatorPlatform = "Unknown"
-local Script2Description = "Tool That Makes You Teleport Like A Enderman."
-local Script2GameID = 0
+local Script2Description = "Just Aimbot."
+local Script2GameID = 155615604
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/n7wqcH9D'),true))()
+loadstring(game:HttpGet("https://pastebin.com/raw/6mu9gydS",true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 end)
