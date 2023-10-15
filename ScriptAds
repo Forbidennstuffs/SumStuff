@@ -46,7 +46,6 @@ ScriptAds.Image = "http://www.roblox.com/asset/?id=11926598891"
 ScriptAds.BackgroundTransparency = 1
 ScriptAds.ImageTransparency = 1
 ScriptAds.ScaleType = Enum.ScaleType.Crop
-ScriptAds.Visible = false
 
 UICorner.Parent = ScriptAds
 
