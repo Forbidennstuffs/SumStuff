@@ -626,6 +626,7 @@ coroutine.wrap(function()
 while wait() do
 wait(getgenv().AnimationDelay)
 ScriptAds.Visible = false
+return
 end
 end)()
 
