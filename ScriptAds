@@ -95,7 +95,7 @@ else
 writefile(path, result.Body)
 end
 else
-print(result)
+writefile(path, result.Body)
 end
 
 ScriptAds.Image = getcustomasset("VexHubAdvertisementInfo.png")
