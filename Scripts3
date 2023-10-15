@@ -113,17 +113,17 @@ end)
 end)
 end)
 
-local Script3Name = "Telekinesis Gun"
-local Script3Creator = "Quenty"
-local Script3CreatorPlatform = "Twitter"
-local Script3Description = "Makes Unanchored Parts Fly! Only Works On Unanchored Parts!"
+local Script3Name = "Mesh Spin"
+local Script3Creator = "Unknown"
+local Script3CreatorPlatform = "Unknown"
+local Script3Description = "Makes Your Accessories Turn Blocks And Spin."
 local Script3GameID = 0
-local Script3RigType = "All" -- Choises: All, R15, R6
+local Script3RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/uPc0ir3b'),true))()
+loadstring(game:HttpGet("https://pastebin.com/raw/7dgwwzg0",true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
