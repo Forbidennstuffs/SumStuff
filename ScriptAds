@@ -78,6 +78,7 @@ X.TextSize = 14.000
 X.TextTransparency = 1
 
 X.MouseButton1Down:connect(function()
+SettingsPopUpFrame:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quad",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 TweenService:Create(ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
