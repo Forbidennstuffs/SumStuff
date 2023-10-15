@@ -4,25 +4,6 @@ exe = syn or Fluxus
 getcustomasset = getsynasset or getcustomasset
 request = syn and syn.request or requet
 
-function LoadAdImage(path, url)
-local result = request({
-	Url = url,
-	Method = 'GET'
-})
-
-if result.Success then
-if isfile(path) then
-if readfile(path) ~= result.Body then
-writefile(path, result.Body)
-end
-else
-writefile(path, result.Body)
-end
-else
-print(result)
-end
-end
-
 -- (VOID) : Gui to Lua
 -- Version: 1.4
 
@@ -98,7 +79,25 @@ end)
 local AdNumber = math.random(1, 1)
 
 if AdNumber == 1 then
-LoadAdImage("VexHubAdvertisementInfo.png", "https://cdn.discordapp.com/attachments/1065991198289961101/1163065668019695676/Advertise_With_VexHub_20231015_184708_0000.png")
+local path = "VexHubAdvertisementInfo.png"
+local url = "https://cdn.discordapp.com/attachments/1065991198289961101/1163065668019695676/Advertise_With_VexHub_20231015_184708_0000.png"
+local result = request({
+	Url = url,
+	Method = 'GET'
+})
+
+if result.Success then
+if isfile(path) then
+if readfile(path) ~= result.Body then
+writefile(path, result.Body)
+end
+else
+writefile(path, result.Body)
+end
+else
+print(result)
+end
+
 ScriptAds.Image = getcustomasset("VexHubAdvertisementInfo.png")
 
 ScriptAds.MouseButton1Down:connect(function()
