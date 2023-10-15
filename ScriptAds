@@ -61,6 +61,7 @@ ScriptAdText.Text = "Script Ad"
 ScriptAdText.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScriptAdText.TextSize = 12.000
 ScriptAdText.TextTransparency = 1
+ScriptAdText.TextStrokeTransparency = 0
 
 X.Name = "X"
 X.Parent = ScriptAds
@@ -75,6 +76,7 @@ X.Text = "X"
 X.TextColor3 = Color3.fromRGB(255, 255, 255)
 X.TextSize = 14.000
 X.TextTransparency = 1
+X.TextStrokeTransparency = 1
 
 ScriptAds:TweenPosition(UDim2.new(0, 0, -0.379999995, 0),"Out","Quad",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
