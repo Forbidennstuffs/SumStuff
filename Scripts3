@@ -1,0 +1,964 @@
+local MainFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.TabsContents
+MainFrame:Clone()
+
+--Locals:
+
+local Your = game:GetService("Players").LocalPlayer
+local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
+local TabName = "Scripts"
+local CurrentPage = "3"
+local PreviousPage = CurrentPage-1
+local NextPage = CurrentPage+1
+
+-- Functions:
+
+function R6()
+	if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+		return true
+	end
+end
+
+function GameScript(PlaceId, callback)
+local callback = callback or function() end
+
+if PlaceId == 0 then
+pcall(callback)
+elseif game.PlaceId == PlaceId then
+pcall(callback)
+else
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+
+Notification:Create("Whoops!", "This Script Only Works In "..GameName.."!",5)
+wait(5)
+Notification:Create("Want To Join?", "If You Want To Join The Game, Click The Play Button!",5)
+end
+end
+
+function RigTypeScript(RigType, callback)
+local callback = callback or function() end
+
+if RigType == "R6" then
+if R6() then
+pcall(callback)
+else
+Notification:Create("Whoops!", "This Script Only Works If Your RigType is R6!",5)
+end
+elseif RigType == "R15" then
+if not R6() then
+pcall(callback)
+else
+Notification:Create("Whoops!", "This Script Only Works If Your RigType is R15!",5)
+end
+elseif RigType == "All" then
+pcall(callback)
+end
+end
+
+MainFrame.Name = TabName..""..CurrentPage
+MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+
+-- GUI Animations:
+
+local PlayAnimation = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations"))()
+local ReportPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ReportPopUp
+local SettingsPopUpFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.SettingsPopUp
+local HomePageFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage
+local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
+local TweenService = game:GetService("TweenService")
+
+function DisappearOtherFrames()
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+end
+
+-- 6 Scripts Information And Functions:
+
+local Script1Name = "Spy On People's Private Chat"
+local Script1Creator = "PTR KILLER (Unverified Creator)"
+local Script1CreatorPlatform = "YouTube"
+local Script1Description = "See People's Private Chat."
+local Script1GameID = 0
+local Script1RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+GameScript(Script1GameID, function()
+RigTypeScript(Script1RigType, function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Obfuscatetestloluwu/Scripts/main/Spy%20Peoples%20Private%20Chat'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
+end)
+end)
+end)
+
+local Script2Name = "Teleport Tool"
+local Script2Creator = "Unknown"
+local Script2CreatorPlatform = "Unknown"
+local Script2Description = "Tool That Makes You Teleport Like A Enderman."
+local Script2GameID = 0
+local Script2RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+GameScript(Script2GameID, function()
+RigTypeScript(Script2RigType, function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/n7wqcH9D'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
+end)
+end)
+end)
+
+local Script3Name = "Telekinesis Gun"
+local Script3Creator = "Quenty"
+local Script3CreatorPlatform = "Twitter"
+local Script3Description = "Makes Unanchored Parts Fly! Only Works On Unanchored Parts!"
+local Script3GameID = 0
+local Script3RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+GameScript(Script3GameID, function()
+RigTypeScript(Script3RigType, function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/uPc0ir3b'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
+end)
+end)
+end)
+
+local Script4Name = "Balloon Stealer"
+local Script4Creator = "garfield"
+local Script4CreatorPlatform = "Unknown"
+local Script4Description = "Steals The Balloon That The Person Have."
+local Script4GameID = 189707
+local Script4RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+GameScript(Script4GameID, function()
+RigTypeScript(Script4RigType, function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/BVbG4ei7'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
+end)
+end)
+end)
+
+local Script5Name = "Color Block Auto Play"
+local Script5Creator = "Unknown"
+local Script5CreatorPlatform = "Unknown"
+local Script5Description = "Auto Plays The Game!"
+local Script5GameID = 5926001758
+local Script5RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+GameScript(Script5GameID, function()
+RigTypeScript(Script5RigType, function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/tKu2vZrb'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
+end)
+end)
+end)
+
+local Script6Name = "Tower Of Hell Invincibility"
+local Script6Creator = "Unknown"
+local Script6CreatorPlatform = "Unknown"
+local Script6Description = "Makes You Not Get Killed When You Touch Kill Parts."
+local Script6GameID = 1962086868
+local Script6RigType = "All" -- Choises: All, R15, R6
+MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+GameScript(Script6GameID, function()
+RigTypeScript(Script6RigType, function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/X8cG57XV'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
+end)
+end)
+end)
+
+-- Button Functions:
+MainFrame.InfoBar.Settings.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+if SettingsPopUpFrame.Visible == false then
+PlayAnimation:Create("Appear", "SettingsPopUp", "0", "1")
+else
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+end
+end)
+
+MainFrame.InfoBar.X.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+if _G.settingsTable.OpenButtonFloating == false then
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "1")
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+
+local ButtonParent = Instance.new("Frame")
+local VHubLogoOpen = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ButtonParent.Name = "ButtonParent"
+ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame
+ButtonParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonParent.BackgroundTransparency = 1.000
+ButtonParent.Size = UDim2.new(0, 32, 1, 0)
+ButtonParent.Position = UDim2.new(0, 0, 0, 0)
+ButtonParent.Visible = false
+ButtonParent.LayoutOrder = 3
+ButtonParent.Active = true
+
+VHubLogoOpen.Name = "VHubLogoOpen"
+VHubLogoOpen.Parent = ButtonParent
+VHubLogoOpen.AutoButtonColor = false
+VHubLogoOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VHubLogoOpen.BackgroundTransparency = 1
+VHubLogoOpen.Position = UDim2.new(0, 0, 0.11, 0)
+VHubLogoOpen.Size = UDim2.new(0, 0, 0, 0)
+VHubLogoOpen.Image = The.path.Logo
+VHubLogoOpen.ImageTransparency = 1
+VHubLogoOpen.Active = true 
+VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
+VHubLogoOpen.MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Appear", "DragImage", "0", "1")
+PlayAnimation:Create("Appear", TabName, CurrentPage, "1")
+
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1})
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
+
+wait(getgenv().AnimationDelay)
+ButtonParent:Destroy()
+end
+end)
+
+UICorner.Parent = VHubLogoOpen
+
+game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0)
+
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+
+if _G.settingsTable.ButtonTopLeft == false then
+ButtonParent.LayoutOrder = 0
+ButtonParent.Parent = game:GetService("CoreGui").TopBarApp.TopBarFrame.RightFrame
+VHubLogoOpen.Size = UDim2.new(0, 32, 0, 32)
+ButtonParent.Visible = true
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.5})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0})
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
+else
+VHubLogoOpen.Size = UDim2.new(0, 62, 0, 32)
+ButtonParent.Visible = true
+local OpenButtonAppear_2 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.5})
+local OpenButtonAppear_3 = TweenService:Create(VHubLogoOpen, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0})
+OpenButtonAppear_2:Play()
+OpenButtonAppear_3:Play()
+end
+
+else
+
+getgenv().TweenHomePage = false
+getgenv().TweenPage = CurrentPage
+getgenv().TweenTab = TabName
+game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo.Visible = true
+
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "1")
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+
+TweenService:Create(game:GetService("CoreGui").VexHubOpenButtonScreen.VexHubLogo, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.3}):Play()
+
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+
+end
+end
+end)
+
+MainFrame.TabsParent.Tabs["1HomeTab"].MouseButton1Down:connect(function()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+DisappearOtherFrames()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "HomePage", "0", "2")
+end
+end)
+
+MainFrame.TabsParent.Tabs["2ScriptsTab"].MouseButton1Down:connect(function()
+if TabName == "Scripts" then
+wait()
+else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+DisappearOtherFrames()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "Scripts", "1", "2")
+end
+end
+end)
+
+MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
+if TabName == "Required Accessories" then
+wait()
+else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+DisappearOtherFrames()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "Required Accessories", "1", "2")
+end
+end
+end)
+
+MainFrame.TabsParent.Tabs["4GuisTab"].MouseButton1Down:connect(function()
+if TabName == "GUIS" then
+wait()
+else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+DisappearOtherFrames()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "GUIS", "1", "2")
+end
+end
+end)
+
+MainFrame.TabsParent.Tabs["5AnimationsTab"].MouseButton1Down:connect(function()
+if TabName == "Animations" then
+wait()
+else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+DisappearOtherFrames()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "Animations", "1", "2")
+end
+end
+end)
+
+MainFrame.TabsParent.Tabs["6CommandsTab"].MouseButton1Down:connect(function()
+if TabName == "Commands" then
+wait()
+else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+DisappearOtherFrames()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "Commands", "1", "2")
+end
+end
+end)
+
+MainFrame.TabsParent.Tabs["7OtherHubsTab"].MouseButton1Down:connect(function()
+if TabName == "Other Hubs" then
+wait()
+else
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+DisappearOtherFrames()
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", "Other Hubs", "1", "2")
+end
+end
+end)
+
+-- Page Functions, Buttons, Texts And Images:
+
+function ScriptRigType(Script)
+if Script == "All" then
+return "R6, R15"
+elseif Script == "R6" then
+return "R6"
+elseif Script == "R15" then
+return "R15"
+end
+end
+
+function ScriptSupportedGame(PlaceId)
+if PlaceId == 0 then
+return "Universal"
+else
+return game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+end
+end
+
+function JoinGame(PlaceId)
+if PlaceId == 0 then
+Notification:Create("Whoops!", "You Don't Need To Join A Game To Execute This Script. This Script Is Universal!",5)
+elseif game.PlaceId == PlaceId then
+Notification:Create("Whoops!", "You're Already In The Game.",5)
+else
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+Notification:Create("Teleporting...", "Teleporting To "..GameName..". Might Take Seconds.",5)
+
+game:GetService("TeleportService"):Teleport(PlaceId)
+end
+end
+
+if TabName == "Scripts" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592851654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592851654"
+
+elseif TabName == "Required Accessories" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592824883"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592824883"
+
+elseif TabName == "GUIS" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592848654"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592848654"
+
+elseif TabName == "Animations" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592835705"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592835705"
+
+elseif TabName == "Commands" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592837927"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592837927"
+
+elseif TabName == "Other Hubs" then
+MainFrame.TabInfo.TabIcon.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ImageLabel.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.Image = "rbxassetid://11592850267"
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ImageLabel.Image = "rbxassetid://11592850267"
+end
+
+MainFrame.TabInfo.TabName.Text = TabName.." / Page "..CurrentPage
+MainFrame.ChooseScriptFrameParent.ScriptButton1.ScriptName1.Text = Script1Name
+MainFrame.ChooseScriptFrameParent.ScriptButton2.ScriptName2.Text = Script2Name
+MainFrame.ChooseScriptFrameParent.ScriptButton3.ScriptName3.Text = Script3Name
+MainFrame.ChooseScriptFrameParent.ScriptButton4.ScriptName4.Text = Script4Name
+MainFrame.ChooseScriptFrameParent.ScriptButton5.ScriptName5.Text = Script5Name
+MainFrame.ChooseScriptFrameParent.ScriptButton6.ScriptName6.Text = Script6Name
+
+MainFrame.TabInfo.PageChanger.Next.MouseButton1Down:connect(function()
+local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..NextPage)
+
+DisappearOtherFrames()
+if PageExist then
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", TabName, NextPage, "2")
+end
+
+else
+Notification:Create("Whoops!", TabName.." Page "..NextPage.." Does Not Exist Yet!",5)
+end
+end)
+
+MainFrame.TabInfo.PageChanger.Previous.MouseButton1Down:connect(function()
+local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..PreviousPage)
+
+DisappearOtherFrames()
+if PageExist then
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">VexHub</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>@'..The.path.Creator..'</b> (Discord)</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"OP Hub In The World"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>Universal</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>R6, R15</b></font>'
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
+PlayAnimation:Create("Disappear", TabName, CurrentPage, "2")
+PlayAnimation:Create("Appear", TabName, PreviousPage, "2")
+end
+
+else
+Notification:Create("Whoops!", TabName.." Page "..PreviousPage.." Does Not Exist Yet!",5)
+end
+end)
+
+MainFrame.ChooseScriptFrameParent.ScriptButton1.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
+MainFrame.ExecuteButtons.Execute1.Visible = true
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = true
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script1Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script1Creator..'</b> ('..Script1CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script1Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script1GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script1RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
+end)
+
+MainFrame.ChooseScriptFrameParent.ScriptButton2.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = true
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = true
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script2Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script2Creator..'</b> ('..Script2CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script2Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script2GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script2RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
+end)
+
+MainFrame.ChooseScriptFrameParent.ScriptButton3.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = true
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = true
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script3Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script3Creator..'</b> ('..Script3CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script3Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script3GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script3RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
+end)
+
+MainFrame.ChooseScriptFrameParent.ScriptButton4.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = true
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = true
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = false
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script4Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script4Creator..'</b> ('..Script4CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script4Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script4GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script4RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
+end)
+
+MainFrame.ChooseScriptFrameParent.ScriptButton5.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = true
+MainFrame.ExecuteButtons.Execute6.Visible = false
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = true
+MainFrame.PlayButtons.Play6.Visible = false
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script5Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script5Creator..'</b> ('..Script5CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script5Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script5GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script5RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
+end)
+
+MainFrame.ChooseScriptFrameParent.ScriptButton6.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+if getgenv().OnCooldown == false then
+getgenv().OnCooldown = true
+coroutine.wrap(function()
+while wait() do
+MainFrame.ExecuteButtons.Execute1.Visible = false
+MainFrame.ExecuteButtons.Execute2.Visible = false
+MainFrame.ExecuteButtons.Execute3.Visible = false
+MainFrame.ExecuteButtons.Execute4.Visible = false
+MainFrame.ExecuteButtons.Execute5.Visible = false
+MainFrame.ExecuteButtons.Execute6.Visible = true
+MainFrame.PlayButtons.Play1.Visible = false
+MainFrame.PlayButtons.Play2.Visible = false
+MainFrame.PlayButtons.Play3.Visible = false
+MainFrame.PlayButtons.Play4.Visible = false
+MainFrame.PlayButtons.Play5.Visible = false
+MainFrame.PlayButtons.Play6.Visible = true
+
+MainFrame.ScriptInfo.ScriptDetails.Text = '<b><font size="13">'..Script6Name..'</font></b>\n<font size="8"><font color="rgb(200,200,200)">By </font><b>'..Script6Creator..'</b> ('..Script6CreatorPlatform..')</font>\n\n\n<font size="8"><font color="rgb(200,200,200)">"'..Script6Description..'"</font>\n\n\n<font color="rgb(200,200,200)">Game:</font> <b>'..ScriptSupportedGame(Script6GameID)..'</b>\n<font color="rgb(200,200,200)">RigType:</font> <b>'..ScriptRigType(Script6RigType)..'</b></font>'
+wait(1)
+getgenv().OnCooldown = false
+return
+end
+end)()
+else
+Notification:Create("Hey!", "Slowdown For 1 Seconds Please!",5)
+end
+end)
+
+MainFrame.PlayButtons.Play1.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+JoinGame(Script1GameID)
+end)
+
+MainFrame.PlayButtons.Play2.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+JoinGame(Script2GameID)
+end)
+
+MainFrame.PlayButtons.Play3.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+JoinGame(Script3GameID)
+end)
+
+MainFrame.PlayButtons.Play4.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+JoinGame(Script4GameID)
+end)
+
+MainFrame.PlayButtons.Play5.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+JoinGame(Script5GameID)
+end)
+
+MainFrame.PlayButtons.Play6.MouseButton1Down:connect(function()
+DisappearOtherFrames()
+JoinGame(Script6GameID)
+end)
