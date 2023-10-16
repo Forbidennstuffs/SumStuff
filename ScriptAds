@@ -76,7 +76,7 @@ end)
 local AdNumber = math.random(1, 1)
 
 if AdNumber == 1 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/VexHubAdvertisingInfo.png"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/vexhubad%20png"))()
 
 ScriptAds.MouseButton1Down:connect(function()
 Notification:Create("Advertisement Clicked!", "Join VexHub Discord Server To Advertising What You Want!",5)
