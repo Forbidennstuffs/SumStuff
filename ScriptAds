@@ -77,7 +77,6 @@ local AdNumber = math.random(1, 1)
 
 if AdNumber == 1 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/VexHubAdvertisingInfo.png"))()
-ScriptAds.Image = getcustomasset("VexHubAdvertisingInfo.png")
 
 ScriptAds.MouseButton1Down:connect(function()
 Notification:Create("Advertisement Clicked!", "Join VexHub Discord Server To Advertising What You Want!",5)
