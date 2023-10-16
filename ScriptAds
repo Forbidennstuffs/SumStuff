@@ -73,14 +73,30 @@ ScriptAds:Destroy()
 end)
 
 -- Advertisements:
-local AdNumber = math.random(1, 1)
+local AdNumber = math.random(1, 4)
 
-if AdNumber == 1 then
+if AdNumber == 1 or AdNumber == 2 or AdNumber == 3 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/vexhubad%20png"))()
 
 ScriptAds.MouseButton1Down:connect(function()
 Notification:Create("Advertisement Clicked!", "Join VexHub Discord Server To Advertising What You Want!",5)
 setclipboard("dsc.gg/vhub")
+
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quad",getgenv().AnimationDelay)
+TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
+TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
+TweenService:Create(ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
+TweenService:Create(X, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
+wait(getgenv().AnimationDelay)
+ScriptAds:Destroy()
+end)
+
+elseif AdNumber == 4 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/spacead%20png"))()
+
+ScriptAds.MouseButton1Down:connect(function()
+Notification:Create("Advertisement Clicked!", "Ad By: space0008 In Discord.",5)
+setclipboard("Hail the vhub")
 
 ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quad",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
