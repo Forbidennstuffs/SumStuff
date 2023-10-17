@@ -73,9 +73,9 @@ ScriptAds:Destroy()
 end)
 
 -- Advertisements:
-local AdNumber = math.random(1, 4)
+local AdNumber = math.random(1, 2)
 
-if AdNumber == 1 or AdNumber == 2 or AdNumber == 3 then
+if AdNumber == 1 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/vexhubad%20png"))()
 
 ScriptAds.MouseButton1Down:connect(function()
@@ -91,7 +91,7 @@ wait(getgenv().AnimationDelay)
 ScriptAds:Destroy()
 end)
 
-elseif AdNumber == 4 then
+elseif AdNumber == 2 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/spacead%20png"))()
 
 ScriptAds.MouseButton1Down:connect(function()
