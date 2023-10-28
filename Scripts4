@@ -79,35 +79,33 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Set Spawn Point"
+local Script1Name = "Get To The Top Auto Farm"
 local Script1Creator = "Unknown"
 local Script1CreatorPlatform = "Unknown"
-local Script1Description = "Spawns On Where You Died."
-local Script1GameID = 0
+local Script1Description = "Gets You To The Top."
+local Script1GameID = 6902912928
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-while wait() do
-loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Set%20Spawn%20Point"))()
-end
+loadstring(game:HttpGet(('https://pastebin.com/raw/75BD30j0'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script2Name = "Prison Life Aimbot"
-local Script2Creator = "AlexScripterUnfounded"
-local Script2CreatorPlatform = "Unknown"
-local Script2Description = "Just Aimbot."
-local Script2GameID = 155615604
+local Script2Name = "99% Fail ESP"
+local Script2Creator = "Ezpi"
+local Script2CreatorPlatform = "Unverified Creator"
+local Script2Description = "Makes The Tiles Green If It's Safe."
+local Script2GameID = 7584496019
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/6mu9gydS",true))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/r5BjpxR7'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 end)
