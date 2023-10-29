@@ -127,17 +127,17 @@ end)
 end)
 end)
 
-local Script4Name = "Toh But There's Lava Rising Teleport To End"
-local Script4Creator = The.path.Creator
-local Script4CreatorPlatform = "Discord"
-local Script4Description = "Teleports You To The End."
-local Script4GameID = 6502546031
+local Script4Name = "Get Police Role"
+local Script4Creator = "Unknown"
+local Script4CreatorPlatform = "Unknown"
+local Script4Description = "Makes You A Police And Only Works On The Lobby."
+local Script4GameID = 3851622790
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/6UbUN5Mv'),true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Break%20In%20Police", true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 end)
