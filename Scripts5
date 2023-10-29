@@ -143,33 +143,33 @@ end)
 end)
 end)
 
-local Script5Name = "Anti Fling"
+local Script5Name = "Koss Gust Horn Spammer"
 local Script5Creator = "Unknown"
 local Script5CreatorPlatform = "Unknown"
-local Script5Description = "Makes You Not Get Flinged."
+local Script5Description = "Spams Tornadoes And Only Works On HD Admin. Prefix Must Be :"
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/Vk7jQ9Ft'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Koss%20Gust%20Horn%20Spammer'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script6Name = "Walk On Walls"
+local Script6Name = "Fade Tiles"
 local Script6Creator = "Unknown"
 local Script6CreatorPlatform = "Unknown"
-local Script6Description = "Makes You Walk In Walls."
-local Script6GameID = 0
+local Script6Description = "Make Tiles Go Away."
+local Script6GameID = 6155643742
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/e551b9PH'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
