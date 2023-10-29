@@ -111,33 +111,33 @@ end)
 end)
 end)
 
-local Script3Name = "Strongest Punch Simulator Auto Farm"
-local Script3Creator = "PyDubs"
-local Script3CreatorPlatform = "Unverified Creator"
-local Script3Description = "Auto Farms The Game."
-local Script3GameID = 6875469709
+local Script3Name = "Aimlock Tool"
+local Script3Creator = "BalligusapoYT"
+local Script3CreatorPlatform = "YouTube"
+local Script3Description = "Locks To The Person You Want To Aim."
+local Script3GameID = 2788229376
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-loadstring(game:HttpGet('https://pastebin.com/raw/9fhssXQd'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BalligusapoTT/BalligusapoTT/main/anothertoollock"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script4Name = "Get Police Role"
-local Script4Creator = "Unknown"
-local Script4CreatorPlatform = "Unknown"
-local Script4Description = "Makes You A Police And Only Works On The Lobby."
-local Script4GameID = 3851622790
+local Script4Name = "Anti Ragdoll"
+local Script4Creator = The.path.Creator
+local Script4CreatorPlatform = "Discord"
+local Script4Description = "Makes You Not Get Ragdolled."
+local Script4GameID = 7314148798
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Break%20In%20Police", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Anti%20Ragdoll"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 end)
