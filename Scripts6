@@ -79,17 +79,17 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Carts Speeder"
-local Script1Creator = "Unknown"
-local Script1CreatorPlatform = "Unknown"
-local Script1Description = "Only Works On Some Cart Games. Makes Carts Go Zoom."
+local Script1Name = "Brainshop ChatBot"
+local Script1Creator = "MinWasTakenOnGitHub"
+local Script1CreatorPlatform = "GitHub (Unverified Creator)"
+local Script1Description = "Chatting Like A Bot."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/sWDcnTga"))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/ChatBot'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
