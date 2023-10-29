@@ -80,8 +80,8 @@ end
 -- 6 Scripts Information And Functions:
 
 local Script1Name = "Brainshop ChatBot"
-local Script1Creator = "MinWasTakenOnGitHub"
-local Script1CreatorPlatform = "GitHub (Unverified Creator)"
+local Script1Creator = "MinWasTakenOnGitHub (Unverified Creator)"
+local Script1CreatorPlatform = "GitHub"
 local Script1Description = "Talk Like A Bot."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
