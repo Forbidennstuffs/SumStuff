@@ -111,17 +111,17 @@ end)
 end)
 end)
 
-local Script3Name = "Uctron's Sword"
+local Script3Name = "Strongest Punch Simulator Auto Farm"
 local Script3Creator = "Unknown"
 local Script3CreatorPlatform = "Unknown"
-local Script3Description = "A Sword That You Can Only See But Can Kill Everyone."
-local Script3GameID = 155615604
+local Script3Description = "Auto Farms The Game."
+local Script3GameID = 6875469709
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/UGNecs1d'),true))()
+loadstring(game:HttpGet('https://pastebin.com/raw/9fhssXQd'))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
