@@ -112,8 +112,8 @@ end)
 end)
 
 local Script3Name = "Strongest Punch Simulator Auto Farm"
-local Script3Creator = "Unknown"
-local Script3CreatorPlatform = "Unknown"
+local Script3Creator = "PyDubs"
+local Script3CreatorPlatform = "Unverified Creator"
 local Script3Description = "Auto Farms The Game."
 local Script3GameID = 6875469709
 local Script3RigType = "All" -- Choises: All, R15, R6
