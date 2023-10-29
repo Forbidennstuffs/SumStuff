@@ -82,7 +82,7 @@ end
 local Script1Name = "Brainshop ChatBot"
 local Script1Creator = "MinWasTakenOnGitHub"
 local Script1CreatorPlatform = "GitHub (Unverified Creator)"
-local Script1Description = "Chatting Like A Bot."
+local Script1Description = "Talk Like A Bot."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
@@ -95,17 +95,17 @@ end)
 end)
 end)
 
-local Script2Name = "Rob A ATM"
-local Script2Creator = "Unknown"
-local Script2CreatorPlatform = "Unknown"
-local Script2Description = "Robs A ATM."
-local Script2GameID = 2788229376
+local Script2Name = "Chat Translator"
+local Script2Creator = "Aim, cli, rang#1234, Riptxde"
+local Script2CreatorPlatform = "Discord"
+local Script2Description = "Translates People What They Say."
+local Script2GameID = 0
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/h1yHHMs6",true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Chat%20Translator'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 end)
