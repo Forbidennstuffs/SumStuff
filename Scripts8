@@ -79,81 +79,81 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Brainshop ChatBot"
-local Script1Creator = "MinWasTakenOnGitHub (Unverified Creator)"
-local Script1CreatorPlatform = "GitHub"
-local Script1Description = "Talk Like A Bot."
-local Script1GameID = 0
+local Script1Name = "Escape The Dungeon Obby Get Gear"
+local Script1Creator = "Unknown"
+local Script1CreatorPlatform = "Unknown"
+local Script1Description = "Gets The Gears In The Game."
+local Script1GameID = 2028593804
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/ChatBot'),true))()
+loadstring(game:HttpGet("https://pastebin.com/raw/daFXeF7t"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script2Name = "Chat Translator"
-local Script2Creator = "Aim, cli, rang#1234, Riptxde"
-local Script2CreatorPlatform = "Discord"
-local Script2Description = "Translates People What They Say."
-local Script2GameID = 0
+local Script2Name = "Heist Tycoon Infinite Money"
+local Script2Creator = "Unknown"
+local Script2CreatorPlatform = "Unknown"
+local Script2Description = "Makes Your Money Infinite."
+local Script2GameID = 11103424163
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Chat%20Translator'),true))()
+loadstring(game:HttpGet("https://pastebin.com/raw/kdTbYUMa"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script3Name = "Aimlock Tool"
-local Script3Creator = "BalligusapoYT"
-local Script3CreatorPlatform = "YouTube"
-local Script3Description = "Locks To The Person You Want To Aim."
-local Script3GameID = 2788229376
+local Script3Name = "Snow Plow Simulator Infinite Money"
+local Script3Creator = "Unknown"
+local Script3CreatorPlatform = "Unknown"
+local Script3Description = "Makes Your Money Infinite."
+local Script3GameID = 11701792069
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/BalligusapoTT/BalligusapoTT/main/anothertoollock"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/CmpSWmcZ"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script4Name = "Anti Ragdoll"
-local Script4Creator = The.path.Creator
-local Script4CreatorPlatform = "Discord"
-local Script4Description = "Makes You Not Get Ragdolled."
-local Script4GameID = 7314148798
+local Script4Name = "Destruction Simulator Infinite Money"
+local Script4Creator = "Unknown"
+local Script4CreatorPlatform = "Unknown"
+local Script4Description = "Makes Your Money Infinite."
+local Script4GameID = 2248408710
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Anti%20Ragdoll"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/tJvYdTpq"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script5Name = "Game Store Tycoon Infinite Money"
+local Script5Name = "Wormface Auto Farm"
 local Script5Creator = "Unknown"
 local Script5CreatorPlatform = "Unknown"
-local Script5Description = "Makes Your Money Infinite."
-local Script5GameID = 10963175
+local Script5Description = "Auto Farms The Game."
+local Script5GameID = 5942932659
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/FV3VrMrP"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Wormface%20Auto%20Farm"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
