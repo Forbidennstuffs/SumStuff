@@ -159,17 +159,17 @@ end)
 end)
 end)
 
-local Script6Name = "Apocalypse Tycoon Infinite Money"
-local Script6Creator = "Unknown"
-local Script6CreatorPlatform = "Unknown"
-local Script6Description = "Makes Your Money Infinite."
-local Script6GameID = 12402669933
+local Script6Name = "Player Lifter"
+local Script6Creator = "rouxhaver"
+local Script6CreatorPlatform = "Discord"
+local Script6Description = "Lift Players By Clicking Them."
+local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/GnFPj7Vv"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-3/main/player%20lifter.lua"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
