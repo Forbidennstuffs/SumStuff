@@ -82,14 +82,14 @@ end
 local Script1Name = "Flashback"
 local Script1Creator = "Envixity"
 local Script1CreatorPlatform = "Discord"
-local Script1Description = "Gets The Gears In The Game."
+local Script1Description = "Flashbacks."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/daFXeF7t"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/cgWLwdN9", true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
