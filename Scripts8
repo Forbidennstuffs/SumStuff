@@ -95,81 +95,77 @@ end)
 end)
 end)
 
-local Script2Name = "Heist Tycoon Infinite Money"
+local Script2Name = "Longest Answer Wins Auto Play"
 local Script2Creator = "Unknown"
 local Script2CreatorPlatform = "Unknown"
-local Script2Description = "Makes Your Money Infinite."
-local Script2GameID = 11103424163
+local Script2Description = "Auto Plays The Game."
+local Script2GameID = 9992339729
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/kdTbYUMa"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/x8r8GXUm"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script3Name = "Snow Plow Simulator Infinite Money"
+local Script3Name = "Coming Soon"
 local Script3Creator = "Unknown"
 local Script3CreatorPlatform = "Unknown"
-local Script3Description = "Makes Your Money Infinite."
-local Script3GameID = 11701792069
+local Script3Description = "Coming Soon."
+local Script3GameID = 0
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/CmpSWmcZ"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script4Name = "Destruction Simulator Infinite Money"
+local Script4Name = "Coming Soon"
 local Script4Creator = "Unknown"
 local Script4CreatorPlatform = "Unknown"
-local Script4Description = "Makes Your Money Infinite."
-local Script4GameID = 2248408710
+local Script4Description = "Coming Soon."
+local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/tJvYdTpq"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script5Name = "Wormface Auto Farm"
+local Script5Name = "Coming Soon"
 local Script5Creator = "Unknown"
 local Script5CreatorPlatform = "Unknown"
-local Script5Description = "Auto Farms The Game."
-local Script5GameID = 5942932659
+local Script5Description = "Coming Soon."
+local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Wormface%20Auto%20Farm"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script6Name = "Player Lifter"
-local Script6Creator = "rouxhaver"
-local Script6CreatorPlatform = "Discord"
-local Script6Description = "Lift Players By Clicking Them."
+local Script6Name = "Coming Soon"
+local Script6Creator = "Unknown"
+local Script6CreatorPlatform = "Unknown"
+local Script6Description = "Coming Soon."
 local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-3/main/player%20lifter.lua"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
