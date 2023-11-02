@@ -79,32 +79,39 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Script1"
-local Script1Creator = "Someone"
-local Script1CreatorPlatform = "Platform"
-local Script1Description = "Test"
+local Script1Name = "Arosia"
+local Script1Creator = "illremember"
+local Script1CreatorPlatform = "Unknown"
+local Script1Description = "A GUI With Simple Features"
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(Game:GetObjects("rbxassetid://1255908305")[1].Source)()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script2Name = "Script2"
-local Script2Creator = "Someone"
-local Script2CreatorPlatform = "Platform"
-local Script2Description = "Test"
+local Script2Name = "Fly Gui"
+local Script2Creator = "me_ozoneYT"
+local Script2CreatorPlatform = "Discord"
+local Script2Description = "Makes You Fly"
 local Script2GameID = 0
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+if game.PlaceId == 2788229376 then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Obfuscatetestloluwu/Scripts/main/Fly%20Gui%20For%20Da%20Hood'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
+else
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Fly%20gui'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
+end
 end)
 end)
 end)
