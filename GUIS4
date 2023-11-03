@@ -98,7 +98,7 @@ end)
 local Script2Name = "Break In Gui"
 local Script2Creator = "Flawm3ng0, Hamsta Gang, doggyshot123, Chrrxs, LeviTheOtaku"
 local Script2CreatorPlatform = "Unknown"
-local Script2Description = "A Gui For Break In."
+local Script2Description = "A Gui For Break In. Only Works On The Game Not In The Lobby."
 local Script2GameID = 4620170611
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
