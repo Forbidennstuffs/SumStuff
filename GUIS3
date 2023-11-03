@@ -111,65 +111,65 @@ end)
 end)
 end)
 
-local Script3Name = "Shiftlock"
-local Script3Creator = "Unknown"
-local Script3CreatorPlatform = "Unknown"
-local Script3Description = "Shitlock."
+local Script3Name = "Swim Gui"
+local Script3Creator = "WarriorRoberr"
+local Script3CreatorPlatform = "YouTube"
+local Script3Description = "Makes You Swim In Air."
 local Script3GameID = 0
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/E9a7QmCZ'),true))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/9CK0qSgn'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script4Name = "Magnet Gui"
+local Script4Name = "Invisible Car Toggle Gui"
 local Script4Creator = "Unknown"
 local Script4CreatorPlatform = "Unknown"
-local Script4Description = "Magnet To People."
+local Script4Description = "Invisible Car."
 local Script4GameID = 0
-local Script4RigType = "All" -- Choises: All, R15, R6
+local Script4RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/pUWgseqt'),true))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/XL50E7g4'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script5Name = "Yeet Gui V4"
-local Script5Creator = "scuba kermit"
-local Script5CreatorPlatform = "Unknown"
-local Script5Description = "Fling People."
+local Script5Name = "Arceus X Aimbot"
+local Script5Creator = "SPDMTeam (Team)"
+local Script5CreatorPlatform = "Discord"
+local Script5Description = "Aim For People."
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/61VhedB4'),true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Aimbot.lua"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script6Name = "TpGui"
-local Script6Creator = "Unknown"
+local Script6Name = "Peterating Underground"
+local Script6Creator = "GhostPlayer"
 local Script6CreatorPlatform = "Unknown"
-local Script6Description = "Teleport To People."
+local Script6Description = "Makes You Noclip Underground."
 local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
+loadstring(game:HttpGet('https://pastebin.com/raw/QKbzxzSj'))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
