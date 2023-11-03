@@ -79,23 +79,23 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Arosia"
-local Script1Creator = "illremember"
+local Script1Name = "Edge's Audio Logger"
+local Script1Creator = "Unknown"
 local Script1CreatorPlatform = "Unknown"
-local Script1Description = "A GUI With Simple Features"
+local Script1Description = "Gets Audios ID In Game."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-loadstring(Game:GetObjects("rbxassetid://1255908305")[1].Source)()
+loadstring(game:HttpGet(('https://pastebin.com/raw/wN9Q3pZm'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script2Name = "Fly Gui"
+local Script2Name = "Fling Gui"
 local Script2Creator = "me_ozoneYT"
 local Script2CreatorPlatform = "Discord"
 local Script2Description = "Makes You Fly"
