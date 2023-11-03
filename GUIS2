@@ -159,17 +159,17 @@ end)
 end)
 end)
 
-local Script6Name = "Teleport Gui"
-local Script6Creator = "Mich"
+local Script6Name = "TpGui"
+local Script6Creator = "Unknown"
 local Script6CreatorPlatform = "Unknown"
-local Script6Description = "A GUI For Tower Of Hell"
-local Script6GameID = 1962086868
+local Script6Description = "Teleport To People."
+local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/zphaw4sM'),true))()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
