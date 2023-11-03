@@ -82,7 +82,7 @@ end
 local Script1Name = "Arosia"
 local Script1Creator = "illremember"
 local Script1CreatorPlatform = "Unknown"
-local Script1Description = "A GUI With Simple Features"
+local Script1Description = "A GUI With Simple Features."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
@@ -98,7 +98,7 @@ end)
 local Script2Name = "Fly Gui"
 local Script2Creator = "me_ozoneYT"
 local Script2CreatorPlatform = "Discord"
-local Script2Description = "Makes You Fly"
+local Script2Description = "Makes You Fly."
 local Script2GameID = 0
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
@@ -151,7 +151,7 @@ end)
 local Script5Name = "Spectate Gui"
 local Script5Creator = "Unknown"
 local Script5CreatorPlatform = "Unknown"
-local Script5Description = "Spectate People"
+local Script5Description = "Spectate People."
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
@@ -167,7 +167,7 @@ end)
 local Script6Name = "Tower Of Hell OnWin"
 local Script6Creator = "Mich"
 local Script6CreatorPlatform = "Unknown"
-local Script6Description = "A GUI For Tower Of Hell"
+local Script6Description = "A GUI For Tower Of Hell."
 local Script6GameID = 1962086868
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
