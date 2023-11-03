@@ -148,32 +148,34 @@ end)
 end)
 end)
 
-local Script5Name = "Script5"
-local Script5Creator = "Someone"
-local Script5CreatorPlatform = "Platform"
-local Script5Description = "Test"
+local Script5Name = "Spectate Gui"
+local Script5Creator = "Unknown"
+local Script5CreatorPlatform = "Unknown"
+local Script5Description = "Spectate People"
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/brJacHL9'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script6Name = "Script6"
-local Script6Creator = "Someone"
-local Script6CreatorPlatform = "Platform"
-local Script6Description = "Test"
-local Script6GameID = 0
+local Script6Name = "Tower Of Hell OnWin"
+local Script6Creator = "Mich"
+local Script6CreatorPlatform = "Unknown"
+local Script6Description = "A GUI For Tower Of Hell"
+local Script6GameID = 1962086868
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/zphaw4sM'),true))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
 end)
