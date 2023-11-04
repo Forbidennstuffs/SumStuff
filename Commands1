@@ -143,32 +143,34 @@ end)
 end)
 end)
 
-local Script5Name = "Script5"
-local Script5Creator = "Someone"
-local Script5CreatorPlatform = "Platform"
-local Script5Description = "Test"
+local Script5Name = "NTos Admin"
+local Script5Creator = "NTOEXPLOITS"
+local Script5CreatorPlatform = "YouTube"
+local Script5Description = "Commands For Any Game."
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TwomadJR/nto/main/admiin"))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script6Name = "Script6"
-local Script6Creator = "Someone"
-local Script6CreatorPlatform = "Platform"
-local Script6Description = "Test"
+local Script6Name = "FrostMare"
+local Script6Creator = "Unknown"
+local Script6CreatorPlatform = "Unknown"
+local Script6Description = "Commands For Any Game."
 local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet(('https://pastebin.com/raw/Lqmx6Eiy'),true))();
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
 end)
