@@ -79,25 +79,26 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Script1"
-local Script1Creator = "Someone"
-local Script1CreatorPlatform = "Platform"
-local Script1Description = "Test"
+local Script1Name = "IceHub"
+local Script1Creator = "xyz.hexr, xjfs"
+local Script1CreatorPlatform = "Discord"
+local Script1Description = "A Hub."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-Notification:Create("Coming Soon.", "This Script Is Coming Soon Or Never.",5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script2Name = "Script2"
-local Script2Creator = "Someone"
-local Script2CreatorPlatform = "Platform"
-local Script2Description = "Test"
+local Script2Name = "Coming Soon"
+local Script2Creator = "Unknown"
+local Script2CreatorPlatform = "Unknown"
+local Script2Description = "Coming Soon"
 local Script2GameID = 0
 local Script2RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
@@ -109,10 +110,10 @@ end)
 end)
 end)
 
-local Script3Name = "Script3"
-local Script3Creator = "Someone"
-local Script3CreatorPlatform = "Platform"
-local Script3Description = "Test"
+local Script3Name = "Coming Soon"
+local Script3Creator = "Unknown"
+local Script3CreatorPlatform = "Unknown"
+local Script3Description = "Coming Soon"
 local Script3GameID = 0
 local Script3RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
@@ -124,10 +125,10 @@ end)
 end)
 end)
 
-local Script4Name = "Script4"
-local Script4Creator = "Someone"
-local Script4CreatorPlatform = "Platform"
-local Script4Description = "Test"
+local Script4Name = "Coming Soon"
+local Script4Creator = "Unknown"
+local Script4CreatorPlatform = "Unknown"
+local Script4Description = "Coming Soon"
 local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
@@ -139,10 +140,10 @@ end)
 end)
 end)
 
-local Script5Name = "Script5"
-local Script5Creator = "Someone"
-local Script5CreatorPlatform = "Platform"
-local Script5Description = "Test"
+local Script5Name = "Coming Soon"
+local Script5Creator = "Unknown"
+local Script5CreatorPlatform = "Unknown"
+local Script5Description = "Coming Soon"
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
@@ -154,10 +155,10 @@ end)
 end)
 end)
 
-local Script6Name = "Script6"
-local Script6Creator = "Someone"
-local Script6CreatorPlatform = "Platform"
-local Script6Description = "Test"
+local Script6Name = "Coming Soon"
+local Script6Creator = "Unknown"
+local Script6CreatorPlatform = "Unknown"
+local Script6Description = "Coming Soon"
 local Script6GameID = 0
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
