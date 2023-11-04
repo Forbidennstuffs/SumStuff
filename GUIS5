@@ -79,17 +79,17 @@ end
 
 -- 6 Scripts Information And Functions:
 
-local Script1Name = "Keyboard Keybinds"
-local Script1Creator = "Kokjindesu"
-local Script1CreatorPlatform = "Roblox"
-local Script1Description = "Keyboard."
+local Script1Name = "Project Bullshit"
+local Script1Creator = "Racist Dolphin#5199"
+local Script1CreatorPlatform = "Discord"
+local Script1Description = "A GUI With OP Stuff."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/MbQqeRy9'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script1Name.." With No Errors!",5)
 end)
 end)
