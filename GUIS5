@@ -95,81 +95,82 @@ end)
 end)
 end)
 
-local Script2Name = "Break In Gui"
-local Script2Creator = "Flawm3ng0, Hamsta Gang, doggyshot123, Chrrxs, LeviTheOtaku"
-local Script2CreatorPlatform = "Unknown"
-local Script2Description = "A Gui For Break In. Only Works On The Game Not In The Lobby."
-local Script2GameID = 4620170611
-local Script2RigType = "All" -- Choises: All, R15, R6
+local Script2Name = "Simulator Pets Gui"
+local Script2Creator = "rouxhaver"
+local Script2CreatorPlatform = "GitHub"
+local Script2Description = "Makes Your Accessories As Pets."
+local Script2GameID = 0
+local Script2RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/Wg8pEW3Z", true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20Simulator%20Pets.lua'))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script2Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script3Name = "Invisible Gui"
-local Script3Creator = "GhostPlayer"
+local Script3Name = "Fedoratum Accessory Giver"
+local Script3Creator = "Fedoratum"
 local Script3CreatorPlatform = "Unknown"
-local Script3Description = "Makes You Invisible."
+local Script3Description = "Give Your Accessory To People. Type \"Console\" To See Your Accessories Name."
 local Script3GameID = 0
-local Script3RigType = "All" -- Choises: All, R15, R6
+local Script3RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
-loadstring(game:HttpGet('https://pastebin.com/raw/AYtzGEPb'))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/r0p74xjX'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Hat%20Giver'),true))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script3Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script4Name = "LuaC Emulator"
-local Script4Creator = "3dsboy08, Josh"
+local Script4Name = "CCTV Camera Spawner"
+local Script4Creator = "GhostPlayer"
 local Script4CreatorPlatform = "Unknown"
-local Script4Description = "Executes Any LuaC Script."
+local Script4Description = "Spy With People."
 local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
-loadstring(game:GetObjects("rbxassetid://1463753930")[1].Source)()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV Camera'))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script4Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script5Name = "Waypoint Gui"
-local Script5Creator = "koirapallo32#5518"
-local Script5CreatorPlatform = "Discord"
-local Script5Description = "Spawns To The Thing You Saved."
+local Script5Name = "Dex Explorer"
+local Script5Creator = "Unknown"
+local Script5CreatorPlatform = "Unknown"
+local Script5Description = "Explore Game Properties."
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Waypoint%20Gui'),true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/testforshiistuff/Scripts/main/Dex%20Explorer"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script5Name.." With No Errors!",5)
 end)
 end)
 end)
 
-local Script6Name = "Hitbox Gui"
-local Script6Creator = The.path.Creator
-local Script6CreatorPlatform = "Discord"
-local Script6Description = "Hitbox."
-local Script6GameID = 0
+local Script6Name = "Strongman Simulator Gui"
+local Script6Creator = "HamstaGang, OREZAKung"
+local Script6CreatorPlatform = "Unknown"
+local Script6Description = "A Gui For Strongman Simulator."
+local Script6GameID = 6766156863
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
-loadstring(game:HttpGet("https://pastebin.com/raw/W3HhJPmW"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/nt5hj2Rp"))()
 Notification:Create("Script Successfully Executed!", "Successfully Executed "..Script6Name.." With No Errors!",5)
 end)
 end)
