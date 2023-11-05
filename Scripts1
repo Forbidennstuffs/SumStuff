@@ -61,6 +61,7 @@ local Sound = Instance.new("Sound")
 Sound.Parent = game:GetService("CoreGui")
 Sound.Playing = true
 Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+Sound.Volume = 0.3
 
 wait(The.path.ClickSoundLength)
 Sound:Destroy()
