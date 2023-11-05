@@ -55,6 +55,14 @@ pcall(callback)
 end
 end
 
+function ClickSound()
+local Sound = Instance.new("Sound")
+
+Sound.Parent = game:GetService("CoreGui")
+Sound.Playing = true
+Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+end
+
 MainFrame.Name = TabName..""..CurrentPage
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 
@@ -86,6 +94,7 @@ local Script1Description = "Copies Chat Messages. You Can't Stop It."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
