@@ -5,7 +5,7 @@ return {
     Version = 'V5.143',
     K = 'IStealSpermsInSpermBanksForMoney',
     FL = '.msl',
-    KC = '08/14/23'
+    KC = '08/14/23',
     ClickSound = '4499400560'
   }
 }
