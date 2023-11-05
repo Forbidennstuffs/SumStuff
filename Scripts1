@@ -61,6 +61,11 @@ local Sound = Instance.new("Sound")
 Sound.Parent = game:GetService("CoreGui")
 Sound.Playing = true
 Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+
+while wait() do
+if Sound.Playing == false then
+Sound:Destroy()
+end
 end
 
 MainFrame.Name = TabName..""..CurrentPage
