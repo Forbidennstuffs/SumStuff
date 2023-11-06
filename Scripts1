@@ -63,8 +63,12 @@ Sound.Playing = true
 Sound.SoundId = "rbxassetid://"..The.path.ClickSound
 Sound.Volume = 0.3
 
+coroutine.wrap(function()
+while wait() do
 wait(The.path.ClickSoundLength)
 Sound:Destroy()
+return
+end
 end
 
 MainFrame.Name = TabName..""..CurrentPage
