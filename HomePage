@@ -133,6 +133,22 @@ local Your = game:GetService("Players").LocalPlayer
 local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
 
+--Functions:
+
+function ClickSound()
+local Sound = Instance.new("Sound")
+
+Sound.Parent = game:GetService("CoreGui")
+Sound.Playing = true
+Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+Sound.Volume = 0.3
+
+task.spawn(function()
+wait(The.path.ClickSoundLength)
+Sound:Destroy()
+end)
+end
+
 --Properties:
 
 MainFrame.Name = "HomePage"
@@ -875,12 +891,14 @@ end
 
 -- Button Functions:
 DiscordButton.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 setclipboard("discord.gg/3NN5zTW7h2")
 Notification:Create("Copied To Clipboard!", "VexHub Discord link Is In Your Clipboard!",5)
 end)
 
 ReportButton.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -900,6 +918,7 @@ end
 end)
 
 X.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -941,6 +960,7 @@ VHubLogoOpen.ImageTransparency = 1
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1019,6 +1039,7 @@ end
 end)
 
 Settings.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1038,6 +1059,7 @@ end
 end)
 
 _2ScriptsTab.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1055,6 +1077,7 @@ end
 end)
 
 _3RequiredAccessoriesTab.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1072,6 +1095,7 @@ end
 end)
 
 _4GuisTab.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1089,6 +1113,7 @@ end
 end)
 
 _5AnimationsTab.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1106,6 +1131,7 @@ end
 end)
 
 _6CommandsTab.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -1123,6 +1149,7 @@ end
 end)
 
 _7OtherHubsTab.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
