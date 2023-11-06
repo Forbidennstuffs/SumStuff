@@ -6,6 +6,20 @@ local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen
 local TweenService = game:GetService("TweenService")
 local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
 
+function ClickSound()
+local Sound = Instance.new("Sound")
+
+Sound.Parent = game:GetService("CoreGui")
+Sound.Playing = true
+Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+Sound.Volume = 0.3
+
+task.spawn(function()
+wait(The.path.ClickSoundLength)
+Sound:Destroy()
+end)
+end
+
 local VexHubOpenButtonScreen = Instance.new("ScreenGui")
 local VexHubLogo = Instance.new("ImageLabel")
 local OpenButton = Instance.new("TextButton")
@@ -40,6 +54,7 @@ OpenButton.Text = ""
 OpenButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 OpenButton.TextSize = 14.000
 OpenButton.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
