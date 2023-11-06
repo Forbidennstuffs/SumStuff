@@ -113,6 +113,23 @@ local UIStroke_20 = Instance.new("UIStroke")
 local AnimationsText = Instance.new("TextLabel")
 
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
+local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
+
+--Functions:
+
+function ClickSound()
+local Sound = Instance.new("Sound")
+
+Sound.Parent = game:GetService("CoreGui")
+Sound.Playing = true
+Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+Sound.Volume = 0.3
+
+task.spawn(function()
+wait(The.path.ClickSoundLength)
+Sound:Destroy()
+end)
+end
 
 --Properties:
 
@@ -737,6 +754,7 @@ local TweenService = game:GetService("TweenService")
 
 -- Button Functions:
 Close.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -752,6 +770,7 @@ end
 end)
 
 Next.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -769,6 +788,7 @@ end
 end)
 
 Previous_2.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -786,6 +806,7 @@ end
 end)
 
 UIScaleImage.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.UIScale = UIScaleTextBox.Text
 saveSettings()
 game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.UIScale.Scale = UIScaleTextBox.Text
@@ -793,18 +814,21 @@ Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",
 end)
 
 TopLeftButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.ButtonTopLeft = true
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 TopRightButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.ButtonTopLeft = false
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 OkButton.MouseButton1Down:connect(function()
+ClickSound()
 if string.find(WallpaperTextBox.Text, ".png") then
 if not isfile(WallpaperTextBox.Text) then
 Notification:Create("Failed To Save!", "File "..WallpaperTextBox.Text.." Does Not Exist In Your Exploits Workspace.",5)
@@ -834,18 +858,21 @@ end
 end)
 
 BlackButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.WhiteBackground = false
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 WhiteButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.WhiteBackground = true
 saveSettings()
 Notification:Create("Successfully Saved Changes!:", "Setting Changed And Saved! Re-Execute VexHub To See Changes.",5)
 end)
 
 FastButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.AnimationDelay = 0.6
 saveSettings()
 getgenv().AnimationDelay = 0.6
@@ -853,6 +880,7 @@ Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",
 end)
 
 SlowButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.AnimationDelay = 0.8
 saveSettings()
 getgenv().AnimationDelay = 0.8
@@ -860,6 +888,7 @@ Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",
 end)
 
 EnabledButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.EnabledNotifications = true
 saveSettings()
 local LibraryLoaded = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
@@ -872,6 +901,7 @@ Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",
 end)
 
 DisabledButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.EnabledNotifications = false
 saveSettings()
 local LibraryLoaded = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
@@ -882,12 +912,14 @@ end
 end)
 
 TopScreenButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.OpenButtonFloating = false
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
 end)
 
 FloatingButton.MouseButton1Down:connect(function()
+ClickSound()
 _G.settingsTable.OpenButtonFloating = true
 saveSettings()
 Notification:Create("Successfully Saved Changes!", "Setting Changed And Saved!",5)
