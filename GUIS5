@@ -55,6 +55,20 @@ pcall(callback)
 end
 end
 
+function ClickSound()
+local Sound = Instance.new("Sound")
+
+Sound.Parent = game:GetService("CoreGui")
+Sound.Playing = true
+Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+Sound.Volume = 0.3
+
+task.spawn(function()
+wait(The.path.ClickSoundLength)
+Sound:Destroy()
+end)
+end
+
 MainFrame.Name = TabName..""..CurrentPage
 MainFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 
@@ -86,6 +100,7 @@ local Script1Description = "A GUI With OP Stuff."
 local Script1GameID = 0
 local Script1RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute1.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 GameScript(Script1GameID, function()
 RigTypeScript(Script1RigType, function()
@@ -102,6 +117,7 @@ local Script2Description = "Makes Your Accessories As Pets."
 local Script2GameID = 0
 local Script2RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute2.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 GameScript(Script2GameID, function()
 RigTypeScript(Script2RigType, function()
@@ -118,6 +134,7 @@ local Script3Description = "Give Your Accessory To People. Type \"Console\" To S
 local Script3GameID = 0
 local Script3RigType = "R6" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute3.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 GameScript(Script3GameID, function()
 RigTypeScript(Script3RigType, function()
@@ -135,6 +152,7 @@ local Script4Description = "Spy With People."
 local Script4GameID = 0
 local Script4RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute4.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 GameScript(Script4GameID, function()
 RigTypeScript(Script4RigType, function()
@@ -151,6 +169,7 @@ local Script5Description = "Explore Game Properties."
 local Script5GameID = 0
 local Script5RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute5.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 GameScript(Script5GameID, function()
 RigTypeScript(Script5RigType, function()
@@ -167,6 +186,7 @@ local Script6Description = "A Gui For Strongman Simulator."
 local Script6GameID = 6766156863
 local Script6RigType = "All" -- Choises: All, R15, R6
 MainFrame.ExecuteButtons.Execute6.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 GameScript(Script6GameID, function()
 RigTypeScript(Script6RigType, function()
@@ -178,6 +198,7 @@ end)
 
 -- Button Functions:
 MainFrame.InfoBar.Settings.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -197,6 +218,7 @@ end
 end)
 
 MainFrame.InfoBar.X.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -238,6 +260,7 @@ VHubLogoOpen.ImageTransparency = 1
 VHubLogoOpen.Active = true 
 VHubLogoOpen.ScaleType = Enum.ScaleType.Fit
 VHubLogoOpen.MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -318,6 +341,7 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["1HomeTab"].MouseButton1Down:connect(function()
+ClickSound()
 if getgenv().AnimationOngoing == false then
 getgenv().AnimationOngoing = true
 coroutine.wrap(function()
@@ -348,6 +372,7 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["2ScriptsTab"].MouseButton1Down:connect(function()
+ClickSound()
 if TabName == "Scripts" then
 wait()
 else
@@ -382,6 +407,7 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["3RequiredAccessoriesTab"].MouseButton1Down:connect(function()
+ClickSound()
 if TabName == "Required Accessories" then
 wait()
 else
@@ -416,6 +442,7 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["4GuisTab"].MouseButton1Down:connect(function()
+ClickSound()
 if TabName == "GUIS" then
 wait()
 else
@@ -450,6 +477,7 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["5AnimationsTab"].MouseButton1Down:connect(function()
+ClickSound()
 if TabName == "Animations" then
 wait()
 else
@@ -484,6 +512,7 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["6CommandsTab"].MouseButton1Down:connect(function()
+ClickSound()
 if TabName == "Commands" then
 wait()
 else
@@ -518,6 +547,7 @@ end
 end)
 
 MainFrame.TabsParent.Tabs["7OtherHubsTab"].MouseButton1Down:connect(function()
+ClickSound()
 if TabName == "Other Hubs" then
 wait()
 else
@@ -684,6 +714,7 @@ MainFrame.ChooseScriptFrameParent.ScriptButton5.ScriptName5.Text = Script5Name
 MainFrame.ChooseScriptFrameParent.ScriptButton6.ScriptName6.Text = Script6Name
 
 MainFrame.TabInfo.PageChanger.Next.MouseButton1Down:connect(function()
+ClickSound()
 local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..NextPage)
 
 DisappearOtherFrames()
@@ -721,6 +752,7 @@ end
 end)
 
 MainFrame.TabInfo.PageChanger.Previous.MouseButton1Down:connect(function()
+ClickSound()
 local PageExist = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage:FindFirstChild(TabName..""..PreviousPage)
 
 DisappearOtherFrames()
@@ -758,6 +790,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton1.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
@@ -788,6 +821,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton2.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
@@ -818,6 +852,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton3.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
@@ -848,6 +883,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton4.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
@@ -878,6 +914,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton5.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
@@ -908,6 +945,7 @@ end
 end)
 
 MainFrame.ChooseScriptFrameParent.ScriptButton6.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 if getgenv().OnCooldown == false then
 getgenv().OnCooldown = true
@@ -938,31 +976,37 @@ end
 end)
 
 MainFrame.PlayButtons.Play1.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 JoinGame(Script1GameID)
 end)
 
 MainFrame.PlayButtons.Play2.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 JoinGame(Script2GameID)
 end)
 
 MainFrame.PlayButtons.Play3.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 JoinGame(Script3GameID)
 end)
 
 MainFrame.PlayButtons.Play4.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 JoinGame(Script4GameID)
 end)
 
 MainFrame.PlayButtons.Play5.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 JoinGame(Script5GameID)
 end)
 
 MainFrame.PlayButtons.Play6.MouseButton1Down:connect(function()
+ClickSound()
 DisappearOtherFrames()
 JoinGame(Script6GameID)
 end)
