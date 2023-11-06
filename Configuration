@@ -6,7 +6,7 @@ return {
     K = 'IStealSpermsInSpermBanksForMoney',
     FL = '.msl',
     KC = '08/14/23',
-    ClickSound = '6895079853',
+    ClickSound = '6324790483',
     ClickSoundLength = '10'
   }
 }
