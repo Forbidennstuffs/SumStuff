@@ -154,8 +154,8 @@ local Sound = Instance.new("Sound")
 
 Sound.Parent = game:GetService("CoreGui")
 Sound.Playing = true
-Sound.SoundId = "rbxassetid://7433801607"
-Sound.Volume = 0.5
+Sound.SoundId = "rbxassetid://3398620867"
+Sound.Volume = 1
 
 a.Notification:TweenPosition(UDim2.new(0, 0, 0, 0),"Out","Quint",getgenv().AnimationDelay)
 TweenService:Create(a.Notification, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
