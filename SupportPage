@@ -14,6 +14,24 @@ local SendButton = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local UIStroke_2 = Instance.new("UIStroke")
 
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
+
+--Functions:
+
+function ClickSound()
+local Sound = Instance.new("Sound")
+
+Sound.Parent = game:GetService("CoreGui")
+Sound.Playing = true
+Sound.SoundId = "rbxassetid://"..The.path.ClickSound
+Sound.Volume = 0.3
+
+task.spawn(function()
+wait(The.path.ClickSoundLength)
+Sound:Destroy()
+end)
+end
+
 --Properties:
 
 ReportPopUp.Name = "ReportPopUp"
@@ -120,3 +138,17 @@ if success then
     end
 end
 end
+
+--Button Functions:
+SendButton.MouseButton1Down:connect(function()
+ClickSound()
+if Sender_LOADED and not _G.Sender_DEBUG == true then
+Notification:Create("Whoops!", "You Can Only Send One Message.",5)
+	return
+end
+
+pcall(function() getgenv().Sender_LOADED = true end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SendReport"))()
+Notification:Create("Sent!", "Message Sent Successfully!",5)
+end)
