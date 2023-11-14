@@ -149,6 +149,6 @@ end
 
 pcall(function() getgenv().Sender_LOADED = true end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SendReport"))()
 Notification:Create("Sent!", "Message Sent Successfully!",5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SendReport"))()
 end)
