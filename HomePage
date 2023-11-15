@@ -810,30 +810,6 @@ WelcomeUserUserName.TextSize = 10.000
 WelcomeUserUserName.TextWrapped = true
 WelcomeUserUserName.TextXAlignment = Enum.TextXAlignment.Left
 
--- Badging System:
--- Badges:
---_1ShootingStar
---_2Wrench
---_3Star
---_4Trophy
---_5Piece
---_6Tube
---_7Heart
-
-if Your.Name == "itsyaboivincentt" then
-_1ShootingStar.Visible = true
-_2Wrench.Visible = true
-_3Star.Visible = true
-_4Trophy.Visible = true
-_5Piece.Visible = true
-_6Tube.Visible = true
-_7Heart.Visible = true
-
-elseif Your.Name == "Klay5278" then
-_4Trophy.Visible = true
-_6Tube.Visible = true
-end
-
 -- White Background Checker:
 if _G.settingsTable.WhiteBackground == false then
 InfoBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
