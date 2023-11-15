@@ -771,6 +771,16 @@ PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
 end
 end)
 
+ReExecuteVHub.MouseButton1Down:connect(function()
+game:GetService("CoreGui").VexHubFolder:Destroy()
+game:GetService("CoreGui").VexHubOpenButtonScreen:Destroy()
+local VexHubNotificationLibrary = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
+
+if VexHubNotificationLibrary then
+VexHubNotificationLibrary:Destroy()
+end
+end)
+
 Next.MouseButton1Down:connect(function()
 ClickSound()
 if getgenv().AnimationOngoing == false then
