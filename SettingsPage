@@ -815,6 +815,14 @@ end
 
 ReExecuteVHub.MouseButton1Down:connect(function()
 DisappearPage()
+if ReportPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
+end
+if SettingsPopUpFrame.Visible == true then
+PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
+end
+PlayAnimation:Create("Disappear", "DragImage", "0", "1")
+PlayAnimation:Create("Disappear", "ScriptAd", "0", "1")
 wait(getgenv().AnimationDelay)
 game:GetService("CoreGui").VexHubFolder:Destroy()
 game:GetService("CoreGui").VexHubOpenButtonScreen:Destroy()
