@@ -776,6 +776,19 @@ local VexHubFolder = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImag
 
 if VexHubFolder["HomePage"].Visible == true then
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
+elseif VexHubFolder["Script1"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "1", "1")
+elseif VexHubFolder["Script2"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "2", "1")
+elseif VexHubFolder["Script3"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "3", "1")
+elseif VexHubFolder["Script4"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "4", "1")
+elseif VexHubFolder["Script5"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "5", "1")
+elseif VexHubFolder["Script6"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "6", "1")
+
 end
 end
 
