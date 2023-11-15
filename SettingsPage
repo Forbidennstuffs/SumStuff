@@ -817,6 +817,17 @@ end
 end
 
 ReExecuteVHub.MouseButton1Down:connect(function()
+ClickSound()
+if getgenv().AnimationOngoing == false then
+getgenv().AnimationOngoing = true
+coroutine.wrap(function()
+while wait() do
+wait(getgenv().AnimationDelay+0.1)
+getgenv().AnimationOngoing = false
+return
+end
+end)()
+
 DisappearPage()
 if ReportPopUpFrame.Visible == true then
 PlayAnimation:Create("Disappear", "ReportPopUp", "0", "1")
@@ -833,6 +844,7 @@ local VexHubNotificationLibrary = game:GetService("CoreGui"):FindFirstChild("Vex
 
 if VexHubNotificationLibrary then
 VexHubNotificationLibrary:Destroy()
+end
 end
 end)
 
