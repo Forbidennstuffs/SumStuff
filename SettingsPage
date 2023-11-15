@@ -788,7 +788,28 @@ elseif VexHubFolder["Script5"].Visible == true then
 PlayAnimation:Create("Disappear", "Script", "5", "1")
 elseif VexHubFolder["Script6"].Visible == true then
 PlayAnimation:Create("Disappear", "Script", "6", "1")
-
+elseif VexHubFolder["Script7"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "7", "1")
+elseif VexHubFolder["Script8"].Visible == true then
+PlayAnimation:Create("Disappear", "Script", "8", "1")
+elseif VexHubFolder["Required Accessories1"].Visible == true then
+PlayAnimation:Create("Disappear", "Required Accessories", "1", "1")
+elseif VexHubFolder["GUIS1"].Visible == true then
+PlayAnimation:Create("Disappear", "GUIS", "1", "1")
+elseif VexHubFolder["GUIS2"].Visible == true then
+PlayAnimation:Create("Disappear", "GUIS", "2", "1")
+elseif VexHubFolder["GUIS3"].Visible == true then
+PlayAnimation:Create("Disappear", "GUIS", "3", "1")
+elseif VexHubFolder["GUIS4"].Visible == true then
+PlayAnimation:Create("Disappear", "GUIS", "4", "1")
+elseif VexHubFolder["GUIS5"].Visible == true then
+PlayAnimation:Create("Disappear", "GUIS", "5", "1")
+elseif VexHubFolder["Animations1"].Visible == true then
+PlayAnimation:Create("Disappear", "Animations", "1", "1")
+elseif VexHubFolder["Commands1"].Visible == true then
+PlayAnimation:Create("Disappear", "Commands", "1", "1")
+elseif VexHubFolder["Other Hubs1"].Visible == true then
+PlayAnimation:Create("Disappear", "Other Hubs", "1", "1")
 end
 end
 
