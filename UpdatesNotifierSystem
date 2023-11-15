@@ -1,0 +1,13 @@
+local UpdatesFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage.UpdatesFrame.Updates
+
+UpdatesFrame.Update1.Visible = true
+UpdatesFrame.Update1.Text = "New Gui"
+
+UpdatesFrame.Update2.Visible = false
+UpdatesFrame.Update2.Text = ""
+
+UpdatesFrame.Update3.Visible = false
+UpdatesFrame.Update3.Text = ""
+
+UpdatesFrame.Update4.Visible = false
+UpdatesFrame.Update4.Text = ""
