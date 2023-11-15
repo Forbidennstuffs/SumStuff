@@ -771,7 +771,17 @@ PlayAnimation:Create("Disappear", "SettingsPopUp", "0", "1")
 end
 end)
 
+function DisappearPage()
+local VexHubFolder = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+
+if VexHubFolder["HomePage"].Visible == true then
+PlayAnimation:Create("Disappear", "HomePage", "0", "1")
+end
+end
+
 ReExecuteVHub.MouseButton1Down:connect(function()
+DisappearPage()
+wait(getgenv().AnimationDelay)
 game:GetService("CoreGui").VexHubFolder:Destroy()
 game:GetService("CoreGui").VexHubOpenButtonScreen:Destroy()
 local VexHubNotificationLibrary = game:GetService("CoreGui"):FindFirstChild("VexHubNotificationLibrary")
