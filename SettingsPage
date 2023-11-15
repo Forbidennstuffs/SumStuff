@@ -776,22 +776,22 @@ local VexHubFolder = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImag
 
 if VexHubFolder["HomePage"].Visible == true then
 PlayAnimation:Create("Disappear", "HomePage", "0", "1")
-elseif VexHubFolder["Script1"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "1", "1")
-elseif VexHubFolder["Script2"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "2", "1")
-elseif VexHubFolder["Script3"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "3", "1")
-elseif VexHubFolder["Script4"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "4", "1")
-elseif VexHubFolder["Script5"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "5", "1")
-elseif VexHubFolder["Script6"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "6", "1")
-elseif VexHubFolder["Script7"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "7", "1")
-elseif VexHubFolder["Script8"].Visible == true then
-PlayAnimation:Create("Disappear", "Script", "8", "1")
+elseif VexHubFolder["Scripts1"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "1", "1")
+elseif VexHubFolder["Scripts2"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "2", "1")
+elseif VexHubFolder["Scripts3"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "3", "1")
+elseif VexHubFolder["Scripts4"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "4", "1")
+elseif VexHubFolder["Scripts5"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "5", "1")
+elseif VexHubFolder["Scripts6"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "6", "1")
+elseif VexHubFolder["Scripts7"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "7", "1")
+elseif VexHubFolder["Scripts8"].Visible == true then
+PlayAnimation:Create("Disappear", "Scripts", "8", "1")
 elseif VexHubFolder["Required Accessories1"].Visible == true then
 PlayAnimation:Create("Disappear", "Required Accessories", "1", "1")
 elseif VexHubFolder["GUIS1"].Visible == true then
