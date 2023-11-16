@@ -1,0 +1,25 @@
+local Your = game:GetService("Players").LocalPlayer
+local UpdatesFrame = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.HomePage.BadgesParent.Badges
+
+-- Badges:
+--_1ShootingStar
+--_2Wrench
+--_3Star
+--_4Trophy
+--_5Piece
+--_6Tube
+--_7Heart
+
+if Your.Name == "itsyaboivincentt" then
+UpdatesFrame["1ShootingStar"].Visible = true
+UpdatesFrame["2Wrench"].Visible = true
+UpdatesFrame["3Star"].Visible = true
+UpdatesFrame["4Trophy"].Visible = true
+UpdatesFrame["5Piece"].Visible = true
+UpdatesFrame["6Tube"].Visible = true
+UpdatesFrame["7Heart"].Visible = true
+
+elseif Your.Name == "Klay5278" then
+UpdatesFrame["4Trophy"].Visible = true
+UpdatesFrame["6Tube"].Visible = true
+end
