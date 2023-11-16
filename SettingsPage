@@ -846,6 +846,8 @@ if VexHubNotificationLibrary then
 VexHubNotificationLibrary:Destroy()
 end
 
+pcall(function() getgenv().VHub_LOADED = false end)
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Sofjskdkkco/GUIGateway/main/Access"))()
 end
 end)
