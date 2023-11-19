@@ -22,4 +22,16 @@ UpdatesFrame["7Heart"].Visible = true
 elseif Your.Name == "Klay5278" then
 UpdatesFrame["4Trophy"].Visible = true
 UpdatesFrame["6Tube"].Visible = true
+
+elseif Your.Name == "PraseTSuperT" then
+UpdatesFrame["6Tube"].Visible = true
+
+elseif Your.Name == "Chekong02178" then
+UpdatesFrame["6Tube"].Visible = true
+
+elseif Your.Name == "GenyLoLK" then
+UpdatesFrame["6Tube"].Visible = true
+
+elseif Your.Name == "19xVoltz" then
+UpdatesFrame["6Tube"].Visible = true
 end
