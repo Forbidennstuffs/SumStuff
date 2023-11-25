@@ -6,8 +6,8 @@ UpdatesFrame.Update1.Text = "New Gui"
 UpdatesFrame.Update2.Visible = true
 UpdatesFrame.Update2.Text = "Removed Patched Scripts"
 
-UpdatesFrame.Update3.Visible = false
-UpdatesFrame.Update3.Text = ""
+UpdatesFrame.Update3.Visible = true
+UpdatesFrame.Update3.Text = "New Intro"
 
 UpdatesFrame.Update4.Visible = false
 UpdatesFrame.Update4.Text = ""
