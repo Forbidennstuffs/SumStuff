@@ -41,7 +41,7 @@ ReportPopUpFrame.SendButton.TextTransparency = 1
 ReportPopUpFrame.SendButton.BackgroundTransparency = 1
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 1
 ReportPopUpFrame.Visible = true
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quad",getgenv().AnimationDelay)
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.519999981, 0, 0, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
 TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
@@ -71,7 +71,7 @@ ReportPopUpFrame.TextBoxParent.TextBox.TextTransparency = 0
 ReportPopUpFrame.SendButton.TextTransparency = 0
 ReportPopUpFrame.SendButton.BackgroundTransparency = 0.9
 ReportPopUpFrame.SendButton.UIStroke.Transparency = 0.7
-ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quad",getgenv().AnimationDelay)
+ReportPopUpFrame:TweenPosition(UDim2.new(-0.509999981, 0, 0, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ReportPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 TweenService:Create(ReportPopUpFrame.SupportText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
@@ -155,7 +155,7 @@ SettingsPopUpFrame.Settings2.Previous.BackgroundTransparency = 1
 SettingsPopUpFrame.Settings2.Previous.TextTransparency = 1
 SettingsPopUpFrame.Settings2.Previous.UIStroke.Transparency = 1
 SettingsPopUpFrame.Visible = true
-SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quad",getgenv().AnimationDelay)
+SettingsPopUpFrame:TweenPosition(UDim2.new(1.02499998, 0, 0, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
 TweenService:Create(SettingsPopUpFrame.SettingsText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
@@ -307,7 +307,7 @@ SettingsPopUpFrame.Settings2.Next.UIStroke.Transparency = 0.7
 SettingsPopUpFrame.Settings2.Previous.BackgroundTransparency = 0.9
 SettingsPopUpFrame.Settings2.Previous.TextTransparency = 0
 SettingsPopUpFrame.Settings2.Previous.UIStroke.Transparency = 0.7
-SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quad",getgenv().AnimationDelay)
+SettingsPopUpFrame:TweenPosition(UDim2.new(1.01499998, 0, 0, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(SettingsPopUpFrame, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1.5}):Play()
 TweenService:Create(SettingsPopUpFrame.SettingsText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
@@ -613,7 +613,7 @@ ScriptAds.ImageTransparency = 1
 ScriptAds.ScriptAdText.TextTransparency = 1
 ScriptAds.X.TextTransparency = 1
 ScriptAds.Visible = true
-ScriptAds:TweenPosition(UDim2.new(0, 0, -0.379999995, 0),"Out","Quad",getgenv().AnimationDelay)
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.379999995, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
 TweenService:Create(ScriptAds.ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
@@ -635,7 +635,7 @@ ScriptAds.BackgroundTransparency = 0
 ScriptAds.ImageTransparency = 0
 ScriptAds.ScriptAdText.TextTransparency = 0
 ScriptAds.X.TextTransparency = 0
-ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quad",getgenv().AnimationDelay)
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 TweenService:Create(ScriptAds.ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
