@@ -56,14 +56,14 @@ X.TextSize = 14.000
 X.TextTransparency = 1
 X.TextStrokeTransparency = 1
 
-ScriptAds:TweenPosition(UDim2.new(0, 0, -0.379999995, 0),"Out","Quad",getgenv().AnimationDelay)
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.379999995, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
 TweenService:Create(ScriptAds.ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
 TweenService:Create(ScriptAds.X, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 0}):Play()
 
 X.MouseButton1Down:connect(function()
-ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quad",getgenv().AnimationDelay)
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 TweenService:Create(ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
@@ -82,7 +82,7 @@ ScriptAds.MouseButton1Down:connect(function()
 Notification:Create("Advertisement Clicked!", "Join VexHub Discord Server To Advertising What You Want!",5)
 setclipboard("dsc.gg/vhub")
 
-ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quad",getgenv().AnimationDelay)
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 TweenService:Create(ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
@@ -98,7 +98,7 @@ ScriptAds.MouseButton1Down:connect(function()
 Notification:Create("Advertisement Clicked!", "Ad By: space0008 In Discord.",5)
 setclipboard("Hail the vhub")
 
-ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quad",getgenv().AnimationDelay)
+ScriptAds:TweenPosition(UDim2.new(0, 0, -0.369999995, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ScriptAds, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 TweenService:Create(ScriptAdText, TweenInfo.new(getgenv().AnimationDelay), {TextTransparency = 1}):Play()
