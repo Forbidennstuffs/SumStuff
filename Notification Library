@@ -157,7 +157,7 @@ Sound.Playing = true
 Sound.SoundId = "rbxassetid://3398620867"
 Sound.Volume = 1
 
-a.Notification:TweenPosition(UDim2.new(0, 0, 0, 0),"Out","Quint",getgenv().AnimationDelay)
+a.Notification:TweenPosition(UDim2.new(0, 0, 0, 0),"Out","Quart",getgenv().AnimationDelay)
 TweenService:Create(a.Notification, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(a.Notification, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
 TweenService:Create(a.Bell, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
