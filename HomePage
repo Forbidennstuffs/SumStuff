@@ -836,7 +836,7 @@ end
 
 -- Announcement Checker:
 if The.path.AreModeratorsAllowedToAnnounce == true then
-Announcement.Text = AnnnouncementByModerators.path.Announcement
+Announcement.Text = AnnnouncementByModerators.path.Announcement..": \n"\""..AnnnouncementByModerators.path.Announcement.."\""
 else
 Announcement.Text = The.path.ImportantAnouncement
 end
