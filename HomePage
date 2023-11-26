@@ -132,6 +132,7 @@ local WelcomeUserUserName = Instance.new("TextLabel")
 local Your = game:GetService("Players").LocalPlayer
 local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
+local AnnnouncementByModerators = loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/AnnouncementSystemForModeratorsOnVexHub/main/Announcement"))()
 
 --Functions:
 
@@ -571,7 +572,7 @@ Announcement.BorderSizePixel = 0
 Announcement.Position = UDim2.new(0.0335570462, 0, 0.232526988, 0)
 Announcement.Size = UDim2.new(0, 140, 0, 49)
 Announcement.Font = Enum.Font.Gotham
-Announcement.Text = "Kill yourself @everyone right now"
+Announcement.Text = "Loading..."
 Announcement.TextColor3 = Color3.fromRGB(200, 200, 200)
 Announcement.TextWrapped = true
 Announcement.TextXAlignment = Enum.TextXAlignment.Left
@@ -831,6 +832,13 @@ _4GuisTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 _5AnimationsTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 _6CommandsTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 _7OtherHubsTab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+end
+
+-- Announcement Checker:
+if The.path.AreModeratorsAllowedToAnnounce == true then
+Announcement.Text = AnnnouncementByModerators.path.Announcement
+else
+Announcement.Text = The.path.ImportantAnouncement
 end
 
 -- GUI Animations:
