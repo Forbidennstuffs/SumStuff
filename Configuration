@@ -8,7 +8,7 @@ return {
     KC = '08/14/23',
     ClickSound = '6324790483',
     ClickSoundLength = '10',
-    AreModeratorsAllowedToAnnounce = false,
+    AreModeratorsAllowedToAnnounce = true,
     ImportantAnouncement = "Testing"
   }
 }
