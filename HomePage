@@ -132,7 +132,7 @@ local WelcomeUserUserName = Instance.new("TextLabel")
 local Your = game:GetService("Players").LocalPlayer
 local The = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Configuration"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
-local AnnnouncementByModerators = loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/AnnouncementSystemForModeratorsOnVexHub/main/Announcement"))()
+local AnnouncementByModerators = loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/AnnouncementSystemForModeratorsOnVexHub/main/Announcement"))()
 
 --Functions:
 
@@ -837,7 +837,7 @@ end
 
 -- Announcement Checker:
 if The.path.AreModeratorsAllowedToAnnounce == true then
-Announcement.Text = AnnnouncementByModerators.path.Announcer..": \n\""..AnnnouncementByModerators.path.Announcement.."\""
+Announcement.Text = '<font color="rgb('..AnnouncementByModerators.path.AnnouncerUsernameColor..')">['..AnnouncementByModerators.path.Announcer..']:</font> \n"'..AnnouncementByModerators.path.Announcement..'"'
 else
 Announcement.Text = The.path.ImportantAnouncement
 end
