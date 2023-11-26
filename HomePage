@@ -572,6 +572,7 @@ Announcement.BorderSizePixel = 0
 Announcement.Position = UDim2.new(0.0335570462, 0, 0.232526988, 0)
 Announcement.Size = UDim2.new(0, 140, 0, 49)
 Announcement.Font = Enum.Font.Gotham
+Announcement.RichText = true
 Announcement.Text = "Loading..."
 Announcement.TextColor3 = Color3.fromRGB(200, 200, 200)
 Announcement.TextWrapped = true
