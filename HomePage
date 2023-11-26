@@ -839,7 +839,7 @@ end
 if The.path.AreModeratorsAllowedToAnnounce == true then
 Announcement.Text = '<font color="rgb('..AnnouncementByModerators.path.AnnouncerUsernameColor..')">['..AnnouncementByModerators.path.Announcer..']:</font> \n"'..AnnouncementByModerators.path.Announcement..'"'
 else
-Announcement.Text = '<font color="rgb(255,0,0)">[V31nc]:</font> \n"'..The.path.ImportantAnouncement..'"'
+Announcement.Text = '<font color="rgb(255,50,0)">[V31nc]:</font> \n"'..The.path.ImportantAnouncement..'"'
 end
 
 -- GUI Animations:
