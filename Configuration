@@ -10,6 +10,6 @@ return {
     ClickSoundLength = '10',
     AreModeratorsAllowedToAnnounce = true,
     ImportantAnouncement = "Testing",
-    OnMaintenance = false
+    OnMaintenance = true
   }
 }
