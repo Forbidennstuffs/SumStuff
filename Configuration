@@ -9,6 +9,7 @@ return {
     ClickSound = '6324790483',
     ClickSoundLength = '10',
     AreModeratorsAllowedToAnnounce = true,
-    ImportantAnouncement = "Testing"
+    ImportantAnouncement = "Testing",
+    OnMaintenance = false
   }
 }
