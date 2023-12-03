@@ -8,8 +8,8 @@ return {
     KC = '08/14/23',
     ClickSound = '6324790483',
     ClickSoundLength = '10',
-    AreModeratorsAllowedToAnnounce = true,
-    ImportantAnouncement = "Testing",
+    AreModeratorsAllowedToAnnounce = false,
+    ImportantAnouncement = "@everyone cant update vexhub this week until dec 13 becuz of school stuff.",
     OnMaintenance = false
   }
 }
