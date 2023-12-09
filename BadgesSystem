@@ -196,6 +196,7 @@ UpdatesFrame["6Tube"].Visible = true
 
 elseif Your.Name == "fvbhvvuuby" then
 UpdatesFrame["6Tube"].Visible = true
+UpdatesFrame["7Heart"].Visible = true
 
 elseif Your.Name == "Foxypaint12" then
 UpdatesFrame["6Tube"].Visible = true
@@ -208,4 +209,17 @@ UpdatesFrame["6Tube"].Visible = true
 
 elseif Your.Name == "elad155" then
 UpdatesFrame["6Tube"].Visible = true
+
+elseif Your.Name == "RifqiKil" then
+UpdatesFrame["7Heart"].Visible = true
+
+elseif Your.Name == "sreymey2k" then
+UpdatesFrame["7Heart"].Visible = true
+
+elseif Your.Name == "r0b33333" then
+UpdatesFrame["3Star"].Visible = true
+UpdatesFrame["7Heart"].Visible = true
+
+elseif Your.Name == "albertocc24" then
+UpdatesFrame["7Heart"].Visible = true
 end
