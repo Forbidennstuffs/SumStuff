@@ -6,7 +6,7 @@ return {
     K = 'Test',
     FL = '.msl',
     KC = '08/14/23',
-    HowHardToUnlockUsingPickLocker = 50,
+    NumbersRandomnes = 50,
     ClickSound = '6324790483',
     ClickSoundLength = '10',
     AreModeratorsAllowedToAnnounce = false,
