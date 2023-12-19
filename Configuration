@@ -3,7 +3,7 @@ return {
     Creator = 'V31nc',
     Logo = 'rbxassetid://14803348752',
     Version = 'V5.143.2',
-    K = 'IStealSpermsInSpermBanksForMoney',
+    K = 'Test',
     FL = '.msl',
     KC = '08/14/23',
     ClickSound = '6324790483',
