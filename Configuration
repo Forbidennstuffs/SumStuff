@@ -12,6 +12,6 @@ return {
     AreModeratorsAllowedToAnnounce = false,
     ImportantAnouncement = "@everyone cant update vexhub this week until dec 13 becuz of school stuff.",
     OnMaintenance = false,
-    Keyless = false
+    Keyless = true
   }
 }
