@@ -4,7 +4,7 @@ return {
     Logo = 'rbxassetid://14803348752',
     Version = 'V5.143.2',
     K = 'MyCondomBrokeAndIJustMadeMyBrotherPregnant',
-    FL = '.adbs',
+    FL = '.bsas',
     KC = '01/09/24',
     NumbersRandomnes = 50,
     ClickSound = '6324790483',
@@ -12,6 +12,6 @@ return {
     AreModeratorsAllowedToAnnounce = false,
     ImportantAnouncement = "@everyone cant update vexhub this week until dec 13 becuz of school stuff.",
     OnMaintenance = false,
-    Keyless = true
+    Keyless = false
   }
 }
