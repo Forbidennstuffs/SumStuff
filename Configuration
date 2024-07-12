@@ -10,7 +10,7 @@ return {
     ClickSound = '6324790483',
     ClickSoundLength = '10',
     AreModeratorsAllowedToAnnounce = false,
-    ImportantAnouncement = "@everyone cant update vexhub this week until dec 13 becuz of school stuff.",
+    ImportantAnouncement = "Sorry for no updates for like 7 months. BUT im now wokring in a new UI that looks cool! Join our server dsc.gg/vhub",
     OnMaintenance = false,
     Keyless = true
   }
